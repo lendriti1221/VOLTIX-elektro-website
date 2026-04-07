@@ -900,3 +900,70 @@ a {
     line-height: 1.8;
     color: #444;
 }
+/* MOBILE RESCUE FIXES */
+@media (max-width: 768px) {
+    /* 1. Stop the side-scrolling/white gap */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 2. Fix the Header/Nav (The black bar in your first photo) */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Wraps links so they don't go off-screen */
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    /* 3. Force Centering on All Sections */
+    .container, .about-content-centered, .mission-section {
+        width: 100% !important;
+        padding: 0 20px !important;
+        text-align: center !important;
+    }
+
+    /* 4. Fix Service Cards (Photo 2 & 4) */
+    /* This makes them take full width and centers them */
+    .values-grid, .expertise-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .value-box, .service-card {
+        width: 100% !important;
+        max-width: 350px; /* Keeps them from being too wide */
+        margin-bottom: 20px;
+    }
+
+    /* 5. Fix the Black Info Boxes (Photo 5) */
+    /* This stops them from cutting off on the right */
+    .why-choose-grid, .info-boxes {
+        width: 100% !important;
+        padding: 10px !important;
+        display: block !important;
+    }
+
+    .info-box {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* 6. Fix Titles (So they don't break lines weirdly) */
+    h2 {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+    }
+}
