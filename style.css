@@ -1198,3 +1198,38 @@ a {
         margin-bottom: 20px !important;
     }
 }
+/* --- FIX FOR THE WHITE EDGES (CONTACT SECTION) --- */
+#contact {
+    background-color: #0d0d0d !important; /* Forces the whole section background to black */
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 60px 0 !important;
+}
+
+@media (max-width: 768px) {
+    /* This removes the "white gap" on the sides seen in your screenshot */
+    .contact-container {
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 40px 20px !important; /* Keeps text away from the very edge of the glass */
+        background-color: #0d0d0d !important;
+        box-sizing: border-box; /* Ensures padding doesn't push width over 100% */
+    }
+
+    /* Centers the 'Wo Sie uns finden' and 'Inquiry' content */
+    .contact-info, .contact-form-wrapper {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Force the red accent lines to be centered */
+    .contact-info h2, .contact-form-wrapper h2 {
+        width: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
