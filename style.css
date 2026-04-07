@@ -1049,3 +1049,49 @@ a {
         font-size: 1.6rem !important;
     }
 }
+/* --- UPDATED MOBILE NAVBAR FIX --- */
+@media (max-width: 768px) {
+    /* 1. Slim down the black bar */
+    .navbar {
+        flex-direction: column !important;
+        padding: 10px 0 !important; /* Less vertical bulk */
+        height: auto !important;
+        background: rgba(0, 0, 0, 0.95) !important;
+    }
+
+    /* 2. Shrink the logo so it doesn't dominate the screen */
+    .logo, .logo-container img {
+        height: 50px !important; /* Significant reduction from your current size */
+        width: auto !important;
+        margin: 0 auto 5px auto !important; /* Centers logo perfectly */
+    }
+
+    /* 3. Arrange links in a clean single or double row */
+    .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px !important; /* Controlled spacing between links */
+        padding: 0 10px !important;
+        margin: 5px 0 0 0 !important;
+        width: 100% !important;
+    }
+
+    .nav-links li {
+        margin: 0 !important; /* Clear out any desktop margins */
+    }
+
+    .nav-links a {
+        font-size: 13px !important; /* Smaller, modern font size for mobile */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    /* 4. Fix the Language Switcher position */
+    .lang-switch {
+        margin-top: 8px !important;
+        padding: 4px 10px !important;
+        font-size: 12px !important;
+    }
+}
