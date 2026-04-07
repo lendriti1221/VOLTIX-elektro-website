@@ -720,8 +720,9 @@ function openModal() {
 
     }
     function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
+    const navLinks = document.getElementById("navLinks");
+    // This switches the "active" class on and off
+    navLinks.classList.toggle("active");
 }
 }
 
