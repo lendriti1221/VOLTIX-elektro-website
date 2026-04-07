@@ -499,15 +499,6 @@ body {
     padding: 20px;
     border-radius: 8px;
 }
-.business-email {
-    margin-top: 20px;
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-.email-item {
-    margin-top: 20px;
-}
 
 
 /* FOOTER */
@@ -518,9 +509,6 @@ footer {
     color: var(--color-white);
     font-size: 14px;
     margin-top: 0;
-}
-footer {
-    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 /* --- ABOUT PAGE SPECIFIC STYLES --- */
@@ -1290,90 +1278,214 @@ a {
         padding: 0 15px !important;
         margin: 0 !important;
     }
-@media (max-width: 768px) {
-
-    .service-box,
-    .value-box,
-    .project-card,
-    .contact-info,
-    .contact-form-wrapper {
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 20px;
-        margin-bottom: 20px;
-
-        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
-
 }
+    /* ===================================================== */
+/* =============== FINAL MOBILE MASTER FIX ============== */
+/* =============== (DO NOT EDIT ABOVE) ================== */
+/* ===================================================== */
+
 @media (max-width: 768px) {
 
-    .hero {
-        padding: 120px 20px 80px;
-        background: linear-gradient(135deg, #0f172a, #1e293b);
+    /* GLOBAL RESET */
+    * {
+        box-sizing: border-box !important;
     }
 
-    .hero h1 {
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: -1px;
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* CONTAINER FIX */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        margin: 0 auto !important;
+    }
+
+    /* NAVBAR FIX */
+    .navbar {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px !important;
+        width: 100% !important;
+    }
+
+    .logo {
+        width: 150px !important;
+        height: auto !important;
+        margin-bottom: 10px !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .nav-links li {
+        margin: 4px !important;
+    }
+
+    .nav-links a {
+        font-size: 13px !important;
+        white-space: nowrap !important;
+    }
+
+    /* HERO FIX */
+    .hero, .about-hero {
+        height: auto !important;
+        min-height: 65vh !important;
+        padding: 100px 20px 60px 20px !important;
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .hero-content {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .hero h1, .hero h2 {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
     }
 
     .hero p {
-        opacity: 0.9;
+        font-size: 16px !important;
+        padding: 0 10px !important;
     }
 
-}@media (max-width: 768px) {
+    /* GRID FIXES (VERY IMPORTANT) */
+    .services-grid,
+    .projects-grid,
+    .values-grid,
+    .expertise-grid,
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 20px !important;
+    }
 
+    .service-box,
+    .project-card,
+    .value-box {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* IMAGE FIX */
+    .hero-image,
+    .service-image-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .service-image-wrapper {
+        aspect-ratio: 1 / 1 !important;
+    }
+
+    /* CONTACT SECTION FIX */
+    .contact-container {
+        padding: 30px 15px !important;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        width: 100% !important;
+        min-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .form-row {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    input, textarea {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* HEADINGS FIX */
+    h1, h2, h3 {
+        word-break: break-word !important;
+    }
+
+    h2 {
+        font-size: 26px !important;
+    }
+
+    /* BUTTON FIX */
+    .btn, .primary-btn, .secondary-btn {
+        width: auto !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* SECTION SPACING FIX */
+    .content-section {
+        padding: 40px 15px !important;
+    }
+}
+    @media (max-width: 768px) {
+
+    /* Only apply to boxes — NOT layout containers */
     .service-box,
     .value-box,
     .project-card {
-        transform: translateY(20px);
-        opacity: 0;
-        animation: fadeUp 0.6s ease forwards;
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     }
 
-    .service-box:nth-child(2),
-    .value-box:nth-child(2) {
-        animation-delay: 0.1s;
-    }
-
-    .service-box:nth-child(3),
-    .value-box:nth-child(3) {
-        animation-delay: 0.2s;
+    /* Subtle animation */
+    .service-box,
+    .value-box {
+        animation: fadeUp 0.5s ease forwards;
     }
 
 }
 
 @keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
     to {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
-}@media (max-width: 768px) {
+}
+    @media (max-width: 768px) {
 
-    section {
-        padding: 50px 20px;
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 
-    h2 {
-        margin-bottom: 20px;
-    }
-
-    p {
-        line-height: 1.6;
+    .contact-info,
+    .contact-form-wrapper {
+        width: 100%;
     }
 
 }
-.info-item i {
-    color: #3b82f6; /* nice modern blue */
-}
-
-.send-btn {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-    border: none;
-    color: white;
-}
-button:active {
-    transform: scale(0.97);
+@media (max-width: 768px) {
+    .hero {
+        background: url("assets/your-image.jpg") center/cover no-repeat !important;
+    }
 }
