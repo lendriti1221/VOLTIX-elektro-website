@@ -1430,3 +1430,101 @@ a {
         padding: 40px 15px !important;
     }
 }
+    /* ================= MOBILE FIX (SAFE) ================= */
+
+@media (max-width: 768px) {
+
+    /* GENERAL */
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* HERO (SAFE - NO BACKGROUND CHANGE) */
+    .hero {
+        padding: 120px 20px 80px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* GRIDS → STACK */
+    .services-grid,
+    .projects-grid,
+    .values-grid,
+    .expertise-grid,
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* CONTACT SECTION */
+    .contact-info,
+    .contact-form-wrapper {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    /* CLEAN CARD STYLE (SAFE TARGETS ONLY) */
+    .service-box,
+    .value-box,
+    .project-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    /* TYPOGRAPHY */
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
