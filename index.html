@@ -2,7 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    * { box-sizing: border-box; }
+    body { 
+        margin: 0; 
+        padding: 0; 
+        overflow-x: hidden; /* Prevents the 'wobble'/side-scrolling */
+        width: 100%;
+    }
+    img { 
+        max-width: 100%; /* Prevents images from being wider than the phone */
+        height: auto; 
+    }
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    /* Forces everything to stay inside the phone screen */
+    section {
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+</style>
 
     <title>Voltix Elektotechnik GmbH – Electrical Engineering Experts</title>
 
@@ -15,6 +40,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 </head>
+
 
 <body>
     <header>
