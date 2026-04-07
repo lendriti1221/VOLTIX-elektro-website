@@ -1155,7 +1155,7 @@ a {
     .contact-container {
         padding: 30px 15px !important;
         flex-direction: column !important;
-        width: 100% !important;
+        width: 110% !important;
     }
 
     .contact-info, .contact-form-wrapper {
