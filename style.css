@@ -28,74 +28,6 @@ body {
     padding: 0 20px;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .navbar {
-        position: relative; /* Keep the menu contained to the header */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-    }
-
-    .nav-links {
-        display: none; /* Hide by default */
-        flex-direction: column;
-        
-        /* Positioning logic */
-        position: absolute;
-        top: 100%;     /* Places it right below the header */
-        left: 0;
-        width: 100%;
-        background-color: #0a0e1a; /* Match your dark blue background */
-        z-index: 1000; /* Ensure it sits on top of the text below */
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    /* When the menu is toggled via JS */
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .menu-toggle {
-        display: block; /* Show the ☰ icon */
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: white;
-    }
-}
-/* Hide toggle button on desktop */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show hamburger on mobile */
-    }
-
-    .nav-links {
-        display: none; /* Hide links by default on mobile */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 0;
-        background-color: #fff;
-    }
-
-    /* This class is toggled by JavaScript */
-    .nav-links.active {
-        display: flex;
-    }
-}
 /* SECTION STRUCTURE */
 .content-section {
     padding: 80px 0;
@@ -1453,7 +1385,16 @@ a {
         max-width: 100% !important;
     }
 
+    /* IMAGE FIX */
+    .hero-image,
+    .service-image-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 
+    .service-image-wrapper {
+        aspect-ratio: 1 / 1 !important;
+    }
 
     /* CONTACT SECTION FIX */
     .contact-container {
@@ -1496,103 +1437,5 @@ a {
     /* SECTION SPACING FIX */
     .content-section {
         padding: 40px 15px !important;
-    }
-}
-    /* ================= MOBILE FIX (SAFE) ================= */
-
-@media (max-width: 768px) {
-
-    /* GENERAL */
-    body {
-        overflow-x: hidden;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-
-    section {
-        padding: 50px 15px;
-    }
-
-    /* NAVBAR */
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    /* HERO (SAFE - NO BACKGROUND CHANGE) */
-    .hero {
-        padding: 120px 20px 80px;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-        line-height: 1.2;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    /* GRIDS → STACK */
-    .services-grid,
-    .projects-grid,
-    .values-grid,
-    .expertise-grid,
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* CONTACT SECTION */
-    .contact-info,
-    .contact-form-wrapper {
-        width: 100%;
-    }
-
-    .form-row {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    input, textarea {
-        width: 100%;
-    }
-
-    /* CLEAN CARD STYLE (SAFE TARGETS ONLY) */
-    .service-box,
-    .value-box,
-    .project-card {
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
-
-    /* TYPOGRAPHY */
-    h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    p {
-        line-height: 1.6;
-        text-align: center;
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-        padding: 20px;
     }
 }
