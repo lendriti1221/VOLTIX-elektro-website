@@ -1230,3 +1230,52 @@ a {
         padding: 0 20px !important;
     }
 }
+    /* --- EMERGENCY SCALE RESET --- */
+@media (max-width: 768px) {
+    /* 1. Force the Hero to stop zooming */
+    .hero, .about-hero, .service-hero, .hero-section {
+        height: auto !important;
+        min-height: 60vh !important;
+        /* This removes the massive side-padding that causes the zoom effect */
+        padding: 120px 20px 60px 20px !important; 
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* 2. Fix the Hero Content container */
+    .hero-content, .about-hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    /* 3. Force text to stay inside the screen */
+    .hero h1, .hero h2 {
+        font-size: 28px !important;
+        width: 100% !important;
+        word-wrap: break-word !important;
+    }
+
+    .hero p {
+        font-size: 16px !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    /* 4. Fix any massive margins/paddings from your 900 lines */
+    .content-section {
+        padding: 40px 15px !important;
+    }
+
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        margin: 0 !important;
+    }
+}
