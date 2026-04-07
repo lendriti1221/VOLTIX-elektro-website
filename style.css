@@ -1102,3 +1102,49 @@ a {
         transform: scale(0.9);
     }
 }
+/* --- CONTACT SECTION COMPACT MOBILE FIX --- */
+@media screen and (max-width: 768px) {
+    /* Reduce the massive padding/height of the container */
+    .contact-container {
+        padding: 40px 15px !important; 
+        height: auto !important;
+        min-height: unset !important;
+        gap: 25px !important; /* Shrinks space between info and form */
+    }
+
+    /* Make the red-line headings smaller and tighter */
+    .contact-info h2, 
+    .contact-form-wrapper h2,
+    .centered-heading {
+        font-size: 1.4rem !important;
+        margin-bottom: 20px !important;
+        padding-top: 0 !important;
+    }
+
+    /* Tighten the space between address/phone/email items */
+    .info-item {
+        margin-bottom: 15px !important;
+        gap: 10px !important;
+    }
+
+    .info-text h3 {
+        font-size: 1rem !important;
+    }
+
+    .info-text p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Shrink the form inputs so they don't take up the whole screen */
+    input, textarea {
+        padding: 10px !important;
+        margin-bottom: 10px !important;
+        font-size: 14px !important;
+    }
+
+    .send-btn {
+        width: 100% !important; /* Full width button is easier to click on mobile */
+        padding: 12px !important;
+        margin-top: 10px !important;
+    }
+}
