@@ -1048,50 +1048,57 @@ a {
     .centered-heading {
         font-size: 1.6rem !important;
     }
-}
-/* --- UPDATED MOBILE NAVBAR FIX --- */
-@media (max-width: 768px) {
-    /* 1. Slim down the black bar */
-    .navbar {
+/* --- DEEP CLEAN MOBILE NAVBAR --- */
+@media screen and (max-width: 768px) {
+    /* Force the black bar to be smaller */
+    header, .navbar {
+        display: flex !important;
         flex-direction: column !important;
-        padding: 10px 0 !important; /* Less vertical bulk */
+        align-items: center !important;
+        padding: 15px 0 !important;
         height: auto !important;
-        background: rgba(0, 0, 0, 0.95) !important;
+        min-height: unset !important;
+        background: #000 !important;
     }
 
-    /* 2. Shrink the logo so it doesn't dominate the screen */
-    .logo, .logo-container img {
-        height: 50px !important; /* Significant reduction from your current size */
+    /* Force the logo to shrink */
+    .logo, .logo-container img, .navbar img {
+        height: 45px !important; /* Smaller height */
         width: auto !important;
-        margin: 0 auto 5px auto !important; /* Centers logo perfectly */
+        margin: 0 auto 10px auto !important;
+        max-width: 180px !important;
+        display: block !important;
     }
 
-    /* 3. Arrange links in a clean single or double row */
+    /* Force the links to stay in one or two neat rows */
     .nav-links {
         display: flex !important;
+        flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 12px !important; /* Controlled spacing between links */
+        gap: 10px 15px !important;
         padding: 0 10px !important;
-        margin: 5px 0 0 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
         width: 100% !important;
     }
 
     .nav-links li {
-        margin: 0 !important; /* Clear out any desktop margins */
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .nav-links a {
-        font-size: 13px !important; /* Smaller, modern font size for mobile */
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 600;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        white-space: nowrap !important;
     }
 
-    /* 4. Fix the Language Switcher position */
+    /* Hide the language switcher text or shrink it to fit */
     .lang-switch {
-        margin-top: 8px !important;
-        padding: 4px 10px !important;
-        font-size: 12px !important;
+        margin-top: 10px !important;
+        transform: scale(0.9);
     }
 }
