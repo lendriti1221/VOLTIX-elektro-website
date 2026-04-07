@@ -1231,3 +1231,35 @@ a {
         position: relative;
     }
 }
+    /* FORCE MOBILE ALIGNMENT */
+@media (max-width: 768px) {
+    /* Force the main container to stay inside the screen */
+    .container, .contact-container, section {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin: 0 auto !important;
+        overflow-x: hidden !important;
+        display: block !important; /* Resets flexbox issues */
+    }
+
+    /* Center the Navbar items */
+    .navbar {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Fix the Inquiry Form (Photo 11) */
+    .form-row {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    input, textarea {
+        width: 100% !important;
+        box-sizing: border-box !important; /* Keeps padding inside the width */
+    }
+}
