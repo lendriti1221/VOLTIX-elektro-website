@@ -717,7 +717,12 @@ function openModal() {
         modalText.innerText = text;
         modalOverlay.style.display = 'flex';
         document.body.style.overflow = 'hidden'; 
+
     }
+    function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+}
 }
 
 function closeModal() {
