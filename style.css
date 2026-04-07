@@ -1264,3 +1264,27 @@ html, body {
 section {
     max-width: 100% !important;
 }
+/* FORCE BLACK BACKGROUND ON EVERYTHING IN CONTACT SECTION */
+#contact, 
+.contact-section, 
+.bg-dark,
+section.content-section.bg-dark {
+    background-color: #0d0d0d !important;
+    background: #0d0d0d !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: none !important;
+}
+
+/* This removes the white gaps on the left/right of the whole page */
+html, body {
+    background-color: #0d0d0d !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+    
