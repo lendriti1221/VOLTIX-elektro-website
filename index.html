@@ -49,19 +49,22 @@
                 <img src="assets/voltix-logo.png" alt="" class="logo">
                 <h1 class="company-name">Voltix Elektotechnik GmbH</h1>
             </div>
+         <div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+</div>
 
-            <ul class="nav-links">
-                <li><a href="#home" data-translate="nav_home">Home</a></li>
-                <li><a href="about.html" data-translate="nav_about">About</a></li>
-                <li><a href="#services" data-translate="nav_services">Services</a></li>
-                <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
-                <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+          <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
 
-                <select class="lang-switch" onchange="setLanguage(this.value)">
-                    <option value="en">EN</option>
-                    <option value="de">DE</option>
-                </select>
-            </ul>
+    <select class="lang-switch" onchange="setLanguage(this.value)">
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+    </select>
+</ul>
         </nav>
     </header>
 
@@ -210,7 +213,7 @@
                 <i class="fas fa-envelope"></i>
                 <div class="info-text">
                     <!-- ✅ TRANSLATABLE -->
-                    <p data-translate="contact_email">E: office@voltix-elektro.at</p>
+                    <p>E: office@voltix-elektro.at</p>
                 </div>
             </div>
 
