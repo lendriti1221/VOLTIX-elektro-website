@@ -1269,7 +1269,41 @@ section {
 .contact-section, 
 .bg-dark,
 section.content-section.bg-dark {
+   /* 1. Reset Body to Light (Fixes the 'Too Up' black) */
+html, body {
+    background-color: #f9f9f9 !important; /* Matches your --color-light */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* 2. Target ONLY the contact section to be full-width black */
+#contact, .contact-section {
     background-color: #0d0d0d !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 60px 0 !important;
+    display: block !important;
+    position: relative;
+    left: 0;
+}
+
+/* 3. The 'Container' inside the contact section keeps the content centered 
+   without showing white on the sides */
+#contact .container {
+    background-color: transparent !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding: 0 20px;
+}
+
+/* 4. Ensure the Inner Black Box matches the section */
+.contact-container {
+    background-color: #0d0d0d !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
     background: #0d0d0d !important;
     width: 100% !important;
     max-width: 100% !important;
