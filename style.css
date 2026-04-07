@@ -174,7 +174,8 @@ body {
 
 .hero {
     position: relative;
-    height: 90vh;
+    min-height: 80vh; /* Use min-height so it grows if needed */
+    padding: 100px 20px; /* Add padding so text doesn't touch the edges */
     background: linear-gradient(
         rgba(255,255,255,0.85),
         rgba(255,255,255,0.95)
@@ -965,5 +966,86 @@ a {
     h2 {
         font-size: 28px !important;
         line-height: 1.2 !important;
+    }
+}
+/* --- THE MOBILE PATCH (Add to the bottom of your 900 lines) --- */
+@media (max-width: 768px) {
+    /* 1. Prevent the "Side-Scroll" / White Gap */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 2. Fix the Hero Section (Photo 1) */
+    .hero, .about-hero {
+        height: auto !important;
+        min-height: 70vh;
+        padding: 80px 20px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero h1, .hero h2, .about-hero-content h2 {
+        font-size: 30px !important;
+        line-height: 1.2;
+    }
+
+    /* 3. Fix the Navbar & Logo */
+    .navbar {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 15px !important;
+    }
+
+    .logo {
+        height: 60px !important; /* Makes logo fit on phone */
+        width: auto !important;
+        margin-bottom: 10px !important;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* 4. Fix Grids (Services, Values, Expertise) */
+    /* This stops them from being 'everywhere' and stacks them neatly */
+    .services-grid, 
+    .values-grid, 
+    .expertise-grid, 
+    .projects-grid, 
+    .why-choose-grid,
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    .service-box, .value-box, .project-card, .info-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* 5. Fix the Service Image Squares (The ones we discussed) */
+    .service-image-wrapper {
+        width: 100% !important;
+        aspect-ratio: 1 / 1 !important;
+    }
+
+    /* 6. Fix the Contact Section (Photo 5) */
+    .contact-info, .contact-form-wrapper {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+    
+    .centered-heading {
+        font-size: 1.6rem !important;
     }
 }
