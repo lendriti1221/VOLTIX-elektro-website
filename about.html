@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Us – Voltix Elektotechnik GmbH</title>
+
+    <meta name="description" content="Learn more about Voltix Elektotechnik GmbH – a modern electrical engineering company providing professional installations, industrial automation, smart home systems, and advanced technical solutions." data-translate="meta_description_about">
+    <meta name="author" content="Voltix Elektotechnik GmbH">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/voltix-logo.png">
+</head>
+<style>
+/* This forces the container to stop being a 'grid' and starts centering */
+.about-content-grid {
+    display: block !important;
+    text-align: center !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+/* This forces the title to the center */
+.about-content-grid h2 {
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 3rem !important; /* Making it bigger as requested */
+    display: block !important;
+}
+
+/* This forces every paragraph to the center and makes them bigger */
+.about-content-grid p {
+    text-align: center !important;
+    font-size: 1.4rem !important; /* Making it bigger as requested */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+</style>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="assets/voltix-logo.png" alt="Voltix Logo" class="logo">
+                <h1 class="company-name">Voltix Elektotechnik GmbH</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" data-translate="nav_home">Home</a></li>
+                <li><a class="active" href="about.html" data-translate="nav_about">About</a></li>
+                <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                <li><a href="index.html#projects" data-translate="nav_projects">Projects</a></li>
+                <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
+
+                <select class="lang-switch" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                </select>
+            </ul>
+        </nav>
+    </header>
+
+  <section class="about-hero">
+    <div class="about-hero-content">
+        <h2 data-translate="about_hero_title">VOLTIX Elektrotechnik GmbH</h2>
+        <p data-translate="about_hero_subtitle">Your trusted partner for modern electrical engineering and intelligent building solutions.</p>
+    </div>
+</section>
+
+<section class="about-section">
+    <div class="container">
+        <div class="about-content-centered">
+            <h2 data-translate="who_we_are_title">Who We Are</h2>
+            
+            <p data-translate="about_main_text_p1">
+                VOLTIX Elektrotechnik GmbH is a forward-thinking master electrical contractor focusing on modern electrical engineering and intelligent building solutions. Since our founding in 2026, we have stood for clean planning, reliable implementation, and honest interaction with our customers.
+            </p>
+            <p data-translate="about_main_text_p2">
+                We accompany both private and commercial projects from the initial idea to the final completion—structured, solution-oriented, and at eye level.
+            </p>
+            <p data-translate="about_main_text_p3">
+                In doing so, we place great value on quality, compliance with standards, and longevity. Every system is carefully planned and professionally executed to ensure long-term safety, comfort, and energy efficiency.
+            </p>
+        </div>
+    </div>
+</section>
+    <section class="content-section about-section bg-light">
+        <div class="container">
+            <h2 data-translate="values_title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-box">
+                    <h3 data-translate="value_1_title">Precision</h3>
+                    <p data-translate="value_1_text">We follow the highest engineering and safety standards to ensure every connection is flawless.</p>
+                </div>
+                <div class="value-box">
+                    <h3 data-translate="value_2_title">Innovation</h3>
+                    <p data-translate="value_2_text">We implement modern technologies, including advanced smart systems and custom automation solutions.</p>
+                </div>
+                <div class="value-box">
+                    <h3 data-translate="value_3_title">Trust</h3>
+                    <p data-translate="value_3_text">Our clients rely on us because we deliver consistent long-term performance and transparency.</p>
+                </div>
+                <div class="value-box">
+                    <h3 data-translate="value_4_title">Safety</h3>
+                    <p data-translate="value_4_text">All projects strictly adhere to EU regulations and certified quality management procedures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section about-section">
+        <div class="container">
+            <h2 data-translate="expertise_title">Our Specialized Expertise</h2>
+            <div class="expertise-grid">
+                <div class="text-content">
+                    <p data-translate="expertise_p1">
+                        Our team consists of certified electrical engineers and master electricians managing everything from planning to ongoing maintenance.
+                    </p>
+                    <ul class="skills-list">
+                        <li data-translate="skill_1">• PLC Programming (Siemens S7, TIA Portal)</li>
+                        <li data-translate="skill_2">• Smart Home & Building Automation (KNX, Loxone)</li>
+                        <li data-translate="skill_3">• High-Voltage & Low-Voltage Systems Engineering</li>
+                        <li data-translate="skill_4">• Industrial Process Control & Optimization</li>
+                        <li data-translate="skill_5">• Complex System Diagnostics</li>
+                        <li data-translate="skill_6">• Security Systems & Access Control</li>
+                        <li data-translate="skill_7">• Residential & Commercial VDE-Compliant Wiring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section about-section bg-dark mission-section">
+        <div class="container">
+            <h2 data-translate="mission_title">Our Goal</h2>
+            <p data-translate="mission_text">
+                Our goal is to create technology that is easy to understand, works reliably, and is oriented toward people—not the other way around.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-translate="footer_text">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>

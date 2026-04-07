@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltix | Klimaanlagen & Systemintegration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --accent-gold: #bcab26;
+            --bg-white: #ffffff;
+            --text-black: #000000;
+            --text-dim: #444444;
+        }
+        body { margin: 0; background-color: var(--bg-white); color: var(--text-black); font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: #000; position: sticky; top: 0; z-index: 1000; }
+        .logo { height: 140px; width: auto; }
+        .nav-right { display: flex; align-items: center; gap: 30px; }
+        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
+        .lang-switch { background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 5% 80px; }
+        .back-link { display: inline-flex; align-items: center; text-decoration: none; color: var(--accent-gold); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; transition: transform 0.3s ease; }
+        .back-link i { margin-right: 10px; }
+        .back-link:hover { transform: translateX(-5px); }
+
+        .hero-flex { display: flex; gap: 50px; align-items: center; margin-bottom: 80px; }
+        .hero-content { flex: 1.2; }
+        .hero-image { flex: 0.8; }
+        .hero-image img { width: 100%; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .hero-content h1 { font-size: 3rem; margin: 0; font-weight: 700; line-height: 1.1; }
+        .hero-content .subtitle { color: var(--accent-gold); font-size: 1.25rem; margin: 15px 0 25px; font-weight: 500; }
+
+        .section-title { font-size: 1.8rem; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 60px; }
+        .service-col h3 { color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 25px; text-transform: uppercase; }
+        .service-col ul { list-style: none; padding: 0; }
+        .service-col li { position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 0.95rem; color: var(--text-dim); }
+        .service-col li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent-gold); }
+        .service-col li strong { color: var(--text-black); display: block; margin-bottom: 2px; }
+
+        .integration-section { background: #fdfdfd; padding: 50px; border-radius: 12px; border: 1px solid #eee; margin-bottom: 60px; }
+        .integration-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .integration-list { list-style: none; padding: 0; }
+        .integration-list li { margin-bottom: 10px; font-size: 0.95rem; color: var(--text-dim); display: flex; align-items: center; }
+        .integration-list i { color: var(--accent-gold); margin-right: 15px; }
+
+        .benefits-box { background: #f9f9f9; padding: 50px; border-radius: 12px; border-left: 4px solid var(--accent-gold); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .benefits-box h2 { font-size: 1.6rem; margin-top: 0; margin-bottom: 30px; }
+        .footer-cta { text-align: center; margin-top: 80px; color: var(--text-dim); font-style: italic; }
+
+        @media (max-width: 900px) { .hero-flex, .services-grid, .integration-grid { grid-template-columns: 1fr; flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html"><img src="assets/voltix-logo.png" class="logo" alt="Voltix"></a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
+            </ul>
+            <select class="lang-switch" onchange="setLanguage(this.value)">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="index.html#services" class="back-link" data-translate="back_to_overview">
+            <i class="fas fa-chevron-left"></i> Zurück zur Übersicht
+        </a>
+
+        <div class="hero-flex">
+            <div class="hero-content">
+                <h1 data-translate="service_5_title">Klimaanlagen & Systemintegration</h1>
+                <div class="subtitle" data-translate="climate_hero_subtitle">Angenehmes Raumklima – intelligent geplant und fachgerecht integriert</div>
+                <p data-translate="climate_hero_description">Ein gutes Raumklima steigert den Komfort, die Konzentration und das Wohlbefinden – im Wohnbereich genauso wie im Büro oder Gewerbebetrieb. Wir unterstützen Sie bei der Auswahl, elektrotechnischen Vorbereitung und intelligenten Einbindung moderner Klimaanlagen.</p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/climatesystem.png" alt="Climate System">
+            </div>
+        </div>
+
+        <h2 class="section-title" data-translate="climate_section_title">Unsere Leistungen im Bereich Klimaanlagen</h2>
+        <div class="services-grid">
+            <div class="service-col">
+                <h3 data-translate="climate_col1_title">Vorbereitung & Planung</h3>
+                <ul>
+                    <li><strong data-translate="climate_col1_head1">Beratung & Auswahl</strong><span data-translate="climate_col1_text1">Unterstützung bei der Auswahl geeigneter Geräte nach Raumgröße und Nutzung.</span></li>
+                    <li><strong data-translate="climate_col1_head2">Elektrotechnische Vorbereitung</strong><span data-translate="climate_col1_text2">Fachgerechte Stromversorgung und Absicherung nach ÖVE-Normen.</span></li>
+                </ul>
+            </div>
+            <div class="service-col">
+                <h3 data-translate="climate_col2_title">Umsetzung</h3>
+                <ul>
+                    <li><strong data-translate="climate_col2_head1">Zusammenarbeit mit Fachpartnern</strong><span data-translate="climate_col2_text1">Abstimmung mit Kälte-/Klimatechnikern für eine reibungslose Umsetzung.</span></li>
+                    <li><strong data-translate="climate_col2_head2">Inbetriebnahme & Prüfung</strong><span data-translate="climate_col2_text2">Kontrolle der elektrischen Anschlüsse und sichere Übergabe.</span></li>
+                </ul>
+            </div>
+            <div class="service-col">
+                <h3 data-translate="climate_col3_title">Vorteile mit VOLTIX</h3>
+                <ul>
+                    <li data-translate="climate_col3_item1">Saubere elektrotechnische Ausführung</li>
+                    <li data-translate="climate_col3_item2">Normgerechte Umsetzung nach ÖVE</li>
+                    <li data-translate="climate_col3_item3">Ein Ansprechpartner für Technik & Steuerung</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="integration-section">
+            <div class="integration-grid">
+                <div>
+                    <h2 data-translate="climate_integration_title">Systemintegration & Smart Home</h2>
+                    <p data-translate="climate_integration_description">Moderne Klimaanlagen entfalten ihr volles Potenzial erst dann, wenn sie sinnvoll in das Gesamtsystem eingebunden sind. Wir ermöglichen die Integration in bestehende Smart-Home- und Gebäudesteuerungen.</p>
+                </div>
+                <div>
+                    <ul class="integration-list">
+                        <li><i class="fas fa-plus"></i> <span data-translate="climate_int_item1">Einbindung in KNX-Systeme</span></li>
+                        <li><i class="fas fa-plus"></i> <span data-translate="climate_int_item2">Zentrale Steuerung (Heizung, Beschattung, Lüftung)</span></li>
+                        <li><i class="fas fa-plus"></i> <span data-translate="climate_int_item3">Zeitprogramme, Szenen und Automatisierungen</span></li>
+                        <li><i class="fas fa-plus"></i> <span data-translate="climate_int_item4">Vorbereitung für spätere Erweiterungen</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      
+
+        <div class="benefits-box">
+            <h2 data-translate="climate_target_title">Für wen eignen sich unsere Lösungen?</h2>
+            <div class="services-grid" style="margin-bottom: 0; gap: 20px;">
+                <div class="service-col">
+                    <ul>
+                        <li data-translate="climate_target_1">Einfamilienhäuser & Wohnungen</li>
+                        <li data-translate="climate_target_2">Büros & Praxisräume</li>
+                    </ul>
+                </div>
+                <div class="service-col">
+                    <ul>
+                        <li data-translate="climate_target_3">Gewerbeobjekte</li>
+                        <li data-translate="climate_target_4">Neubau- und Sanierungsprojekte</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer-cta" data-translate="climate_footer_cta">
+            Sie planen eine Klimaanlage oder möchten bestehende Systeme intelligent integrieren? Wir beraten Sie ehrlich, technisch fundiert und finden eine Lösung, die zu Ihrem Gebäude passt.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

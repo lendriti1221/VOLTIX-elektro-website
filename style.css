@@ -1,0 +1,902 @@
+/* This enables smooth scrolling for the whole website */
+html {
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --color-primary: #f4b400; /* VoltixGold */
+    --color-secondary: #ffcc33;
+    --color-dark: #0d0d0d;
+    --color-light: #f9f9f9;
+    --color-text: #222;
+    --color-white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--color-light);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Base Container for Content Centering */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* SECTION STRUCTURE */
+.content-section {
+    padding: 80px 0;
+    margin-top: 0; /* Override old margin */
+    scroll-margin-top: 90px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 18px;
+    color: #555;
+}
+
+.bg-dark {
+    background: var(--color-dark);
+    color: var(--color-white);
+}
+
+.bg-light {
+    background: var(--color-light);
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgb(0, 0, 0); /* Slightly darker, more opaque */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+/* ... (Logo and Nav Links styles remain similar, updated colors) */
+.logo { width: 250px; margin-right: 70px; }
+.company-name { font-size: 0px; font-weight: 0; }
+
+.nav-links { list-style: none; display: flex; align-items: center; }
+.nav-links li { margin: 0 15px; }
+.nav-links a { text-decoration: none; color: var(--color-white); font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--color-primary); }
+.lang-switch { padding: 8px; border-radius: 5px; border: none; cursor: pointer; }
+
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px; /* Pill shape */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: var(--color-primary);
+    color: var(--color-dark);
+}
+
+.primary-btn:hover {
+    background: var(--color-secondary);
+    box-shadow: 0 4px 10px rgba(244, 180, 0, 0.4);
+}
+
+.secondary-btn {
+    background: none;
+    color: var(--color-dark);
+    border-color: var(--color-primary);
+}
+
+.secondary-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-dark);
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    background-color: #f5f5f5;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #f2b705;
+    color: #111;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d9a404;
+}
+
+.hero-image {
+    max-width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(
+        rgba(255,255,255,0.85),
+        rgba(255,255,255,0.95)
+    ),
+    url('assets/elektro-panel.jpg') center/cover no-repeat fixed; /* Added fixed for parallax feel */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+    animation: fadeUp 1.2s ease;
+}
+
+.hero h2 {
+    color: var(--color-dark);
+    font-size: 60px; /* Larger title */
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero p {
+    color: var(--color-text);
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ABOUT PREVIEW */
+/* Center the container text */
+.about-text-content {
+    text-align: center;
+    max-width: 800px; /* Optional: keeps text from getting too wide on desktop */
+    margin: 0 auto;   /* Centers the block itself if it has a max-width */
+}
+
+/* Ensure the grid doesn't force it to the side */
+.about-grid {
+    display: flex;
+    flex-direction: column; /* Stacks text and image (if any) vertically */
+    align-items: center;    /* Centers items horizontally */
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Center the button specifically (if it's an inline-block) */
+.about-text-content .btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* SERVICES SECTION */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    position: relative; /* REQUIRED */
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--color-primary);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden; /* REQUIRED */
+    cursor: pointer;
+}
+
+/* background image layer */
+.service-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18; /* image visibility */
+    z-index: 0;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* text stays above image */
+.service-box > * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-box h3 {
+    font-size: 22px;
+    color: var(--color-dark);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* hover effects */
+.service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.service-box:hover::before {
+  opacity: 0.28;
+  transform: scale(1.05);
+}
+
+
+
+.service-box.elektro::before {
+    background-image: url("assets/elektro-image.png");
+}
+
+.service-box.smart::before {
+    background-image: url("assets/smart-home.png");
+}
+
+.service-box.testing::before {
+    background-image: url("assets/ebefund.png");
+}
+
+.service-box.planning::before {
+    background-image: url("assets/planning.jpg");
+}
+
+.service-box.wallbox::before {
+    background-image: url("assets/wallbox.jpg");
+}
+
+.service-box.klima::before {
+    background-image: url("assets/climate.jpg");
+}
+
+
+/* PROJECTS SECTION */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.project-card {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #007bff; /* Secondary color for project */
+}
+.project-card h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+.project-card p {
+    font-size: 16px;
+}
+/* Cards (example) */
+.service-card {
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Modal Overlay */
+/* The Dark Background */
+/* OVERLAY */
+.modal-overlay {
+    display: none ; /* Hidden by default */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODAL BOX */
+.modal {
+    position: relative;
+    background: white;
+    padding: 60px;
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 90%;
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
+    animation: fadeIn 0.3s ease;
+    overflow: hidden;
+}
+.service-image-wrapper {
+    width: 40%;
+    aspect-ratio: 16 / 9; /* Forces all images to the same professional shape */
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(122, 111, 65, 0.3); /* Subtle gold border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.service-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching */
+    transition: transform 0.5s ease;
+    filter: brightness(0.9); /* Makes the image feel more industrial */
+}
+
+/* Hover effect for a "live" feel */
+.service-image-wrapper:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+/* CONTACT */
+.contact-section {
+    padding-bottom: 40px;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+.contact-form textarea {
+    resize: vertical;
+    min-height:120px;
+}
+
+.business-email {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    color: #555;
+}
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    .contact-info, .contact-form-container {
+    
+        flex: 1;
+    }
+.contact-form-container h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.red-line {
+    margin: 0 auto;
+
+}
+
+}
+
+
+/* TRUST SECTION */
+.trust {
+    padding: 50px 0;
+}
+
+.trust h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.trust-grid div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+/* FOOTER */
+footer {
+    background: var(--color-dark);
+    padding: 25px 0;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 14px;
+    margin-top: 0;
+}
+
+/* --- ABOUT PAGE SPECIFIC STYLES --- */
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+    /* Shrink the Hero Title so it doesn't wrap 5 times */
+    .about-hero-content h2 {
+        font-size: 28px !important;
+    }
+    
+    .about-hero {
+        height: 40vh !important; /* Make hero shorter on mobile */
+    }
+
+    /* Shrink Section Titles */
+    .about-section h2, 
+    .about-content-centered h2, 
+    .expertise-grid h2 {
+        font-size: 1.8rem !important; 
+    }
+
+    /* Shrink Body Text slightly for better fit */
+    .about-section p, 
+    .about-content-centered p, 
+    .expertise-grid p {
+        font-size: 1rem !important;
+        padding: 0 10px; /* Adds a little space on the sides */
+    }
+
+    /* Stack the values grid into 1 column */
+    .values-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* 1. ANIMATION (Keep as is) */
+@keyframes electricFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 2. HERO SECTION - Adjusted height and text */
+.about-hero {
+    background: linear-gradient(-45deg, #000000, #000000, #7a6f41, #837b43);
+    background-size: 300% 300%;
+    animation: electricFlow 10s ease infinite;
+    height: 50vh; /* Reduced from 60vh */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.about-hero-content h2 {
+    font-size: 36px; /* Reduced from 48px */
+    margin-bottom: 10px;
+}
+
+.about-hero-content p {
+    font-size: 18px; /* Reduced from 20px */
+}
+
+/* 3. CENTER & RESIZE CONTENT */
+.about-content-centered, 
+.about-content-grid, 
+.expertise-grid {
+    display: block !important;    
+    text-align: center !important; 
+    max-width: 800px !important; /* Slightly narrower for better reading */
+    margin: 60px auto !important;     
+}
+
+/* Titles - Professional Size */
+.about-section h2, 
+.about-content-centered h2, 
+.expertise-grid h2,
+.mission-section h2 {
+    text-align: center !important;
+    font-size: 2.2rem !important; /* Reduced from 3rem */
+    margin-bottom: 20px !important;
+    display: block !important;
+    color: #7a6f41; /* Using your gold theme color */
+}
+
+/* Body Text - Clean & Readable */
+.about-section p, 
+.about-content-centered p, 
+.expertise-grid p,
+.mission-section p {
+    text-align: center !important;
+    font-size: 1.15rem !important; /* Reduced from 1.4rem */
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+}
+
+/* Skills List - Centered and clean */
+.skills-list {
+    text-align: center !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 20px auto !important;
+    font-size: 1.1rem !important;
+}
+
+.skills-list li {
+    padding: 8px 0;
+}
+
+/* 4. GRIDS (Keeping them functional) */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.value-box {
+    padding: 20px;
+    border-left: 4px solid #7a6f41;
+    border-radius: 6px;
+    background: #fdfdfd; 
+    text-align: left; /* Keep box content left-aligned for clarity */
+}
+
+.value-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.value-box p {
+    font-size: 0.95rem !important; /* Keep box text smaller */
+    text-align: left !important;
+}
+
+
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .nav-links {
+        margin-top: 15px;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+    .hero h2 {
+        font-size: 40px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .about-grid, .projects-grid, .about-content-grid, .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-image-content, .expertise-grid > :last-child {
+        order: -1; /* Move image/placeholder above text on mobile */
+    }
+}
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-image {
+        max-width: 100%;
+    }
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  background-color: #222; /* Dark theme from photo 2 */
+  color: white;
+  padding: 60px;
+  font-family: sans-serif;
+}
+
+.contact-info, .contact-form-wrapper {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2, .contact-form-wrapper h2 {
+  border-bottom: 3px solid #e74c3c; /* Red accent line */
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.info-item { margin-bottom: 20px; line-height: 1.6; }
+
+/* Form Styling */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+  border-radius: 4px;
+}
+
+.send-btn {
+  background-color: #f1c40f; /* Yellow button from photo 1 */
+  color: black;
+  border: none;
+  padding: 15px 40px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #d4ac0d;
+}
+/* Layout for info items to align icons properly */
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Icon Styling */
+.info-item i {
+  color: #f1c40f; /* Matches your yellow button */
+  font-size: 1.2rem;
+  margin-top: 5px; /* Aligns with the first line of text */
+  width: 20px;     /* Keeps icons centered even if widths vary */
+  text-align: center;
+}
+
+.info-text p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.info-text h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+/* Ensure both headings start at the exact same vertical point */
+.contact-info h2, 
+.contact-form-wrapper h2 {
+    margin-top: 0;           /* Remove default browser margins */
+    padding-top: 20px;       /* Set a specific uniform starting point */
+    font-size: 24px;         /* Ensure font sizes are identical */
+    line-height: 1.2;        /* Ensure line height is identical */
+}
+
+/* Ensure the lines (borders) are positioned exactly the same */
+.contact-info h2, 
+.contact-form-wrapper h2 {
+    border-bottom: 2px solid #e74c3c; /* Your orange/red color */
+    padding-bottom: 10px;            /* Space between text and the line */
+    margin-bottom: 30px;            /* Space below the line */
+    display: inline-block;          /* Makes the line only as long as the text */
+    width: 100%;                    /* Or set a fixed width like 300px to match exactly */
+}
+.contact-container {
+    display: flex;
+    align-items: flex-start; /* This is crucial for top alignment */
+    justify-content: space-between;
+    gap: 50px;
+}
+.centered-heading {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white; /* Matches your image */
+    font-size: 2rem;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* This creates the lines on the left and right */
+.centered-heading::before,
+.centered-heading::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #e63946; /* The red color from your line */
+}
+
+/* This adds a gap between the text and the lines */
+.centered-heading::before {
+    margin-right: 15px;
+}
+
+.centered-heading::after {
+    margin-left: 15px;
+}
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+/* Unified Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;    /* Matches your service page padding */
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: auto;        /* Changed from 80px to auto to allow the logo to define the height */
+}
+
+/* Unified Logo Styles */
+.logo, .logo-container img {
+    height: 140px;       /* Matches the service page logo height */
+    width: auto;         /* Maintains aspect ratio to prevent stretching */
+    display: block;
+    object-fit: contain;
+}
+
+.logo {
+    height: 100px;                   /* Adjust this to make the logo look proportional */
+    width: 200px;
+}
+.back-nav {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link i {
+    color: var(--color-primary); /* Use your Voltix Gold */
+    font-size: 1.1rem;
+}
+
+.back-link:hover {
+    color: var(--color-primary);
+    transform: translateX(-5px); /* Subtle nudge to the left */
+}
+/* Remove blue color and underlines from the service links */
+.services-grid a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Forces the text to stay the original color (dark) */
+    display: block;        /* Ensures the whole card area remains clickable */
+}
+
+/* Optional: Ensure the titles don't turn blue on hover */
+.service-box h3 {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+.service-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-8px); /* Card lifts up */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Shadow deepens */
+    border-top-color: var(--color-secondary); /* Top border changes color */
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+[data-translate*="_text"] {
+    white-space: pre-line; /* Preserves line breaks and bullets */
+    line-height: 1.8;
+    color: #444;
+}

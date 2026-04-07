@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltix | Wallbox-Installationen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --accent-gold: #bcab26;
+            --bg-white: #ffffff;
+            --text-black: #000000;
+            --text-dim: #444444;
+        }
+        body { margin: 0; background-color: var(--bg-white); color: var(--text-black); font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
+         .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: #000; position: sticky; top: 0; z-index: 1000; }
+        .logo { height: 140px; width: auto; }
+        .nav-right { display: flex; align-items: center; gap: 30px; }
+        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
+        .lang-switch { background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 5% 80px; }
+        .back-link { display: inline-flex; align-items: center; text-decoration: none; color: var(--accent-gold); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; transition: transform 0.3s ease; }
+        .back-link i { margin-right: 10px; }
+        .back-link:hover { transform: translateX(-5px); }
+
+        .hero-flex { display: flex; gap: 50px; align-items: center; margin-bottom: 80px; }
+        .hero-content { flex: 1.2; }
+        .hero-image { flex: 0.8; }
+        .hero-image img { width: 100%; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .hero-content h1 { font-size: 3rem; margin: 0; font-weight: 700; line-height: 1.1; }
+        .hero-content .subtitle { color: var(--accent-gold); font-size: 1.25rem; margin: 15px 0 25px; font-weight: 500; }
+
+        .section-title { font-size: 1.8rem; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 60px; }
+        .service-col h3 { color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 25px; text-transform: uppercase; }
+        .service-col ul { list-style: none; padding: 0; }
+        .service-col li { position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 0.95rem; color: var(--text-dim); }
+        .service-col li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent-gold); }
+        .service-col li strong { color: var(--text-black); display: block; margin-bottom: 2px; }
+
+        .process-box { background: #fdfdfd; padding: 40px; border-radius: 12px; border: 1px solid #eee; margin-bottom: 60px; }
+        .process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .step-num { background: var(--accent-gold); color: #fff; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-weight: bold; margin-bottom: 15px; }
+        
+        .benefits-box { background: #f9f9f9; padding: 50px; border-radius: 12px; border-left: 4px solid var(--accent-gold); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .benefits-box h2 { font-size: 1.6rem; margin-top: 0; margin-bottom: 30px; }
+        .footer-cta { text-align: center; margin-top: 80px; color: var(--text-dim); font-style: italic; }
+
+        @media (max-width: 900px) { .hero-flex, .services-grid, .process-steps { grid-template-columns: 1fr; flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html"><img src="assets/voltix-logo.png" class="logo" alt="Voltix"></a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
+            </ul>
+            <select class="lang-switch" onchange="setLanguage(this.value)">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="index.html#services" class="back-link" data-translate="back_to_overview">
+            <i class="fas fa-chevron-left"></i> Zurück zur Übersicht
+        </a>
+
+        <div class="hero-flex">
+            <div class="hero-content">
+                <h1 data-translate="service_6_title">Wallbox-Installationen</h1>
+                <div class="subtitle" data-translate="wall_hero_subtitle">Sichere Ladelösungen für private und gewerbliche Anwendungen</div>
+                <p data-translate="wall_hero_description">Eine eigene Wallbox ermöglicht komfortables, sicheres und kontrolliertes Laden von Elektrofahrzeugen – zu Hause wie auch im Betrieb. Wir begleiten Sie von der ersten Beratung bis zur fachgerechten Inbetriebnahme und sorgen für eine Lösung, die technisch passt und langfristig zuverlässig funktioniert.</p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/Wallbox.webp" alt="Wallbox">
+            </div>
+        </div>
+
+        <h2 class="section-title" data-translate="wall_why_title">Warum eine Wallbox von VOLTIX?</h2>
+        <div class="services-grid">
+            <div class="service-col">
+                <h3 data-translate="wall_col1_title">Sicherheit & Norm</h3>
+                <ul>
+                    <li><strong data-translate="wall_col1_head1">Normgerecht & sicher</strong><span data-translate="wall_col1_text1">Fachgerechte Installation inklusive Absicherung und Schutzmaßnahmen nach ÖVE.</span></li>
+                    <li><strong data-translate="wall_col1_head2">Saubere Integration</strong><span data-translate="wall_col1_text2">Ordnungsgemäße Einbindung in bestehende Verteiler und klare Dokumentation.</span></li>
+                </ul>
+            </div>
+            <div class="service-col">
+                <h3 data-translate="wall_col2_title">Planung & Flexibilität</h3>
+                <ul>
+                    <li><strong data-translate="wall_col2_head1">Individuell geplant</strong><span data-translate="wall_col2_text1">Anpassung an die bestehende Elektroanlage und den tatsächlichen Bedarf.</span></li>
+                    <li><strong data-translate="wall_col2_head2">Privat & gewerblich</strong><span data-translate="wall_col2_text2">Lösungen für Einfamilienhäuser, Wohnanlagen und Firmenstandorte.</span></li>
+                </ul>
+            </div>
+            <div class="service-col">
+                <h3 data-translate="wall_col3_title">Zukunftssicherheit</h3>
+                <ul>
+                    <li><strong data-translate="wall_col3_head1">Zukunftssicher vorbereitet</strong><span data-translate="wall_col3_text1">Vorbereitung für Lastmanagement und mehrere Ladepunkte.</span></li>
+                    <li><strong data-translate="wall_col3_head2">Erweiterbarkeit</strong><span data-translate="wall_col3_text2">Planung für spätere Erweiterungen Ihrer Ladeinfrastruktur.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title" data-translate="wall_process_title">Unser Ablauf</h2>
+        <div class="process-box">
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <h4 data-translate="wall_step1_title">Beratung</h4>
+                    <p data-translate="wall_step1_text">Klärung von Ladeleistung, Standort, Nutzung und technischen Voraussetzungen.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <h4 data-translate="wall_step2_title">Planung</h4>
+                    <p data-translate="wall_step2_text">Prüfung der Installation, Auswahl der passenden Wallbox und Planung der Absicherung.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <h4 data-translate="wall_step3_title">Installation</h4>
+                    <p data-translate="wall_step3_text">Fachgerechte Montage, Inbetriebnahme, Funktionsprüfung und Einweisung.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits-box">
+            <h2 data-translate="wall_target_title">Für wen eignet sich eine Wallbox?</h2>
+            <div class="services-grid" style="margin-bottom: 0; gap: 20px;">
+                <div class="service-col">
+                    <ul>
+                        <li data-translate="wall_target_1">Eigenheime & Wohnungen</li>
+                        <li data-translate="wall_target_2">Mehrparteienhäuser</li>
+                    </ul>
+                </div>
+                <div class="service-col">
+                    <ul>
+                        <li data-translate="wall_target_3">Gewerbebetriebe & Büros</li>
+                        <li data-translate="wall_target_4">Firmenparkplätze & Fuhrparks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer-cta" data-translate="wall_footer_cta">
+            Sie planen eine Wallbox oder möchten Ihre Ladeinfrastruktur erweitern? Wir beraten Sie persönlich und finden eine Lösung, die zu Ihrem Gebäude und Ihrem Nutzungsverhalten passt.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
