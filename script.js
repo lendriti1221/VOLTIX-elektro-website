@@ -719,12 +719,8 @@ function openModal() {
         document.body.style.overflow = 'hidden'; 
 
     }
-    function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    // This switches the "active" class on and off
-    navLinks.classList.toggle("active");
-}
-}
+  
+
 
 function closeModal() {
     document.getElementById('modalOverlay').style.display = 'none';
