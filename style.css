@@ -1102,37 +1102,27 @@ a {
         transform: scale(0.9);
     }
 }
-/* ============================================================
-   CLEANED MOBILE OVERRIDE (REPLACE EVERYTHING AT THE END)
-   ============================================================ */
-
+/* --- ULTIMATE VERTICAL MOBILE FIX --- */
 @media (max-width: 768px) {
-    /* 1. Reset Global Layout */
+    /* 1. Kill the Horizontal Scroll / White Gap */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
         position: relative;
     }
 
-    .container, section, .content-section {
-        width: 100% !important;
-        max-width: 100vw !important;
-        padding: 40px 15px !important;
-        margin: 0 auto !important;
-        box-sizing: border-box !important;
-    }
-
-    /* 2. Navbar & Logo Centering (Fixes the "Left-Align" Issue) */
+    /* 2. Fix the Navbar (The biggest issue) */
     .navbar {
         flex-direction: column !important;
-        align-items: center !important;
         padding: 15px 10px !important;
         height: auto !important;
+        width: 100% !important;
+        align-items: center !important;
     }
 
-    .logo, .logo-container img {
-        height: 60px !important; /* Smaller for mobile */
-        width: auto !important;
+    .logo {
+        width: 160px !important; /* Shrink logo for vertical view */
+        height: auto !important;
         margin: 0 auto 10px auto !important;
         display: block !important;
     }
@@ -1141,72 +1131,70 @@ a {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 12px !important;
+        gap: 8px !important;
         padding: 0 !important;
-        margin: 5px 0 0 0 !important;
         width: 100% !important;
     }
 
     .nav-links li {
-        margin: 5px 10px !important;
+        margin: 5px !important;
     }
 
-    /* 3. Hero Section (Photo 1 & 10) */
-    .hero {
-        height: auto !important;
-        min-height: 70vh !important;
-        padding: 60px 20px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
+    .nav-links a {
+        font-size: 14px !important;
     }
 
+    /* 3. Fix the Hero Section Title (Photo 1) */
     .hero h2 {
-        font-size: 32px !important;
-        line-height: 1.2 !important;
+        font-size: 32px !important; /* Prevents giant text from breaking the layout */
+        line-height: 1.1 !important;
+        padding: 0 10px !important;
     }
 
-    /* 4. Contact & Inquiry Form (Photo 11) */
+    /* 4. Fix the Inquiry Form & Contact Container (Photo 11) */
     .contact-container {
         padding: 30px 15px !important;
         flex-direction: column !important;
-        align-items: center !important;
+        width: 100% !important;
     }
 
     .contact-info, .contact-form-wrapper {
         width: 100% !important;
         min-width: 100% !important;
+        margin: 0 0 40px 0 !important;
         text-align: center !important;
     }
 
     .form-row {
-        flex-direction: column !important;
+        flex-direction: column !important; /* Stacks name fields vertically */
         gap: 0 !important;
     }
 
     input, textarea {
         width: 100% !important;
         margin-bottom: 15px !important;
-        font-size: 16px !important; /* Prevents iOS auto-zoom */
+        box-sizing: border-box !important; /* Vital: keeps padding inside the box */
     }
 
-    /* Center the red lines and headings */
-    .contact-info h2, .contact-form-wrapper h2, .centered-heading {
+    /* 5. Force Center Headers with Red Lines */
+    .centered-heading, .contact-info h2, .contact-form-wrapper h2 {
         justify-content: center !important;
+        text-align: center !important;
         font-size: 1.6rem !important;
-        width: 100% !important;
+        display: flex !important;
     }
 
-    /* 5. Grid Fixes (Services & Projects) */
-    .services-grid, .projects-grid, .values-grid, .trust-grid {
-        grid-template-columns: 1fr !important;
+    /* 6. Stack All Grids Vertically */
+    .services-grid, .values-grid, .projects-grid, .expertise-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 20px !important;
+        align-items: center !important;
+        width: 100% !important;
     }
 
-    .service-box, .project-card, .value-box {
+    .service-box, .value-box, .project-card {
         width: 100% !important;
         max-width: 100% !important;
+        margin-bottom: 20px !important;
     }
 }
