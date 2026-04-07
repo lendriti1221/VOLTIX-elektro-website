@@ -1198,3 +1198,35 @@ a {
         margin-bottom: 20px !important;
     }
 }
+    /* --- FIX FOR ZOOMED-IN SERVICE PAGES --- */
+@media (max-width: 768px) {
+    /* 1. Stop forcing the hero to fill the whole screen height */
+    .hero, .about-hero, .service-hero {
+        height: auto !important; /* This is the main fix */
+        min-height: 50vh !important;
+        padding: 100px 20px 60px 20px !important; /* More space for the text */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* 2. Shrink the titles so they don't look 'zoomed' */
+    .hero h1, .hero h2, .about-hero-content h2 {
+        font-size: 28px !important; /* Smaller header for mobile */
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 3. Shrink the description text */
+    .hero p, .about-hero-content p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        max-width: 100% !important;
+    }
+
+    /* 4. Fix the white gap caused by the zoomed content */
+    .container {
+        width: 100% !important;
+        padding: 0 20px !important;
+    }
+}
