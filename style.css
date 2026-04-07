@@ -1185,3 +1185,109 @@ a {
         position: relative;    
     }
 }
+    /* ============================================================
+   FINAL MOBILE RESCUE OVERRIDE 
+   (Paste this at the VERY BOTTOM of your style.css)
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* 1. Reset Global Layout to prevent drifting and white gaps */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #f9f9f9; /* Keeps top sections light */
+    }
+
+    /* 2. Fix Navbar - Centers Logo and Links perfectly */
+    .navbar {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px 0 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+
+    .logo {
+        height: 55px !important;
+        width: auto !important;
+        margin: 0 auto 10px auto !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    /* 3. The "Black Contact Section" - Forces edge-to-edge black */
+    #contact, .contact-section, .bg-dark {
+        background-color: #0d0d0d !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 60px 0 !important;
+        display: block !important;
+        overflow: hidden !important;
+    }
+
+    /* 4. Fix Container inside Contact - Stops the "To the right" movement */
+    .contact-container {
+        background-color: #0d0d0d !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 20px !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        box-sizing: border-box !important; /* Critical: includes padding in width */
+    }
+
+    /* 5. Fix Inquiry Form - Forces inputs to stay inside the screen */
+    .contact-form-wrapper, .contact-form, form {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .form-row {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    input, textarea, select {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 6. Centering headings and info text */
+    .contact-info, .info-item {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Centers the red underline markers */
+    .centered-heading {
+        justify-content: center !important;
+        font-size: 1.6rem !important;
+    }
+
+    /* 7. General Grid Fix for all other sections (Expertise, Values, etc.) */
+    .services-grid, .expertise-grid, .values-grid, .projects-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+    }
+}
