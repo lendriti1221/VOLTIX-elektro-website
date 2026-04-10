@@ -1508,3 +1508,56 @@ textarea::placeholder {
 .centered-heading {
     color: #ffffff !important;
 }
+    /* --- THE ULTIMATE CONTACT FIX --- */
+
+/* 1. Force the container to be dark */
+.contact-form {
+    background-color: #1a1a1a !important; /* Dark Grey */
+    padding: 40px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* 2. Make the input fields visible */
+.contact-form input, 
+.contact-form textarea {
+    background-color: #2a2a2a !important; /* Lighter Grey */
+    color: #ffffff !important;           /* White Text */
+    border: 1px solid #444 !important;
+    margin-bottom: 15px !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* 3. Fix the Checkbox text that is currently "invisible" */
+.checkbox-container {
+    display: flex !important;
+    align-items: center !important;
+    margin: 15px 0 !important;
+}
+
+.checkbox-text {
+    color: #ffffff !important; /* Force this to White */
+    font-size: 14px !important;
+    margin-left: 10px !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+
+/* 4. Fix the Form Row (First Name / Last Name) */
+.form-row {
+    display: flex !important;
+    gap: 15px !important;
+    width: 100% !important;
+}
+
+/* 5. The Submit Button */
+.send-btn {
+    background-color: #f4b400 !important; /* Voltix Gold */
+    color: #000000 !important;
+    border: none !important;
+    padding: 15px 40px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
