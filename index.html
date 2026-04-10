@@ -224,38 +224,31 @@
         </div>
 
         <!-- RIGHT SIDE -->
-      <form action="https://formspree.io/f/xwvwjjgo" method="POST" class="contact-form">
-  
-  <div class="form-row">
-    <div style="flex: 1;">
-      <input type="text" name="Vorname" placeholder="Vorname" required>
-    </div>
-    <div style="flex: 1;">
-      <input type="text" name="Nachname" placeholder="Nachname" required>
+    <div class="contact-form-wrapper">
+        <h2 class="form-title">Inquiry</h2> <form action="https://formspree.io/f/xwvwjjgo" method="POST" class="contact-form">
+          <div class="form-row">
+            <input type="text" name="Vorname" placeholder="Vorname" required>
+            <input type="text" name="Nachname" placeholder="Nachname" required>
+          </div>
+          <input type="email" name="Email" placeholder="Deine E-Mail" required>
+          <input type="text" name="Betreff" placeholder="Betreff">
+          <textarea name="Nachricht" placeholder="Deine Nachricht" required></textarea>
+
+          <label class="checkbox-container">
+            <input type="checkbox" name="Datenschutz" required>
+            <span class="checkmark"></span>
+            <span class="checkbox-text">Ich habe die Datenschutzerklärung gelesen und akzeptiere diese.</span>
+          </label>
+
+          <div class="button-wrapper">
+            <button type="submit" class="send-btn">SENDEN</button>
+          </div>
+        </form>
+      </div>
+
     </div>
   </div>
-  
-  <input type="email" name="Email" placeholder="Deine E-Mail" required>
-  <input type="text" name="Betreff" placeholder="Betreff">
-  
-  <textarea name="Nachricht" placeholder="Deine Nachricht" required></textarea>
-
-  <label class="checkbox-container">
-    <input type="checkbox" name="Datenschutz_Akzeptiert" required>
-    <span class="checkmark"></span>
-    <span class="checkbox-text">Ich habe die Datenschutzerklärung gelesen und akzeptiere diese.</span>
-  </label>
-
-  <div class="button-wrapper">
-    <button type="submit" class="send-btn">SENDEN</button>
-  </div>
-</form>
-    </div>
-    
-
-    </div>
 </section>
-
 
   </div>
 </section>
