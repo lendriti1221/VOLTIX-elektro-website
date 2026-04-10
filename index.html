@@ -224,27 +224,34 @@
         </div>
 
         <!-- RIGHT SIDE -->
-        <div class="contact-form-wrapper">
-            <h2 class="centered-heading" data-translate="contact_inquiry_title">Inquiry</h2>
+      <form action="https://formspree.io/f/xwvwjjgo" method="POST" class="contact-form">
+  
+  <div class="form-row">
+    <div style="flex: 1;">
+      <input type="text" name="Vorname" placeholder="Vorname" required>
+    </div>
+    <div style="flex: 1;">
+      <input type="text" name="Nachname" placeholder="Nachname" required>
+    </div>
+  </div>
+  
+  <input type="email" name="Email" placeholder="Deine E-Mail" required>
+  <input type="text" name="Betreff" placeholder="Betreff">
+  
+  <textarea name="Nachricht" placeholder="Deine Nachricht" required></textarea>
 
-            <form>
-                <div class="form-row">
-                    <input type="text" data-translate="placeholder_fname" placeholder="First Name*" required>
-                    <input type="text" data-translate="placeholder_lname" placeholder="Last Name*" required>
-                </div>
+  <label class="checkbox-container">
+    <input type="checkbox" name="Datenschutz_Akzeptiert" required>
+    <span class="checkmark"></span>
+    <span class="checkbox-text">Ich habe die Datenschutzerklärung gelesen und akzeptiere diese.</span>
+  </label>
 
-                <div class="form-row">
-                    <input type="tel" data-translate="placeholder_phone" placeholder="Phone Number*" required>
-                    <input type="email" data-translate="placeholder_email" placeholder="Email*" required>
-                </div>
-
-                <textarea data-translate="placeholder_msg" placeholder="Message*" rows="5"></textarea>
-
-                <div class="button-wrapper">
-                    <button type="submit" class="send-btn" data-translate="contact_send_btn">SEND</button>
-                </div>
-            </form>
-        </div>
+  <div class="button-wrapper">
+    <button type="submit" class="send-btn">SENDEN</button>
+  </div>
+</form>
+    </div>
+    
 
     </div>
 </section>
