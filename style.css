@@ -1455,3 +1455,37 @@ a {
 .send-btn:hover {
     background-color: #ffcc33;
 }
+/* --- CONTACT FORM TEXT VISIBILITY --- */
+#contact {
+    background-color: #0d0d0d !important;
+    color: #ffffff !important; /* Forces all text in this section to white */
+}
+
+.contact-form-wrapper h2, 
+.contact-info h2 {
+    color: #ffffff !important;
+}
+
+/* Style for the text next to the checkbox */
+.checkbox-text {
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 10px;
+    line-height: 1.4;
+    display: inline-block;
+}
+
+/* Ensure placeholder text inside inputs is visible but slightly faded */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbbbbb;
+}
+
+/* Fix for the checkbox labels */
+.checkbox-container {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
