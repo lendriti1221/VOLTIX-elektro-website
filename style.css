@@ -419,64 +419,6 @@ body {
     background: none;
     cursor: pointer;
 }
-/* --- FIXED CONTACT SECTION --- */
-.contact-section {
-    padding: 80px 0;
-    background-color: #0d0d0d; /* Force section background to black */
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 30px auto 0;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    background: #1a1a1a; /* Dark gray box so it stands out from the black bg */
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-}
-
-.contact-form input,
-.contact-form textarea {
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #444;
-    background-color: #222; /* Dark input fields */
-    color: #ffffff;         /* White text inside inputs */
-    font-size: 16px;
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-/* Fix for the grid and the bracket error you had */
-.contact-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px;
-}
-
-.contact-info, .contact-form-container {
-    flex: 1;
-}
-
-/* Checkbox Text Visibility */
-.checkbox-text {
-    color: #ffffff !important;
-    font-size: 14px;
-    margin-left: 10px;
-}
-
-.contact-form-container h2 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
 
 
 /* TRUST SECTION */
@@ -1529,4 +1471,40 @@ a {
 input::placeholder, 
 textarea::placeholder {
     color: #888 !important;
+}
+    /* --- THE FINAL DARK FORM FIX --- */
+#contact, .contact-section {
+    background-color: #0d0d0d !important; /* Forces background to Black */
+    color: #ffffff !important;           /* Forces text to White */
+}
+
+.contact-form {
+    background: #1a1a1a !important;      /* Dark grey box */
+    padding: 40px !important;
+    border-radius: 12px !important;
+    border: 1px solid #333 !important;
+}
+
+/* Fix the inputs so they aren't white-on-white */
+.contact-form input, 
+.contact-form textarea {
+    background-color: #2a2a2a !important; 
+    color: #ffffff !important; 
+    border: 1px solid #444 !important;
+    margin-bottom: 15px !important;
+}
+
+/* Force the Checkbox text to be visible */
+.checkbox-text {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ensure headings aren't black */
+.contact-form-wrapper h2, 
+.contact-info h2, 
+.centered-heading {
+    color: #ffffff !important;
 }
