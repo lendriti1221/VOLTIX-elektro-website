@@ -1912,3 +1912,34 @@ textarea::placeholder {
         top: 180px !important; 
     }
 }
+/* --- MOBILE MENU SCROLL & SIZE FIX --- */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+        flex-direction: column !important;
+        position: absolute !important;
+        top: 180px !important; /* Matches your tall navbar */
+        left: 0 !important;
+        width: 100% !important;
+        background-color: #000000 !important;
+        
+        /* SCROLL FIX */
+        max-height: calc(100vh - 180px) !important; /* Tells menu to only take remaining screen space */
+        overflow-y: auto !important; /* Adds a scrollbar INSIDE the menu if needed */
+        padding: 20px 0 !important;
+        z-index: 9999 !important;
+    }
+
+    .nav-links.show {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        margin: 10px 0 !important; /* Reduce space between links so they fit better */
+    }
+
+    .nav-links li a {
+        font-size: 1.1rem !important; /* Slightly smaller text for better fit */
+        padding: 10px !important;
+    }
+}
