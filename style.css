@@ -75,73 +75,22 @@ body {
 }
 
 /* NAVBAR */
-/* --- DESKTOP & GENERAL STYLES --- */
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
-    background: #000000; /* Pure Black */
-    height: 90px; /* Increased height so logo doesn't squish */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2000;
+    padding: 15px 40px;
+    background: rgb(0, 0, 0); /* Slightly darker, more opaque */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers logo and text */
-    justify-content: center;
-    flex-grow: 1; /* Pushes logo to the middle */
-}
-
-.logo {
-    height: 50px; /* Adjust this to fit your logo nicely */
-    width: auto;
-    object-fit: contain;
-}
-/* --- MOBILE SPECIFIC FIXES --- */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: flex !important;
-        order: 2; /* Moves hamburger to the right */
-    }
-
-    /* This makes the menu background PITCH BLACK when opened */
-    .nav-links {
-        display: none !important;
-        flex-direction: column;
-        position: absolute;
-        top: 90px; /* Matches navbar height */
-        left: 0;
-        width: 100%;
-        background: #000000 !important; /* Pure Black background */
-        padding: 30px 0;
-        text-align: center;
-        z-index: 1000;
-        border-bottom: 2px solid #f4b400; /* Optional gold line at bottom */
-    }
-
-    .nav-links.show {
-        display: flex !important;
-    }
-
-    .nav-links li a {
-        font-size: 1.2rem;
-        color: white !important;
-        padding: 15px 0;
-        display: block;
-    }
-
-    /* Adjusting logo container for mobile centering */
-    .logo-container {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); /* Perfectly centers logo on the screen */
-    }
-}
+/* ... (Logo and Nav Links styles remain similar, updated colors) */
+.logo { width: 250px; margin-right: 70px; }
+.company-name { font-size: 0px; font-weight: 0; }
 
 .nav-links { list-style: none; display: flex; align-items: center; }
 .nav-links li { margin: 0 15px; }
@@ -531,7 +480,7 @@ footer {
     .about-hero-content h2 {
         font-size: 28px !important;
     }
-    
+
     .about-hero {
         height: 40vh !important; /* Make hero shorter on mobile */
     }
@@ -664,6 +613,16 @@ footer {
 
 /* RESPONSIVENESS */
 @media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .nav-links {
+        margin-top: 15px;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
     .hero h2 {
         font-size: 40px;
     }
@@ -826,6 +785,19 @@ input, textarea {
 }
 
 
+/* Unified Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;    /* Matches your service page padding */
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: auto;        /* Changed from 80px to auto to allow the logo to define the height */
+}
+
 /* Unified Logo Styles */
 .logo, .logo-container img {
     height: 140px;       /* Matches the service page logo height */
@@ -902,7 +874,20 @@ a {
     }
 
     /* 2. Fix the Header/Nav (The black bar in your first photo) */
-  
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Wraps links so they don't go off-screen */
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+        margin-top: 10px;
+    }
 
     /* 3. Force Centering on All Sections */
     .container, .about-content-centered, .mission-section {
@@ -970,7 +955,24 @@ a {
         line-height: 1.2;
     }
 
-  
+    /* 3. Fix the Navbar & Logo */
+    .navbar {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 15px !important;
+    }
+
+    .logo {
+        height: 60px !important; /* Makes logo fit on phone */
+        width: auto !important;
+        margin-bottom: 10px !important;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
 
     /* 4. Fix Grids (Services, Values, Expertise) */
     /* This stops them from being 'everywhere' and stacks them neatly */
@@ -1004,12 +1006,57 @@ a {
         width: 100% !important;
         padding: 10px !important;
     }
-    
+
     .centered-heading {
         font-size: 1.6rem !important;
     }
+/* --- DEEP CLEAN MOBILE NAVBAR --- */
+@media screen and (max-width: 768px) {
+    /* Force the black bar to be smaller */
+    header, .navbar {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px 0 !important;
+        height: auto !important;
+        min-height: unset !important;
+        background: #000 !important;
+    }
 
+    /* Force the logo to shrink */
+    .logo, .logo-container img, .navbar img {
+        height: 45px !important; /* Smaller height */
+        width: auto !important;
+        margin: 0 auto 10px auto !important;
+        max-width: 180px !important;
+        display: block !important;
+    }
 
+    /* Force the links to stay in one or two neat rows */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px 15px !important;
+        padding: 0 10px !important;
+        margin: 0 !important;
+        list-style: none !important;
+        width: 100% !important;
+    }
+
+    .nav-links li {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-links a {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        white-space: nowrap !important;
+    }
 
     /* Hide the language switcher text or shrink it to fit */
     .lang-switch {
@@ -1026,7 +1073,15 @@ a {
         position: relative;
     }
 
-    
+    /* 2. Fix the Navbar (The biggest issue) */
+    .navbar {
+        flex-direction: column !important;
+        padding: 15px 10px !important;
+        height: auto !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+
     .logo {
         width: 160px !important; /* Shrink logo for vertical view */
         height: auto !important;
@@ -1213,8 +1268,39 @@ a {
         margin: 0 auto !important;
     }
 
-    
+    /* NAVBAR FIX */
+    .navbar {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px !important;
+        width: 100% !important;
+    }
 
+    .logo {
+        width: 150px !important;
+        height: auto !important;
+        margin-bottom: 10px !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .nav-links li {
+        margin: 4px !important;
+    }
+
+    .nav-links a {
+        font-size: 13px !important;
+        white-space: nowrap !important;
+    }
 
     /* HERO FIX */
     .hero, .about-hero {
@@ -1551,7 +1637,18 @@ textarea::placeholder {
         margin: 15px 0;
     }
 }
- 
+    /* General Navbar fixes */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0d0d0d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
 .logo-container {
     display: flex;
@@ -1562,53 +1659,125 @@ textarea::placeholder {
 .logo {
     height: 40px; /* Force small logo on mobile */
 }
-/* DESKTOP STYLES (Default) */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    background: #0d0d0d;
-    height: 80px;
-}
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-.menu-toggle { display: none; }
 
-/* MOBILE STYLES (The Fix) */
+/* Hide Hamburger on Desktop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f4b400; /* Voltix Gold */
+    border-radius: 2px;
+}
+
+/* MOBILE STYLES */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: flex !important; /* Show hamburger */
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
+    .company-name {
+        font-size: 1.2rem; /* Make title smaller */
     }
-    
-    .bar {
-        width: 25px;
-        height: 3px;
-        background: #f4b400;
-        border-radius: 2px;
+
+    .menu-toggle {
+        display: flex; /* Show Hamburger */
     }
 
     .nav-links {
-        display: none !important; /* Force hide the row of links */
+        display: none; /* Hide links initially */
         flex-direction: column;
         position: absolute;
-        top: 80px;
+        top: 100%; /* Sits right under the nav */
         left: 0;
         width: 100%;
         background: #1a1a1a;
         padding: 20px 0;
-        text-align: center;
-        z-index: 1000;
+        border-top: 2px solid #f4b400;
     }
 
-    /* This class is what the JS will add */
-    .nav-links.show {
-        display: flex !important; 
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+/* --- MOBILE NAVIGATION FIX --- */
+@media screen and (max-width: 768px) {
+    /* 1. Force the Navbar to be a single row */
+    .navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        height: 70px;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    /* 2. Hide the links by default on mobile */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: #0d0d0d;
+        padding: 20px 0;
+        z-index: 1000;
+        border-bottom: 2px solid #f4b400;
+    }
+
+    /* 3. The class the JS will toggle */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* 4. Show the Hamburger */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #f4b400; /* Gold */
+        border-radius: 5px;
+    }
+
+    /* 5. Prevent logo squishing */
+    .logo-container {
+        max-width: 70%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        height: 35px !important;
+        width: auto;
+    }
+
+    .company-name {
+        font-size: 1rem !important;
+        white-space: nowrap;
+    }
+}
+
+/* Desktop Fix: Hide Hamburger on big screens */
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+    .nav-links {
+        display: flex !important;
     }
 }
