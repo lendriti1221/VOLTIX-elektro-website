@@ -677,16 +677,39 @@ const translations = {
 
 };
 
+// --- 1. THE DICTIONARY (For your Home Page) ---
+// Make sure this contains the keys your Home Page uses (data-translate="...")
+const translations = {
+    en: {
+        contact_where_title: "Where are we located",
+        contact_hours_title: "Opening Hours",
+        // ADD YOUR HOME PAGE KEYS HERE
+    },
+    de: {
+        contact_where_title: "Wo wir uns befinden",
+        contact_hours_title: "Öffnungszeiten",
+        // ADD YOUR HOME PAGE KEYS HERE
+    }
+};
+
+// --- 2. THE MASTER FUNCTION ---
 function setLanguage(lang) {
+    console.log("Applying language: " + lang);
     localStorage.setItem('selectedLanguage', lang);
 
-    // Select all elements that have a 'data-en' attribute
-    const elements = document.querySelectorAll('[data-en]');
+    // FIX A: Handle Home Page (Dictionary Method)
+    const translateElements = document.querySelectorAll('[data-translate]');
+    translateElements.forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            el.innerText = translations[lang][key];
+        }
+    });
 
-    elements.forEach(el => {
-        // Get the text from data-en or data-de
+    // FIX B: Handle Contact Section (Inline Method)
+    const inlineElements = document.querySelectorAll('[data-en]');
+    inlineElements.forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
-
         if (translation) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = translation;
@@ -694,6 +717,20 @@ function setLanguage(lang) {
                 el.innerText = translation;
             }
         }
+    });
+
+    document.documentElement.lang = lang;
+}
+
+// --- 3. THE TRIGGERS ---
+function changeLanguage(lang) {
+    setLanguage(lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
+});
     });
 }
 
