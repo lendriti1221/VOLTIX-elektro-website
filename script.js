@@ -775,3 +775,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     setLanguage(savedLang);
 });
+
+// --- HAMBURGER MENU LOGIC ---
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        
+        // Optional: Animate hamburger to an 'X'
+        mobileMenu.classList.toggle('is-active');
+    });
+}
+
+// Close menu when a link is clicked (useful for one-page sites)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navList.classList.remove('active');
+    });
+});
