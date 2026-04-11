@@ -2084,3 +2084,45 @@ textarea::placeholder {
         width: 100px !important;
     }
 }
+/* --- THE "5PX" ULTRA-COMPACT RESET --- */
+@media screen and (max-width: 768px) {
+    /* 1. Shrink the black header area */
+    .navbar {
+        height: 70px !important; /* Smaller bar to match the tight menu */
+        padding: 5px !important;
+    }
+
+    .logo {
+        height: 40px !important; /* Smaller logo for the 70px bar */
+    }
+
+    /* 2. Remove whitespace from the menu container */
+    .nav-links {
+        padding: 5px !important; /* Only 5px padding overall */
+        top: 70px !important;   /* Starts exactly where the navbar ends */
+        gap: 0 !important;
+    }
+
+    /* 3. Tighten every menu item */
+    .nav-links li {
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: 0.5px solid #1a1a1a !important;
+    }
+
+    .nav-links li a {
+        padding: 5px 0 !important; /* The 5px padding you requested */
+        font-size: 0.8rem !important; 
+        line-height: 1 !important;
+        display: block !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* 4. Match the language switcher */
+    .lang-switch {
+        margin: 5px 0 !important;
+        padding: 5px !important;
+        font-size: 0.7rem !important;
+        width: 80px !important;
+    }
+}
