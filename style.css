@@ -1810,29 +1810,36 @@ textarea::placeholder {
         width: auto !important;
 
     }
- .logo-container {
+/* --- MOBILE LOGO UPSIZE ONLY --- */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        /* This ensures the container doesn't restrict the logo height */
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
 
-    display: flex !important;
+    .logo {
+        /* Force the logo to be much bigger */
+        height: 110px !important; 
+        width: auto !important;
+        
+        /* Removes any "ghost" constraints from previous code */
+        max-height: 120px !important; 
+        max-width: 90% !important;
+        
+        /* Keeps the image clear and un-stretched */
+        object-fit: contain !important;
+        margin: 0 auto !important;
+        padding: 5px 0 !important;
+    }
 
-    flex-direction: column !important;
-
-    align-items: center !important;
-
-    justify-content: center !important;
-
-    margin: 0 auto !important;
-
+    .company-name {
+        /* Matches the text size to the bigger logo */
+        font-size: 0.9rem !important;
+        margin-top: 5px !important;
+        font-weight: 500 !important;
+    }
 }
-
-
-.logo {
-
-    height: 120px !important; /* Bigger logo to fill the bigger space */
-
-    width: auto !important;
-
-    margin-bottom: 8px !important;
-
-    object-fit: contain !important;
-
-} 
