@@ -1810,4 +1810,29 @@ textarea::placeholder {
         width: auto !important;
 
     }
+ .logo-container {
 
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    margin: 0 auto !important;
+
+}
+
+
+.logo {
+
+    height: 120px !important; /* Bigger logo to fill the bigger space */
+
+    width: auto !important;
+
+    margin-bottom: 8px !important;
+
+    object-fit: contain !important;
+
+} 
