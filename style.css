@@ -2054,3 +2054,33 @@ textarea::placeholder {
         justify-content: flex-start !important;
     }
 }
+/* --- ULTRA COMPACT MOBILE MENU --- */
+@media screen and (max-width: 768px) {
+    /* 1. Shrink the gap at the top of the menu */
+    .nav-links {
+        padding-top: 20px !important; 
+        padding-bottom: 10px !important;
+    }
+
+    /* 2. Make the text small and professional */
+    .nav-links li a {
+        font-size: 0.85rem !important; /* Small, sleek font */
+        padding: 8px 0 !important;    /* This is half the size of the last one */
+        letter-spacing: 2px !important;
+        font-weight: 400 !important;
+        text-transform: uppercase;
+    }
+
+    /* 3. Make the border lines very thin */
+    .nav-links li {
+        border-bottom: 0.5px solid #1a1a1a !important; 
+    }
+
+    /* 4. Keep the Language Switcher small to match */
+    .lang-switch {
+        margin-top: 15px !important;
+        font-size: 0.75rem !important;
+        padding: 5px !important;
+        width: 100px !important;
+    }
+}
