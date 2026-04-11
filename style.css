@@ -1705,57 +1705,72 @@ textarea::placeholder {
         margin: 15px 0;
     }
 }
-/* --- MOBILE HEADER: RIGHT MENU & LARGER CENTER LOGO --- */
+/* --- THE FINAL ULTRA-TINY MOBILE RESET --- */
 @media screen and (max-width: 768px) {
-    /* 1. Header Height */
+    /* 1. Slim Header */
     .navbar {
-        height: 125px !important; /* Slightly taller for the bigger logo */
-        padding: 0 20px !important;
+        height: 80px !important; /* Total header height */
+        padding: 5px !important;
         display: flex !important;
         align-items: center !important;
-    }
-
-    /* 2. Centered & Larger Logo */
-    .logo-container {
-        position: absolute !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        margin: 0 !important;
     }
 
     .logo {
-        height: 125px !important; /* Significantly larger as requested */
+        height: 45px !important; /* Tiny logo */
         width: auto !important;
     }
 
     .company-name {
-        font-size: 0.8rem !important;
-        margin-top: 15px !important;
+        font-size: 0.7rem !important; /* Tiny text under logo */
+        margin-top: 2px !important;
     }
 
-    /* 3. Hamburger Button back to the RIGHT */
-    .menu-toggle {
-        position: absolute !important;
-        right: 20px !important; /* Pinned back to the right */
-        left: auto !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        display: flex !important;
-        z-index: 10000 !important;
-    }
-
-    /* 4. The Menu Links */
+    /* 2. Tiny Menu Container */
     .nav-links {
-        top: 110px !important; /* Matches new navbar height */
-        padding: 20px 25px !important;
+        display: none !important;
+        flex-direction: column !important;
+        position: absolute !important;
+        top: 80px !important; /* Matches navbar height exactly */
+        left: 0 !important;
+        width: 100% !important;
+        background-color: #000000 !important;
+        padding: 5px 0 !important; /* Minimum vertical space */
+        gap: 0 !important;
+        max-height: calc(100vh - 80px) !important;
+        overflow-y: auto !important;
+    }
+
+    .nav-links.show {
+        display: flex !important;
+    }
+
+    /* 3. The "5px" Logic for Links */
+    .nav-links li {
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: 1px solid #1a1a1a !important;
+        width: 100% !important;
     }
 
     .nav-links li a {
-        padding: 15px 0 !important; /* Keeps that tight 5px-style spacing */
-        font-size: 0.9rem !important;
-        letter-spacing: 1.5px !important;
+        padding: 5px 15px !important; /* Only 5px top/bottom */
+        font-size: 0.75rem !important; /* Very small text */
+        line-height: 1.2 !important;
+        display: block !important;
+        text-align: left !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* 4. Tiny Language Switch */
+    .lang-switch {
+        margin: 5px 15px !important;
+        padding: 3px !important;
+        font-size: 0.6rem !important;
+        width: 70px !important;
+    }
+
+    /* 5. Hamburger Alignment */
+    .menu-toggle {
+        right: 15px !important;
     }
 }
