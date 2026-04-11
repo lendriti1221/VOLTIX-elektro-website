@@ -75,22 +75,73 @@ body {
 }
 
 /* NAVBAR */
+/* --- DESKTOP & GENERAL STYLES --- */
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background: rgb(0, 0, 0); /* Slightly darker, more opaque */
-    backdrop-filter: blur(5px);
-    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    padding: 10px 5%;
+    background: #000000; /* Pure Black */
+    height: 90px; /* Increased height so logo doesn't squish */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
 }
 
-/* ... (Logo and Nav Links styles remain similar, updated colors) */
-.logo { width: 250px; margin-right: 70px; }
-.company-name { font-size: 0px; font-weight: 0; }
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers logo and text */
+    justify-content: center;
+    flex-grow: 1; /* Pushes logo to the middle */
+}
+
+.logo {
+    height: 50px; /* Adjust this to fit your logo nicely */
+    width: auto;
+    object-fit: contain;
+}
+/* --- MOBILE SPECIFIC FIXES --- */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex !important;
+        order: 2; /* Moves hamburger to the right */
+    }
+
+    /* This makes the menu background PITCH BLACK when opened */
+    .nav-links {
+        display: none !important;
+        flex-direction: column;
+        position: absolute;
+        top: 90px; /* Matches navbar height */
+        left: 0;
+        width: 100%;
+        background: #000000 !important; /* Pure Black background */
+        padding: 30px 0;
+        text-align: center;
+        z-index: 1000;
+        border-bottom: 2px solid #f4b400; /* Optional gold line at bottom */
+    }
+
+    .nav-links.show {
+        display: flex !important;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+        color: white !important;
+        padding: 15px 0;
+        display: block;
+    }
+
+    /* Adjusting logo container for mobile centering */
+    .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); /* Perfectly centers logo on the screen */
+    }
+}
 
 .nav-links { list-style: none; display: flex; align-items: center; }
 .nav-links li { margin: 0 15px; }
