@@ -1716,7 +1716,7 @@ textarea::placeholder {
     }
 
     .logo {
-        height: 115px !important; /* Tiny logo */
+        height: 100px !important; /* Tiny logo */
         width: auto !important;
     }
 
@@ -1730,7 +1730,7 @@ textarea::placeholder {
         display: none !important;
         flex-direction: column !important;
         position: absolute !important;
-        top: 120px !important; /* Matches navbar height exactly */
+        top: 100px !important; /* Matches navbar height exactly */
         left: 0 !important;
         width: 100% !important;
         background-color: #000000 !important;
