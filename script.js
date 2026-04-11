@@ -677,21 +677,25 @@ const translations = {
     
 };
 
-// --- LANGUAGE LOGIC ---
 function setLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
-    const elements = document.querySelectorAll('[data-translate]');
+    
+    // Select all elements that have a 'data-en' attribute
+    const elements = document.querySelectorAll('[data-en]');
 
     elements.forEach(el => {
-        const key = el.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
+        // Get the text from data-en or data-de
+        const translation = el.getAttribute(`data-${lang}`);
+        
+        if (translation) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = translations[lang][key];
+                el.placeholder = translation;
             } else {
-                el.innerText = translations[lang][key];
+                el.innerText = translation;
             }
         }
     });
+}
 
     // Update Modal Data on Service Boxes
     const serviceBoxes = document.querySelectorAll('.service-box');
