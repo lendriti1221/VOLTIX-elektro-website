@@ -1926,7 +1926,7 @@ textarea::placeholder {
         /* SCROLL FIX */
         max-height: calc(100vh - 120px) !important; /* Tells menu to only take remaining screen space */
         overflow-y: auto !important; /* Adds a scrollbar INSIDE the menu if needed */
-        padding: 20px 0 !important;
+        padding: 5px 0 !important;
         z-index: 9999 !important;
     }
 
@@ -1939,8 +1939,8 @@ textarea::placeholder {
     }
 
     .nav-links li a {
-        font-size: 1.1rem !important; /* Slightly smaller text for better fit */
-        padding: 10px !important;
+        font-size: 0.6rem !important; /* Slightly smaller text for better fit */
+        padding: 5px !important;
     }
 }
 /* --- MOBILE LOGO OVERSIZE --- */
@@ -2009,8 +2009,8 @@ textarea::placeholder {
 
     .nav-links li a {
         display: block;
-        font-size: 1rem !important; /* Large, clear text */
-        padding: 11px 0 !important;
+        font-size: 0.6rem !important; /* Large, clear text */
+        padding: 5px 0 !important;
         color: white !important;
         font-weight: 400 !important;
     }
@@ -2027,8 +2027,8 @@ textarea::placeholder {
         background: transparent;
         color: white;
         border: 1px solid #444;
-        padding: 10px;
-        font-size: 1rem;
+        padding: 5px;
+        font-size: 0.6rem;
         border-radius: 4px;
     }
 }
