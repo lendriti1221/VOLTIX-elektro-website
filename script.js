@@ -695,22 +695,23 @@ const translations = {
 
 };
 
-// 2. THE MASTER TRANSLATION FUNCTION
+// --- 2. THE MASTER TRANSLATION FUNCTION ---
 function setLanguage(lang) {
     console.log("Switching to: " + lang);
     localStorage.setItem('selectedLanguage', lang);
     document.documentElement.lang = lang;
 
-    // FIX A: Home Page (Dictionary Method using data-translate)
+    // FIX A: Home Page (Dictionary Method)
     const translateElements = document.querySelectorAll('[data-translate]');
     translateElements.forEach(el => {
         const key = el.getAttribute('data-translate');
+        // Added a safety check to make sure translations[lang] exists
         if (translations[lang] && translations[lang][key]) {
             el.innerText = translations[lang][key];
         }
     });
 
-    // FIX B: Contact Section (Inline Method using data-en/data-de)
+    // FIX B: Contact Section (Inline Method)
     const inlineElements = document.querySelectorAll('[data-en]');
     inlineElements.forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
@@ -728,22 +729,29 @@ function setLanguage(lang) {
     serviceBoxes.forEach((box, index) => {
         const titleKey = `service_${index + 1}_title`;
         const textKey = `service_${index + 1}_text`;
-        if (translations[lang][titleKey]) box.setAttribute('data-title', translations[lang][titleKey]);
-        if (translations[lang][textKey]) box.setAttribute('data-text', translations[lang][textKey]);
+        if (translations[lang] && translations[lang][titleKey]) {
+            box.setAttribute('data-title', translations[lang][titleKey]);
+        }
+        if (translations[lang] && translations[lang][textKey]) {
+            box.setAttribute('data-text', translations[lang][textKey]);
+        }
     });
 }
 
-// 3. EVENT LISTENERS & TRIGGERS
+// --- 3. EVENT LISTENERS ---
 function changeLanguage(lang) {
     setLanguage(lang);
 }
 
+// Only need ONE DOMContentLoaded listener
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     setLanguage(savedLang);
+    
+    // Hamburger menu logic would go here
 });
 
-// 4. MODAL LOGIC (Cleaned)
+// --- 4. MODAL LOGIC ---
 function openModal(event) {
     const box = event.currentTarget;
     const title = box.getAttribute('data-title');
@@ -752,7 +760,7 @@ function openModal(event) {
     const modalText = document.getElementById('modalText');
     const modalOverlay = document.getElementById('modalOverlay');
 
-    if (title && text) {
+    if (title && text && modalOverlay) {
         modalTitle.innerText = title;
         modalText.innerText = text;
         modalOverlay.style.display = 'flex';
@@ -761,8 +769,11 @@ function openModal(event) {
 }
 
 function closeModal() {
-    document.getElementById('modalOverlay').style.display = 'none';
-    document.body.style.overflow = 'auto';
+    const modal = document.getElementById('modalOverlay');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
 }
 
 window.onclick = function(event) {
@@ -770,8 +781,3 @@ window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
     }
-};
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    setLanguage(savedLang);
-});
