@@ -695,23 +695,22 @@ const translations = {
 
 };
 
-// --- 2. THE MASTER TRANSLATION FUNCTION ---
+// 2. THE MASTER TRANSLATION FUNCTION
 function setLanguage(lang) {
     console.log("Switching to: " + lang);
     localStorage.setItem('selectedLanguage', lang);
     document.documentElement.lang = lang;
 
-    // FIX A: Home Page (Dictionary Method)
+    // FIX A: Home Page / Desktop Nav (data-translate)
     const translateElements = document.querySelectorAll('[data-translate]');
     translateElements.forEach(el => {
         const key = el.getAttribute('data-translate');
-        // Added a safety check to make sure translations[lang] exists
         if (translations[lang] && translations[lang][key]) {
             el.innerText = translations[lang][key];
         }
     });
 
-    // FIX B: Contact Section (Inline Method)
+    // FIX B: Contact Section / Inline (data-en/data-de)
     const inlineElements = document.querySelectorAll('[data-en]');
     inlineElements.forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
@@ -724,7 +723,7 @@ function setLanguage(lang) {
         }
     });
 
-    // Update Modal Data for Service Boxes
+    // Update Modal Data
     const serviceBoxes = document.querySelectorAll('.service-box');
     serviceBoxes.forEach((box, index) => {
         const titleKey = `service_${index + 1}_title`;
@@ -736,33 +735,40 @@ function setLanguage(lang) {
             box.setAttribute('data-text', translations[lang][textKey]);
         }
     });
+
+    // Sync the dropdown value
+    const langSelect = document.querySelector('.lang-switch');
+    if (langSelect) langSelect.value = lang;
 }
 
-// --- 3. EVENT LISTENERS ---
+// 3. EVENT LISTENERS
 function changeLanguage(lang) {
     setLanguage(lang);
 }
 
-// Only need ONE DOMContentLoaded listener
+// 4. INITIALIZATION (One single trigger for everything)
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     setLanguage(savedLang);
-    
-    // Hamburger menu logic would go here
+
+    // Mobile Menu Logic
+    const menuBtn = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (menuBtn && navList) {
+        menuBtn.onclick = () => navList.classList.toggle('show');
+    }
 });
 
-// --- 4. MODAL LOGIC ---
+// 5. MODAL LOGIC
 function openModal(event) {
     const box = event.currentTarget;
     const title = box.getAttribute('data-title');
     const text = box.getAttribute('data-text');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalText = document.getElementById('modalText');
     const modalOverlay = document.getElementById('modalOverlay');
 
     if (title && text && modalOverlay) {
-        modalTitle.innerText = title;
-        modalText.innerText = text;
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalText').innerText = text;
         modalOverlay.style.display = 'flex';
         document.body.style.overflow = 'hidden'; 
     }
@@ -778,6 +784,5 @@ function closeModal() {
 
 window.onclick = function(event) {
     const modal = document.getElementById('modalOverlay');
-    if (event.target == modal) {
-        closeModal();
-    }
+    if (event.target == modal) closeModal();
+};
