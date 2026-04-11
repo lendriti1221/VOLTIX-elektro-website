@@ -20,7 +20,17 @@ body {
     color: var(--color-text);
     line-height: 1.6;
 }
-
+/* Center the privacy policy container */
+.contact-container p {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stacks checkbox above text */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    color: white;
+}
 /* Base Container for Content Centering */
 .container {
     max-width: 1200px;
