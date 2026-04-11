@@ -1705,424 +1705,72 @@ textarea::placeholder {
         margin: 15px 0;
     }
 }
-    /* --- FINAL HAMBURGER & BLACK MENU FIX --- */
+/* --- THE FINAL ULTRA-TINY MOBILE RESET --- */
 @media screen and (max-width: 768px) {
-    /* Force the background to be Pure Black */
-    #nav-list.nav-links {
-        display: none !important; /* Hidden until toggled */
-        flex-direction: column !important;
-        position: absolute !important;
-        top: 90px !important; /* Adjust to match your header height */
-        left: 0 !important;
-        width: 100% !important;
-        background-color: #000000 !important; /* PURE BLACK */
-        padding: 50px 0 !important;
-        text-align: center !important;
-        z-index: 9999 !important;
-        border-bottom: 2px solid #f4b400 !important;
-    }
-
-    /* The class added by JavaScript */
-    #nav-list.nav-links.show {
-        display: flex !important;
-    }
-
-    /* Style the links inside the black menu */
-    #nav-list.nav-links li {
-        margin: 20px 0 !important;
-        list-style: none !important;
-    }
-
-    #nav-list.nav-links li a {
-        color: #ffffff !important;
-        font-size: 1rem !important;
-        text-decoration: none !important;
-    }
-
-    /* Force the hamburger icon to show */
-    #mobile-menu.menu-toggle {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 5px !important;
-        cursor: pointer !important;
-        z-index: 10000 !important;
-    }
-
-    .bar {
-        width: 30px !important;
-        height: 3px !important;
-        background-color: #f4b400 !important;
-        border-radius: 2px !important;
-    }
-}
-    /* --- HAMBURGER ON THE RIGHT / LOGO CENTERED --- */
-@media screen and (max-width: 768px) {
-    /* 1. Position the Hamburger Button on the Right */
-    #mobile-menu.menu-toggle {
-        display: flex !important;
-        position: absolute !important;
-        right: 20px !important; /* Forces it to the right */
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 10000 !important;
-    }
-
-    /* 2. Ensure Logo stays in the Center */
-    .logo-container {
-        position: absolute !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: auto !important;
-    }
-
-    /* 3. Pure Black Menu Fix */
-    #nav-list.nav-links {
-        display: none !important;
-        flex-direction: column !important;
-        position: absolute !important;
-        top: 90px !important; /* Adjust if your navbar is thinner */
-        left: 0 !important;
-        width: 100% !important;
-        background-color: #000000 !important; /* PURE BLACK */
-        padding: 20px 0 !important;
-        text-align: center !important;
-        z-index: 9999 !important;
-        border-bottom: 2px solid #f4b400 !important;
-    }
-
-    /* Show menu when toggled */
-    #nav-list.nav-links.show {
-        display: flex !important;
-    }
-
-    /* Styling for links inside the black menu */
-    #nav-list.nav-links li a {
-        color: #ffffff !important;
-        font-size: 1.4rem !important;
-        padding: 5px 0 !important;
-        display: block !important;
-    }
-}
-/* --- EXPANDED BLACK NAVBAR --- */
-.navbar {
-    display: flex !important;
-    justify-content: center !important; 
-    align-items: center !important;
-    background-color: #000000 !important; /* Pure Black */
-    height: 120px !important; /* Much taller black area */
-    padding: 20px !important;
-    position: fixed !important;
-    top: 0 !important;
-    width: 100% !important;
-    z-index: 9999 !important;
-    border-bottom: 2px solid #222; /* Subtle separation from content */
-}
-
-.logo-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 auto !important;
-}
-
-.logo {
-    height: 120px !important; /* Bigger logo to fill the bigger space */
-    width: auto !important;
-    margin-bottom: 8px !important;
-    object-fit: contain !important;
-}
-
-.company-name {
-    font-size: 1rem !important;
-    color: white !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* --- HAMBURGER ALIGNMENT --- */
-.menu-toggle {
-    position: absolute !important;
-    right: 30px !important; /* Pinned to the right */
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-}
-
-.bar {
-    width: 35px !important; /* Slightly larger bars for the larger nav */
-    height: 3px !important;
-    background-color: #f4b400 !important;
-}
-
-/* --- MOBILE MENU RESET --- */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        top: 120px !important; /* Must match the new navbar height */
-        background-color: #000000 !important;
-        width: 100% !important;
-    }
-}
-/* --- OVERSIZE LOGO FIX --- */
-.navbar {
-    height: 120px !important; /* Making the black area even taller */
-    padding: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.logo-container {
-    height: 100% !important; /* Allow container to use full height */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 0 auto !important;
-}
-
-.logo {
-    height: 110px !important; /* This is the main size control - increase this to make it bigger */
-    width: auto !important;
-    max-height: 120px !important; /* Safety cap */
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    object-fit: contain !important;
-}
-
-.company-name {
-    font-size: 1.1rem !important;
-    margin-top: 10px !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-}
-
-/* Fix hamburger position for the new height */
-.menu-toggle {
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-}
-
-/* Ensure mobile menu doesn't have a gap */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        top: 180px !important; 
-    }
-}
-/* --- MOBILE MENU SCROLL & SIZE FIX --- */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none !important;
-        flex-direction: column !important;
-        position: absolute !important;
-        top: 180px !important; /* Matches your tall navbar */
-        left: 0 !important;
-        width: 100% !important;
-        background-color: #000000 !important;
-        
-        /* SCROLL FIX */
-        max-height: calc(100vh - 120px) !important; /* Tells menu to only take remaining screen space */
-        overflow-y: auto !important; /* Adds a scrollbar INSIDE the menu if needed */
-        padding: 5px 0 !important;
-        z-index: 9999 !important;
-    }
-
-    .nav-links.show {
-        display: flex !important;
-    }
-
-    .nav-links li {
-        margin: 10px 0 !important; /* Reduce space between links so they fit better */
-    }
-
-    .nav-links li a {
-        font-size: 0.6rem !important; /* Slightly smaller text for better fit */
+    /* 1. Slim Header */
+    .navbar {
+        height: 80px !important; /* Total header height */
         padding: 5px !important;
-    }
-}
-/* --- MOBILE LOGO OVERSIZE --- */
-@media screen and (max-width: 768px) {
-    .logo-container {
-        height: auto !important;
-        width: 100% !important;
         display: flex !important;
-        justify-content: center !important;
         align-items: center !important;
-        padding-top: 10px !important;
     }
 
     .logo {
-        /* Force the logo to be much larger on mobile */
-        height: 100px !important; 
+        height: 45px !important; /* Tiny logo */
         width: auto !important;
-        min-height: 100px !important;
-        max-height: 120px !important;
-        
-        /* Remove any old constraints */
-        max-width: 80% !important;
-        object-fit: contain !important;
-        margin: 0 auto !important;
     }
 
     .company-name {
-        font-size: 1.1rem !important; /* Make text bigger to match */
-        margin-top: 8px !important;
-    }
-}
-/* --- SCREENSHOT-STYLE MOBILE MENU --- */
-@media screen and (max-width: 768px) {
-    .navbar {
-        height: 100px !important; /* Slimmer black bar as seen in reference */
-        padding: 0 20px !important;
+        font-size: 0.7rem !important; /* Tiny text under logo */
+        margin-top: 2px !important;
     }
 
-    .logo {
-        height: 50px !important; /* Proper scaling for the slim bar */
-    }
-
+    /* 2. Tiny Menu Container */
     .nav-links {
         display: none !important;
         flex-direction: column !important;
-        position: fixed !important; /* Covers the whole screen */
-        top: 0 !important;
+        position: absolute !important;
+        top: 80px !important; /* Matches navbar height exactly */
         left: 0 !important;
         width: 100% !important;
-        height: 100vh !important;
         background-color: #000000 !important;
-        padding: 80px 30px !important; /* Space for the 'X' button */
-        z-index: 9999 !important;
-        text-align: left !important; /* Left-aligned as per screenshot */
+        padding: 5px 0 !important; /* Minimum vertical space */
+        gap: 0 !important;
+        max-height: calc(100vh - 80px) !important;
+        overflow-y: auto !important;
     }
 
     .nav-links.show {
         display: flex !important;
     }
 
-    .nav-links li {
-        width: 100%;
-        border-bottom: 1px solid #333 !important; /* Thin separators */
-        margin: 0 !important;
-    }
-
-    .nav-links li a {
-        display: block;
-        font-size: 0.6rem !important; /* Large, clear text */
-        padding: 5px 0 !important;
-        color: white !important;
-        font-weight: 400 !important;
-    }
-
-    /* Change "Home" to gold/yellow as seen in reference */
-    .nav-links li:first-child a {
-        color: #f4b400 !important; 
-    }
-
-    /* Style the language selector to match the box in screenshot */
-    .lang-switch {
-        margin-top: 30px !important;
-        width: 100%;
-        background: transparent;
-        color: white;
-        border: 1px solid #444;
-        padding: 5px;
-        font-size: 0.6rem;
-        border-radius: 4px;
-    }
-}
-/* --- SLEEK COMPACT MENU --- */
-@media screen and (max-width: 768px) {
-    /* 1. Make the text smaller */
-    .nav-links li a {
-        font-size: 1.1rem !important; /* Smaller, modern font size */
-        padding: 15px 0 !important; /* This makes the "borders" feel closer together */
-        font-weight: 500 !important; /* Clean, medium thickness */
-        letter-spacing: 1px !important;
-    }
-
-    /* 2. Make the borders/lines thinner and more subtle */
-    .nav-links li {
-        border-bottom: 0.5px solid #333 !important; /* Thin, dark grey line */
-        margin: 0 !important;
-    }
-
-    /* 3. Reduce top padding so the first link isn't too low */
-    .nav-links {
-        padding-top: 50px !important;
-        justify-content: flex-start !important;
-    }
-}
-/* --- ULTRA COMPACT MOBILE MENU --- */
-@media screen and (max-width: 768px) {
-    /* 1. Shrink the gap at the top of the menu */
-    .nav-links {
-        padding-top: 5px !important; 
-        padding-bottom: 5px !important;
-    }
-
-    /* 2. Make the text small and professional */
-    .nav-links li a {
-        font-size: 0.85rem !important; /* Small, sleek font */
-        padding: 8px 0 !important;    /* This is half the size of the last one */
-        letter-spacing: 2px !important;
-        font-weight: 400 !important;
-        text-transform: uppercase;
-    }
-
-    /* 3. Make the border lines very thin */
-    .nav-links li {
-        border-bottom: 0.5px solid #1a1a1a !important; 
-    }
-
-    /* 4. Keep the Language Switcher small to match */
-    .lang-switch {
-        margin-top: 15px !important;
-        font-size: 0.75rem !important;
-        padding: 5px !important;
-        width: 100px !important;
-    }
-}
-/* --- THE "5PX" ULTRA-COMPACT RESET --- */
-@media screen and (max-width: 768px) {
-    /* 1. Shrink the black header area */
-    .navbar {
-        height: 120px !important; /* Smaller bar to match the tight menu */
-        padding: 2px !important;
-    }
-
-    .logo {
-        height: 70px !important; /* Smaller logo for the 70px bar */
-    }
-
-    /* 2. Remove whitespace from the menu container */
-    .nav-links {
-        padding: 5px !important; /* Only 5px padding overall */
-        top: 120px !important;   /* Starts exactly where the navbar ends */
-        gap: 0 !important;
-    }
-
-    /* 3. Tighten every menu item */
+    /* 3. The "5px" Logic for Links */
     .nav-links li {
         margin: 0 !important;
         padding: 0 !important;
         border-bottom: 1px solid #1a1a1a !important;
+        width: 100% !important;
     }
 
     .nav-links li a {
-        padding: 2px 0 !important; /* The 5px padding you requested */
-        font-size: 0.3rem !important; 
-        line-height: 1 !important;
+        padding: 5px 15px !important; /* Only 5px top/bottom */
+        font-size: 0.75rem !important; /* Very small text */
+        line-height: 1.2 !important;
         display: block !important;
+        text-align: left !important;
         letter-spacing: 1px !important;
     }
 
-    /* 4. Match the language switcher */
+    /* 4. Tiny Language Switch */
     .lang-switch {
-        margin: 2px 0 !important;
-        padding: 2px !important;
-        font-size: 0.3rem !important;
-        width: 80px !important;
+        margin: 5px 15px !important;
+        padding: 3px !important;
+        font-size: 0.6rem !important;
+        width: 70px !important;
+    }
+
+    /* 5. Hamburger Alignment */
+    .menu-toggle {
+        right: 15px !important;
     }
 }
