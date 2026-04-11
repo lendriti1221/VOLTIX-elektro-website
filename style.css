@@ -1705,3 +1705,53 @@ textarea::placeholder {
         margin: 15px 0;
     }
 }
+    /* --- FINAL HAMBURGER & BLACK MENU FIX --- */
+@media screen and (max-width: 768px) {
+    /* Force the background to be Pure Black */
+    #nav-list.nav-links {
+        display: none !important; /* Hidden until toggled */
+        flex-direction: column !important;
+        position: absolute !important;
+        top: 90px !important; /* Adjust to match your header height */
+        left: 0 !important;
+        width: 100% !important;
+        background-color: #000000 !important; /* PURE BLACK */
+        padding: 50px 0 !important;
+        text-align: center !important;
+        z-index: 9999 !important;
+        border-bottom: 2px solid #f4b400 !important;
+    }
+
+    /* The class added by JavaScript */
+    #nav-list.nav-links.show {
+        display: flex !important;
+    }
+
+    /* Style the links inside the black menu */
+    #nav-list.nav-links li {
+        margin: 20px 0 !important;
+        list-style: none !important;
+    }
+
+    #nav-list.nav-links li a {
+        color: #ffffff !important;
+        font-size: 1.4rem !important;
+        text-decoration: none !important;
+    }
+
+    /* Force the hamburger icon to show */
+    #mobile-menu.menu-toggle {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        cursor: pointer !important;
+        z-index: 10000 !important;
+    }
+
+    .bar {
+        width: 30px !important;
+        height: 3px !important;
+        background-color: #f4b400 !important;
+        border-radius: 2px !important;
+    }
+}
