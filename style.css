@@ -1709,7 +1709,7 @@ textarea::placeholder {
 @media screen and (max-width: 768px) {
     /* 1. Slim Header */
     .navbar {
-        height: 120px !important; /* Total header height */
+        height: 100px !important; /* Total header height */
         padding: 5px !important;
         display: flex !important;
         align-items: center !important;
@@ -1818,9 +1818,9 @@ textarea::placeholder {
 
     /* 3. Force the logo image to be massive */
     .logo {
-        height: 130px !important; /* Scale this up even more if needed */
+        height: 100px !important; /* Scale this up even more if needed */
         width: auto !important;
-        min-height: 130px !important;
+        min-height: 100px !important;
         
         /* This forces the logo to scale beyond its original container size */
         transform: scale(1.1) !important; 
