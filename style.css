@@ -28,11 +28,17 @@ body {
     padding: 0 20px;
 }
 
-/* SECTION STRUCTURE */
-.content-section {
+.contact-section {
+    width: 100%;
+    background-color: #1a1a1a !important; /* Use the dark grey from your screenshot */
+    margin: 0;
     padding: 80px 0;
-    margin-top: 0; /* Override old margin */
-    scroll-margin-top: 90px;
+}
+
+.container {
+    max-width: 1200px; /* Or whatever width you want the text to stay within */
+    margin: 0 auto;    /* Centers the content */
+    padding: 0 20px;   /* Prevents text from hitting screen edges on mobile */
 }
 
 .section-title {
