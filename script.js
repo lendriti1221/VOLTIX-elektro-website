@@ -800,3 +800,16 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navList.classList.remove('show');
     });
 });
+// --- FINAL OVERRIDE TOGGLE ---
+(function() {
+    const btn = document.getElementById('mobile-menu');
+    const list = document.getElementById('nav-list');
+
+    if (btn && list) {
+        btn.onclick = function(e) {
+            e.preventDefault();
+            list.classList.toggle('show');
+            console.log("Menu toggled: ", list.classList.contains('show'));
+        };
+    }
+})();
