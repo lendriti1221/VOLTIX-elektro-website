@@ -1592,3 +1592,35 @@ textarea::placeholder {
         gap: 0;
     }
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Shown when toggled */
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
+    }
+}
