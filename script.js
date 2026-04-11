@@ -776,22 +776,23 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(savedLang);
 });
 
-// --- HAMBURGER MENU LOGIC ---
-const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.getElementById('nav-list');
+// --- MOBILE MENU LOGIC ---
+const menuBtn = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-list');
 
-if (mobileMenu) {
-    mobileMenu.addEventListener('click', () => {
-        navList.classList.toggle('active');
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        // Toggle the 'active' class on the menu
+        navLinks.classList.toggle('active');
         
-        // Optional: Animate hamburger to an 'X'
-        mobileMenu.classList.toggle('is-active');
+        // Optional: Animate the hamburger bars into an 'X'
+        menuBtn.classList.toggle('is-active');
     });
 }
 
-// Close menu when a link is clicked (useful for one-page sites)
+// Close the menu automatically when a user clicks a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navList.classList.remove('active');
+        navLinks.classList.remove('active');
     });
 });
