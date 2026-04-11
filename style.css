@@ -1755,3 +1755,51 @@ textarea::placeholder {
         border-radius: 2px !important;
     }
 }
+    /* --- HAMBURGER ON THE RIGHT / LOGO CENTERED --- */
+@media screen and (max-width: 768px) {
+    /* 1. Position the Hamburger Button on the Right */
+    #mobile-menu.menu-toggle {
+        display: flex !important;
+        position: absolute !important;
+        right: 20px !important; /* Forces it to the right */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 10000 !important;
+    }
+
+    /* 2. Ensure Logo stays in the Center */
+    .logo-container {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: auto !important;
+    }
+
+    /* 3. Pure Black Menu Fix */
+    #nav-list.nav-links {
+        display: none !important;
+        flex-direction: column !important;
+        position: absolute !important;
+        top: 90px !important; /* Adjust if your navbar is thinner */
+        left: 0 !important;
+        width: 100% !important;
+        background-color: #000000 !important; /* PURE BLACK */
+        padding: 40px 0 !important;
+        text-align: center !important;
+        z-index: 9999 !important;
+        border-bottom: 2px solid #f4b400 !important;
+    }
+
+    /* Show menu when toggled */
+    #nav-list.nav-links.show {
+        display: flex !important;
+    }
+
+    /* Styling for links inside the black menu */
+    #nav-list.nav-links li a {
+        color: #ffffff !important;
+        font-size: 1.4rem !important;
+        padding: 15px 0 !important;
+        display: block !important;
+    }
+}
