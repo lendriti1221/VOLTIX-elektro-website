@@ -1810,32 +1810,24 @@ textarea::placeholder {
         width: auto !important;
 
     }
-/* --- MOBILE LOGO UPSIZE ONLY --- */
-@media screen and (max-width: 768px) {
-    .logo-container {
-        /* This ensures the container doesn't restrict the logo height */
-        height: auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
+.logo-container {
+        height: 100% !important;
+        max-height: 150px !important;
+        width: 100% !important;
     }
 
+    /* 3. Force the logo image to be massive */
     .logo {
-        /* Force the logo to be much bigger */
-        height: 110px !important; 
+        height: 130px !important; /* Scale this up even more if needed */
         width: auto !important;
+        min-height: 130px !important;
         
-        /* Removes any "ghost" constraints from previous code */
-        max-height: 120px !important; 
-        max-width: 90% !important;
+        /* This forces the logo to scale beyond its original container size */
+        transform: scale(1.1) !important; 
         
-        /* Keeps the image clear and un-stretched */
         object-fit: contain !important;
-        margin: 0 auto !important;
-        padding: 5px 0 !important;
+        margin-top: 5px !important;
     }
-
     .company-name {
         /* Matches the text size to the bigger logo */
         font-size: 0.9rem !important;
