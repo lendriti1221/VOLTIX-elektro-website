@@ -697,19 +697,22 @@ const translations = {
 
 // 2. THE MASTER TRANSLATION FUNCTION
 function setLanguage(lang) {
+    console.log("Switching to: " + lang);
     localStorage.setItem('selectedLanguage', lang);
     document.documentElement.lang = lang;
 
-    // A: Handle [data-translate] (Dictionary items)
-    document.querySelectorAll('[data-translate]').forEach(el => {
+    // FIX A: Home Page (Dictionary Method using data-translate)
+    const translateElements = document.querySelectorAll('[data-translate]');
+    translateElements.forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
             el.innerText = translations[lang][key];
         }
     });
 
-    // B: Handle [data-en] (Inline attributes used in Contact form)
-    document.querySelectorAll('[data-en]').forEach(el => {
+    // FIX B: Contact Section (Inline Method using data-en/data-de)
+    const inlineElements = document.querySelectorAll('[data-en]');
+    inlineElements.forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
         if (translation) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -720,73 +723,112 @@ function setLanguage(lang) {
         }
     });
 
-    // C: Update Service Boxes for Modals
-    document.querySelectorAll('.service-box').forEach((box, index) => {
+    // Update Modal Data for Service Boxes
+    const serviceBoxes = document.querySelectorAll('.service-box');
+    serviceBoxes.forEach((box, index) => {
         const titleKey = `service_${index + 1}_title`;
         const textKey = `service_${index + 1}_text`;
         if (translations[lang][titleKey]) box.setAttribute('data-title', translations[lang][titleKey]);
         if (translations[lang][textKey]) box.setAttribute('data-text', translations[lang][textKey]);
     });
-
-    // Update the dropdown value to match the selection
-    const langSelects = document.querySelectorAll('.lang-switch');
-    langSelects.forEach(select => select.value = lang);
 }
 
-// 3. MOBILE MENU TOGGLE
-function initMobileMenu() {
-    const menuBtn = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
-
-    if (menuBtn && navList) {
-        menuBtn.onclick = () => {
-            navList.classList.toggle('show');
-        };
-    }
+// 3. EVENT LISTENERS & TRIGGERS
+function changeLanguage(lang) {
+    setLanguage(lang);
 }
 
-// 4. MODAL LOGIC
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
+});
+
+// 4. MODAL LOGIC (Cleaned)
 function openModal(event) {
     const box = event.currentTarget;
     const title = box.getAttribute('data-title');
     const text = box.getAttribute('data-text');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
     const modalOverlay = document.getElementById('modalOverlay');
 
-    if (title && text && modalOverlay) {
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalText').innerText = text;
+    if (title && text) {
+        modalTitle.innerText = title;
+        modalText.innerText = text;
         modalOverlay.style.display = 'flex';
         document.body.style.overflow = 'hidden'; 
     }
 }
 
 function closeModal() {
-    const modalOverlay = document.getElementById('modalOverlay');
-    if (modalOverlay) {
-        modalOverlay.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
 
-// 5. INITIALIZATION
+window.onclick = function(event) {
+    const modal = document.getElementById('modalOverlay');
+    if (event.target == modal) {
+        closeModal();
+    }
+};
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     setLanguage(savedLang);
-    initMobileMenu();
-
-    // Close modal if clicking outside of it
-    window.onclick = (event) => {
-        const modal = document.getElementById('modalOverlay');
-        if (event.target == modal) {
-            closeModal();
-        }
-    };
 });
 
-    if (menuBtn) {
-        menuBtn.onclick = function() {
-            console.log("Button clicked"); // If you don't see this in F12, the ID is wrong
-            navList.classList.toggle('show');
-        };
+// --- MOBILE MENU LOGIC ---
+const menuBtn = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-list');
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        // Toggle the 'active' class on the menu
+        navLinks.classList.toggle('active');
+
+        // Optional: Animate the hamburger bars into an 'X'
+        menuBtn.classList.toggle('is-active');
+    });
+}
+
+// Close the menu automatically when a user clicks a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+const menuBtn = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-list');
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
+
+// Auto-close menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+// --- MOBILE MENU RESET ---
+function initMobileMenu() {
+    const menuBtn = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-links'); // Using class for safety
+
+    if (menuBtn && navList) {
+        // Remove any old listeners to prevent double-firing
+        menuBtn.replaceWith(menuBtn.cloneNode(true));
+        const newMenuBtn = document.getElementById('mobile-menu');
+
+        newMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log("Hamburger clicked!"); // Check your console (F12) for this!
+            navList.classList.toggle('active');
+        });
     }
-});
+}
+
+// Run the function
+document.addEventListener('DOMContentLoaded', initMobileMenu);
