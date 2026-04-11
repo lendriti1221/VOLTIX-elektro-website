@@ -704,7 +704,8 @@ function setLanguage(lang) {
 }
 
 // --- MODAL LOGIC ---
-function openModal() {
+// --- MODAL LOGIC ---
+function openModal(event) { // Added 'event' here for better practice
     const box = event.currentTarget;
     const title = box.getAttribute('data-title');
     const text = box.getAttribute('data-text');
@@ -717,10 +718,8 @@ function openModal() {
         modalText.innerText = text;
         modalOverlay.style.display = 'flex';
         document.body.style.overflow = 'hidden'; 
-
-    }
-  
-
+    } // <--- WAS MISSING: Closes the "if"
+} // <--- WAS MISSING: Closes the "openModal" function
 
 function closeModal() {
     document.getElementById('modalOverlay').style.display = 'none';
