@@ -234,13 +234,14 @@
           
           <textarea name="Message" placeholder="Your Message" data-en="Your Message" data-de="Deine Nachricht" required></textarea>
 
-          <label class="checkbox-container">
-            <input type="checkbox" name="Privacy" required>
-            <span class="checkmark"></span>
-            <span class="checkbox-text" data-en="I have read and accept the privacy policy." data-de="Ich habe die Datenschutzerklärung gelesen und akzeptiere diese.">
-              I have read and accept the privacy policy.
-            </span>
-          </label>
+          <div class="privacy-wrapper">
+    <input type="checkbox" id="privacy" name="privacy" required>
+    <label for="privacy" 
+           data-en="I have read and accept the privacy policy." 
+           data-de="Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.">
+           I have read and accept the privacy policy.
+    </label>
+</div>
 
           <div class="button-wrapper">
             <button type="submit" class="send-btn" data-en="SEND" data-de="SENDEN">SEND</button>
