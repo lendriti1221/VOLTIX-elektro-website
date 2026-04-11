@@ -53,7 +53,7 @@ const translations = {
         "trust_4": "✔ Reliable Quality",
 
         // Services (Full Text Restored)
-       
+
         back_to_overview: "Back to Overview",
         hero_button: "Get in Touch",
         nav_services: "Services",
@@ -61,7 +61,7 @@ const translations = {
 
         "services_title": "Our Services",
         "services_subtitle": "Specialized technical solutions delivered with precision and adherence to strict EU safety standards.",
-    
+
         // Service 1: Electrical Installations
         "service_1_title": "Electrical Installations",
         "service_1_preview": "Solid Foundations for Functioning Buildings...",
@@ -91,7 +91,7 @@ const translations = {
         "service_6_title": "Air Conditioning & System Integration",
         "service_6_preview": "Pleasant Indoor Climate – Intelligently Planned...",
         "service_6_text": "Pleasant indoor climate—intelligently planned and professionally integrated. A good indoor climate increases comfort, concentration, and well-being. VOLTIX Elektrotechnik GmbH supports you in the selection, electrotechnical preparation, and intelligent integration of modern air conditioning systems. Our focus is on sensibly planned, reliable solutions that are cleanly integrated and usable in the long term—in residential areas as well as in offices or commercial enterprises. Our services at a glance: We offer sound advice on device selection, tailored to room size and usage. We handle professional power supply, protection, and cable routing according to ÖVE standards and, upon request, coordinate cooperation with refrigeration and air conditioning technology partners up to safe commissioning and testing of the electrical connections. System Integration & Smart Home: Modern air conditioning systems unfold their full potential through integration into the overall system. We enable integration into KNX systems or existing building controls. This allows time programs, scenes, and automations to be controlled centrally together with heating, shading, and ventilation. The result is an efficient overall system instead of isolated individual solutions. Why air conditioning with VOLTIX? We guarantee a clean, standard-compliant electrotechnical execution according to ÖVE and thoughtful integration that remains future-proof and expandable. You have a single point of contact for all technology and control—whether for single-family homes, offices, medical practices, or commercial properties. Get a personal consultation: Are you planning an air conditioning system or want to intelligently integrate existing systems? We advise you honestly and with a technical foundation to find a solution that fits your building exactly.",
-    
+
         // Projects
         "projects_title": "Recent Projects",
         "projects_text": "Selected examples showcasing our expertise in complex automation and high-quality installations.",
@@ -131,7 +131,7 @@ const translations = {
         "value_3_text": "Our clients rely on us because we deliver consistent long-term performance, transparency, and reliable maintenance support.",
         "value_4_title": "Safety",
         "value_4_text": "All projects strictly adhere to EU regulations, industrial safety rules (DGUV V3), and certified quality management procedures.",
-        
+
         "expertise_title": "Our Specialized Expertise",
         "expertise_p1": "Our team consists of IHK-certified electrical engineers, master electricians, and specialists in advanced technical fields. We manage everything from planning and commissioning to ongoing maintenance.",
         "skill_1": "• PLC Programming (Siemens S7, TIA Portal, ABB, Schneider)",
@@ -142,7 +142,7 @@ const translations = {
         "skill_6": "• Security Systems & Access Control Integration",
         "skill_7": "• Residential & Commercial VDE-Compliant Wiring",
         "contact_email": "Business Email: office@voltix-elektro.at",
-        
+
         "mission_title": "Our Mission",
         "mission_text": "We aim to set new standards in electrical engineering by delivering modern, efficient, and safe installations that significantly improve productivity, reduce energy consumption, and enable sustainable, smart living and working environments for our clients.",
         "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — All rights reserved.",
@@ -533,10 +533,10 @@ const translations = {
         "hero_subtitle": "Professionelle Lösungen im Bereich Elektrotechnik für Haus, Gewerbe und Gebäude.",
         "hero_button": "Kontakt aufnehmen",
 
-        
+
           "services_title": "Unser Service",
         "services_subtitle": "Fachgerechte technische Lösungen mit Präzision und nach strengen EU-Sicherheitsstandards.",
-    
+
       "about_hero_title": "VOLTIX Elektrotechnik GmbH",
         "about_hero_subtitle": "Ihr vertrauenswürdiger Partner für moderne Elektrotechnik und intelligente Gebäudelösungen.",
         "who_we_are_title": "Wer wir sind",
@@ -642,7 +642,7 @@ const translations = {
         "who_we_are_title": "Wer wir sind",
         "who_we_are_p1": "Die Voltix Elektotechnik GmbH ist ein zukunftsorientiertes Elektrotechnikunternehmen, das sich der Bereitstellung hochwertiger Lösungen für Privat-, Gewerbe- und Industriekunden verschrieben hat. Wir wurden 2018 mit der Mission gegründet, deutsche Ingenieurspräzision in die sich schnell entwickelnden Bereiche der Automatisierung und nachhaltigen Energie zu bringen.",
         "who_we_are_p2": "Mit Expertise in Automatisierungstechnologien, Industriemaschinen, Smart-Home-Systemen und komplexen Elektroinstallationen liefern wir Zuverlässigkeit und Innovation in jedem Projekt, wobei wir uns auf Langlebigkeit und die Einhaltung strengster europäischer Sicherheitsstandards konzentrieren.",
-        
+
         "values_title": "Unsere Grundwerte",
         "value_1_title": "Präzision",
         "value_1_text": "Wir folgen den höchsten Ingenieurs- und Sicherheitsstandards (VDE/DIN), um sicherzustellen, dass jede Verbindung einwandfrei ist.",
@@ -652,7 +652,7 @@ const translations = {
         "value_3_text": "Unsere Kunden verlassen sich auf uns, weil wir konsistente langfristige Leistung, Transparenz und zuverlässige Wartungsunterstützung bieten.",
         "value_4_title": "Sicherheit",
         "value_4_text": "Alle Projekte halten sich strikt an EU-Vorschriften, Arbeitssicherheitsregeln (DGUV V3) und zertifizierte Qualitätsmanagementverfahren.",
-        
+
         "expertise_title": "Unsere Fachkompetenz",
         "expertise_p1": "Unser Team besteht aus IHK-zertifizierten Elektroingenieuren, Elektromeistern und Spezialisten in fortgeschrittenen technischen Bereichen. Wir übernehmen alles von der Planung und Inbetriebnahme bis zur laufenden Wartung.",
         "skill_1": "• SPS-Programmierung (Siemens S7, TIA Portal, ABB, Schneider)",
@@ -663,30 +663,30 @@ const translations = {
         "skill_6": "• Sicherheitssysteme & Zutrittskontrollintegration",
         "skill_7": "• VDE-konforme Verkabelung für Wohn- und Gewerbebau",
         "contact_email": "Geschäftliche E-Mail: office@voltix-elektro.at",
-        
+
         "mission_title": "Unsere Mission",
         "mission_text": "Unser Ziel ist es, neue Maßstäbe in der Elektrotechnik zu setzen, indem wir moderne, effiziente und sichere Installationen liefern, die die Produktivität erheblich steigern, den Energieverbrauch senken und nachhaltige, intelligente Lebens- und Arbeitsumgebungen ermöglichen.",
         "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — Alle Rechte vorbehalten.",
-        
+
         "about_title": "Über unser Unternehmen",
         "about_text_p1": "Die Voltix Elektrotechnik GmbH ist ein modernes Elektrotechnik-Unternehmen, das auf Smart-Home-Systeme, industrielle Automatisierung, SPS-Programmierung und elektrische Sicherheit spezialisiert ist. Unsere zertifizierten Ingenieure liefern sichere, effiziente und innovative Lösungen, die auf jeden Kunden zugeschnitten sind.",
         "about_text_p2": "Mit jahrelanger Erfahrung in Industriestandards und Hochspannungssystemen gewährleisten wir Präzision, Konformität und langlebige Leistung bei jedem Projekt in ganz Deutschland.",
         "about_more_btn": "Unsere Expertise entdecken"
-        
+
     }
-    
+
 };
 
 function setLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
-    
+
     // Select all elements that have a 'data-en' attribute
     const elements = document.querySelectorAll('[data-en]');
 
     elements.forEach(el => {
         // Get the text from data-en or data-de
         const translation = el.getAttribute(`data-${lang}`);
-        
+
         if (translation) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = translation;
@@ -744,6 +744,39 @@ window.onload = () => {
     setLanguage(savedLang);
 };
 
+function setLanguage(lang) {
+    // 1. Save language choice
+    localStorage.setItem('selectedLanguage', lang);
+    
+    // 2. Find all elements that have the data-en attribute
+    const elements = document.querySelectorAll('[data-en]');
 
+    elements.forEach(el => {
+        const translation = el.getAttribute(`data-${lang}`);
+        
+        if (translation) {
+            // Handle Inputs and Textareas (Placeholders)
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translation;
+            } 
+            // Handle everything else (Text)
+            else {
+                el.textContent = translation;
+            }
+        }
+    });
 
+    // 3. Update the HTML lang tag
+    document.documentElement.lang = lang;
+}
 
+// Function called by your buttons
+function changeLanguage(lang) {
+    setLanguage(lang);
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
+});
