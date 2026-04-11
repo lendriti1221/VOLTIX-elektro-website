@@ -1705,3 +1705,79 @@ textarea::placeholder {
         margin: 15px 0;
     }
 }
+/* --- MOBILE NAVIGATION FIX --- */
+@media screen and (max-width: 768px) {
+    /* 1. Force the Navbar to be a single row */
+    .navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        height: 70px;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    /* 2. Hide the links by default on mobile */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: #0d0d0d;
+        padding: 20px 0;
+        z-index: 1000;
+        border-bottom: 2px solid #f4b400;
+    }
+
+    /* 3. The class the JS will toggle */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* 4. Show the Hamburger */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #f4b400; /* Gold */
+        border-radius: 5px;
+    }
+
+    /* 5. Prevent logo squishing */
+    .logo-container {
+        max-width: 70%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        height: 35px !important;
+        width: auto;
+    }
+
+    .company-name {
+        font-size: 1rem !important;
+        white-space: nowrap;
+    }
+}
+
+/* Desktop Fix: Hide Hamburger on big screens */
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+    .nav-links {
+        display: flex !important;
+    }
+}
