@@ -2032,3 +2032,25 @@ textarea::placeholder {
         border-radius: 4px;
     }
 }
+/* --- SLEEK COMPACT MENU --- */
+@media screen and (max-width: 768px) {
+    /* 1. Make the text smaller */
+    .nav-links li a {
+        font-size: 1.1rem !important; /* Smaller, modern font size */
+        padding: 15px 0 !important; /* This makes the "borders" feel closer together */
+        font-weight: 500 !important; /* Clean, medium thickness */
+        letter-spacing: 1px !important;
+    }
+
+    /* 2. Make the borders/lines thinner and more subtle */
+    .nav-links li {
+        border-bottom: 0.5px solid #333 !important; /* Thin, dark grey line */
+        margin: 0 !important;
+    }
+
+    /* 3. Reduce top padding so the first link isn't too low */
+    .nav-links {
+        padding-top: 50px !important;
+        justify-content: flex-start !important;
+    }
+}
