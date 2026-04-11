@@ -1943,3 +1943,32 @@ textarea::placeholder {
         padding: 10px !important;
     }
 }
+/* --- MOBILE LOGO OVERSIZE --- */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        height: auto !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 10px !important;
+    }
+
+    .logo {
+        /* Force the logo to be much larger on mobile */
+        height: 100px !important; 
+        width: auto !important;
+        min-height: 100px !important;
+        max-height: 120px !important;
+        
+        /* Remove any old constraints */
+        max-width: 80% !important;
+        object-fit: contain !important;
+        margin: 0 auto !important;
+    }
+
+    .company-name {
+        font-size: 1.1rem !important; /* Make text bigger to match */
+        margin-top: 8px !important;
+    }
+}
