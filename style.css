@@ -1774,3 +1774,40 @@ textarea::placeholder {
         right: 60px !important;
     }
 }
+ /* --- HAMBURGER ON THE RIGHT / LOGO CENTERED --- */
+
+@media screen and (max-width: 768px) {
+
+    /* 1. Position the Hamburger Button on the Right */
+
+    #mobile-menu.menu-toggle {
+
+        display: flex !important;
+
+        position: absolute !important;
+
+        right: 20px !important; /* Forces it to the right */
+
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        z-index: 10000 !important;
+
+    }
+
+
+    /* 2. Ensure Logo stays in the Center */
+
+    .logo-container {
+
+        position: absolute !important;
+
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+
+        width: auto !important;
+
+    }
+
