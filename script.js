@@ -780,3 +780,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target == modal) closeModal();
     };
 });
+// --- HAMBURGER MENU TOGGLE ---
+const menuBtn = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+
+if (menuBtn && navList) {
+    menuBtn.onclick = function() {
+        // Toggle the 'show' class to open/close the menu
+        navList.classList.toggle('show');
+        
+        // Optional: Animate the hamburger icon if you have 'is-active' styles
+        menuBtn.classList.toggle('is-active');
+    };
+}
+
+// Close the menu when a link is clicked (important for one-page sites)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navList.classList.remove('show');
+    });
+});
