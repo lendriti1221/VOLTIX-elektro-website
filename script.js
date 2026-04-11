@@ -697,22 +697,19 @@ const translations = {
 
 // 2. THE MASTER TRANSLATION FUNCTION
 function setLanguage(lang) {
-    console.log("Switching to: " + lang);
     localStorage.setItem('selectedLanguage', lang);
     document.documentElement.lang = lang;
 
-    // FIX A: Home Page (Dictionary Method using data-translate)
-    const translateElements = document.querySelectorAll('[data-translate]');
-    translateElements.forEach(el => {
+    // A: Handle [data-translate] (Dictionary items)
+    document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
             el.innerText = translations[lang][key];
         }
     });
 
-    // FIX B: Contact Section (Inline Method using data-en/data-de)
-    const inlineElements = document.querySelectorAll('[data-en]');
-    inlineElements.forEach(el => {
+    // B: Handle [data-en] (Inline attributes used in Contact form)
+    document.querySelectorAll('[data-en]').forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
         if (translation) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -723,62 +720,68 @@ function setLanguage(lang) {
         }
     });
 
-    // Update Modal Data for Service Boxes
-    const serviceBoxes = document.querySelectorAll('.service-box');
-    serviceBoxes.forEach((box, index) => {
+    // C: Update Service Boxes for Modals
+    document.querySelectorAll('.service-box').forEach((box, index) => {
         const titleKey = `service_${index + 1}_title`;
         const textKey = `service_${index + 1}_text`;
         if (translations[lang][titleKey]) box.setAttribute('data-title', translations[lang][titleKey]);
         if (translations[lang][textKey]) box.setAttribute('data-text', translations[lang][textKey]);
     });
+
+    // Update the dropdown value to match the selection
+    const langSelects = document.querySelectorAll('.lang-switch');
+    langSelects.forEach(select => select.value = lang);
 }
 
-// 3. EVENT LISTENERS & TRIGGERS
-function changeLanguage(lang) {
-    setLanguage(lang);
+// 3. MOBILE MENU TOGGLE
+function initMobileMenu() {
+    const menuBtn = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+
+    if (menuBtn && navList) {
+        menuBtn.onclick = () => {
+            navList.classList.toggle('show');
+        };
+    }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    setLanguage(savedLang);
-});
-
-// 4. MODAL LOGIC (Cleaned)
+// 4. MODAL LOGIC
 function openModal(event) {
     const box = event.currentTarget;
     const title = box.getAttribute('data-title');
     const text = box.getAttribute('data-text');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalText = document.getElementById('modalText');
     const modalOverlay = document.getElementById('modalOverlay');
 
-    if (title && text) {
-        modalTitle.innerText = title;
-        modalText.innerText = text;
+    if (title && text && modalOverlay) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalText').innerText = text;
         modalOverlay.style.display = 'flex';
         document.body.style.overflow = 'hidden'; 
     }
 }
 
 function closeModal() {
-    document.getElementById('modalOverlay').style.display = 'none';
-    document.body.style.overflow = 'auto';
+    const modalOverlay = document.getElementById('modalOverlay');
+    if (modalOverlay) {
+        modalOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
 }
 
-window.onclick = function(event) {
-    const modal = document.getElementById('modalOverlay');
-    if (event.target == modal) {
-        closeModal();
-    }
-};
+// 5. INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     setLanguage(savedLang);
-});
+    initMobileMenu();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
+    // Close modal if clicking outside of it
+    window.onclick = (event) => {
+        const modal = document.getElementById('modalOverlay');
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
+});
 
     if (menuBtn) {
         menuBtn.onclick = function() {
