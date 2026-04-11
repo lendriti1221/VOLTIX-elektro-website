@@ -812,3 +812,23 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+// --- MOBILE MENU RESET ---
+function initMobileMenu() {
+    const menuBtn = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-links'); // Using class for safety
+
+    if (menuBtn && navList) {
+        // Remove any old listeners to prevent double-firing
+        menuBtn.replaceWith(menuBtn.cloneNode(true));
+        const newMenuBtn = document.getElementById('mobile-menu');
+
+        newMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log("Hamburger clicked!"); // Check your console (F12) for this!
+            navList.classList.toggle('active');
+        });
+    }
+}
+
+// Run the function
+document.addEventListener('DOMContentLoaded', initMobileMenu);
