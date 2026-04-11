@@ -1803,3 +1803,65 @@ textarea::placeholder {
         display: block !important;
     }
 }
+/* --- EXPANDED BLACK NAVBAR --- */
+.navbar {
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;
+    background-color: #000000 !important; /* Pure Black */
+    height: 160px !important; /* Much taller black area */
+    padding: 20px !important;
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    border-bottom: 2px solid #222; /* Subtle separation from content */
+}
+
+.logo-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+}
+
+.logo {
+    height: 90px !important; /* Bigger logo to fill the bigger space */
+    width: auto !important;
+    margin-bottom: 8px !important;
+    object-fit: contain !important;
+}
+
+.company-name {
+    font-size: 1rem !important;
+    color: white !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- HAMBURGER ALIGNMENT --- */
+.menu-toggle {
+    position: absolute !important;
+    right: 30px !important; /* Pinned to the right */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+}
+
+.bar {
+    width: 35px !important; /* Slightly larger bars for the larger nav */
+    height: 3px !important;
+    background-color: #f4b400 !important;
+}
+
+/* --- MOBILE MENU RESET --- */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        top: 160px !important; /* Must match the new navbar height */
+        background-color: #000000 !important;
+        width: 100% !important;
+    }
+}
