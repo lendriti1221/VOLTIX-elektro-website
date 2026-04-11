@@ -1865,3 +1865,50 @@ textarea::placeholder {
         width: 100% !important;
     }
 }
+/* --- OVERSIZE LOGO FIX --- */
+.navbar {
+    height: 180px !important; /* Making the black area even taller */
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.logo-container {
+    height: 100% !important; /* Allow container to use full height */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+}
+
+.logo {
+    height: 110px !important; /* This is the main size control - increase this to make it bigger */
+    width: auto !important;
+    max-height: 120px !important; /* Safety cap */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+.company-name {
+    font-size: 1.1rem !important;
+    margin-top: 10px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+}
+
+/* Fix hamburger position for the new height */
+.menu-toggle {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* Ensure mobile menu doesn't have a gap */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        top: 180px !important; 
+    }
+}
