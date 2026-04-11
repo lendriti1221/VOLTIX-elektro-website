@@ -701,18 +701,16 @@ function setLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
     document.documentElement.lang = lang;
 
-    // FIX A: Home Page / Desktop Nav (data-translate)
-    const translateElements = document.querySelectorAll('[data-translate]');
-    translateElements.forEach(el => {
+    // A: Dictionary Method (data-translate) - Used for Desktop Nav/Titles
+    document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
             el.innerText = translations[lang][key];
         }
     });
 
-    // FIX B: Contact Section / Inline (data-en/data-de)
-    const inlineElements = document.querySelectorAll('[data-en]');
-    inlineElements.forEach(el => {
+    // B: Inline Method (data-en/data-de) - Used for Contact Form
+    document.querySelectorAll('[data-en]').forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
         if (translation) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -723,43 +721,25 @@ function setLanguage(lang) {
         }
     });
 
-    // Update Modal Data
-    const serviceBoxes = document.querySelectorAll('.service-box');
-    serviceBoxes.forEach((box, index) => {
+    // C: Update Modal Data for Services
+    document.querySelectorAll('.service-box').forEach((box, index) => {
         const titleKey = `service_${index + 1}_title`;
         const textKey = `service_${index + 1}_text`;
-        if (translations[lang] && translations[lang][titleKey]) {
-            box.setAttribute('data-title', translations[lang][titleKey]);
-        }
-        if (translations[lang] && translations[lang][textKey]) {
-            box.setAttribute('data-text', translations[lang][textKey]);
-        }
+        if (translations[lang][titleKey]) box.setAttribute('data-title', translations[lang][titleKey]);
+        if (translations[lang][textKey]) box.setAttribute('data-text', translations[lang][textKey]);
     });
 
-    // Sync the dropdown value
+    // Sync the dropdown if it exists
     const langSelect = document.querySelector('.lang-switch');
     if (langSelect) langSelect.value = lang;
 }
 
-// 3. EVENT LISTENERS
+// 3. GLOBAL CHANGE FUNCTION (For Button clicks)
 function changeLanguage(lang) {
     setLanguage(lang);
 }
 
-// 4. INITIALIZATION (One single trigger for everything)
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    setLanguage(savedLang);
-
-    // Mobile Menu Logic
-    const menuBtn = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
-    if (menuBtn && navList) {
-        menuBtn.onclick = () => navList.classList.toggle('show');
-    }
-});
-
-// 5. MODAL LOGIC
+// 4. MODAL LOGIC
 function openModal(event) {
     const box = event.currentTarget;
     const title = box.getAttribute('data-title');
@@ -782,7 +762,21 @@ function closeModal() {
     }
 }
 
-window.onclick = function(event) {
-    const modal = document.getElementById('modalOverlay');
-    if (event.target == modal) closeModal();
-};
+// 5. INITIALIZATION ON PAGE LOAD
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
+
+    // Mobile Menu logic
+    const menuBtn = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (menuBtn && navList) {
+        menuBtn.onclick = () => navList.classList.toggle('show');
+    }
+
+    // Modal click-outside logic
+    window.onclick = (event) => {
+        const modal = document.getElementById('modalOverlay');
+        if (event.target == modal) closeModal();
+    };
+});
