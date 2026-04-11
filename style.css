@@ -1860,7 +1860,7 @@ textarea::placeholder {
 /* --- MOBILE MENU RESET --- */
 @media screen and (max-width: 768px) {
     .nav-links {
-        top: 160px !important; /* Must match the new navbar height */
+        top: 120px !important; /* Must match the new navbar height */
         background-color: #000000 !important;
         width: 100% !important;
     }
@@ -1924,7 +1924,7 @@ textarea::placeholder {
         background-color: #000000 !important;
         
         /* SCROLL FIX */
-        max-height: calc(100vh - 180px) !important; /* Tells menu to only take remaining screen space */
+        max-height: calc(100vh - 120px) !important; /* Tells menu to only take remaining screen space */
         overflow-y: auto !important; /* Adds a scrollbar INSIDE the menu if needed */
         padding: 20px 0 !important;
         z-index: 9999 !important;
