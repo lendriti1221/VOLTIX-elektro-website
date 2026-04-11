@@ -2009,8 +2009,8 @@ textarea::placeholder {
 
     .nav-links li a {
         display: block;
-        font-size: 1.4rem !important; /* Large, clear text */
-        padding: 25px 0 !important;
+        font-size: 1rem !important; /* Large, clear text */
+        padding: 11px 0 !important;
         color: white !important;
         font-weight: 400 !important;
     }
@@ -2027,8 +2027,8 @@ textarea::placeholder {
         background: transparent;
         color: white;
         border: 1px solid #444;
-        padding: 15px;
-        font-size: 1.1rem;
+        padding: 10px;
+        font-size: 1rem;
         border-radius: 4px;
     }
 }
