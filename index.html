@@ -254,35 +254,8 @@
       </div>
 
     </div> </div> </section>
-     <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('voltix_lang') || 'en';
-            applyLanguage(savedLang);
-        });
-
-        function changeLanguage(lang) {
-            localStorage.setItem('voltix_lang', lang);
-            applyLanguage(lang);
-        }
-
-        function applyLanguage(lang) {
-            // Update regular text (H2, H3, P, SPAN)
-            const textElements = document.querySelectorAll('[data-en]');
-            textElements.forEach(el => {
-                if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') {
-                    el.textContent = el.getAttribute(`data-${lang}`);
-                }
-            });
-
-            // Update Input Placeholders
-            const inputs = document.querySelectorAll('input[data-en], textarea[data-en]');
-            inputs.forEach(input => {
-                input.placeholder = input.getAttribute(`data-${lang}`);
-            });
-        }
-    </script>
+    
 </body>
 </html>
         
