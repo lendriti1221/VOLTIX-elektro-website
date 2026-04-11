@@ -744,41 +744,6 @@ window.onload = () => {
     setLanguage(savedLang);
 };
 
-function setLanguage(lang) {
-    // 1. Save language choice
-    localStorage.setItem('selectedLanguage', lang);
-    
-    // 2. Find all elements that have the data-en attribute
-    const elements = document.querySelectorAll('[data-en]');
 
-    elements.forEach(el => {
-        const translation = el.getAttribute(`data-${lang}`);
-        
-        if (translation) {
-            // Handle Inputs and Textareas (Placeholders)
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = translation;
-            } 
-            // Handle everything else (Text)
-            else {
-                el.textContent = translation;
-            }
-        }
-    });
-
-    // 3. Update the HTML lang tag
-    document.documentElement.lang = lang;
-}
-
-// Function called by your buttons
-function changeLanguage(lang) {
-    setLanguage(lang);
-}
-
-// Run on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    setLanguage(savedLang);
-});
 
 
