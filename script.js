@@ -6,6 +6,15 @@ const translations = {
         "nav_services": "Services",
         "nav_projects": "Projects",
         "nav_contact": "Contact",
+        "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
+        "hero_button": "Get in Touch",
+        // ... (Keep all your other "en" keys here)
+        "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — All rights reserved.",
+        "nav_home": "Home",
+        "nav_about": "About",
+        "nav_services": "Services",
+        "nav_projects": "Projects",
+        "nav_contact": "Contact",
 
         // Hero
         "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
@@ -379,6 +388,15 @@ const translations = {
 "climate_footer_cta": "Are you planning an air conditioning system or want to integrate existing systems intelligently? We advise you honestly, with a technical foundation, and find a solution that fits your building.",
 },
     "de": {  
+        "nav_home": "Startseite",
+        "nav_about": "Über uns",
+        "nav_services": "Leistungen",
+        "nav_projects": "Projekte",
+        "nav_contact": "Kontakt",
+        "hero_subtitle": "Professionelle Lösungen im Bereich Elektrotechnik für Haus, Gewerbe und Gebäude.",
+        "hero_button": "Kontakt aufnehmen",
+        // ... (Keep all your other "de" keys here)
+        "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — Alle Rechte vorbehalten.",
         "climate_hero_subtitle": "Angenehmes Raumklima – intelligent geplant und fachgerecht integriert",
 "climate_hero_description": "Ein gutes Raumklima steigert den Komfort, die Konzentration und das Wohlbefinden – im Wohnbereich genauso wie im Büro oder Gewerbebetrieb. Wir unterstützen Sie bei der Auswahl, elektrotechnischen Vorbereitung und intelligenten Einbindung moderner Klimaanlagen.",
 "climate_section_title": "Unsere Leistungen im Bereich Klimaanlagen",
@@ -677,27 +695,13 @@ const translations = {
 
 };
 
-// --- 1. THE DICTIONARY (For your Home Page) ---
-// Make sure this contains the keys your Home Page uses (data-translate="...")
-const translations = {
-    en: {
-        contact_where_title: "Where are we located",
-        contact_hours_title: "Opening Hours",
-        // ADD YOUR HOME PAGE KEYS HERE
-    },
-    de: {
-        contact_where_title: "Wo wir uns befinden",
-        contact_hours_title: "Öffnungszeiten",
-        // ADD YOUR HOME PAGE KEYS HERE
-    }
-};
-
-// --- 2. THE MASTER FUNCTION ---
+// 2. THE MASTER TRANSLATION FUNCTION
 function setLanguage(lang) {
-    console.log("Applying language: " + lang);
+    console.log("Switching to: " + lang);
     localStorage.setItem('selectedLanguage', lang);
+    document.documentElement.lang = lang;
 
-    // FIX A: Handle Home Page (Dictionary Method)
+    // FIX A: Home Page (Dictionary Method using data-translate)
     const translateElements = document.querySelectorAll('[data-translate]');
     translateElements.forEach(el => {
         const key = el.getAttribute('data-translate');
@@ -706,7 +710,7 @@ function setLanguage(lang) {
         }
     });
 
-    // FIX B: Handle Contact Section (Inline Method)
+    // FIX B: Contact Section (Inline Method using data-en/data-de)
     const inlineElements = document.querySelectorAll('[data-en]');
     inlineElements.forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
@@ -719,22 +723,7 @@ function setLanguage(lang) {
         }
     });
 
-    document.documentElement.lang = lang;
-}
-
-// --- 3. THE TRIGGERS ---
-function changeLanguage(lang) {
-    setLanguage(lang);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    setLanguage(savedLang);
-});
-    });
-}
-
-    // Update Modal Data on Service Boxes
+    // Update Modal Data for Service Boxes
     const serviceBoxes = document.querySelectorAll('.service-box');
     serviceBoxes.forEach((box, index) => {
         const titleKey = `service_${index + 1}_title`;
@@ -744,9 +733,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }
 
-// --- MODAL LOGIC ---
-// --- MODAL LOGIC ---
-function openModal(event) { // Added 'event' here for better practice
+// 3. EVENT LISTENERS & TRIGGERS
+function changeLanguage(lang) {
+    setLanguage(lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
+});
+
+// 4. MODAL LOGIC (Cleaned)
+function openModal(event) {
     const box = event.currentTarget;
     const title = box.getAttribute('data-title');
     const text = box.getAttribute('data-text');
@@ -759,8 +757,8 @@ function openModal(event) { // Added 'event' here for better practice
         modalText.innerText = text;
         modalOverlay.style.display = 'flex';
         document.body.style.overflow = 'hidden'; 
-    } // <--- WAS MISSING: Closes the "if"
-} // <--- WAS MISSING: Closes the "openModal" function
+    }
+}
 
 function closeModal() {
     document.getElementById('modalOverlay').style.display = 'none';
@@ -772,47 +770,7 @@ window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
     }
-}
-
-window.onload = () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    const langSelect = document.querySelector('.lang-switch');
-    if (langSelect) langSelect.value = savedLang;
-    setLanguage(savedLang);
 };
-
-function setLanguage(lang) {
-    // 1. Save language choice
-    localStorage.setItem('selectedLanguage', lang);
-    
-    // 2. Find all elements that have the data-en attribute
-    const elements = document.querySelectorAll('[data-en]');
-
-    elements.forEach(el => {
-        const translation = el.getAttribute(`data-${lang}`);
-        
-        if (translation) {
-            // Handle Inputs and Textareas (Placeholders)
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = translation;
-            } 
-            // Handle everything else (Text)
-            else {
-                el.textContent = translation;
-            }
-        }
-    });
-
-    // 3. Update the HTML lang tag
-    document.documentElement.lang = lang;
-}
-
-// Function called by your buttons
-function changeLanguage(lang) {
-    setLanguage(lang);
-}
-
-// Run on page load
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     setLanguage(savedLang);
