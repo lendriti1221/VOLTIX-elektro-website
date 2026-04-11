@@ -1799,7 +1799,7 @@ textarea::placeholder {
     #nav-list.nav-links li a {
         color: #ffffff !important;
         font-size: 1.4rem !important;
-        padding: 15px 0 !important;
+        padding: 5px 0 !important;
         display: block !important;
     }
 }
@@ -1809,7 +1809,7 @@ textarea::placeholder {
     justify-content: center !important; 
     align-items: center !important;
     background-color: #000000 !important; /* Pure Black */
-    height: 135px !important; /* Much taller black area */
+    height: 125px !important; /* Much taller black area */
     padding: 20px !important;
     position: fixed !important;
     top: 0 !important;
