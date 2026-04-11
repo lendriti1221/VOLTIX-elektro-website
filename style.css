@@ -1637,3 +1637,71 @@ textarea::placeholder {
         margin: 15px 0;
     }
 }
+    /* General Navbar fixes */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0d0d0d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 40px; /* Force small logo on mobile */
+}
+
+/* Hide Hamburger on Desktop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f4b400; /* Voltix Gold */
+    border-radius: 2px;
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 768px) {
+    .company-name {
+        font-size: 1.2rem; /* Make title smaller */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show Hamburger */
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Sits right under the nav */
+        left: 0;
+        width: 100%;
+        background: #1a1a1a;
+        padding: 20px 0;
+        border-top: 2px solid #f4b400;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
