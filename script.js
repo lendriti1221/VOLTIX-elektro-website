@@ -561,7 +561,7 @@ const translations = {
         // Expertise
         "expertise_title": "Unsere fachliche Stärke",
         "expertise_p1": "VOLTIX steht für moderne Elektrotechnik mit klarem Fokus auf Planung, Umsetzung und intelligente Systeme. Wir verbinden klassisches Handwerk mit durchdachter Gebäudetechnik und begleiten Projekte zuverlässig von der Idee bis zur fertigen Lösung.",
-        "expertise_p2": "Alle Arbeiten werden sorgfältig geplant und streng nach den geltenden österreichischen Normen und Vorschriften (ÖVE) ausgeführt – für maximale Sicherheit, Qualität und langfristige Zuverlässigkeit."
+        "expertise_p2": "Alle Arbeiten werden sorgfältig geplant und streng nach den geltenden österreichischen Normen und Vorschriften (ÖVE) ausgeführt – für maximale Sicherheit, Qualität und langfristige Zuverlässigkeit.",
         "skill_1": "• Elektroinstallationen für Neubau, Sanierung und Umbau Strukturierte, normgerechte Installationen für Wohn- und Gewerbeobjekte – von der Grundinstallation bis zur Erweiterung bestehender Anlagen.",
         "skill_2": "• Intelligente Gebäudetechnik &amp; Smart Home (KNX) Planung und Umsetzung smarter Steuerungen für Licht, Beschattung, Heizung, Klima und mehr – individuell abgestimmt und jederzeit erweiterbar.",
         "skill_3": "• Digitale Elektroplanung Stromlauf- und Installationspläne als saubere Grundlage für eine effiziente, nachvollziehbare und normkonforme Ausführung.",
