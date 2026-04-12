@@ -15,7 +15,7 @@ const translations = {
         "nav_services": "Services",
         "nav_projects": "Projects",
         "nav_contact": "Contact",
-        "about_more_button": "Discover Our Expertise",
+        about_more_button: "Discover Our Expertise",
 
         // Hero
         "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
@@ -552,7 +552,7 @@ const translations = {
         "hero_subtitle": "Professionelle Lösungen im Bereich Elektrotechnik für Haus, Gewerbe und Gebäude.",
         "hero_button": "Kontakt aufnehmen",
 
-           "about_more_button": "Entdecken Sie unsere Expertise",
+           about_more_button: "Entdecken Sie unsere Expertise",
           "services_title": "Unser Service",
         "services_subtitle": "Fachgerechte technische Lösungen mit Präzision und nach strengen EU-Sicherheitsstandards.",
 
