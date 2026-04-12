@@ -552,7 +552,7 @@ const translations = {
         "hero_subtitle": "Professionelle Lösungen im Bereich Elektrotechnik für Haus, Gewerbe und Gebäude.",
         "hero_button": "Kontakt aufnehmen",
 
-
+           "about_more_button": "Entdecken Sie unsere Expertise",
           "services_title": "Unser Service",
         "services_subtitle": "Fachgerechte technische Lösungen mit Präzision und nach strengen EU-Sicherheitsstandards.",
 
@@ -601,7 +601,7 @@ const translations = {
         hero_button: "Kontakt aufnehmen",
         nav_services: "Leistungen",
         nav_contact: "Kontakt",
-        "about_more_button": "Entdecken Sie unsere Expertise",
+       
 
         // Service 1
         "service_1_title": "Elektroinstallationen",
