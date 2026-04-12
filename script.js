@@ -15,6 +15,7 @@ const translations = {
         "nav_services": "Services",
         "nav_projects": "Projects",
         "nav_contact": "Contact",
+        "about_more_button": "Discover Our Expertise",
 
         // Hero
         "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
@@ -600,6 +601,7 @@ const translations = {
         hero_button: "Kontakt aufnehmen",
         nav_services: "Leistungen",
         nav_contact: "Kontakt",
+        "about_more_button": "Entdecken Sie unsere Expertise",
 
         // Service 1
         "service_1_title": "Elektroinstallationen",
