@@ -133,25 +133,8 @@ const translations = {
         "about_text_p2": "With years of experience in industrial standards and high-voltage systems, we ensure precision, compliance, and long-lasting performance in every project across Germany.",
         "about_more_btn": "Discover Our Expertise",
 
-        "values_title": "Our Core Values",
-        "value_1_title": "Precision",
-        "value_1_text": "We follow the highest engineering and safety standards (VDE/DIN) to ensure every connection is flawless.",
-        "value_2_title": "Innovation",
-        "value_2_text": "We implement modern technologies, including advanced smart systems and custom automation solutions, for energy efficiency.",
-        "value_3_title": "Trust",
-        "value_3_text": "Our clients rely on us because we deliver consistent long-term performance, transparency, and reliable maintenance support.",
-        "value_4_title": "Safety",
-        "value_4_text": "All projects strictly adhere to EU regulations, industrial safety rules (DGUV V3), and certified quality management procedures.",
 
-        "expertise_title": "Our Specialized Expertise",
-        "expertise_p1": "Our team consists of IHK-certified electrical engineers, master electricians, and specialists in advanced technical fields. We manage everything from planning and commissioning to ongoing maintenance.",
-        "skill_1": "• PLC Programming (Siemens S7, TIA Portal, ABB, Schneider)",
-        "skill_2": "• Smart Home & Building Automation (KNX, Loxone)",
-        "skill_3": "• High-Voltage & Low-Voltage Systems Engineering",
-        "skill_4": "• Industrial Process Control & Optimization",
-        "skill_5": "• Complex System Diagnostics & Electrical Maintenance",
-        "skill_6": "• Security Systems & Access Control Integration",
-        "skill_7": "• Residential & Commercial VDE-Compliant Wiring",
+
         "contact_email": "Business Email: office@voltix-elektro.at",
 
         "mission_title": "Our Mission",
@@ -577,7 +560,8 @@ const translations = {
 
         // Expertise
         "expertise_title": "Unsere fachliche Stärke",
-        "expertise_p1": "VOLTIX steht für moderne Elektrotechnik mit klarem Fokus auf Planung, Umsetzung und intelligente Systeme. Wir verbinden klassisches Handwerk mit durchdachter Gebäudetechnik und begleiten Projekte zuverlässig von der Idee bis zur fertigen Lösung. Alle Arbeiten werden sorgfältig geplant und streng nach den geltenden österreichischen Normen und Vorschriften (ÖVE) ausgeführt – für maximale Sicherheit, Qualität und langfristige Zuverlässigkeit.",
+        "expertise_p1": "VOLTIX steht für moderne Elektrotechnik mit klarem Fokus auf Planung, Umsetzung und intelligente Systeme. Wir verbinden klassisches Handwerk mit durchdachter Gebäudetechnik und begleiten Projekte zuverlässig von der Idee bis zur fertigen Lösung.",
+        "expertise_p2": "Alle Arbeiten werden sorgfältig geplant und streng nach den geltenden österreichischen Normen und Vorschriften (ÖVE) ausgeführt – für maximale Sicherheit, Qualität und langfristige Zuverlässigkeit."
         "skill_1": "• Elektroinstallationen für Neubau, Sanierung und Umbau Strukturierte, normgerechte Installationen für Wohn- und Gewerbeobjekte – von der Grundinstallation bis zur Erweiterung bestehender Anlagen.",
         "skill_2": "• Intelligente Gebäudetechnik &amp; Smart Home (KNX) Planung und Umsetzung smarter Steuerungen für Licht, Beschattung, Heizung, Klima und mehr – individuell abgestimmt und jederzeit erweiterbar.",
         "skill_3": "• Digitale Elektroplanung Stromlauf- und Installationspläne als saubere Grundlage für eine effiziente, nachvollziehbare und normkonforme Ausführung.",
@@ -664,25 +648,8 @@ const translations = {
         "who_we_are_p1": "Die Voltix Elektotechnik GmbH ist ein zukunftsorientiertes Elektrotechnikunternehmen, das sich der Bereitstellung hochwertiger Lösungen für Privat-, Gewerbe- und Industriekunden verschrieben hat. Wir wurden 2018 mit der Mission gegründet, deutsche Ingenieurspräzision in die sich schnell entwickelnden Bereiche der Automatisierung und nachhaltigen Energie zu bringen.",
         "who_we_are_p2": "Mit Expertise in Automatisierungstechnologien, Industriemaschinen, Smart-Home-Systemen und komplexen Elektroinstallationen liefern wir Zuverlässigkeit und Innovation in jedem Projekt, wobei wir uns auf Langlebigkeit und die Einhaltung strengster europäischer Sicherheitsstandards konzentrieren.",
 
-        "values_title": "Unsere Grundwerte",
-        "value_1_title": "Präzision",
-        "value_1_text": "Wir folgen den höchsten Ingenieurs- und Sicherheitsstandards (VDE/DIN), um sicherzustellen, dass jede Verbindung einwandfrei ist.",
-        "value_2_title": "Innovation",
-        "value_2_text": "Wir implementieren moderne Technologien, einschließlich fortschrittlicher Smart-Systeme und maßgeschneiderter Automatisierungslösungen, für Energieeffizienz.",
-        "value_3_title": "Vertrauen",
-        "value_3_text": "Unsere Kunden verlassen sich auf uns, weil wir konsistente langfristige Leistung, Transparenz und zuverlässige Wartungsunterstützung bieten.",
-        "value_4_title": "Sicherheit",
-        "value_4_text": "Alle Projekte halten sich strikt an EU-Vorschriften, Arbeitssicherheitsregeln (DGUV V3) und zertifizierte Qualitätsmanagementverfahren.",
+     
 
-        "expertise_title": "Unsere Fachkompetenz",
-        "expertise_p1": "Unser Team besteht aus IHK-zertifizierten Elektroingenieuren, Elektromeistern und Spezialisten in fortgeschrittenen technischen Bereichen. Wir übernehmen alles von der Planung und Inbetriebnahme bis zur laufenden Wartung.",
-        "skill_1": "• SPS-Programmierung (Siemens S7, TIA Portal, ABB, Schneider)",
-        "skill_2": "• Smart Home & Gebäudeautomation (KNX, Loxone)",
-        "skill_3": "• Hoch- und Niederspannungssystemtechnik",
-        "skill_4": "• Industrielle Prozesssteuerung & Optimierung",
-        "skill_5": "• Komplexe Systemdiagnose & elektrische Wartung",
-        "skill_6": "• Sicherheitssysteme & Zutrittskontrollintegration",
-        "skill_7": "• VDE-konforme Verkabelung für Wohn- und Gewerbebau",
         "contact_email": "Geschäftliche E-Mail: office@voltix-elektro.at",
 
         "mission_title": "Unsere Mission",
