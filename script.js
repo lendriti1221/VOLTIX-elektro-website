@@ -372,6 +372,7 @@ const translations = {
 "climate_target_4": "New construction and renovation projects",
 "climate_footer_cta": "Are you planning an air conditioning system or want to integrate existing systems intelligently? We advise you honestly, with a technical foundation, and find a solution that fits your building.",
 },
+    
     "de": {  
         "nav_home": "Startseite",
         "nav_about": "Über uns",
@@ -661,7 +662,7 @@ const translations = {
         "about_text_p2": "Mit jahrelanger Erfahrung in Industriestandards und Hochspannungssystemen gewährleisten wir Präzision, Konformität und langlebige Leistung bei jedem Projekt in ganz Deutschland.",
         "about_more_btn": "Unsere Expertise entdecken"
 
-    }
+    },
 
 };
 
