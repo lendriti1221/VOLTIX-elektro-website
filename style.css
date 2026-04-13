@@ -1879,3 +1879,20 @@ textarea::placeholder {
         font-weight: 500 !important;
     }
 }
+    .gallery {
+    display: flex;
+    gap: 15px; /* Adds space between the images */
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+}
+
+.gallery img {
+    width: 100%; /* Makes the image take up the container width */
+    max-width: 450px; /* Limits size so they don't get too huge */
+    height: 300px; /* Sets a uniform height for all images */
+    
+    /* THE MAGIC PART */
+    object-fit: cover; 
+    object-position: center;
+    
+    border-radius: 8px; /* Optional: adds nice rounded corners */
+}
