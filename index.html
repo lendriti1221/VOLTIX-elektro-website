@@ -43,33 +43,25 @@
 
 <body>
     <header>
-     
- <nav class="navbar">
-    <div class="logo-container">
-        <img src="assets/voltix-logo.png" class="logo">
-   
-    </div>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="assets/voltix-logo.png" alt="" class="logo">
+                <h1 class="company-name">Voltix Elektotechnik GmbH</h1>
+            </div>
 
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-translate="nav_home">Home</a></li>
+                <li><a href="about.html" data-translate="nav_about">About</a></li>
+                <li><a href="#services" data-translate="nav_services">Services</a></li>
+                <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
+                <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
 
-    <ul class="nav-links" id="nav-list">
-        <li><a href="#home" data-translate="nav_home">Home</a></li>
-        <li><a href="about.html" data-translate="nav_about">About</a></li>
-        <li><a href="#services" data-translate="nav_services">Services</a></li>
-        <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
-        <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
-        <li>
-            <select class="lang-switch" onchange="setLanguage(this.value)">
-                <option value="en">EN</option>
-                <option value="de">DE</option>
-            </select>
-        </li>
-    </ul>
-</nav>
+                <select class="lang-switch" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                </select>
+            </ul>
+        </nav>
     </header>
    <section class="hero" id="home">
     <div class="hero-content">
@@ -188,7 +180,12 @@
             </div>
         </div>
     </section>
-<section id="contact" class="contact-section">
+
+    <section id="contact" class="contact-section">
+    <div class="contact-container">
+
+
+           <section id="contact" class="contact-section">
   <div class="container">
     <div class="contact-container">
       
@@ -241,16 +238,17 @@
           <input type="tel" name="Phone" placeholder="Phone Number" data-en="Phone Number" data-de="Telefonnummer" required>
           
           <textarea name="Message" placeholder="Your Message" data-en="Your Message" data-de="Deine Nachricht" required></textarea>
-<div class="privacy-wrapper">
-    <input type="checkbox" id="privacy" name="privacy" required>
-         
+
+          <label class="checkbox-container">
+            <input type="checkbox" name="Privacy" required>
+            <span class="checkmark"></span>
+            <span class="checkbox-text" data-en="I have read and accept the privacy policy." data-de="Ich habe die Datenschutzerklärung gelesen und akzeptiere diese.">
+              I have read and accept the privacy policy.
+            </span>
+          </label>
+
           <div class="button-wrapper">
             <button type="submit" class="send-btn" data-en="SEND" data-de="SENDEN">SEND</button>
-          </div>
-        </form>
-      </div>
-
-    </div> </div> </section>
           </div>
         </form>
       </div>
