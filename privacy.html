@@ -68,7 +68,31 @@
         /* Ensure Navbar branding remains untouched by global styles */
         .navbar {
             background-color: #0a0a0a !important;
-        }
+        }/* Force strict top-to-bottom order */
+.legal-card-final {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+
+    column-count: 1 !important;
+    columns: 1 !important;
+}
+
+.legal-card-final > * {
+    width: 100% !important;
+    order: initial !important;
+    float: none !important;
+    break-inside: avoid !important;
+}
+
+.legal-block,
+.legal-actions {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+}
     </style>
 </head>
 <body>
