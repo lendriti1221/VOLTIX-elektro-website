@@ -2218,3 +2218,231 @@ footer {
         min-width: 0;
     }
 }
+/* =========================
+   LEGAL PAGES PROFESSIONAL ALIGNMENT
+   ========================= */
+
+.legal-hero {
+    text-align: center;
+    min-height: 42vh;
+    padding: 110px 20px 90px;
+}
+
+.legal-hero .hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.legal-hero h1 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+}
+
+.legal-hero .hero-subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.legal-hero .hero-subtitle p {
+    text-align: center;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.92);
+    margin: 0 auto;
+}
+
+/* Main section */
+.legal-section {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #f7f7f7 0%, #ffffff 100%);
+}
+
+/* Main legal card */
+.legal-card {
+    max-width: 980px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 55px 55px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid var(--color-primary);
+}
+
+/* Each content block */
+.legal-block {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: left;
+}
+
+.legal-block:last-of-type {
+    margin-bottom: 20px;
+}
+
+.legal-block h2,
+.legal-block h3 {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #111;
+    line-height: 1.25;
+}
+
+.legal-block h2 {
+    font-size: 1.7rem;
+}
+
+.legal-block h3 {
+    font-size: 1.25rem;
+}
+
+.legal-block p {
+    text-align: left;
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1.02rem;
+    line-height: 1.9;
+    color: #444;
+}
+
+/* Company info centered for better presentation */
+.legal-block:first-child p {
+    text-align: center;
+}
+
+/* Grid for legal facts */
+.legal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 860px;
+    margin: 0 auto 45px;
+}
+
+.legal-item {
+    background: #fafafa;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 18px;
+    padding: 24px 22px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.legal-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+}
+
+.legal-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: #111;
+    text-align: center;
+}
+
+.legal-item p {
+    margin: 0;
+    text-align: center;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* CTA button area */
+.legal-actions {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* Better footer links */
+.footer-links {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.82);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.footer-links a:hover,
+.footer-links a.active-link {
+    color: var(--color-primary);
+}
+
+/* Legal page links inside text */
+.legal-card a {
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(244, 180, 0, 0.5);
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.legal-card a:hover {
+    color: #000;
+    border-color: var(--color-primary);
+}
+
+/* subtle divider between sections */
+.legal-block + .legal-block {
+    padding-top: 12px;
+    position: relative;
+}
+
+.legal-block + .legal-block::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    margin: 0 auto 28px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .legal-card {
+        padding: 34px 22px;
+        border-radius: 18px;
+    }
+
+    .legal-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .legal-block {
+        margin-bottom: 34px;
+    }
+
+    .legal-block h2 {
+        font-size: 1.4rem;
+    }
+
+    .legal-block h3 {
+        font-size: 1.1rem;
+    }
+
+    .legal-block p,
+    .legal-item p {
+        font-size: 0.98rem;
+        line-height: 1.8;
+    }
+
+    .legal-hero {
+        min-height: 34vh;
+        padding: 90px 16px 70px;
+    }
+
+    .legal-hero .hero-subtitle p {
+        font-size: 1rem;
+    }
+}
