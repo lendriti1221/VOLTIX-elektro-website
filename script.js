@@ -9,7 +9,7 @@ const translations = {
         "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
         "hero_button": "Get in Touch",
         // ... (Keep all your other "en" keys here)
-        footer_text: "© 2025 Voltix Elektotechnik GmbH — All rights reserved.",
+        footer_text: "© 2025 VOLTIX Elektrotechnik GmbH — All rights reserved.",
     footer_impressum: "Legal Notice",
     footer_datenschutz: "Privacy Policy",
         "nav_home": "Home",
@@ -657,7 +657,7 @@ const translations = {
 
         "mission_title": "Unsere Mission",
         "mission_text": "Unser Ziel ist es, neue Maßstäbe in der Elektrotechnik zu setzen, indem wir moderne, effiziente und sichere Installationen liefern, die die Produktivität erheblich steigern, den Energieverbrauch senken und nachhaltige, intelligente Lebens- und Arbeitsumgebungen ermöglichen.",
-        footer_text: "© 2025 Voltix Elektotechnik GmbH — Alle Rechte vorbehalten.",
+        footer_text: "© 2025 VOLTIX Elektrotechnik GmbH — Alle Rechte vorbehalten.",
     footer_impressum: "Impressum",
     footer_datenschutz: "Datenschutz",
 
