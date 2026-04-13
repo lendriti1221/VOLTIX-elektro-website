@@ -721,7 +721,7 @@ function setLanguage(lang) {
         }
     });
 
-    // C: Service modal data (FIXED with data-key)
+    // ✅ Keep this ONLY if you use data-title/text somewhere else
     document.querySelectorAll('.service-box').forEach((box) => {
         const key = box.getAttribute('data-key');
         if (!key) return;
@@ -748,42 +748,12 @@ function changeLanguage(lang) {
     setLanguage(lang);
 }
 
-// 4. MODAL LOGIC
-function openModal(event) {
-    event.preventDefault(); // stop link navigation
-
-    const box = event.currentTarget;
-    const title = box.getAttribute('data-title');
-    const text = box.getAttribute('data-text');
-    const modalOverlay = document.getElementById('modalOverlay');
-
-    if (title && text && modalOverlay) {
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalText').innerText = text;
-        modalOverlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeModal() {
-    const modal = document.getElementById('modalOverlay');
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-}
-
-// 5. INITIALIZATION
+// 4. INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     setLanguage(savedLang);
 
-    // ✅ Attach modal click to service boxes
-    document.querySelectorAll('.service-box').forEach(box => {
-        box.addEventListener('click', openModal);
-    });
-
-    // ✅ Mobile menu (single clean version)
+    // ✅ CLEAN mobile menu (only one version)
     const menuBtn = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
 
@@ -799,13 +769,5 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             if (navList) navList.classList.remove('show');
         });
-    });
-
-    // Close modal when clicking outside
-    window.addEventListener('click', (event) => {
-        const modal = document.getElementById('modalOverlay');
-        if (event.target === modal) {
-            closeModal();
-        }
     });
 });
