@@ -550,7 +550,7 @@ footer {
 /* Titles - Professional Size */
 .about-section h2, 
 .about-content-centered h2, 
-.expertise-grid h2,
+.expertise-grid h2,{
     text-align: center !important;
     font-size: 1.6rem !important; /* Reduced from 3rem */
     margin-bottom: 20px !important;
@@ -560,6 +560,7 @@ footer {
 .mission-section {
     padding: 80px 20px; /* Increase the first number for more height */
     background-color: #000; 
+    margin: 0 auto;
     text-align: center;
     background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
 }
