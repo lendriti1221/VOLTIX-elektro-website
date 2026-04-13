@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Voltix Elektrotechnik GmbH</title>
+    <title data-translate="privacy_page_title">Privacy Policy | Voltix Elektrotechnik GmbH</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -31,8 +31,6 @@
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             border-top: 4px solid #f4b400;
-
-            /* THIS FIXES THE ORDER BUG */
             display: flex;
             flex-direction: column;
         }
@@ -75,11 +73,9 @@
             .legal-card {
                 padding: 25px;
             }
-
             .legal-block h1 {
                 font-size: 1.8rem;
             }
-
             .legal-block h2 {
                 font-size: 1.3rem;
             }
@@ -98,14 +94,14 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+            <li><a href="about.html" data-translate="nav_about">About</a></li>
+            <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+            <li><a href="index.html#projects" data-translate="nav_projects">Projects</a></li>
+            <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
             <li>
                 <select class="lang-switch" onchange="setLanguage(this.value)">
-                    <option value="en" selected>EN</option>
+                    <option value="en">EN</option>
                     <option value="de">DE</option>
                 </select>
             </li>
@@ -114,46 +110,45 @@
 </header>
 
 <div class="legal-wrapper">
-
     <div class="legal-card">
 
         <div class="legal-block">
-            <h1>Privacy Policy</h1>
-            <p>Information about how personal data is processed on this website.</p>
+            <h1 data-translate="privacy_title">Privacy Policy</h1>
+            <p data-translate="privacy_subtitle">Information about how personal data is processed on this website.</p>
         </div>
 
         <div class="legal-block">
-            <h2>1. General Information</h2>
-            <p>
+            <h2 data-translate="privacy_intro_title">1. General Information</h2>
+            <p data-translate="privacy_intro_text">
                 We take the protection of your personal data seriously. Your data is treated confidentially and in accordance with legal regulations (GDPR).
             </p>
         </div>
 
         <div class="legal-block">
-            <h2>2. Contact Form</h2>
-            <p>
+            <h2 data-translate="privacy_contact_title">2. Contact Form</h2>
+            <p data-translate="privacy_contact_text">
                 If you contact us via the form, your data (name, email, message) will be stored for the purpose of processing your request.
             </p>
         </div>
 
         <div class="legal-block">
-            <h2>3. Formspree</h2>
-            <p>
+            <h2 data-translate="privacy_formspree_title">3. Formspree</h2>
+            <p data-translate="privacy_formspree_text">
                 This website uses Formspree to handle form submissions. Data may be transferred to and stored on servers outside the EU.
             </p>
         </div>
 
         <div class="legal-block">
-            <h2>4. Your Rights</h2>
-            <p>
+            <h2 data-translate="privacy_rights_title">4. Your Rights</h2>
+            <p data-translate="privacy_rights_text">
                 You have the right to access, correct, delete, and restrict the processing of your personal data at any time.
             </p>
         </div>
 
         <div class="legal-block">
-            <h2>5. Contact</h2>
+            <h2 data-translate="privacy_responsible_title">5. Contact</h2>
             <p>
-                <strong>VOLTIX Elektrotechnik GmbH</strong><br>
+                <strong data-translate="company_name">VOLTIX Elektrotechnik GmbH</strong><br>
                 Brunnengasse 2<br>
                 2230 Gänserndorf, Austria<br>
                 <a href="mailto:office@voltix-elektro.at">office@voltix-elektro.at</a>
@@ -161,19 +156,18 @@
         </div>
 
         <div class="legal-actions">
-            <a href="index.html" class="btn primary-btn">Back to Home</a>
+            <a href="index.html" class="btn primary-btn" data-translate="back_home">Back to Home</a>
         </div>
 
     </div>
-
 </div>
 
 <footer>
     <div class="container footer-content">
-        <p>© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        <p data-translate="footer_rights">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
         <div class="footer-legal">
-            <a href="impressum.html">Legal Notice</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="impressum.html" data-translate="footer_impressum">Legal Notice</a>
+            <a href="privacy.html" data-translate="footer_privacy">Privacy Policy</a>
         </div>
     </div>
 </footer>
