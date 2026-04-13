@@ -8,60 +8,108 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 
-  <style>
-    /* 1. Reset the background to White */
-    .legal-viewport-fix {
-        width: 100% !important;
-        background-color: #ffffff !important; 
-        padding: 80px 20px !important;
-        display: block !important; /* Changed from flex to block */
-        margin: 0 !important;
-        box-sizing: border-box !important;
-    }
+    <style>
+        /* 1. Fix the Header/Navbar visibility */
+        header {
+            position: relative !important;
+            z-index: 1000 !important;
+            background-color: #0a0a0a !important;
+            width: 100% !important;
+        }
 
-    /* 2. The Card - Using Block instead of Flex to preserve order */
-    .legal-card-final {
-        width: 100% !important;
-        max-width: 850px !important;
-        background: #ffffff !important; 
-        padding: 50px 30px !important;
-        border-radius: 15px !important;
-        border: 1px solid #dddddd !important;
-        margin: 0 auto !important; 
-        display: block !important; /* CRITICAL: Forces 1, 2, 3 order */
-        box-sizing: border-box !important;
-        color: #333333 !important;
-    }
+        .navbar {
+            background-color: #0a0a0a !important;
+            display: flex !important; /* Ensure navbar stays flex for the logo/links */
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 10px 20px !important;
+        }
 
-    /* 3. The Blocks - Forced to full width and centered */
-    .legal-block {
-        width: 100% !important;
-        margin-bottom: 40px !important;
-        display: block !important;
-        clear: both !important; /* Prevents anything from floating next to it */
-        text-align: center !important;
-    }
+        /* 2. Force the page background to White and clear any floats */
+        .legal-viewport-fix {
+            width: 100% !important;
+            background-color: #ffffff !important; 
+            padding: 100px 20px !important; /* Extra top padding so it doesn't hide under nav */
+            display: block !important; 
+            margin: 0 !important;
+            position: relative !important;
+            min-height: 100vh !important;
+        }
 
-    .legal-card-final h1, 
-    .legal-card-final h2, 
-    .legal-card-final p, 
-    .legal-card-final strong {
-        text-align: center !important;
-        width: 100% !important;
-        display: block !important;
-        margin-bottom: 10px !important;
-    }
+        /* 3. The Card - Block display is SAFER for keeping order 1, 2, 3... */
+        .legal-card-final {
+            width: 100% !important;
+            max-width: 850px !important;
+            background: #ffffff !important; 
+            padding: 50px 30px !important;
+            border-radius: 15px !important;
+            border: 1px solid #dddddd !important;
+            margin: 0 auto !important; 
+            display: block !important; 
+            box-sizing: border-box !important;
+            color: #333333 !important;
+        }
 
-    .legal-actions {
-        text-align: center !important;
-        margin-top: 30px !important;
-    }
+        /* 4. This forces every block to be its own row */
+        .legal-block {
+            width: 100% !important;
+            margin-bottom: 50px !important;
+            display: block !important;
+            float: none !important; /* Kills any floating errors */
+            clear: both !important; /* Kills any overlapping */
+            text-align: center !important;
+        }
 
-    h1, h2 { color: #f4b400 !important; }
-    .navbar { background-color: #0a0a0a !important; }
-</style>
+        .legal-card-final h1, 
+        .legal-card-final h2, 
+        .legal-card-final p {
+            text-align: center !important;
+            width: 100% !important;
+            margin-bottom: 15px !important;
+            color: #333333 !important;
+        }
 
-<section class="legal-viewport-fix">
+        h1, h2 { color: #f4b400 !important; }
+
+        .legal-actions {
+            text-align: center !important;
+            display: block !important;
+            margin-top: 40px !important;
+        }
+
+        /* Fix Nav Links color so they don't disappear on white if they were white */
+        .nav-links a {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo"></a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li>
+                <select class="lang-switch" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="legal-viewport-fix">
     <div class="legal-card-final">
         
         <div class="legal-block">
@@ -103,17 +151,7 @@
             <a href="index.html" class="btn primary-btn">Back to Home</a>
         </div>
     </div>
-</section>
-
-<footer>
-    <div class="container footer-content">
-        <p>© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
-        <div class="footer-legal">
-            <a href="impressum.html">Impressum</a>
-            <a href="privacy.html">Datenschutz</a>
-        </div>
-    </div>
-</footer>
+</main>
 
 <script src="script.js"></script>
 </body>
