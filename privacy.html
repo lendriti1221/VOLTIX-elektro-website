@@ -1,52 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | Voltix Elektrotechnik GmbH</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Datenschutz | Voltix Elektrotechnik GmbH</title>
+    <meta name="description" content="Datenschutzerklärung von Voltix Elektrotechnik GmbH" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 </head>
-
 <body>
+<header>
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo"></a>
+        </div>
 
-<section class="content-section">
-<div class="container">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
 
-<h1 data-en="Privacy Policy" data-de="Datenschutzerklärung">
-Datenschutzerklärung
-</h1>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+            <li><a href="about.html" data-translate="nav_about">About</a></li>
+            <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+            <li><a href="index.html#projects" data-translate="nav_projects">Projects</a></li>
+            <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
+            <li><a href="impressum.html" data-translate="footer_impressum">Impressum</a></li>
+            <li><a href="privacy.html" class="active-link" data-translate="footer_privacy">Datenschutz</a></li>
+            <li>
+                <select class="lang-switch" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-<h2>1. General Information</h2>
-<p>
-We take the protection of your personal data seriously.  
-Your data is treated confidentially and in accordance with legal regulations (GDPR).
-</p>
-
-<h2>2. Contact Form</h2>
-<p>
-If you contact us via the form, your data (name, email, message) will be stored
-for processing your request.
-</p>
-
-<h2>3. Formspree</h2>
-<p>
-This website uses Formspree to handle form submissions.  
-Data may be transferred to Formspree servers in the USA.
-</p>
-
-<h2>4. Your Rights</h2>
-<p>
-You have the right to access, correct, delete, and restrict processing of your data.
-</p>
-
-<h2>5. Contact</h2>
-<p>
-Voltix Elektrotechnik GmbH<br>
-office@voltix-elektro.at
-</p>
-
-</div>
+<section class="hero legal-hero">
+    <div class="hero-content">
+        <h1 data-translate="privacy_title">Datenschutzerklärung</h1>
+        <div class="hero-subtitle">
+            <p data-translate="privacy_subtitle">Information about how personal data is processed on this website.</p>
+        </div>
+    </div>
 </section>
 
+<section class="content-section legal-section">
+    <div class="container legal-card">
+        <div class="legal-block">
+            <h2 data-translate="privacy_intro_title">1. General Information</h2>
+            <p data-translate="privacy_intro_text">We take the protection of your personal data seriously. Your data is treated confidentially and in accordance with legal regulations (GDPR).</p>
+        </div>
+
+        <div class="legal-block">
+            <h2 data-translate="privacy_contact_title">2. Contact Form</h2>
+            <p data-translate="privacy_contact_text">If you contact us via the form, your data (name, email, message) will be stored for processing your request.</p>
+        </div>
+
+        <div class="legal-block">
+            <h2 data-translate="privacy_formspree_title">3. Formspree</h2>
+            <p data-translate="privacy_formspree_text">This website uses Formspree to handle form submissions. Data may be transferred to Formspree servers in the USA.</p>
+        </div>
+
+        <div class="legal-block">
+            <h2 data-translate="privacy_rights_title">4. Your Rights</h2>
+            <p data-translate="privacy_rights_text">You have the right to access, correct, delete, and restrict processing of your data.</p>
+        </div>
+
+        <div class="legal-block">
+            <h2 data-translate="privacy_responsible_title">5. Contact</h2>
+            <p>
+                <strong>VOLTIX Elektrotechnik GmbH</strong><br>
+                Brunnengasse 2<br>
+                2230 Gänserndorf<br>
+                office@voltix-elektro.at
+            </p>
+        </div>
+
+        <div class="legal-actions">
+            <a href="index.html" class="btn primary-btn" data-translate="back_home">Back to Home</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p data-translate="footer_text">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        <div class="footer-links">
+            <a href="impressum.html" data-translate="footer_impressum">Impressum</a>
+            <a href="privacy.html" class="active-link" data-translate="footer_privacy">Datenschutz</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
