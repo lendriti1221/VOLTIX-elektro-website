@@ -1,195 +1,177 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Datenschutz | Voltix Elektrotechnik GmbH</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/voltix-logo.png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutz | Voltix Elektrotechnik GmbH</title>
 
-    <style>
-        /* 1. Page Background Fix */
-        body {
-            background-color: #ffffff !important;
-            color: #333 !important;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 
-        /* 2. Content Wrapper - Forces Vertical Stack */
-        .legal-viewport-fix {
-            width: 100%;
-            padding: 80px 20px;
-            background-color: #ffffff;
-            display: flex !important;
-            flex-direction: column !important; /* Forces vertical */
-            align-items: center !important;
-            min-height: 80vh;
-        }
+<style>
 
-        /* 3. The Card - Kill Grid/Flex conflicts */
-        .legal-card-final {
-            width: 100%;
-            max-width: 850px;
-            background: #ffffff;
-            padding: 40px;
-            border: 1px solid #eee;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            
-            /* The real fix for the order: */
-            display: block !important; 
-        }
-
-        /* 4. The Blocks - Ensuring they don't float or shrink */
-        .legal-block {
-            display: block !important;
-            width: 100% !important;
-            margin-bottom: 40px !important;
-            text-align: center !important;
-            clear: both !important;
-        }
-
-        .legal-block h1, .legal-block h2 {
-            color: #f4b400 !important;
-            margin-bottom: 15px !important;
-        }
-
-        .legal-block p {
-            color: #444 !important;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .legal-actions {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        /* Ensure Navbar branding remains untouched by global styles */
-        .navbar {
-            background-color: #0a0a0a !important;
-        }/* Force strict top-to-bottom order */
-..legal-card-final {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
-    column-count: 1 !important;
-    columns: 1 !important;
-}
+/* ===== PAGE FIX ===== */
+body {
+    background: #ffffff;
+    color: #333;
 }
 
-.legal-card-final > * {
-    width: 100% !important;
-    order: initial !important;
-    float: none !important;
-    break-inside: avoid !important;
+/* ===== CENTER WRAPPER ===== */
+.legal-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
 }
 
-.legal-block,
+/* ===== MAIN CARD ===== */
+.legal-card {
+    width: 100%;
+    max-width: 850px;
+    background: #fff;
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border-top: 4px solid #f4b400;
+
+    /* THIS FIXES THE ORDER BUG */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== BLOCKS ===== */
+.legal-block {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+.legal-block h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.legal-block h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f4b400;
+}
+
+/* ===== TEXT ===== */
+.legal-block p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* ===== BUTTON ===== */
 .legal-actions {
-    display: block !important;
-    width: 100% !important;
-    float: none !important;
-    clear: both !important;
-}main.legal-viewport-fix .legal-card-final {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
-    column-count: 1 !important;
-    columns: 1 !important;
+    text-align: center;
+    margin-top: 30px;
 }
 
-main.legal-viewport-fix .legal-card-final > .legal-block,
-main.legal-viewport-fix .legal-card-final > .legal-actions {
-    display: block !important;
-    width: 100% !important;
-    float: none !important;
-    clear: both !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .legal-card {
+        padding: 25px;
+    }
+
+    .legal-block h1 {
+        font-size: 1.8rem;
+    }
+
+    .legal-block h2 {
+        font-size: 1.3rem;
+    }
 }
-    </style>
+
+</style>
 </head>
+
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="logo-container">
-            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo"></a>
-        </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-        <ul class="nav-links" id="nav-list">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li>
-                <select class="lang-switch" onchange="setLanguage(this.value)">
-                    <option value="en">EN</option>
-                    <option value="de">DE</option>
-                </select>
-            </li>
-        </ul>
-    </nav>
+<nav class="navbar">
+    <div class="logo-container">
+        <a href="index.html#home">
+            <img src="assets/voltix-logo.png" class="logo">
+        </a>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
 </header>
 
-<main class="legal-viewport-fix">
-    <div class="legal-card-final">
-        
+<!-- ===== MAIN ===== -->
+<div class="legal-wrapper">
+
+    <div class="legal-card">
+
         <div class="legal-block">
-            <h1 data-translate="privacy_title">Datenschutzerklärung</h1>
-            <p data-translate="privacy_subtitle">Information about how personal data is processed on this website.</p>
+            <h1>Datenschutzerklärung</h1>
+            <p>Information about how personal data is processed on this website.</p>
         </div>
 
         <div class="legal-block">
-            <h2 data-translate="privacy_intro_title">1. General Information</h2>
-            <p data-translate="privacy_intro_text">We take the protection of your personal data seriously. Your data is treated confidentially and in accordance with legal regulations (GDPR).</p>
+            <h2>1. General Information</h2>
+            <p>
+                We take the protection of your personal data seriously. Your data is treated confidentially and in accordance with legal regulations (GDPR).
+            </p>
         </div>
 
         <div class="legal-block">
-            <h2 data-translate="privacy_contact_title">2. Contact Form</h2>
-            <p data-translate="privacy_contact_text">If you contact us via the form, your data (name, email, message) will be stored for processing your request.</p>
+            <h2>2. Contact Form</h2>
+            <p>
+                If you contact us via the form, your data (name, email, message) will be stored for processing your request.
+            </p>
         </div>
 
         <div class="legal-block">
-            <h2 data-translate="privacy_formspree_title">3. Formspree</h2>
-            <p data-translate="privacy_formspree_text">This website uses Formspree to handle form submissions. Data may be transferred to Formspree servers in the USA.</p>
+            <h2>3. Formspree</h2>
+            <p>
+                This website uses Formspree to handle form submissions. Data may be transferred to servers outside the EU.
+            </p>
         </div>
 
         <div class="legal-block">
-            <h2 data-translate="privacy_rights_title">4. Your Rights</h2>
-            <p data-translate="privacy_rights_text">You have the right to access, correct, delete, and restrict processing of your data.</p>
+            <h2>4. Your Rights</h2>
+            <p>
+                You have the right to access, correct, delete, and restrict processing of your data.
+            </p>
         </div>
 
         <div class="legal-block">
-            <h2 data-translate="privacy_responsible_title">5. Contact</h2>
+            <h2>5. Contact</h2>
             <p>
                 <strong>VOLTIX Elektrotechnik GmbH</strong><br>
                 Brunnengasse 2<br>
                 2230 Gänserndorf<br>
-                office@voltix-elektro.at
+                <a href="mailto:office@voltix-elektro.at">office@voltix-elektro.at</a>
             </p>
         </div>
 
         <div class="legal-actions">
             <a href="index.html" class="btn primary-btn">Back to Home</a>
         </div>
+
     </div>
-</main>
+
+</div>
 
 <footer>
-    <div class="container footer-content">
+    <div class="container">
         <p>© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
-        <div class="footer-legal">
-            <a href="impressum.html">Impressum</a>
-            <a href="privacy.html">Datenschutz</a>
-        </div>
     </div>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
