@@ -253,37 +253,47 @@ body {
 }
 
 /* SERVICES SECTION */
+/* --- SERVICES SECTION GRID --- */
 .services-grid {
     display: grid;
+    /* This creates the responsive grid layout */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    width: 100%;
 }
 
+/* --- INDIVIDUAL SERVICE BOX --- */
 .service-box {
-    position: relative; /* REQUIRED */
-    background: var(--color-white);
+    position: relative; 
+    background: #ffffff; /* Defaulting to white if var is missing */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 5px solid var(--color-primary);
+    border-top: 5px solid #ffd700; /* Your gold theme color */
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    overflow: hidden; /* REQUIRED */
+    overflow: hidden; 
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; /* Removes underline from links */
+    min-height: 250px; /* Ensures all boxes have a uniform height */
 }
 
-/* background image layer */
+/* --- BACKGROUND IMAGE LAYER --- */
 .service-box::before {
     content: "";
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    opacity: 0.18; /* image visibility */
+    opacity: 0.18; 
     z-index: 0;
     transition: opacity 0.35s ease, transform 0.35s ease;
+    /* CRITICAL FIX: This prevents the image from blocking clicks to other links */
+    pointer-events: none; 
 }
 
-/* text stays above image */
+/* --- CONTENT LAYER (Text above images) --- */
 .service-box > * {
     position: relative;
     z-index: 1;
@@ -291,24 +301,29 @@ body {
 
 .service-box h3 {
     font-size: 22px;
-    color: var(--color-dark);
+    color: #1a1a1a;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-/* hover effects */
+.service-box p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* --- HOVER EFFECTS --- */
 .service-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 .service-box:hover::before {
-  opacity: 0.28;
-  transform: scale(1.05);
+    opacity: 0.28;
+    transform: scale(1.05);
 }
 
-
-
+/* --- SPECIFIC BACKGROUND IMAGES --- */
 .service-box.elektro::before {
     background-image: url("assets/elektro-image.png");
 }
