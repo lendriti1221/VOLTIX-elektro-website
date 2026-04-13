@@ -658,8 +658,8 @@ const translations = {
         "mission_title": "Unsere Mission",
         "mission_text": "Unser Ziel ist es, neue Maßstäbe in der Elektrotechnik zu setzen, indem wir moderne, effiziente und sichere Installationen liefern, die die Produktivität erheblich steigern, den Energieverbrauch senken und nachhaltige, intelligente Lebens- und Arbeitsumgebungen ermöglichen.",
         "footer_text": "© 2025 VOLTIX Elektrotechnik GmbH — Alle Rechte vorbehalten.",
-    "footer_impressum": "Impressum",
-    "footer_datenschutz": "Datenschutz",
+        "footer_impressum": "Impressum",
+        "footer_datenschutz": "Datenschutz",
 
         "about_title": "Über unser Unternehmen",
         "about_text_p1": "Die VOLTIX Elektrotechnik GmbH steht für moderne Elektrotechnik, durchdachte Planung und zuverlässige Umsetzung. Als Elektromeisterbetrieb begleiten wir unsere Kundinnen und Kunden von der ersten Idee bis zur fertigen Lösung – persönlich, ehrlich und auf Augenhöhe. Unser Schwerpunkt liegt auf intelligenter Gebäudetechnik und Smart-Home-Lösungen (KNX), die den Alltag spürbar erleichtern, Energie sparen und langfristig überzeugen. Ob Einfamilienhaus, Wohnung, Gewerbebetrieb oder Büro – wir entwickeln Lösungen, die genau zu Ihren Anforderungen passen und auch in Zukunft flexibel erweiterbar sind. Besonderen Wert legen wir auf saubere Arbeit, Termintreue und nachhaltige Qualität. Jede Installation wird sorgfältig geplant und Normgerecht umgesetzt, damit Sie sich auf eine sichere, zuverlässige und langlebige Elektrotechnik verlassen können.",
