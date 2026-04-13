@@ -554,9 +554,11 @@ footer {
 .expertise-grid h2 {  /* <--- Removed the extra comma here */
     text-align: center !important;
     font-size: 1.6rem !important;
-    margin-bottom: 20px !important;
+    margin-top: 60px !important;
+    margin-bottom: 40px !important;
     margin-left: auto !important;   /* Explicitly center the block */
     margin-right: auto !important;  /* Explicitly center the block */
+    letter-spacing: 1px;
     display: block !important;
     color: #d4af37; 
 }
