@@ -2287,3 +2287,66 @@ footer {
     display: flex;
     gap: 25px;
 }
+/* --- THE ABSOLUTE CENTER SLEDGEHAMMER --- */
+
+/* This resets the entire section to be a centering machine */
+.legal-viewport-fix {
+    width: 100% !important;
+    min-height: 80vh;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; /* Horizontal Center */
+    align-items: center !important;     /* Vertical Center */
+    text-align: center !important;
+    background-color: #0a0a0a !important;
+    padding: 80px 20px !important;
+    margin: 0 !important;
+    left: 0 !important;
+    position: relative !important;
+}
+
+/* This forces the card to be dead-center regardless of other containers */
+.legal-card-final {
+    width: 100% !important;
+    max-width: 850px !important;
+    background: #111111 !important;
+    padding: 50px 30px !important;
+    border-radius: 15px !important;
+    border: 1px solid #222 !important;
+    margin: 0 auto !important; /* Critical for centering */
+    box-sizing: border-box !important;
+    display: block !important;
+}
+
+/* Force every single text element to be centered */
+.legal-card-final h1, 
+.legal-card-final h2, 
+.legal-card-final h3, 
+.legal-card-final p, 
+.legal-card-final strong,
+.legal-card-final div {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+}
+
+.legal-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    margin: 40px 0 !important;
+}
+
+.legal-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center !important;
+}
+
+.legal-actions {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 40px !important;
+}
