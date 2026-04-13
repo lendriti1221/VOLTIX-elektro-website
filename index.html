@@ -43,25 +43,33 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <img src="assets/voltix-logo.png" alt="" class="logo">
-                <h1 class="company-name">Voltix Elektotechnik GmbH</h1>
-            </div>
+     
+ <nav class="navbar">
+    <div class="logo-container">
+        <img src="assets/voltix-logo.png" class="logo">
+   
+    </div>
 
-            <ul class="nav-links">
-                <li><a href="#home" data-translate="nav_home">Home</a></li>
-                <li><a href="about.html" data-translate="nav_about">About</a></li>
-                <li><a href="#services" data-translate="nav_services">Services</a></li>
-                <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
-                <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
 
-                <select class="lang-switch" onchange="setLanguage(this.value)">
-                    <option value="en">EN</option>
-                    <option value="de">DE</option>
-                </select>
-            </ul>
-        </nav>
+    <ul class="nav-links" id="nav-list">
+        <li><a href="#home" data-translate="nav_home">Home</a></li>
+        <li><a href="about.html" data-translate="nav_about">About</a></li>
+        <li><a href="#services" data-translate="nav_services">Services</a></li>
+        <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
+        <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+        <li>
+            <select class="lang-switch" onchange="setLanguage(this.value)">
+                <option value="en">EN</option>
+                <option value="de">DE</option>
+            </select>
+        </li>
+    </ul>
+</nav>
     </header>
    <section class="hero" id="home">
     <div class="hero-content">
@@ -82,14 +90,10 @@
             <div class="about-grid">
                 <div class="about-text-content">
                     <p data-translate="about_text_p1">
-                        Voltix Elektotechnik GmbH is a modern electrical engineering company specializing in 
-                        smart home systems, industrial automation, PLC programming, electrical safety systems, 
-                        building wiring, and private/commercial installations. Our certified engineers deliver 
-                        safe, efficient, and innovative solutions tailored to each customer.
+                       VOLTIX Elektrotechnik GmbH stands for modern electrical engineering, well-thought-out planning, and reliable implementation. As a master electrical contracting company, we support our clients from the initial idea to the finished solution – personally, honestly, and as equals. Our focus is on intelligent building technology and smart home solutions (KNX) that noticeably simplify everyday life, save energy, and provide long-term benefits. Whether for a single-family home, apartment, commercial building, or office – we develop solutions that precisely match your requirements and can be flexibly expanded in the future. We place particular emphasis on clean workmanship, adherence to deadlines, and sustainable quality. Every installation is carefully planned and implemented in accordance with standards, so you can rely on safe, dependable, and durable electrical engineering.
                     </p>
                     <p data-translate="about_text_p2">
-                        With years of experience in industrial standards and high-voltage systems, we ensure 
-                        precision, compliance, and long-lasting performance in every project across Germany.
+                       We primarily operate in Lower Austria and Vienna, but depending on the project size, we also accept projects beyond these regions. As a growing company, we pursue a clear goal: to create technology that inspires today and will still be relevant tomorrow.
                     </p>
                     <a href="about.html" class="btn secondary-btn" data-translate="about_more_button">Discover Our Expertise</a>
                 </div>
@@ -138,7 +142,6 @@
         </div>
     </div>
 </section>
-   
 
 <!-- Modal Overlay -->
 <div id="modalOverlay" class="modal-overlay" onclick="outsideClick(event)">
@@ -156,7 +159,7 @@
     <section id="projects" class="content-section projects-section">
         <div class="container">
             <h2 class="section-title" data-translate="projects_title">Recent Projects</h2>
-            <p class="section-subtitle" data-translate="projects_text">Selected examples showcasing our expertise in complex automation and high-quality installations.</p>
+            <p class="section-subtitle" data-translate="projects_text">Insight into selected projects and implemented electrotechnical solutions.</p>
             
             <div class="projects-grid">
                 <div class="project-card">
@@ -183,12 +186,7 @@
             </div>
         </div>
     </section>
-
-    <section id="contact" class="contact-section">
-    <div class="contact-container">
-
-
-           <section id="contact" class="contact-section">
+<section id="contact" class="contact-section">
   <div class="container">
     <div class="contact-container">
       
@@ -199,7 +197,7 @@
           <i class="fas fa-map-marker-alt"></i>
           <div class="info-text">
             <strong>VOLTIX Elektrotechnik GmbH</strong><br>
-            Brunnengasse 2, 2203 Gänserndorf
+            Brunnengasse 2, 2230 Gänserndorf
           </div>
         </div>
 
@@ -241,17 +239,16 @@
           <input type="tel" name="Phone" placeholder="Phone Number" data-en="Phone Number" data-de="Telefonnummer" required>
           
           <textarea name="Message" placeholder="Your Message" data-en="Your Message" data-de="Deine Nachricht" required></textarea>
-
-          <label class="checkbox-container">
-            <input type="checkbox" name="Privacy" required>
-            <span class="checkmark"></span>
-            <span class="checkbox-text" data-en="I have read and accept the privacy policy." data-de="Ich habe die Datenschutzerklärung gelesen und akzeptiere diese.">
-              I have read and accept the privacy policy.
-            </span>
-          </label>
-
+<div class="privacy-wrapper">
+    <input type="checkbox" id="privacy" name="privacy" required>
+         
           <div class="button-wrapper">
             <button type="submit" class="send-btn" data-en="SEND" data-de="SENDEN">SEND</button>
+          </div>
+        </form>
+      </div>
+
+    </div> </div> </section>
           </div>
         </form>
       </div>
