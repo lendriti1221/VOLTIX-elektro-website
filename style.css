@@ -2011,3 +2011,65 @@ footer {
         padding: 30px 15px !important; 
     }
 }
+/* --- THE ULTIMATE CENTER FIX --- */
+
+/* 1. Force the section to be a centering flex-box */
+.legal-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 100px 0 !important;
+    background-color: #0a0a0a !important;
+}
+
+/* 2. Force the card to stay in the middle and center its children */
+.legal-card {
+    display: block !important;
+    margin: 0 auto !important; /* The classic centering trick */
+    text-align: center !important; /* Centers text and inline elements */
+    width: 90% !important;
+    max-width: 900px !important;
+    background: #111 !important;
+    padding: 50px !important;
+    border-radius: 12px !important;
+    border: 1px solid #222 !important;
+}
+
+/* 3. Force every block and paragraph to align center */
+.legal-block, 
+.legal-block h1, 
+.legal-block h2, 
+.legal-block h3, 
+.legal-block p {
+    text-align: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 4. Ensure the grid items (VAT, Director, etc.) are centered */
+.legal-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important; 
+    gap: 30px !important;
+    margin: 40px 0 !important;
+    width: 100% !important;
+}
+
+.legal-item {
+    text-align: center !important;
+    flex: 1;
+    min-width: 200px !important;
+}
+
+/* 5. Center the Back Home Button */
+.legal-actions {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 30px !important;
+}
