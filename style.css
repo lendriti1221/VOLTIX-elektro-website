@@ -515,7 +515,7 @@ footer {
 
 /* 2. HERO SECTION - Adjusted height and text */
 .about-hero {
-    background: linear-gradient(-45deg, #000000, #000000, #7a6f41, #837b43);
+    background: linear-gradient(-45deg, #000000, #000000, #D4AF37, #CFB53B);
     background-size: 300% 300%;
     animation: electricFlow 10s ease infinite;
     height: 50vh; /* Reduced from 60vh */
