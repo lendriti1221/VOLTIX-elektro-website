@@ -50,6 +50,24 @@ const translations = {
         privacy_intro_title: "1. General Information",
         privacy_intro_text: "We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with the applicable legal data protection regulations, in particular the GDPR.",
 
+        privacy_page_title: "Privacy Policy | Voltix Elektrotechnik GmbH",
+        privacy_title: "Privacy Policy",
+        privacy_subtitle: "Information about how personal data is processed on this website.",
+        privacy_intro_title: "1. General Information",
+        privacy_intro_text: "We take the protection of your personal data seriously. Your data is treated confidentially and in accordance with legal regulations (GDPR).",
+        privacy_contact_title: "2. Contact Form",
+        privacy_contact_text: "If you contact us via the form, your data (name, email, message) will be stored for the purpose of processing your request.",
+        privacy_formspree_title: "3. Formspree",
+        privacy_formspree_text: "This website uses Formspree to handle form submissions. Data may be transferred to and stored on servers outside the EU.",
+        privacy_rights_title: "4. Your Rights",
+        privacy_rights_text: "You have the right to access, correct, delete, and restrict the processing of your personal data at any time.",
+        privacy_responsible_title: "5. Contact",
+        company_name: "VOLTIX Elektrotechnik GmbH",
+        back_home: "Back to Home",
+        footer_rights: "© 2025 Voltix Elektrotechnik GmbH — All rights reserved.",
+        footer_impressum: "Legal Notice",
+        footer_privacy: "Privacy Policy",
+        
         privacy_responsible_title: "2. Responsible Entity",
         privacy_contact_title: "3. Contacting Us",
         privacy_contact_text: "If you contact us by email or via the contact form, the data you provide will be stored for the purpose of processing your request and possible follow-up questions.",
@@ -636,7 +654,7 @@ const translations = {
         "trust_3": "✔ Moderne Gebäudetechnik",
         "trust_4": "✔ Verlässliche Qualität",
 
-        // Services (Full German Text)
+        
         back_to_overview: "Zurück zur Übersicht",
         hero_button: "Kontakt aufnehmen",
         nav_services: "Leistungen",
@@ -676,6 +694,23 @@ const translations = {
         privacy_security_text: "Wir setzen geeignete technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre personenbezogenen Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen.",
 
         back_home: "Zurück zur Startseite",
+        privacy_page_title: "Datenschutzerklärung | Voltix Elektrotechnik GmbH",
+        privacy_title: "Datenschutzerklärung",
+        privacy_subtitle: "Informationen darüber, wie personenbezogene Daten auf dieser Website verarbeitet werden.",
+        privacy_intro_title: "1. Allgemeine Informationen",
+        privacy_intro_text: "Wir nehmen den Schutz Ihrer persönlichen Daten ernst. Ihre Daten werden vertraulich und entsprechend der gesetzlichen Vorschriften (DSGVO) behandelt.",
+        privacy_contact_title: "2. Kontaktformular",
+        privacy_contact_text: "Wenn Sie uns per Formular kontaktieren, werden Ihre Daten (Name, E-Mail, Nachricht) zwecks Bearbeitung Ihrer Anfrage gespeichert.",
+        privacy_formspree_title: "3. Formspree",
+        privacy_formspree_text: "Diese Website nutzt Formspree zur Abwicklung von Formularanfragen. Daten können an Server außerhalb der EU übertragen und dort gespeichert werden.",
+        privacy_rights_title: "4. Ihre Rechte",
+        privacy_rights_text: "Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten.",
+        privacy_responsible_title: "5. Kontakt",
+        company_name: "VOLTIX Elektrotechnik GmbH",
+        back_home: "Zurück zur Startseite",
+        footer_rights: "© 2025 Voltix Elektrotechnik GmbH — Alle Rechte vorbehalten.",
+        footer_impressum: "Impressum",
+        footer_privacy: "Datenschutzerklärung",
        
 
         // Service 1
