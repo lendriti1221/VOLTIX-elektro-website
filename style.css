@@ -554,8 +554,8 @@ footer {
 .expertise-grid h2 {  /* <--- Removed the extra comma here */
     text-align: center !important;
     font-size: 1.6rem !important;
-    margin-top: 60px !important;
-    margin-bottom: 40px !important;
+    margin-top: 80px !important;
+    margin-bottom: 60px !important;
     margin-left: auto !important;   /* Explicitly center the block */
     margin-right: auto !important;  /* Explicitly center the block */
     letter-spacing: 1px;
