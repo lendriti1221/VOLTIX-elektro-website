@@ -8,8 +8,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
+
+    <style>
+        .legal-viewport-fix {
+            width: 100% !important;
+            min-height: 80vh;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important; 
+            align-items: center !important;     
+            text-align: center !important;
+            background-color: #0a0a0a !important; /* Force dark background */
+            padding: 80px 20px !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+        }
+
+        .legal-card-final {
+            width: 100% !important;
+            max-width: 850px !important;
+            background: #111111 !important; /* Force dark card */
+            padding: 50px 30px !important;
+            border-radius: 15px !important;
+            border: 1px solid #222 !important;
+            margin: 0 auto !important; 
+            display: block !important;
+            box-sizing: border-box !important;
+        }
+
+        .legal-card-final h1, 
+        .legal-card-final h2, 
+        .legal-card-final p, 
+        .legal-card-final strong {
+            text-align: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: 100% !important;
+            display: block !important;
+        }
+
+        .legal-actions {
+            display: flex !important;
+            justify-content: center !important;
+            margin-top: 40px !important;
+        }
+
+        .legal-block {
+            margin-bottom: 30px !important;
+        }
+
+        h1, h2 { color: #f4b400 !important; }
+    </style>
 </head>
 <body>
+
 <header>
     <nav class="navbar">
         <div class="logo-container">
@@ -38,36 +90,36 @@
     </nav>
 </header>
 
-<section class="legal-page-reset">
-    <div class="legal-card-centered">
+<section class="legal-viewport-fix">
+    <div class="legal-card-final">
         
         <div class="legal-block">
-            <h1 style="color:#f4b400" data-translate="privacy_title">Datenschutzerklärung</h1>
+            <h1 data-translate="privacy_title">Datenschutzerklärung</h1>
             <p data-translate="privacy_subtitle">Information about how personal data is processed on this website.</p>
         </div>
 
         <div class="legal-block">
-            <h2 style="color:#f4b400" data-translate="privacy_intro_title">1. General Information</h2>
+            <h2 data-translate="privacy_intro_title">1. General Information</h2>
             <p data-translate="privacy_intro_text">We take the protection of your personal data seriously. Your data is treated confidentially and in accordance with legal regulations (GDPR).</p>
         </div>
 
         <div class="legal-block">
-            <h2 style="color:#f4b400" data-translate="privacy_contact_title">2. Contact Form</h2>
+            <h2 data-translate="privacy_contact_title">2. Contact Form</h2>
             <p data-translate="privacy_contact_text">If you contact us via the form, your data (name, email, message) will be stored for processing your request.</p>
         </div>
 
         <div class="legal-block">
-            <h2 style="color:#f4b400" data-translate="privacy_formspree_title">3. Formspree</h2>
+            <h2 data-translate="privacy_formspree_title">3. Formspree</h2>
             <p data-translate="privacy_formspree_text">This website uses Formspree to handle form submissions. Data may be transferred to Formspree servers in the USA.</p>
         </div>
 
         <div class="legal-block">
-            <h2 style="color:#f4b400" data-translate="privacy_rights_title">4. Your Rights</h2>
+            <h2 data-translate="privacy_rights_title">4. Your Rights</h2>
             <p data-translate="privacy_rights_text">You have the right to access, correct, delete, and restrict processing of your data.</p>
         </div>
 
         <div class="legal-block">
-            <h2 style="color:#f4b400" data-translate="privacy_responsible_title">5. Contact</h2>
+            <h2 data-translate="privacy_responsible_title">5. Contact</h2>
             <p>
                 <strong>VOLTIX Elektrotechnik GmbH</strong><br>
                 Brunnengasse 2<br>
