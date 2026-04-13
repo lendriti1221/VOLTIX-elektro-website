@@ -553,10 +553,10 @@ footer {
 .expertise-grid h2,
 .mission-section h2 {
     text-align: center !important;
-    font-size: 2.2rem !important; /* Reduced from 3rem */
+    font-size: 1rem !important; /* Reduced from 3rem */
     margin-bottom: 20px !important;
     display: block !important;
-    color: #ffffff; /* Using your gold theme color */
+    color: #ffd700; /* Using your gold theme color */
 }
 
 /* Body Text - Clean & Readable */
@@ -565,9 +565,9 @@ footer {
 .expertise-grid p,
 .mission-section p {
     text-align: center !important;
-    font-size: 1.15rem !important; /* Reduced from 1.4rem */
+    font-size: 1rem !important; /* Reduced from 1.4rem */
     line-height: 1.6 !important;
-    margin-bottom: 20px !important;
+    margin: 0 auto !important;
     display: block !important;
 }
 
