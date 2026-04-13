@@ -1879,23 +1879,27 @@ textarea::placeholder {
         font-weight: 500 !important;
     }
 }
- /* --- FOOTER LAYOUT --- */
+/* --- FOOTER LAYOUT --- */
 footer {
     background-color: #000000;
-    padding: 20px 0;
-    border-top: 1px solid #1a1a1a; /* Subtle line above footer */
+    padding: 30px 0;
+    border-top: 1px solid #1a1a1a;
+    width: 100%;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Copyright left, links right */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Helps on very small screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .footer-legal {
     display: flex;
-    gap: 20px; /* Space between the two links */
+    gap: 25px;
 }
 
 .footer-legal a {
@@ -1906,95 +1910,104 @@ footer {
 }
 
 .footer-legal a:hover {
-    color: #f4b400; /* Turns gold on hover */
+    color: #f4b400; /* Gold hover */
 }
 
-/* Mobile Fix: Center everything on phones */
+/* Mobile Footer Fix */
 @media screen and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
         text-align: center;
     }
     .footer-legal {
         justify-content: center;
     }
 }
-/* --- LEGAL PAGES STYLING (Impressum & Datenschutz) --- */
 
-.legal-hero {
-    height: 40vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('assets/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-bottom: 2px solid #f4b400;
-}
-
-.legal-hero h1 {
-    font-size: 3rem;
-    color: #f4b400;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
+/* --- LEGAL PAGES: FORCE CENTERED DESIGN --- */
 
 .legal-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: #0a0a0a;
-    color: #ffffff;
-    display: flex;       /* Added to help centering */
-    justify-content: center; 
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 60vh;
 }
 
 .legal-card {
-    width: 90%;          /* Essential for responsiveness */
-    max-width: 900px;
-    margin: 0 auto;
-    background: #111;
-    padding: 40px;
-    border-radius: 8px;
-    border: 1px solid #222;
-    line-height: 1.8;
-    text-align: center;  /* This fixes the text being stuck on the left */
+    width: 90% !important;
+    max-width: 900px !important;
+    background: #111 !important;
+    padding: 60px 40px !important;
+    border-radius: 12px !important;
+    border: 1px solid #222 !important;
+    text-align: center !important;
+    margin: 0 auto !important;
 }
 
 .legal-block {
-    margin-bottom: 40px;
+    margin-bottom: 50px !important;
+    width: 100% !important;
+    text-align: center !important;
 }
 
 .legal-block h2 {
-    color: #f4b400;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #333;
+    color: #f4b400 !important;
+    font-size: 1.8rem !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px !important;
+    display: inline-block !important;
+    border-bottom: 2px solid #333;
     padding-bottom: 10px;
-    display: inline-block; /* Keeps the underline from stretching full width */
 }
 
 .legal-block p {
-    color: #ccc;
-    margin: 0 auto 15px auto;
-    max-width: 700px;    /* Keeps text readable when centered */
+    color: #cccccc !important;
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important;
+    margin: 0 auto 15px auto !important;
+    max-width: 750px !important;
+    text-align: center !important;
 }
 
 .legal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
-    justify-content: center;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 40px !important;
+    margin: 30px 0 !important;
+}
+
+.legal-item {
+    text-align: center !important;
+    min-width: 200px;
+}
+
+.legal-item h3 {
+    color: #f4b400 !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase;
+    margin-bottom: 10px !important;
+}
+
+.legal-item p {
+    color: #ffffff !important;
+    font-weight: bold !important;
 }
 
 .legal-actions {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
+    margin-top: 40px !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 
+/* Mobile Legal Fix */
 @media screen and (max-width: 768px) {
-    .legal-hero h1 { font-size: 2rem; }
-    .legal-card { padding: 20px; }
+    .legal-card { 
+        padding: 30px 15px !important; 
+    }
 }
