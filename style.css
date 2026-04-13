@@ -1922,9 +1922,8 @@ footer {
 }
 /* --- LEGAL PAGES STYLING (Impressum & Datenschutz) --- */
 
-/* Hero Section for Legal Pages */
 .legal-hero {
-    height: 40vh; /* Shorter than main hero */
+    height: 40vh;
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('assets/hero-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -1942,14 +1941,16 @@ footer {
     letter-spacing: 3px;
 }
 
-/* Content Container */
 .legal-section {
     padding: 80px 0;
     background-color: #0a0a0a;
     color: #ffffff;
+    display: flex;       /* Added to help centering */
+    justify-content: center; 
 }
 
 .legal-card {
+    width: 90%;          /* Essential for responsiveness */
     max-width: 900px;
     margin: 0 auto;
     background: #111;
@@ -1957,9 +1958,9 @@ footer {
     border-radius: 8px;
     border: 1px solid #222;
     line-height: 1.8;
+    text-align: center;  /* This fixes the text being stuck on the left */
 }
 
-/* Block Spacing */
 .legal-block {
     margin-bottom: 40px;
 }
@@ -1970,58 +1971,30 @@ footer {
     margin-bottom: 20px;
     border-bottom: 1px solid #333;
     padding-bottom: 10px;
-}
-
-.legal-block h3 {
-    color: #f4b400;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+    display: inline-block; /* Keeps the underline from stretching full width */
 }
 
 .legal-block p {
     color: #ccc;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
+    max-width: 700px;    /* Keeps text readable when centered */
 }
 
-/* Grid for Company Info (Managing Dir, VAT, etc.) */
 .legal-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
+    justify-content: center;
 }
 
-.legal-item h3 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-}
-
-.legal-item p {
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Back Button */
 .legal-actions {
     margin-top: 50px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-/* Active Link in Nav */
-.active-link {
-    color: #f4b400 !important;
-    font-weight: bold;
-}
-
-/* Mobile Adjustments */
 @media screen and (max-width: 768px) {
-    .legal-hero h1 {
-        font-size: 2rem;
-    }
-    .legal-card {
-        padding: 20px;
-        margin: 0 15px;
-    }
+    .legal-hero h1 { font-size: 2rem; }
+    .legal-card { padding: 20px; }
 }
