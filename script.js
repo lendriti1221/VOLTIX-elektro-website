@@ -129,8 +129,8 @@ const translations = {
 
         // About Page Specific
       "about_title": "About Our Company",
-        "about_text_p1": "Voltix Elektrotechnik GmbH is a modern electrical engineering company specializing in smart home systems, industrial automation, PLC programming, and electrical safety. Our certified engineers deliver safe, efficient, and innovative solutions tailored to each customer.",
-        "about_text_p2": "With years of experience in industrial standards and high-voltage systems, we ensure precision, compliance, and long-lasting performance in every project across Germany.",
+        "about_text_p1": "VOLTIX Elektrotechnik GmbH stands for modern electrical engineering, well-thought-out planning, and reliable implementation. As a master electrical contracting company, we support our clients from the initial idea to the finished solution – personally, honestly, and as equals. Our focus is on intelligent building technology and smart home solutions (KNX) that noticeably simplify everyday life, save energy, and provide long-term benefits. Whether for a single-family home, apartment, commercial building, or office – we develop solutions that precisely match your requirements and can be flexibly expanded in the future. We place particular emphasis on clean workmanship, adherence to deadlines, and sustainable quality. Every installation is carefully planned and implemented in accordance with standards, so you can rely on safe, dependable, and durable electrical engineering.",
+        "about_text_p2": "We primarily operate in Lower Austria and Vienna, but depending on the project size, we also accept projects beyond these regions. As a growing company, we pursue a clear goal: to create technology that inspires today and will still be relevant tomorrow.",
         "about_more_btn": "Discover Our Expertise",
 
 
@@ -658,8 +658,8 @@ const translations = {
         "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — Alle Rechte vorbehalten.",
 
         "about_title": "Über unser Unternehmen",
-        "about_text_p1": "Die Voltix Elektrotechnik GmbH ist ein modernes Elektrotechnik-Unternehmen, das auf Smart-Home-Systeme, industrielle Automatisierung, SPS-Programmierung und elektrische Sicherheit spezialisiert ist. Unsere zertifizierten Ingenieure liefern sichere, effiziente und innovative Lösungen, die auf jeden Kunden zugeschnitten sind.",
-        "about_text_p2": "Mit jahrelanger Erfahrung in Industriestandards und Hochspannungssystemen gewährleisten wir Präzision, Konformität und langlebige Leistung bei jedem Projekt in ganz Deutschland.",
+        "about_text_p1": "Die VOLTIX Elektrotechnik GmbH steht für moderne Elektrotechnik, durchdachte Planung und zuverlässige Umsetzung. Als Elektromeisterbetrieb begleiten wir unsere Kundinnen und Kunden von der ersten Idee bis zur fertigen Lösung – persönlich, ehrlich und auf Augenhöhe. Unser Schwerpunkt liegt auf intelligenter Gebäudetechnik und Smart-Home-Lösungen (KNX), die den Alltag spürbar erleichtern, Energie sparen und langfristig überzeugen. Ob Einfamilienhaus, Wohnung, Gewerbebetrieb oder Büro – wir entwickeln Lösungen, die genau zu Ihren Anforderungen passen und auch in Zukunft flexibel erweiterbar sind. Besonderen Wert legen wir auf saubere Arbeit, Termintreue und nachhaltige Qualität. Jede Installation wird sorgfältig geplant und Normgerecht umgesetzt, damit Sie sich auf eine sichere, zuverlässige und langlebige Elektrotechnik verlassen können.",
+        "about_text_p2": "Wir sind vorwiegend in Niederösterreich und Wien tätig, übernehmen je nach Projektgröße jedoch auch Aufträge darüber hinaus. Als wachsendes Unternehmen verfolgen wir ein klares Ziel: Technik zu schaffen, die heute begeistert und morgen noch Bestand hat.",
         "about_more_btn": "Unsere Expertise entdecken"
 
     },
