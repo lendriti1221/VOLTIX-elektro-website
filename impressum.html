@@ -3,67 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Legal Notice | Voltix Elektrotechnik GmbH</title>
+    <title data-translate="impressum_page_title">Legal Notice | Voltix Elektrotechnik GmbH</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 
     <style>
-        body {
-            background-color: #ffffff !important;
-            color: #333 !important;
-            margin: 0;
-            padding: 0;
+        body { background-color: #ffffff !important; color: #333 !important; margin: 0; padding: 0; }
+        .legal-viewport-fix { width: 100%; padding: 100px 20px; background-color: #ffffff; min-height: 80vh; }
+        .legal-card-final { 
+            width: 100%; max-width: 900px; background: #ffffff; padding: 50px; 
+            border: 1px solid #eee; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); 
+            margin: 0 auto !important; border-top: 5px solid #f4b400;
         }
-
-        .legal-viewport-fix {
-            width: 100%;
-            padding: 100px 20px;
-            background-color: #ffffff;
-            display: block !important;
-            min-height: 80vh;
-        }
-
-        .legal-card-final {
-            width: 100%;
-            max-width: 850px;
-            background: #ffffff;
-            padding: 40px;
-            border: 1px solid #eee;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            margin: 0 auto !important;
-            display: block !important; 
-        }
-
-        .legal-block {
-            display: block !important;
-            width: 100% !important;
-            margin-bottom: 40px !important;
-            text-align: center !important;
-            clear: both !important;
-        }
-
-        .legal-block h1, .legal-block h2, .legal-block h3 {
-            color: #f4b400 !important;
-            margin-bottom: 15px !important;
-        }
-
-        .legal-block p {
-            color: #444 !important;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .legal-actions {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        header {
-            width: 100%;
-            background-color: #0a0a0a !important;
-        }
+        .legal-block { margin-bottom: 40px; text-align: center; }
+        .legal-block h1 { color: #111 !important; font-size: 2.5rem; margin-bottom: 20px; font-weight: 800; }
+        .legal-block h2 { color: #f4b400 !important; font-size: 1.4rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .legal-block p { color: #555 !important; line-height: 1.7; margin-bottom: 8px; }
+        .legal-block a { color: #f4b400; text-decoration: none; font-weight: 600; }
+        .legal-block a:hover { text-decoration: underline; }
+        .legal-actions { text-align: center; margin-top: 30px; border-top: 1px solid #eee; padding-top: 30px; }
+        header { width: 100%; background-color: #0a0a0a !important; }
     </style>
 </head>
 <body>
@@ -73,10 +33,7 @@
         <div class="logo-container">
             <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo"></a>
         </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-        <ul class="nav-links" id="nav-list">
+        <ul class="nav-links">
             <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
             <li><a href="about.html" data-translate="nav_about">About</a></li>
             <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
@@ -97,32 +54,41 @@
         
         <div class="legal-block">
             <h1 data-translate="impressum_title">Legal Notice</h1>
-            <p data-translate="impressum_subtitle">Information according to § 5 E-Commerce Act and disclosure according to § 25 Media Act.</p>
+            <p data-translate="impressum_subtitle">Information according to § 5 ECG, § 14 UGB, and § 25 Media Act.</p>
         </div>
 
         <div class="legal-block">
-            <h2 data-translate="company_info_title">Company Information</h2>
-            <p>
-                <strong>VOLTIX Elektrotechnik GmbH</strong><br>
-                Brunnengasse 2<br>
-                2230 Gänserndorf, Austria
-            </p>
-            <p>
-                <strong data-translate="phone_label">Phone:</strong> +43 660 1255856<br>
-                <strong data-translate="email_label">Email:</strong> office@voltix-elektro.at
-            </p>
+            <h2 data-translate="company_details">Company Details</h2>
+            <p><strong>VOLTIX Elektrotechnik GmbH</strong></p>
+            <p data-translate="business_object">Object of Business: Electrical Engineering & Installations</p>
+            <p>Brunnengasse 2, 2230 Gänserndorf, Austria</p>
+            <p><strong>Email:</strong> <a href="mailto:office@voltix-elektro.at">office@voltix-elektro.at</a></p>
+            <p><strong>Phone:</strong> +43 660 1255856</p>
         </div>
 
         <div class="legal-block">
-            <h2 data-translate="management_title">Management</h2>
-            <p><strong data-translate="managing_director_label">Managing Director:</strong> Florijan Fazliji</p>
+            <h2 data-translate="commercial_reg">Commercial Registry</h2>
+            <p><span data-translate="reg_num">Registry Number:</span> FN 123456z</p>
+            <p><span data-translate="reg_court">Registry Court:</span> Landesgericht Korneuburg</p>
+            <p><span data-translate="vat_num">VAT-ID:</span> ATU12345678</p>
         </div>
 
         <div class="legal-block">
-            <h2 data-translate="registry_title">Registry Details</h2>
-            <p><strong data-translate="reg_number_label">Register Number:</strong> FN 123456z</p>
-            <p><strong data-translate="court_label">Commercial Court:</strong> Korneuburg</p>
-            <p><strong data-translate="vat_label">VAT Identification Number:</strong> ATU12345678</p>
+            <h2 data-translate="memberships">Memberships & Authority</h2>
+            <p><span data-translate="chamber">Member of:</span> WKO, WKNÖ</p>
+            <p><span data-translate="authority">Trade Authority:</span> Bezirkshauptmannschaft Gänserndorf</p>
+            <p data-translate="laws">Applicable Legislation: <a href="https://www.ris.bka.gv.at" target="_blank">Gewerbeordnung (www.ris.bka.gv.at)</a></p>
+        </div>
+
+        <div class="legal-block">
+            <h2 data-translate="management">Management</h2>
+            <p><strong data-translate="md">Managing Director:</strong> Florijan Fazliji</p>
+        </div>
+
+        <div class="legal-block">
+            <h2 data-translate="dispute_title">EU Dispute Resolution</h2>
+            <p data-translate="dispute_text">Information on online dispute resolution: Consumers have the opportunity to submit complaints to the EU's online dispute resolution platform:</p>
+            <a href="http://ec.europa.eu/odr" target="_blank">http://ec.europa.eu/odr</a>
         </div>
 
         <div class="legal-actions">
@@ -133,7 +99,7 @@
 
 <footer>
     <div class="container footer-content">
-        <p data-translate="footer_rights">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        <p data-translate="footer_rights">© 2026 Voltix Elektrotechnik GmbH — All rights reserved.</p>
         <div class="footer-legal">
             <a href="impressum.html" data-translate="footer_impressum">Legal Notice</a>
             <a href="privacy.html" data-translate="footer_privacy">Privacy Policy</a>
