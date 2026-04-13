@@ -105,7 +105,7 @@ const translations = {
 
         // Projects
         "projects_title": "Recent Projects",
-        "projects_text": "Selected examples showcasing our expertise in complex automation and high-quality installations.",
+        "projects_text": "Insight into selected projects and implemented electrotechnical solutions.",
         "project_1_title": "Projects Coming Soon.",
         "project_1_text": "Projects Coming Soon.",
         "project_2_title": "Projects Coming Soon.",
@@ -621,7 +621,7 @@ const translations = {
 
         // Projects
         "projects_title": "Aktuelle Projekte",
-        "projects_text": "Ausgewählte Beispiele, die unsere Kompetenz in komplexer Automatisierung und hochwertigen Installationen zeigen.",
+        "projects_text": "Einblick in ausgewählte Projekte und umgesetzte elektrotechnische Lösungen.",
         "project_1_title": "Projekte in Kürze.",
         "project_1_text": "Projekte in Kürze.",
         "project_2_title": "Projekte in Kürze.",
