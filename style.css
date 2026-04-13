@@ -563,18 +563,31 @@ footer {
     color: #d4af37; 
 }
 .mission-section {
-    padding: 30px 15px; /* Increase the first number for more height */
-    background-color: #000; 
-    margin: 0 auto;
-    text-align: center;
+    /* Reduced padding to shrink the vertical height further */
+    padding: 20px 15px !important; 
     background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
+    text-align: center;
+    width: 100%;
+    /* Ensures no extra space is added outside the box */
+    margin: 0; 
 }
+
+.mission-section h2 {
+    /* Remove the default top margin to pull the title up */
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    font-size: 1.6rem;
+    color: #ffd700; /* Matching your gold theme */
+}
+
 .mission-text {
     max-width: 800px;
-    margin: 0 auto; /* Centers the text block */
-    line-height: 1.6; /* Adds space between lines of text */
-    font-size: 1.1rem;
-    color: #cccccc; /* Slightly off-white is easier on the eyes than pure white */
+    margin: 0 auto !important; 
+    line-height: 1.4; /* Slightly tighter line height to save space */
+    font-size: 1rem; /* Slightly smaller to feel less "heavy" */
+    color: #cccccc;
+    /* Remove the default bottom margin from the paragraph */
+    margin-bottom: 0 !important; 
 }
 /* Body Text - Clean & Readable */
 .about-section p, 
