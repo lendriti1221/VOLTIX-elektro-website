@@ -551,16 +551,17 @@ footer {
 /* Titles - Professional Size */
 .about-section h2, 
 .about-content-centered h2, 
-.expertise-grid h2,{
+.expertise-grid h2 {  /* <--- Removed the extra comma here */
     text-align: center !important;
-    font-size: 1.6rem !important; /* Reduced from 3rem */
+    font-size: 1.6rem !important;
     margin-bottom: 20px !important;
-    margin: 0 auto;
+    margin-left: auto !important;   /* Explicitly center the block */
+    margin-right: auto !important;  /* Explicitly center the block */
     display: block !important;
-    color: #ffd700; /* Using your gold theme color */
+    color: #d4af37; 
 }
 .mission-section {
-    padding: 80px 20px; /* Increase the first number for more height */
+    padding: 30px 15px; /* Increase the first number for more height */
     background-color: #000; 
     margin: 0 auto;
     text-align: center;
