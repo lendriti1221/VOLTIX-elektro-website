@@ -44,12 +44,12 @@ const translations = {
         "expertise_title": "Our professional strength",
         "expertise_p1": "VOLTIX stands for modern electrical engineering with a clear focus on planning, implementation, and intelligent systems. We combine traditional craftsmanship with sophisticated building technology and reliably support projects from the initial concept to the finished solution.",
         "expertise_p2": "All work is meticulously planned and executed strictly in accordance with applicable Austrian standards and regulations (ÖVE) – for maximum safety, quality, and long-term reliability.",
-        "skill_1": "• Electrical installations for new construction, renovation and conversion. Structured, standards-compliant installations for residential and commercial properties – from basic installation to the expansion of existing systems.",
-        "skill_2": "• Intelligent building technology & Smart Home (KNX) Planning and implementation of smart controls for lighting, shading, heating, air conditioning and more, individually tailored and expandable at any time.",
-        "skill_3": "• Digital electrical planning Circuit and installation plans as a clean basis for efficient, traceable and standards-compliant execution.",
-        "skill_4": "• Electronic reports & recurring inspections Preparation of electronic reports and performance of legally required inspections in accordance with Austrian regulations.",
-        "skill_5": "• Wallbox installations & e-mobility Charging solutions for private and commercial applications – professionally implemented and prepared for future requirements.",
-        "skill_6": "• Air conditioning & system integration Electrical preparation and integration of selected air conditioning systems into existing building and smart home structures.",
+        "skill_1": "• Electrical installations; For new construction, renovation and conversion. Structured, standards-compliant installations for residential and commercial properties – from basic installation to the expansion of existing systems.",
+        "skill_2": "• Intelligent building technology & Smart Home (KNX); Planning and implementation of smart controls for lighting, shading, heating, air conditioning and more, individually tailored and expandable at any time.",
+        "skill_3": "• Digital electrical planning Circuit and installation plans; As a clean basis for efficient, traceable and standards-compliant execution.",
+        "skill_4": "• Electronic reports & recurring inspections; Preparation of electronic reports and performance of legally required inspections in accordance with Austrian regulations.",
+        "skill_5": "• Wallbox installations & e-mobility; Charging solutions for private and commercial applications – professionally implemented and prepared for future requirements.",
+        "skill_6": "• Air conditioning & system integration; Electrical preparation and integration of selected air conditioning systems into existing building and smart home structures.",
       
 
         // Goal
@@ -563,12 +563,12 @@ const translations = {
         "expertise_title": "Unsere fachliche Stärke",
         "expertise_p1": "VOLTIX steht für moderne Elektrotechnik mit klarem Fokus auf Planung, Umsetzung und intelligente Systeme. Wir verbinden klassisches Handwerk mit durchdachter Gebäudetechnik und begleiten Projekte zuverlässig von der Idee bis zur fertigen Lösung.",
         "expertise_p2": "Alle Arbeiten werden sorgfältig geplant und streng nach den geltenden österreichischen Normen und Vorschriften (ÖVE) ausgeführt – für maximale Sicherheit, Qualität und langfristige Zuverlässigkeit.",
-        "skill_1": "• Elektroinstallationen für Neubau, Sanierung und Umbau Strukturierte, normgerechte Installationen für Wohn- und Gewerbeobjekte – von der Grundinstallation bis zur Erweiterung bestehender Anlagen.",
-        "skill_2": "• Intelligente Gebäudetechnik &amp; Smart Home (KNX) Planung und Umsetzung smarter Steuerungen für Licht, Beschattung, Heizung, Klima und mehr – individuell abgestimmt und jederzeit erweiterbar.",
-        "skill_3": "• Digitale Elektroplanung Stromlauf- und Installationspläne als saubere Grundlage für eine effiziente, nachvollziehbare und normkonforme Ausführung.",
-        "skill_4": "• E-Befund &amp; wiederkehrende Prüfungen Erstellung von E-Befunden sowie Durchführung gesetzlich vorgeschriebener Prüfungen gemäß österreichischen Vorgaben.",
-        "skill_5": "• Wallbox-Installationen &amp; E-Mobilität Ladelösungen für private und gewerbliche Anwendungen – fachgerecht umgesetzt und vorbereitet für zukünftige Anforderungen.",
-        "skill_6": "• Klimaanlagen &amp; Systemintegration Elektrotechnische Vorbereitung und Integration ausgewählter Klimasysteme in bestehende Gebäude und Smart-Home-Strukturen.",
+        "skill_1": "• Elektroinstallationen; für Neubau, Sanierung und Umbau Strukturierte, normgerechte Installationen für Wohn- und Gewerbeobjekte – von der Grundinstallation bis zur Erweiterung bestehender Anlagen.",
+        "skill_2": "• Intelligente Gebäudetechnik & Smart Home (KNX); Planung und Umsetzung smarter Steuerungen für Licht, Beschattung, Heizung, Klima und mehr – individuell abgestimmt und jederzeit erweiterbar.",
+        "skill_3": "• Digitale Elektroplanung Stromlauf & Installationspläne; als saubere Grundlage für eine effiziente, nachvollziehbare und normkonforme Ausführung.",
+        "skill_4": "• E-Befund & wiederkehrende Prüfungen; Erstellung von E-Befunden sowie Durchführung gesetzlich vorgeschriebener Prüfungen gemäß österreichischen Vorgaben.",
+        "skill_5": "• Wallbox-Installationen & E-Mobilität; Ladelösungen für private und gewerbliche Anwendungen – fachgerecht umgesetzt und vorbereitet für zukünftige Anforderungen.",
+        "skill_6": "• Klimaanlagen & Systemintegration; Elektrotechnische Vorbereitung und Integration ausgewählter Klimasysteme in bestehende Gebäude und Smart-Home-Strukturen.",
         
 
         // Goal
