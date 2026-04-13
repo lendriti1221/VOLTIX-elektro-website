@@ -721,14 +721,20 @@ function setLanguage(lang) {
         }
     });
 
-    // C: Update Modal Data for Services
-    document.querySelectorAll('.service-box').forEach((box, index) => {
-        const titleKey = `service_${index + 1}_title`;
-        const textKey = `service_${index + 1}_text`;
-        if (translations[lang][titleKey]) box.setAttribute('data-title', translations[lang][titleKey]);
-        if (translations[lang][textKey]) box.setAttribute('data-text', translations[lang][textKey]);
-    });
+document.querySelectorAll('.service-box').forEach((box) => {
+    const key = box.getAttribute('data-key');
 
+    const titleKey = `${key}_title`;
+    const textKey = `${key}_text`;
+
+    if (translations[lang][titleKey]) {
+        box.setAttribute('data-title', translations[lang][titleKey]);
+    }
+
+    if (translations[lang][textKey]) {
+        box.setAttribute('data-text', translations[lang][textKey]);
+    }
+});
     // Sync the dropdown if it exists
     const langSelect = document.querySelector('.lang-switch');
     if (langSelect) langSelect.value = lang;
