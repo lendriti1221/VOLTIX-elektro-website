@@ -15,6 +15,7 @@ const translations = {
         "nav_services": "Services",
         "nav_projects": "Projects",
         "nav_contact": "Contact",
+        about_more_button: "Discover Our Expertise",
 
         // Hero
         "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
@@ -24,31 +25,32 @@ const translations = {
         "about_hero_title": "VOLTIX Elektrotechnik GmbH",
         "about_hero_subtitle": "Your trusted partner for modern electrical engineering and intelligent building solutions.",
         "who_we_are_title": "Who We Are",
-        "about_main_text_p1": "VOLTIX Elektrotechnik GmbH is a forward-thinking master electrical contractor focusing on modern electrical engineering and intelligent building solutions. Since our founding in 2026, we have stood for clean planning, reliable implementation, and honest interaction with our customers.",
-        "about_main_text_p2": "We accompany both private and commercial projects from the initial idea to the final completion—structured, solution-oriented, and at eye level. Our focus lies on intelligent building technology, smart home solutions, as well as classic electrical installations that not only function today but are also sensibly expandable for tomorrow.",
-        "about_main_text_p3": "In doing so, we place great value on quality, compliance with standards, and longevity. Every system is carefully planned and professionally executed to ensure long-term safety, comfort, and energy efficiency.",
+        "about_main_text_p1": "VOLTIX Elektrotechnik GmbH is a future-oriented master electrical contracting company focusing on modern electrical engineering and intelligent building solutions. Since our founding in 2026, we have stood for meticulous planning, reliable implementation, and honest dealings with our customers. We support private and commercial projects from the initial concept to completed implementation – in a structured, solution-oriented manner and on equal footing. Our focus is on intelligent building technology, smart home solutions, and classic electrical installations that not only function today but can also be meaningfully expanded in the future.",
+        "about_main_text_p2": "We place great emphasis on quality, compliance with standards, and durability. Every system is carefully planned and professionally installed to ensure long-term safety, comfort, and energy efficiency.",
+        "about_main_text_p3": "Our aim is to create technology that is understandable, works reliably and is people-oriented – not the other way around.",
 
         // Values
         "values_title": "Our Core Values",
-        "value_1_title": "Precision",
-        "value_1_text": "We follow the highest engineering and safety standards to ensure every connection is flawless.",
-        "value_2_title": "Innovation",
-        "value_2_text": "We implement modern technologies, including advanced smart systems and custom automation solutions.",
-        "value_3_title": "Trust",
-        "value_3_text": "Our clients rely on us because we deliver consistent long-term performance and transparency.",
-        "value_4_title": "Safety",
-        "value_4_text": "All projects strictly adhere to EU regulations and certified quality management procedures.",
+        "value_1_title": "Well-thought-out solutions",
+        "value_1_text": "We take the time to truly understand requirements and plan solutions effectively. Every system is clearly structured and can be easily adapted to new requirements as needed.",
+        "value_2_title": "Working as equals",
+        "value_2_text": "We communicate openly, clearly, and honestly. Decisions are made jointly, transparently, comprehensibly, and with respect for your project.",
+        "value_3_title": "Clean execution",
+        "value_3_text": "Proper work is a matter of course for us. From execution to handover, we pay attention to structure, cleanliness, and professional execution down to the last detail.",
+        "value_4_title": "Technology for the future",
+        "value_4_text": "We rely on durable, proven technology and modern systems such as intelligent building management. Our aim is to create solutions that remain useful and reliable in the long term.",
 
         // Expertise
-        "expertise_title": "Our Specialized Expertise",
-        "expertise_p1": "Our team consists of certified electrical engineers and master electricians managing everything from planning to ongoing maintenance.",
-        "skill_1": "• PLC Programming (Siemens S7, TIA Portal)",
-        "skill_2": "• Smart Home & Building Automation (KNX, Loxone)",
-        "skill_3": "• High-Voltage & Low-Voltage Systems Engineering",
-        "skill_4": "• Industrial Process Control & Optimization",
-        "skill_5": "• Complex System Diagnostics",
-        "skill_6": "• Security Systems & Access Control",
-        "skill_7": "• Residential & Commercial VDE-Compliant Wiring",
+        "expertise_title": "Our professional strength",
+        "expertise_p1": "VOLTIX stands for modern electrical engineering with a clear focus on planning, implementation, and intelligent systems. We combine traditional craftsmanship with sophisticated building technology and reliably support projects from the initial concept to the finished solution.",
+        "expertise_p2": "All work is meticulously planned and executed strictly in accordance with applicable Austrian standards and regulations (ÖVE) – for maximum safety, quality, and long-term reliability.",
+        "skill_1": "• Electrical installations; For new construction, renovation and conversion. Structured, standards-compliant installations for residential and commercial properties – from basic installation to the expansion of existing systems.",
+        "skill_2": "• Intelligent building technology & Smart Home (KNX); Planning and implementation of smart controls for lighting, shading, heating, air conditioning and more, individually tailored and expandable at any time.",
+        "skill_3": "• Digital electrical planning Circuit and installation plans; As a clean basis for efficient, traceable and standards-compliant execution.",
+        "skill_4": "• Electronic reports & recurring inspections; Preparation of electronic reports and performance of legally required inspections in accordance with Austrian regulations.",
+        "skill_5": "• Wallbox installations & e-mobility; Charging solutions for private and commercial applications – professionally implemented and prepared for future requirements.",
+        "skill_6": "• Air conditioning & system integration; Electrical preparation and integration of selected air conditioning systems into existing building and smart home structures.",
+      
 
         // Goal
         "mission_title": "Our Goal",
@@ -103,7 +105,7 @@ const translations = {
 
         // Projects
         "projects_title": "Recent Projects",
-        "projects_text": "Selected examples showcasing our expertise in complex automation and high-quality installations.",
+        "projects_text": "Insight into selected projects and implemented electrotechnical solutions.",
         "project_1_title": "Projects Coming Soon.",
         "project_1_text": "Projects Coming Soon.",
         "project_2_title": "Projects Coming Soon.",
@@ -127,29 +129,12 @@ const translations = {
 
         // About Page Specific
       "about_title": "About Our Company",
-        "about_text_p1": "Voltix Elektrotechnik GmbH is a modern electrical engineering company specializing in smart home systems, industrial automation, PLC programming, and electrical safety. Our certified engineers deliver safe, efficient, and innovative solutions tailored to each customer.",
-        "about_text_p2": "With years of experience in industrial standards and high-voltage systems, we ensure precision, compliance, and long-lasting performance in every project across Germany.",
+        "about_text_p1": "VOLTIX Elektrotechnik GmbH stands for modern electrical engineering, well-thought-out planning, and reliable implementation. As a master electrical contracting company, we support our clients from the initial idea to the finished solution – personally, honestly, and as equals. Our focus is on intelligent building technology and smart home solutions (KNX) that noticeably simplify everyday life, save energy, and provide long-term benefits. Whether for a single-family home, apartment, commercial building, or office – we develop solutions that precisely match your requirements and can be flexibly expanded in the future. We place particular emphasis on clean workmanship, adherence to deadlines, and sustainable quality. Every installation is carefully planned and implemented in accordance with standards, so you can rely on safe, dependable, and durable electrical engineering.",
+        "about_text_p2": "We primarily operate in Lower Austria and Vienna, but depending on the project size, we also accept projects beyond these regions. As a growing company, we pursue a clear goal: to create technology that inspires today and will still be relevant tomorrow.",
         "about_more_btn": "Discover Our Expertise",
 
-        "values_title": "Our Core Values",
-        "value_1_title": "Precision",
-        "value_1_text": "We follow the highest engineering and safety standards (VDE/DIN) to ensure every connection is flawless.",
-        "value_2_title": "Innovation",
-        "value_2_text": "We implement modern technologies, including advanced smart systems and custom automation solutions, for energy efficiency.",
-        "value_3_title": "Trust",
-        "value_3_text": "Our clients rely on us because we deliver consistent long-term performance, transparency, and reliable maintenance support.",
-        "value_4_title": "Safety",
-        "value_4_text": "All projects strictly adhere to EU regulations, industrial safety rules (DGUV V3), and certified quality management procedures.",
 
-        "expertise_title": "Our Specialized Expertise",
-        "expertise_p1": "Our team consists of IHK-certified electrical engineers, master electricians, and specialists in advanced technical fields. We manage everything from planning and commissioning to ongoing maintenance.",
-        "skill_1": "• PLC Programming (Siemens S7, TIA Portal, ABB, Schneider)",
-        "skill_2": "• Smart Home & Building Automation (KNX, Loxone)",
-        "skill_3": "• High-Voltage & Low-Voltage Systems Engineering",
-        "skill_4": "• Industrial Process Control & Optimization",
-        "skill_5": "• Complex System Diagnostics & Electrical Maintenance",
-        "skill_6": "• Security Systems & Access Control Integration",
-        "skill_7": "• Residential & Commercial VDE-Compliant Wiring",
+
         "contact_email": "Business Email: office@voltix-elektro.at",
 
         "mission_title": "Our Mission",
@@ -387,6 +372,7 @@ const translations = {
 "climate_target_4": "New construction and renovation projects",
 "climate_footer_cta": "Are you planning an air conditioning system or want to integrate existing systems intelligently? We advise you honestly, with a technical foundation, and find a solution that fits your building.",
 },
+    
     "de": {  
         "nav_home": "Startseite",
         "nav_about": "Über uns",
@@ -551,38 +537,39 @@ const translations = {
         "hero_subtitle": "Professionelle Lösungen im Bereich Elektrotechnik für Haus, Gewerbe und Gebäude.",
         "hero_button": "Kontakt aufnehmen",
 
-
+           about_more_button: "Entdecken Sie unsere Expertise",
           "services_title": "Unser Service",
         "services_subtitle": "Fachgerechte technische Lösungen mit Präzision und nach strengen EU-Sicherheitsstandards.",
 
       "about_hero_title": "VOLTIX Elektrotechnik GmbH",
         "about_hero_subtitle": "Ihr vertrauenswürdiger Partner für moderne Elektrotechnik und intelligente Gebäudelösungen.",
         "who_we_are_title": "Wer wir sind",
-        "about_main_text_p1": "Die VOLTIX Elektrotechnik GmbH ist ein zukunftsorientierter Elektromeisterbetrieb mit Fokus auf moderne Elektrotechnik und intelligente Gebäudelösungen. Seit unserer Gründung im Jahr 2026 stehen wir für saubere Planung, verlässliche Umsetzung und einen ehrlichen Umgang mit unseren Kundinnen und Kunden.",
-        "about_main_text_p2": "Wir begleiten private wie gewerbliche Projekte von der ersten Idee bis zur fertigen Umsetzung – strukturiert, lösungsorientiert und auf Augenhöhe. Unser Schwerpunkt liegt auf intelligenter Gebäudetechnik, Smart-Home-Lösungen sowie klassischen Elektroinstallationen, die nicht nur heute funktionieren, sondern auch morgen noch sinnvoll erweiterbar sind.",
-        "about_main_text_p3": "Dabei legen wir großen Wert auf Qualität, Normtreue und Langlebigkeit. Jede Anlage wird sorgfältig geplant und fachgerecht ausgeführt, damit Sicherheit, Komfort und Energieeffizienz langfristig gewährleistet sind.",
+        "about_main_text_p1": "Die VOLTIX Elektrotechnik GmbH ist ein zukunftsorientierter Elektromeisterbetrieb mit Fokus aufmoderne Elektrotechnik und intelligente Gebäudelösungen. Seit unserer Gründung im Jahr 2026 stehen wir für saubere Planung, verlässliche Umsetzung und einen ehrlichen Umgang mit unseren Kundinnen und Kunden. Wir begleiten private wie gewerbliche Projekte von der ersten Idee bis zur fertigen Umsetzung – strukturiert, lösungsorientiert und auf Augenhöhe. Unser Schwerpunkt liegt auf intelligenter Gebäudetechnik, Smart-Home-Lösungen sowie klassischen Elektroinstallationen, die nicht nur heute funktionieren, sondern auch morgen noch sinnvoll erweiterbar sind.",
+        "about_main_text_p2": "Dabei legen wir großen Wert auf Qualität, Normtreue und Langlebigkeit. Jede Anlage wird sorgfältig geplant und fachgerecht ausgeführt, damit Sicherheit, Komfort und Energieeffizienz langfristig gewährleistet sind.",
+        "about_main_text_p3": "Unser Anspruch ist es, Technik zu schaffen, die verständlich ist, zuverlässig arbeitet und sich an den Menschen orientiert – nicht umgekehrt.",
 
         // Values
         "values_title": "Unsere Grundwerte",
-        "value_1_title": "Präzision",
-        "value_1_text": "Wir folgen den höchsten Ingenieurs- und Sicherheitsstandards, um sicherzustellen, dass jede Verbindung makellos ist.",
-        "value_2_title": "Innovation",
-        "value_2_text": "Wir implementieren moderne Technologien, einschließlich fortschrittlicher Smart-Systeme und maßgeschneiderter Automatisierungslösungen.",
-        "value_3_title": "Vertrauen",
-        "value_3_text": "Unsere Kunden verlassen sich auf uns, weil wir beständige langfristige Leistung und Transparenz bieten.",
-        "value_4_title": "Sicherheit",
-        "value_4_text": "Alle Projekte entsprechen strikt den EU-Vorschriften und zertifizierten Qualitätsmanagementverfahren.",
+        "value_1_title": "Durchdachte Lösungen",
+        "value_1_text": "Wir nehmen uns Zeit, Anforderungen wirklich zu verstehen und Lösungen sinnvoll zu planen. Jede Anlage ist klar strukturiert aufgebaut und lässt sich bei Bedarf problemlos an neue Anforderungen anpassen.",
+        "value_2_title": "Arbeit auf Augenhöhe",
+        "value_2_text": "Wir kommunizieren offen, verständlich und ehrlich. Entscheidungen werden gemeinsam getroffen – transparent, nachvollziehbar und mit Respekt für Ihr Projekt.",
+        "value_3_title": "Saubere Umsetzung",
+        "value_3_text": "Ordentliche Arbeit ist für uns selbstverständlich. Von der Ausführung bis zur Übergabe achten wir auf Struktur, Sauberkeit und eine fachgerechte Umsetzung bis ins Detail.",
+        "value_4_title": "Technik mit Zukunft",
+        "value_4_text": "Wir setzen auf langlebige, bewährte Technik und moderne Systeme wie intelligente Gebäudesteuerung. Unser Anspruch ist es, Lösungen zu schaffen, die langfristig sinnvoll und zuverlässig nutzbar bleiben..",
 
         // Expertise
-        "expertise_title": "Unsere Fachkompetenz",
-        "expertise_p1": "Unser Team besteht aus zertifizierten Elektroingenieuren und Elektromeistern, die alles von der Planung bis zur laufenden Wartung verwalten.",
-        "skill_1": "• SPS-Programmierung (Siemens S7, TIA Portal)",
-        "skill_2": "• Smart Home & Gebäudeautomation (KNX, Loxone)",
-        "skill_3": "• Hoch- und Niederspannungssystemtechnik",
-        "skill_4": "• Industrielle Prozesssteuerung & Optimierung",
-        "skill_5": "• Komplexe Systemdiagnose",
-        "skill_6": "• Sicherheitssysteme & Zutrittskontrolle",
-        "skill_7": "• VDE-konforme Verkabelung für Wohn- und Gewerbebau",
+        "expertise_title": "Unsere fachliche Stärke",
+        "expertise_p1": "VOLTIX steht für moderne Elektrotechnik mit klarem Fokus auf Planung, Umsetzung und intelligente Systeme. Wir verbinden klassisches Handwerk mit durchdachter Gebäudetechnik und begleiten Projekte zuverlässig von der Idee bis zur fertigen Lösung.",
+        "expertise_p2": "Alle Arbeiten werden sorgfältig geplant und streng nach den geltenden österreichischen Normen und Vorschriften (ÖVE) ausgeführt – für maximale Sicherheit, Qualität und langfristige Zuverlässigkeit.",
+        "skill_1": "• Elektroinstallationen; für Neubau, Sanierung und Umbau Strukturierte, normgerechte Installationen für Wohn- und Gewerbeobjekte – von der Grundinstallation bis zur Erweiterung bestehender Anlagen.",
+        "skill_2": "• Intelligente Gebäudetechnik & Smart Home (KNX); Planung und Umsetzung smarter Steuerungen für Licht, Beschattung, Heizung, Klima und mehr – individuell abgestimmt und jederzeit erweiterbar.",
+        "skill_3": "• Digitale Elektroplanung Stromlauf & Installationspläne; als saubere Grundlage für eine effiziente, nachvollziehbare und normkonforme Ausführung.",
+        "skill_4": "• E-Befund & wiederkehrende Prüfungen; Erstellung von E-Befunden sowie Durchführung gesetzlich vorgeschriebener Prüfungen gemäß österreichischen Vorgaben.",
+        "skill_5": "• Wallbox-Installationen & E-Mobilität; Ladelösungen für private und gewerbliche Anwendungen – fachgerecht umgesetzt und vorbereitet für zukünftige Anforderungen.",
+        "skill_6": "• Klimaanlagen & Systemintegration; Elektrotechnische Vorbereitung und Integration ausgewählter Klimasysteme in bestehende Gebäude und Smart-Home-Strukturen.",
+        
 
         // Goal
         "mission_title": "Unser Ziel",
@@ -600,6 +587,7 @@ const translations = {
         hero_button: "Kontakt aufnehmen",
         nav_services: "Leistungen",
         nav_contact: "Kontakt",
+       
 
         // Service 1
         "service_1_title": "Elektroinstallationen",
@@ -633,7 +621,7 @@ const translations = {
 
         // Projects
         "projects_title": "Aktuelle Projekte",
-        "projects_text": "Ausgewählte Beispiele, die unsere Kompetenz in komplexer Automatisierung und hochwertigen Installationen zeigen.",
+        "projects_text": "Einblick in ausgewählte Projekte und umgesetzte elektrotechnische Lösungen.",
         "project_1_title": "Projekte in Kürze.",
         "project_1_text": "Projekte in Kürze.",
         "project_2_title": "Projekte in Kürze.",
@@ -656,30 +644,13 @@ const translations = {
         "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — Alle Rechte vorbehalten.",
 
         "about_hero_title": "Über VOLTIX Elektotechnik GmbH",
-        "about_hero_subtitle": "Ihr vertrauenswürdiger Partner für moderne Elektrotechnik und Industrieautomation.",
+        "about_hero_subtitle": "Ihr vertrauenswürdiger Partner für moderne Elektrotechnik intelligente Gebäudelösungen.",
         "who_we_are_title": "Wer wir sind",
         "who_we_are_p1": "Die Voltix Elektotechnik GmbH ist ein zukunftsorientiertes Elektrotechnikunternehmen, das sich der Bereitstellung hochwertiger Lösungen für Privat-, Gewerbe- und Industriekunden verschrieben hat. Wir wurden 2018 mit der Mission gegründet, deutsche Ingenieurspräzision in die sich schnell entwickelnden Bereiche der Automatisierung und nachhaltigen Energie zu bringen.",
         "who_we_are_p2": "Mit Expertise in Automatisierungstechnologien, Industriemaschinen, Smart-Home-Systemen und komplexen Elektroinstallationen liefern wir Zuverlässigkeit und Innovation in jedem Projekt, wobei wir uns auf Langlebigkeit und die Einhaltung strengster europäischer Sicherheitsstandards konzentrieren.",
 
-        "values_title": "Unsere Grundwerte",
-        "value_1_title": "Präzision",
-        "value_1_text": "Wir folgen den höchsten Ingenieurs- und Sicherheitsstandards (VDE/DIN), um sicherzustellen, dass jede Verbindung einwandfrei ist.",
-        "value_2_title": "Innovation",
-        "value_2_text": "Wir implementieren moderne Technologien, einschließlich fortschrittlicher Smart-Systeme und maßgeschneiderter Automatisierungslösungen, für Energieeffizienz.",
-        "value_3_title": "Vertrauen",
-        "value_3_text": "Unsere Kunden verlassen sich auf uns, weil wir konsistente langfristige Leistung, Transparenz und zuverlässige Wartungsunterstützung bieten.",
-        "value_4_title": "Sicherheit",
-        "value_4_text": "Alle Projekte halten sich strikt an EU-Vorschriften, Arbeitssicherheitsregeln (DGUV V3) und zertifizierte Qualitätsmanagementverfahren.",
+     
 
-        "expertise_title": "Unsere Fachkompetenz",
-        "expertise_p1": "Unser Team besteht aus IHK-zertifizierten Elektroingenieuren, Elektromeistern und Spezialisten in fortgeschrittenen technischen Bereichen. Wir übernehmen alles von der Planung und Inbetriebnahme bis zur laufenden Wartung.",
-        "skill_1": "• SPS-Programmierung (Siemens S7, TIA Portal, ABB, Schneider)",
-        "skill_2": "• Smart Home & Gebäudeautomation (KNX, Loxone)",
-        "skill_3": "• Hoch- und Niederspannungssystemtechnik",
-        "skill_4": "• Industrielle Prozesssteuerung & Optimierung",
-        "skill_5": "• Komplexe Systemdiagnose & elektrische Wartung",
-        "skill_6": "• Sicherheitssysteme & Zutrittskontrollintegration",
-        "skill_7": "• VDE-konforme Verkabelung für Wohn- und Gewerbebau",
         "contact_email": "Geschäftliche E-Mail: office@voltix-elektro.at",
 
         "mission_title": "Unsere Mission",
@@ -687,11 +658,11 @@ const translations = {
         "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — Alle Rechte vorbehalten.",
 
         "about_title": "Über unser Unternehmen",
-        "about_text_p1": "Die Voltix Elektrotechnik GmbH ist ein modernes Elektrotechnik-Unternehmen, das auf Smart-Home-Systeme, industrielle Automatisierung, SPS-Programmierung und elektrische Sicherheit spezialisiert ist. Unsere zertifizierten Ingenieure liefern sichere, effiziente und innovative Lösungen, die auf jeden Kunden zugeschnitten sind.",
-        "about_text_p2": "Mit jahrelanger Erfahrung in Industriestandards und Hochspannungssystemen gewährleisten wir Präzision, Konformität und langlebige Leistung bei jedem Projekt in ganz Deutschland.",
+        "about_text_p1": "Die VOLTIX Elektrotechnik GmbH steht für moderne Elektrotechnik, durchdachte Planung und zuverlässige Umsetzung. Als Elektromeisterbetrieb begleiten wir unsere Kundinnen und Kunden von der ersten Idee bis zur fertigen Lösung – persönlich, ehrlich und auf Augenhöhe. Unser Schwerpunkt liegt auf intelligenter Gebäudetechnik und Smart-Home-Lösungen (KNX), die den Alltag spürbar erleichtern, Energie sparen und langfristig überzeugen. Ob Einfamilienhaus, Wohnung, Gewerbebetrieb oder Büro – wir entwickeln Lösungen, die genau zu Ihren Anforderungen passen und auch in Zukunft flexibel erweiterbar sind. Besonderen Wert legen wir auf saubere Arbeit, Termintreue und nachhaltige Qualität. Jede Installation wird sorgfältig geplant und Normgerecht umgesetzt, damit Sie sich auf eine sichere, zuverlässige und langlebige Elektrotechnik verlassen können.",
+        "about_text_p2": "Wir sind vorwiegend in Niederösterreich und Wien tätig, übernehmen je nach Projektgröße jedoch auch Aufträge darüber hinaus. Als wachsendes Unternehmen verfolgen wir ein klares Ziel: Technik zu schaffen, die heute begeistert und morgen noch Bestand hat.",
         "about_more_btn": "Unsere Expertise entdecken"
 
-    }
+    },
 
 };
 
