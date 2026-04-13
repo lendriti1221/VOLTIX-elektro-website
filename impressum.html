@@ -4,126 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Impressum | Voltix Elektrotechnik GmbH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 
     <style>
-        /* --- RESET & LAYOUT --- */
+        /* 1. Page Background Fix */
         body {
             background-color: #ffffff !important;
-            margin: 0 !important;
-            display: block !important;
-            font-family: sans-serif;
-        }
-
-        /* --- NAVBAR FIX --- */
-        header {
-            background-color: #0a0a0a !important;
-            display: block !important;
-            width: 100% !important;
-            position: relative !important;
-            z-index: 100 !important;
-        }
-
-        .navbar {
-            background-color: #0a0a0a !important;
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            padding: 10px 20px !important;
-        }
-
-        .nav-links {
-            display: flex !important;
-            list-style: none !important;
-            gap: 20px !important;
-        }
-
-        .nav-links a {
-            color: #ffffff !important;
-            text-decoration: none !important;
-        }
-
-        /* --- CONTENT SECTION --- */
-        .legal-viewport-fix {
-            all: unset !important; 
-            display: block !important;
-            width: 100% !important;
-            background-color: #ffffff !important;
-            padding: 80px 0 !important;
-            box-sizing: border-box !important;
-        }
-
-        .legal-card-final {
-            display: block !important;
-            width: 90% !important;
-            max-width: 850px !important;
-            margin: 0 auto !important;
-            background: #ffffff !important;
-            padding: 40px !important;
-            border: 1px solid #eee !important;
-            border-radius: 15px !important;
             color: #333 !important;
-            box-sizing: border-box !important;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+            margin: 0;
+            padding: 0;
         }
 
-        /* --- BLOCK STACKING --- */
+        /* 2. Content Wrapper - Forces Vertical Stack and Centers Card */
+        .legal-viewport-fix {
+            width: 100%;
+            padding: 100px 20px; /* Space for the navbar */
+            background-color: #ffffff;
+            display: block !important; /* Block is safest for ordering */
+            min-height: 80vh;
+        }
+
+        /* 3. The Card - Forces order 1, 2, 3... */
+        .legal-card-final {
+            width: 100%;
+            max-width: 850px;
+            background: #ffffff;
+            padding: 40px;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin: 0 auto !important;
+            display: block !important; 
+        }
+
+        /* 4. The Blocks - Forced to full width rows */
         .legal-block {
             display: block !important;
             width: 100% !important;
-            margin-bottom: 45px !important;
+            margin-bottom: 40px !important;
+            text-align: center !important;
             clear: both !important;
-            float: none !important;
+        }
+
+        .legal-block h1, .legal-block h2, .legal-block h3 {
+            color: #f4b400 !important;
+            margin-bottom: 15px !important;
             text-align: center !important;
         }
 
-        h1, h2, h3 { 
-            color: #f4b400 !important; 
-            margin-bottom: 15px !important;
-            display: block !important;
-            width: 100% !important;
-        }
-
-        p, strong {
-            display: block !important;
-            margin-bottom: 10px !important;
+        .legal-block p {
             color: #444 !important;
-            line-height: 1.6 !important;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: center !important;
         }
 
         .legal-actions {
-            display: block !important;
-            text-align: center !important;
-            margin-top: 40px !important;
+            text-align: center;
+            margin-top: 30px;
         }
 
-        /* --- FOOTER FIX --- */
-        .legal-footer-fix {
+        /* Ensure the Navbar looks like the rest of the site */
+        header {
+            width: 100%;
             background-color: #0a0a0a !important;
-            color: #ffffff !important;
-            padding: 50px 20px !important;
-            text-align: center !important;
-            display: block !important;
-            width: 100% !important;
-            box-sizing: border-box !important;
-        }
-
-        .footer-legal-links {
-            display: flex !important;
-            justify-content: center !important;
-            gap: 25px !important;
-            margin-top: 15px !important;
-        }
-
-        .footer-legal-links a {
-            color: #ffffff !important;
-            text-decoration: none !important;
-            font-size: 14px !important;
-        }
-
-        .footer-legal-links a:hover {
-            color: #f4b400 !important;
         }
     </style>
 </head>
@@ -132,9 +78,12 @@
 <header>
     <nav class="navbar">
         <div class="logo-container">
-            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo" style="height: 50px;"></a>
+            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo"></a>
         </div>
-        <ul class="nav-links">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-list">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="index.html#services">Services</a></li>
@@ -150,7 +99,7 @@
     </nav>
 </header>
 
-<div class="legal-viewport-fix">
+<main class="legal-viewport-fix">
     <div class="legal-card-final">
         
         <div class="legal-block">
@@ -177,7 +126,7 @@
         </div>
 
         <div class="legal-block">
-            <h2>Commercial Register</h2>
+            <h2>Registry Details</h2>
             <p><strong>Register Number:</strong> FN 123456z</p>
             <p><strong>Commercial Court:</strong> Korneuburg</p>
             <p><strong>VAT Number:</strong> ATU12345678</p>
@@ -187,12 +136,12 @@
             <a href="index.html" class="btn primary-btn">Back to Home</a>
         </div>
     </div>
-</div>
+</main>
 
-<footer class="legal-footer-fix">
-    <div class="footer-container">
-        <p style="color: #888; margin-bottom: 10px;">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
-        <div class="footer-legal-links">
+<footer>
+    <div class="container footer-content">
+        <p>© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        <div class="footer-legal">
             <a href="impressum.html">Impressum</a>
             <a href="privacy.html">Datenschutz</a>
         </div>
