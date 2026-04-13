@@ -1879,4 +1879,44 @@ textarea::placeholder {
         font-weight: 500 !important;
     }
 }
- 
+ /* --- FOOTER LAYOUT --- */
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+    border-top: 1px solid #1a1a1a; /* Subtle line above footer */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Copyright left, links right */
+    align-items: center;
+    flex-wrap: wrap; /* Helps on very small screens */
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px; /* Space between the two links */
+}
+
+.footer-legal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: #f4b400; /* Turns gold on hover */
+}
+
+/* Mobile Fix: Center everything on phones */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .footer-legal {
+        justify-content: center;
+    }
+}
