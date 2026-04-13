@@ -672,6 +672,7 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
 
     // A: Dictionary Method (data-translate)
+    // This handles all titles and paragraphs with data-translate attributes
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
@@ -679,7 +680,7 @@ function setLanguage(lang) {
         }
     });
 
-    // B: Inline Method (data-en/data-de)
+    // B: Inline Method (data-en/data-de) - Used for Contact Form placeholders
     document.querySelectorAll('[data-en]').forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
         if (translation) {
@@ -688,6 +689,18 @@ function setLanguage(lang) {
             } else {
                 el.innerText = translation;
             }
+        }
+    });
+
+    // C: Update Service Box Meta-Data (If you still use modals)
+    document.querySelectorAll('.service-box').forEach((box) => {
+        const service = box.getAttribute('data-service');
+        if (service) {
+            const titleKey = `service_${service}_title`;
+            const textKey = `service_${service}_text`;
+            
+            if (translations[lang][titleKey]) box.setAttribute('data-title', translations[lang][titleKey]);
+            if (translations[lang][textKey]) box.setAttribute('data-text', translations[lang][textKey]);
         }
     });
 
@@ -721,7 +734,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- MODAL LOGIC (Only if you still use modals elsewhere) ---
+    // --- MODAL LOGIC ---
     window.onclick = (event) => {
         const modal = document.getElementById('modalOverlay');
         if (event.target == modal) closeModal();
