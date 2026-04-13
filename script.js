@@ -701,7 +701,7 @@ function setLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
     document.documentElement.lang = lang;
 
-    // A: Dictionary Method (data-translate) - Used for Desktop Nav/Titles
+    // A: Dictionary Method (data-translate)
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
@@ -709,7 +709,7 @@ function setLanguage(lang) {
         }
     });
 
-    // B: Inline Method (data-en/data-de) - Used for Contact Form
+    // B: Inline Method (data-en/data-de)
     document.querySelectorAll('[data-en]').forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
         if (translation) {
@@ -721,32 +721,37 @@ function setLanguage(lang) {
         }
     });
 
-document.querySelectorAll('.service-box').forEach((box) => {
-    const key = box.getAttribute('data-key');
+    // C: Service modal data (FIXED with data-key)
+    document.querySelectorAll('.service-box').forEach((box) => {
+        const key = box.getAttribute('data-key');
+        if (!key) return;
 
-    const titleKey = `${key}_title`;
-    const textKey = `${key}_text`;
+        const titleKey = `${key}_title`;
+        const textKey = `${key}_text`;
 
-    if (translations[lang][titleKey]) {
-        box.setAttribute('data-title', translations[lang][titleKey]);
-    }
+        if (translations[lang][titleKey]) {
+            box.setAttribute('data-title', translations[lang][titleKey]);
+        }
 
-    if (translations[lang][textKey]) {
-        box.setAttribute('data-text', translations[lang][textKey]);
-    }
-});
-    // Sync the dropdown if it exists
+        if (translations[lang][textKey]) {
+            box.setAttribute('data-text', translations[lang][textKey]);
+        }
+    });
+
+    // Sync dropdown
     const langSelect = document.querySelector('.lang-switch');
     if (langSelect) langSelect.value = lang;
 }
 
-// 3. GLOBAL CHANGE FUNCTION (For Button clicks)
+// 3. GLOBAL CHANGE FUNCTION
 function changeLanguage(lang) {
     setLanguage(lang);
 }
 
 // 4. MODAL LOGIC
 function openModal(event) {
+    event.preventDefault(); // stop link navigation
+
     const box = event.currentTarget;
     const title = box.getAttribute('data-title');
     const text = box.getAttribute('data-text');
@@ -756,7 +761,7 @@ function openModal(event) {
         document.getElementById('modalTitle').innerText = title;
         document.getElementById('modalText').innerText = text;
         modalOverlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.overflow = 'hidden';
     }
 }
 
@@ -768,54 +773,39 @@ function closeModal() {
     }
 }
 
-// 5. INITIALIZATION ON PAGE LOAD
+// 5. INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     setLanguage(savedLang);
 
-    // Mobile Menu logic
+    // ✅ Attach modal click to service boxes
+    document.querySelectorAll('.service-box').forEach(box => {
+        box.addEventListener('click', openModal);
+    });
+
+    // ✅ Mobile menu (single clean version)
     const menuBtn = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
+
     if (menuBtn && navList) {
-        menuBtn.onclick = () => navList.classList.toggle('show');
+        menuBtn.addEventListener('click', function () {
+            navList.classList.toggle('show');
+            menuBtn.classList.toggle('is-active');
+        });
     }
 
-    // Modal click-outside logic
-    window.onclick = (event) => {
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navList) navList.classList.remove('show');
+        });
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
         const modal = document.getElementById('modalOverlay');
-        if (event.target == modal) closeModal();
-    };
-});
-// --- HAMBURGER MENU TOGGLE ---
-const menuBtn = document.getElementById('mobile-menu');
-const navList = document.getElementById('nav-list');
-
-if (menuBtn && navList) {
-    menuBtn.onclick = function() {
-        // Toggle the 'show' class to open/close the menu
-        navList.classList.toggle('show');
-        
-        // Optional: Animate the hamburger icon if you have 'is-active' styles
-        menuBtn.classList.toggle('is-active');
-    };
-}
-
-// Close the menu when a link is clicked (important for one-page sites)
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navList.classList.remove('show');
+        if (event.target === modal) {
+            closeModal();
+        }
     });
 });
-// --- FINAL OVERRIDE TOGGLE ---
-(function() {
-    const btn = document.getElementById('mobile-menu');
-    const list = document.getElementById('nav-list');
-
-    if (btn && list) {
-        btn.onclick = function(e) {
-            e.preventDefault();
-            list.classList.toggle('show');
-            console.log("Menu toggled: ", list.classList.contains('show'));
-        };
-    }
-})();
