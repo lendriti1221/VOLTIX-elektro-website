@@ -618,7 +618,7 @@ const translations = {
 
         // Service 4
         "service_4_title": "Planung",
-        "service_4_preview": "Proactive maintenance and swift repairs...",
+        "service_4_preview": "Proaktive Wartung und schnelle Reparaturen...",
         "service_4_text": "Klare Planung als Grundlage für saubere Ausführung Gute Elektrotechnik beginnt nicht auf der Baustelle, sondern am Plan. Eine durchdachte Planung schafft Übersicht, vermeidet spätere Anpassungen und sorgt dafür, dass Installationen effizient, sauber und nachvollziehbar umgesetzt werden können. Digitale Elektroplanung bildet die Basis für funktionierende Gebäude – im Neubau genauso wie bei Sanierungen oder Umbauten. Was eine gute Planung ausmacht: Eine strukturierte Planung berücksichtigt aktuelle Anforderungen sowie künftige Abläufe, Nutzung und Erweiterungen. Sie schafft Klarheit für alle Beteiligten und reduziert Nacharbeiten durch logisch aufgebaute Stromkreise, übersichtliche Verteilerkonzepte, klare Leitungsführung und definierte Reserven für spätere Anpassungen. Digitale Planungsunterlagen: Wir erstellen professionelle Stromlaufpläne, Installationspläne und Verteilerübersichten. Alle Unterlagen sind klar strukturiert, nachvollziehbar und normgerecht nach ÖVE aufgebaut – als verlässliche Grundlage für die Ausführung, die spätere Abnahme und künftige Änderungen. Vorteile für Ihr Projekt: Unabhängig vom Umfang sorgt eine saubere Planung bei Neubau, Sanierung oder Umbau dafür, dass Arbeitsabläufe effizient bleiben, Kosten und Zeit im Griff bleiben und die Ausführung reibungslos erfolgen kann. Gerade bei komplexen Bestandsgebäuden schafft eine professionelle Planung die nötige Sicherheit und Übersicht. Durchdacht planen – sauber umsetzen: Eine gute Planung spart Zeit, reduziert Fehler und erhöht die Qualität der gesamten Elektroinstallation. Sie ist kein optionaler Zusatz, sondern ein wesentlicher Bestandteil professioneller Elektrotechnik.",
 
         // Service 5
@@ -695,14 +695,13 @@ const translations = {
 
 };
 
-// 1. THE MASTER TRANSLATION FUNCTION
+// 2. THE MASTER TRANSLATION FUNCTION
 function setLanguage(lang) {
     console.log("Switching to: " + lang);
     localStorage.setItem('selectedLanguage', lang);
     document.documentElement.lang = lang;
 
-    // A: Dictionary Method (data-translate)
-    // This now handles EVERYTHING (Nav, Titles, and Service Boxes)
+    // A: Dictionary Method (data-translate) - Used for Desktop Nav/Titles
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
@@ -710,7 +709,7 @@ function setLanguage(lang) {
         }
     });
 
-    // B: Inline Method (data-en/data-de) - For Form Placeholders
+    // B: Inline Method (data-en/data-de) - Used for Contact Form
     document.querySelectorAll('[data-en]').forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
         if (translation) {
@@ -722,46 +721,95 @@ function setLanguage(lang) {
         }
     });
 
+    // C: Update Modal Data for Services
+    document.querySelectorAll('.service-box').forEach((box, index) => {
+        const titleKey = `service_${index + 1}_title`;
+        const textKey = `service_${index + 1}_text`;
+        if (translations[lang][titleKey]) box.setAttribute('data-title', translations[lang][titleKey]);
+        if (translations[lang][textKey]) box.setAttribute('data-text', translations[lang][textKey]);
+    });
+
     // Sync the dropdown if it exists
     const langSelect = document.querySelector('.lang-switch');
     if (langSelect) langSelect.value = lang;
 }
 
-// 2. INITIALIZATION ON PAGE LOAD
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'de';
-    setLanguage(savedLang);
-
-    // --- CLEAN MOBILE MENU LOGIC ---
-    const menuBtn = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
-
-    if (menuBtn && navList) {
-        menuBtn.onclick = function(e) {
-            e.preventDefault();
-            navList.classList.toggle('show');
-            menuBtn.classList.toggle('is-active');
-        };
-    }
-
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navList) navList.classList.remove('show');
-            if (menuBtn) menuBtn.classList.remove('is-active');
-        });
-    });
-
-    // --- MODAL LOGIC (If using modals) ---
-    window.onclick = (event) => {
-        const modal = document.getElementById('modalOverlay');
-        if (event.target == modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    };
-});
-
+// 3. GLOBAL CHANGE FUNCTION (For Button clicks)
 function changeLanguage(lang) {
     setLanguage(lang);
 }
+
+// 4. MODAL LOGIC
+function openModal(event) {
+    const box = event.currentTarget;
+    const title = box.getAttribute('data-title');
+    const text = box.getAttribute('data-text');
+    const modalOverlay = document.getElementById('modalOverlay');
+
+    if (title && text && modalOverlay) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalText').innerText = text;
+        modalOverlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; 
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('modalOverlay');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// 5. INITIALIZATION ON PAGE LOAD
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
+
+    // Mobile Menu logic
+    const menuBtn = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (menuBtn && navList) {
+        menuBtn.onclick = () => navList.classList.toggle('show');
+    }
+
+    // Modal click-outside logic
+    window.onclick = (event) => {
+        const modal = document.getElementById('modalOverlay');
+        if (event.target == modal) closeModal();
+    };
+});
+// --- HAMBURGER MENU TOGGLE ---
+const menuBtn = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+
+if (menuBtn && navList) {
+    menuBtn.onclick = function() {
+        // Toggle the 'show' class to open/close the menu
+        navList.classList.toggle('show');
+        
+        // Optional: Animate the hamburger icon if you have 'is-active' styles
+        menuBtn.classList.toggle('is-active');
+    };
+}
+
+// Close the menu when a link is clicked (important for one-page sites)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navList.classList.remove('show');
+    });
+});
+// --- FINAL OVERRIDE TOGGLE ---
+(function() {
+    const btn = document.getElementById('mobile-menu');
+    const list = document.getElementById('nav-list');
+
+    if (btn && list) {
+        btn.onclick = function(e) {
+            e.preventDefault();
+            list.classList.toggle('show');
+            console.log("Menu toggled: ", list.classList.contains('show'));
+        };
+    }
+})();
