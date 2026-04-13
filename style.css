@@ -2227,3 +2227,63 @@ footer {
     display: flex;
     gap: 25px;
 }
+/* --- THE ULTIMATE CENTER FIX --- */
+
+.legal-page-reset {
+    width: 100% !important;
+    min-height: 80vh;
+    display: flex !important;
+    justify-content: center !important; /* Forces the card to the middle */
+    align-items: flex-start !important;
+    padding: 100px 20px !important;
+    background-color: #0a0a0a !important;
+    box-sizing: border-box !important;
+}
+
+.legal-card-centered {
+    width: 100% !important;
+    max-width: 850px !important;
+    background: #111111 !important;
+    padding: 60px 40px !important;
+    border-radius: 15px !important;
+    border: 1px solid #222222 !important;
+    text-align: center !important; /* Forces all text inside to center */
+    margin: 0 auto !important;
+}
+
+.legal-card-centered h1,
+.legal-card-centered h2,
+.legal-card-centered h3,
+.legal-card-centered p,
+.legal-card-centered strong {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.legal-block {
+    margin-bottom: 40px !important;
+}
+
+.legal-actions {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 40px !important;
+}
+
+/* Footer alignment */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 25px;
+}
