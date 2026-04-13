@@ -16,6 +16,41 @@ const translations = {
         "nav_projects": "Projects",
         "nav_contact": "Contact",
         about_more_button: "Discover Our Expertise",
+        impressum_title: "Legal Notice",
+        impressum_company: "Company Information",
+        impressum_managing_director: "Managing Director",
+        impressum_register: "Commercial Register Number",
+        impressum_vat: "VAT Number",
+        impressum_authority: "Supervisory Authority",
+        impressum_profession: "Professional Title",
+        impressum_chamber: "Chamber Membership",
+        impressum_disclaimer_title: "Disclaimer",
+        impressum_disclaimer_text: "Despite careful control of content, we assume no liability for the content of external links. The operators of linked pages are solely responsible for their content.",
+
+        privacy_title: "Privacy Policy",
+        privacy_intro_title: "1. General Information",
+        privacy_intro_text: "We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with the applicable legal data protection regulations, in particular the GDPR.",
+
+        privacy_responsible_title: "2. Responsible Entity",
+        privacy_contact_title: "3. Contacting Us",
+        privacy_contact_text: "If you contact us by email or via the contact form, the data you provide will be stored for the purpose of processing your request and possible follow-up questions.",
+
+        privacy_form_title: "4. Contact Form",
+        privacy_form_text: "When you submit an inquiry using the contact form, the information you provide, including your contact details, is stored for the purpose of processing the request.",
+
+        privacy_formspree_title: "5. Form Processing via Formspree",
+        privacy_formspree_text: "This website uses Formspree, a service for processing contact form submissions. Personal data entered into the form may be transmitted to and processed by Formspree. Please also refer to Formspree’s privacy information.",
+
+        privacy_rights_title: "6. Your Rights",
+        privacy_rights_text: "You have the right to access, rectify, erase, restrict processing, data portability, and object to the processing of your personal data, to the extent permitted by law.",
+
+        privacy_storage_title: "7. Data Storage Duration",
+        privacy_storage_text: "Personal data is stored only for as long as necessary to process your request or as required by statutory retention obligations.",
+
+        privacy_security_title: "8. Data Security",
+        privacy_security_text: "We implement appropriate technical and organizational measures to protect your personal data from loss, misuse, and unauthorized access.",
+
+        back_home: "Back to Home",
 
         // Hero
         "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
@@ -587,6 +622,41 @@ const translations = {
         hero_button: "Kontakt aufnehmen",
         nav_services: "Leistungen",
         nav_contact: "Kontakt",
+         impressum_title: "Impressum",
+        impressum_company: "Angaben zum Unternehmen",
+        impressum_managing_director: "Geschäftsführer",
+        impressum_register: "Firmenbuchnummer",
+        impressum_vat: "UID-Nummer",
+        impressum_authority: "Aufsichtsbehörde",
+        impressum_profession: "Berufsbezeichnung",
+        impressum_chamber: "Kammerzugehörigkeit",
+        impressum_disclaimer_title: "Haftungsausschluss",
+        impressum_disclaimer_text: "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.",
+
+        privacy_title: "Datenschutzerklärung",
+        privacy_intro_title: "1. Allgemeine Hinweise",
+        privacy_intro_text: "Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Ihre Daten werden vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften, insbesondere der DSGVO, behandelt.",
+
+        privacy_responsible_title: "2. Verantwortliche Stelle",
+        privacy_contact_title: "3. Kontaktaufnahme",
+        privacy_contact_text: "Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert.",
+
+        privacy_form_title: "4. Kontaktformular",
+        privacy_form_text: "Wenn Sie über das Kontaktformular Anfragen an uns senden, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zur Bearbeitung der Anfrage gespeichert.",
+
+        privacy_formspree_title: "5. Formularverarbeitung über Formspree",
+        privacy_formspree_text: "Diese Website nutzt Formspree zur Verarbeitung von Kontaktanfragen. Die von Ihnen eingegebenen personenbezogenen Daten können an Formspree übermittelt und dort verarbeitet werden. Beachten Sie dazu auch die Datenschutzhinweise von Formspree.",
+
+        privacy_rights_title: "6. Ihre Rechte",
+        privacy_rights_text: "Sie haben grundsätzlich das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten, soweit dies gesetzlich zulässig ist.",
+
+        privacy_storage_title: "7. Speicherdauer",
+        privacy_storage_text: "Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Bearbeitung Ihrer Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.",
+
+        privacy_security_title: "8. Datensicherheit",
+        privacy_security_text: "Wir setzen geeignete technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre personenbezogenen Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen.",
+
+        back_home: "Zurück zur Startseite",
        
 
         // Service 1
