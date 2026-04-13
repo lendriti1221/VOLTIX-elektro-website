@@ -9,7 +9,6 @@
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 
     <style>
-        /* 1. Page Background Fix */
         body {
             background-color: #ffffff !important;
             color: #333 !important;
@@ -17,7 +16,6 @@
             padding: 0;
         }
 
-        /* 2. Content Wrapper */
         .legal-viewport-fix {
             width: 100%;
             padding: 100px 20px;
@@ -26,7 +24,6 @@
             min-height: 80vh;
         }
 
-        /* 3. The Card */
         .legal-card-final {
             width: 100%;
             max-width: 850px;
@@ -39,7 +36,6 @@
             display: block !important; 
         }
 
-        /* 4. The Blocks */
         .legal-block {
             display: block !important;
             width: 100% !important;
@@ -51,14 +47,12 @@
         .legal-block h1, .legal-block h2, .legal-block h3 {
             color: #f4b400 !important;
             margin-bottom: 15px !important;
-            text-align: center !important;
         }
 
         .legal-block p {
             color: #444 !important;
             line-height: 1.6;
             margin-bottom: 10px;
-            text-align: center !important;
         }
 
         .legal-actions {
@@ -83,14 +77,14 @@
             <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </div>
         <ul class="nav-links" id="nav-list">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+            <li><a href="about.html" data-translate="nav_about">About</a></li>
+            <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+            <li><a href="index.html#projects" data-translate="nav_projects">Projects</a></li>
+            <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
             <li>
                 <select class="lang-switch" onchange="setLanguage(this.value)">
-                    <option value="en" selected>EN</option>
+                    <option value="en">EN</option>
                     <option value="de">DE</option>
                 </select>
             </li>
@@ -102,47 +96,47 @@
     <div class="legal-card-final">
         
         <div class="legal-block">
-            <h1>Legal Notice</h1>
-            <p>Information according to § 5 E-Commerce Act and disclosure according to § 25 Media Act.</p>
+            <h1 data-translate="impressum_title">Legal Notice</h1>
+            <p data-translate="impressum_subtitle">Information according to § 5 E-Commerce Act and disclosure according to § 25 Media Act.</p>
         </div>
 
         <div class="legal-block">
-            <h2>Company Information</h2>
+            <h2 data-translate="company_info_title">Company Information</h2>
             <p>
                 <strong>VOLTIX Elektrotechnik GmbH</strong><br>
                 Brunnengasse 2<br>
                 2230 Gänserndorf, Austria
             </p>
             <p>
-                <strong>Phone:</strong> +43 660 1255856<br>
-                <strong>Email:</strong> office@voltix-elektro.at
+                <strong data-translate="phone_label">Phone:</strong> +43 660 1255856<br>
+                <strong data-translate="email_label">Email:</strong> office@voltix-elektro.at
             </p>
         </div>
 
         <div class="legal-block">
-            <h2>Management</h2>
-            <p><strong>Managing Director:</strong> Florijan Fazliji</p>
+            <h2 data-translate="management_title">Management</h2>
+            <p><strong data-translate="managing_director_label">Managing Director:</strong> Florijan Fazliji</p>
         </div>
 
         <div class="legal-block">
-            <h2>Registry Details</h2>
-            <p><strong>Register Number:</strong> FN 123456z</p>
-            <p><strong>Commercial Court:</strong> Korneuburg</p>
-            <p><strong>VAT Identification Number:</strong> ATU12345678</p>
+            <h2 data-translate="registry_title">Registry Details</h2>
+            <p><strong data-translate="reg_number_label">Register Number:</strong> FN 123456z</p>
+            <p><strong data-translate="court_label">Commercial Court:</strong> Korneuburg</p>
+            <p><strong data-translate="vat_label">VAT Identification Number:</strong> ATU12345678</p>
         </div>
 
         <div class="legal-actions">
-            <a href="index.html" class="btn primary-btn">Back to Home</a>
+            <a href="index.html" class="btn primary-btn" data-translate="back_home">Back to Home</a>
         </div>
     </div>
 </main>
 
 <footer>
     <div class="container footer-content">
-        <p>© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        <p data-translate="footer_rights">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
         <div class="footer-legal">
-            <a href="impressum.html">Legal Notice</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="impressum.html" data-translate="footer_impressum">Legal Notice</a>
+            <a href="privacy.html" data-translate="footer_privacy">Privacy Policy</a>
         </div>
     </div>
 </footer>
