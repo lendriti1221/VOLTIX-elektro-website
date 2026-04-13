@@ -4,70 +4,127 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Impressum | Voltix Elektrotechnik GmbH</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 
     <style>
-        .legal-viewport-fix {
-            width: 100% !important;
-            min-height: 80vh;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: center !important; 
-            align-items: center !important;     
-            text-align: center !important;
-            background-color: #fffff !important;
-            padding: 80px 20px !important;
+        /* --- RESET & LAYOUT --- */
+        body {
+            background-color: #ffffff !important;
             margin: 0 !important;
+            display: block !important;
+            font-family: sans-serif;
+        }
+
+        /* --- NAVBAR FIX --- */
+        header {
+            background-color: #0a0a0a !important;
+            display: block !important;
+            width: 100% !important;
+            position: relative !important;
+            z-index: 100 !important;
+        }
+
+        .navbar {
+            background-color: #0a0a0a !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 10px 20px !important;
+        }
+
+        .nav-links {
+            display: flex !important;
+            list-style: none !important;
+            gap: 20px !important;
+        }
+
+        .nav-links a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        /* --- CONTENT SECTION --- */
+        .legal-viewport-fix {
+            all: unset !important; 
+            display: block !important;
+            width: 100% !important;
+            background-color: #ffffff !important;
+            padding: 80px 0 !important;
             box-sizing: border-box !important;
         }
 
         .legal-card-final {
-            width: 100% !important;
+            display: block !important;
+            width: 90% !important;
             max-width: 850px !important;
+            margin: 0 auto !important;
             background: #ffffff !important;
-            padding: 50px 30px !important;
+            padding: 40px !important;
+            border: 1px solid #eee !important;
             border-radius: 15px !important;
-            border: 1px solid #222 !important;
-            margin: 0 auto !important; 
-            display: block !important;
+            color: #333 !important;
             box-sizing: border-box !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
         }
 
-        .legal-card-final h1, 
-        .legal-card-final h2, 
-        .legal-card-final h3, 
-        .legal-card-final p, 
-        .legal-card-final strong {
-            text-align: center !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-            width: 100% !important;
+        /* --- BLOCK STACKING --- */
+        .legal-block {
             display: block !important;
-        }
-
-        .legal-grid {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-            gap: 30px !important;
-            margin: 40px 0 !important;
-        }
-
-        .legal-item {
-            flex: 1;
-            min-width: 200px;
+            width: 100% !important;
+            margin-bottom: 45px !important;
+            clear: both !important;
+            float: none !important;
             text-align: center !important;
+        }
+
+        h1, h2, h3 { 
+            color: #f4b400 !important; 
+            margin-bottom: 15px !important;
+            display: block !important;
+            width: 100% !important;
+        }
+
+        p, strong {
+            display: block !important;
+            margin-bottom: 10px !important;
+            color: #444 !important;
+            line-height: 1.6 !important;
         }
 
         .legal-actions {
-            display: flex !important;
-            justify-content: center !important;
+            display: block !important;
+            text-align: center !important;
             margin-top: 40px !important;
         }
 
-        h1, h2, h3 { color: #f4b400 !important; }
+        /* --- FOOTER FIX --- */
+        .legal-footer-fix {
+            background-color: #0a0a0a !important;
+            color: #ffffff !important;
+            padding: 50px 20px !important;
+            text-align: center !important;
+            display: block !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        .footer-legal-links {
+            display: flex !important;
+            justify-content: center !important;
+            gap: 25px !important;
+            margin-top: 15px !important;
+        }
+
+        .footer-legal-links a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+            font-size: 14px !important;
+        }
+
+        .footer-legal-links a:hover {
+            color: #f4b400 !important;
+        }
     </style>
 </head>
 <body>
@@ -75,16 +132,9 @@
 <header>
     <nav class="navbar">
         <div class="logo-container">
-            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo"></a>
+            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo" style="height: 50px;"></a>
         </div>
-
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-        <ul class="nav-links" id="nav-list">
+        <ul class="nav-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="index.html#services">Services</a></li>
@@ -100,8 +150,9 @@
     </nav>
 </header>
 
-<section class="legal-viewport-fix">
+<div class="legal-viewport-fix">
     <div class="legal-card-final">
+        
         <div class="legal-block">
             <h1>Impressum</h1>
             <p>Legal information and company details of Voltix Elektrotechnik GmbH.</p>
@@ -115,31 +166,38 @@
                 2230 Gänserndorf, Austria
             </p>
             <p>
-                <strong>Phone</strong>: +43 660 1255856<br>
-                <strong>Email</strong>: office@voltix-elektro.at
+                <strong>Phone:</strong> +43 660 1255856<br>
+                <strong>Email:</strong> office@voltix-elektro.at
             </p>
         </div>
 
-        <div class="legal-grid">
-            <div class="legal-item">
-                <h3>Managing Director</h3>
-                <p>Florijan Fazliji</p>
-            </div>
-            <div class="legal-item">
-                <h3>Register Number</h3>
-                <p>FN 123456z</p>
-            </div>
-            <div class="legal-item">
-                <h3>VAT Number</h3>
-                <p>ATU12345678</p>
-            </div>
+        <div class="legal-block">
+            <h2>Management</h2>
+            <p><strong>Managing Director:</strong> Florijan Fazliji</p>
+        </div>
+
+        <div class="legal-block">
+            <h2>Commercial Register</h2>
+            <p><strong>Register Number:</strong> FN 123456z</p>
+            <p><strong>Commercial Court:</strong> Korneuburg</p>
+            <p><strong>VAT Number:</strong> ATU12345678</p>
         </div>
 
         <div class="legal-actions">
             <a href="index.html" class="btn primary-btn">Back to Home</a>
         </div>
     </div>
-</section>
+</div>
+
+<footer class="legal-footer-fix">
+    <div class="footer-container">
+        <p style="color: #888; margin-bottom: 10px;">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        <div class="footer-legal-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="privacy.html">Datenschutz</a>
+        </div>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
