@@ -812,3 +812,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+
+    // Check if user has already accepted cookies
+    if (!localStorage.getItem("cookiesAccepted")) {
+        // Show the banner after a small delay
+        setTimeout(() => {
+            cookieBanner.classList.add("active");
+        }, 1000);
+    }
+
+    acceptBtn.addEventListener("click", () => {
+        // Save the choice in local storage
+        localStorage.setItem("cookiesAccepted", "true");
+        // Hide the banner
+        cookieBanner.classList.remove("active");
+    });
+});
