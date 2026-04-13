@@ -542,6 +542,7 @@ footer {
 .about-content-grid, 
 .expertise-grid {
     display: block !important;    
+    margin: 0 auto;
     text-align: center !important; 
     max-width: 800px !important; /* Slightly narrower for better reading */
     margin: 60px auto !important;     
@@ -554,6 +555,7 @@ footer {
     text-align: center !important;
     font-size: 1.6rem !important; /* Reduced from 3rem */
     margin-bottom: 20px !important;
+    margin: 0 auto;
     display: block !important;
     color: #ffd700; /* Using your gold theme color */
 }
@@ -574,7 +576,7 @@ footer {
 /* Body Text - Clean & Readable */
 .about-section p, 
 .about-content-centered p, 
-.expertise-grid p,
+.expertise-grid p,{
     text-align: center !important;
     font-size: 1.1rem !important; /* Reduced from 1.4rem */
     line-height: 1.6 !important;
