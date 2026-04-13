@@ -4,36 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Datenschutz | Voltix Elektrotechnik GmbH</title>
-    <meta name="description" content="Datenschutzerklärung von Voltix Elektrotechnik GmbH" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 
     <style>
+        /* 1. Force the page background to WHITE */
         .legal-viewport-fix {
             width: 100% !important;
             min-height: 80vh;
             display: flex !important;
             flex-direction: column !important;
-            justify-content: center !important; 
+            justify-content: flex-start !important; 
             align-items: center !important;     
             text-align: center !important;
-            background-color: #0a0a0a !important; /* Force dark background */
+            background-color: #ffffff !important; 
             padding: 80px 20px !important;
             margin: 0 !important;
             box-sizing: border-box !important;
         }
 
+        /* 2. Force the card to be WHITE with a light border */
         .legal-card-final {
             width: 100% !important;
             max-width: 850px !important;
-            background: #111111 !important; /* Force dark card */
+            background: #ffffff !important; 
             padding: 50px 30px !important;
             border-radius: 15px !important;
-            border: 1px solid #222 !important;
+            border: 1px solid #dddddd !important;
             margin: 0 auto !important; 
-            display: block !important;
+            display: flex !important;
+            flex-direction: column !important; /* Forces vertical order (1, then 2, etc.) */
             box-sizing: border-box !important;
+            color: #333333 !important; /* Dark text for white background */
+        }
+
+        .legal-block {
+            width: 100% !important;
+            margin-bottom: 30px !important;
+            display: block !important;
         }
 
         .legal-card-final h1, 
@@ -44,20 +53,19 @@
             margin-left: auto !important;
             margin-right: auto !important;
             width: 100% !important;
-            display: block !important;
         }
 
         .legal-actions {
             display: flex !important;
             justify-content: center !important;
-            margin-top: 40px !important;
+            margin-top: 20px !important;
         }
 
-        .legal-block {
-            margin-bottom: 30px !important;
-        }
-
+        /* Keep headers Gold */
         h1, h2 { color: #f4b400 !important; }
+        
+        /* Ensure Navbar stays visible if it was dark before */
+        .navbar { background-color: #0a0a0a !important; }
     </style>
 </head>
 <body>
@@ -75,11 +83,11 @@
         </div>
 
         <ul class="nav-links" id="nav-list">
-            <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-            <li><a href="about.html" data-translate="nav_about">About</a></li>
-            <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
-            <li><a href="index.html#projects" data-translate="nav_projects">Projects</a></li>
-            <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
             <li>
                 <select class="lang-switch" onchange="setLanguage(this.value)">
                     <option value="en">EN</option>
@@ -129,17 +137,17 @@
         </div>
 
         <div class="legal-actions">
-            <a href="index.html" class="btn primary-btn" data-translate="back_home">Back to Home</a>
+            <a href="index.html" class="btn primary-btn">Back to Home</a>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="container footer-content">
-        <p data-translate="footer_text">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        <p>© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
         <div class="footer-legal">
-            <a href="impressum.html" data-translate="footer_impressum">Impressum</a>
-            <a href="privacy.html" data-translate="footer_privacy">Datenschutz</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="privacy.html">Datenschutz</a>
         </div>
     </div>
 </footer>
