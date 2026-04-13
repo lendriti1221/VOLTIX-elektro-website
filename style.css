@@ -2446,3 +2446,6 @@ footer {
         font-size: 1rem;
     }
 }
+.legal-block p {
+    text-align: center;
+}
