@@ -1734,3 +1734,21 @@ margin-right: auto !important;
     margin: 0 !important;
     padding: 0 !important;
 }
+/* FINAL FIX: company name + address spacing */
+.contact-section .info-text strong,
+.contact-section .info-text h3 {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.25 !important;
+}
+
+.contact-section .info-text p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+}
+
+.contact-section .info-text br {
+    display: none !important;
+}
