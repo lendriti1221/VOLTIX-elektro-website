@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (menuToggle && navList) {
                 menuToggle.addEventListener("click", function () {
                     navList.classList.toggle("active");
+                    navList.classList.toggle("show");
                     menuToggle.classList.toggle("active");
                 });
 
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 navLinks.forEach(link => {
                     link.addEventListener("click", function () {
                         navList.classList.remove("active");
+                        navList.classList.remove("show");
                         menuToggle.classList.remove("active");
                     });
                 });
