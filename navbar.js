@@ -12,6 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             navbarContainer.innerHTML = data;
 
+            const savedLang = localStorage.getItem("selectedLanguage") || "en";
+
+            if (typeof setLanguage === "function") {
+                setLanguage(savedLang);
+            } else {
+                const langSelect = document.querySelector(".lang-switch");
+                if (langSelect) {
+                    langSelect.value = savedLang;
+                }
+            }
+
             const menuToggle = document.getElementById("mobile-menu");
             const navList = document.getElementById("nav-list");
 
