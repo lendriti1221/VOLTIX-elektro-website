@@ -886,26 +886,23 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- COOKIE BANNER LOGIC ---
 document.addEventListener("DOMContentLoaded", function() {
     const banner = document.getElementById("cookie-banner");
-    const acceptBtn = document.getElementById("accept-cookies");
-    const denyBtn = document.getElementById("deny-cookies");
-
+    
+    // Check if the user already made a choice
     if (banner && !localStorage.getItem("cookieChoice")) {
+        // Force the active class after 1 second
         setTimeout(() => {
+            console.log("Cookie banner is now active"); // Check your console (F12) for this
             banner.classList.add("active");
         }, 1000);
     }
 
-    if (acceptBtn) {
-        acceptBtn.addEventListener("click", () => {
-            localStorage.setItem("cookieChoice", "accepted");
-            banner.classList.remove("active");
-        });
-    }
+    document.getElementById("accept-cookies")?.addEventListener("click", () => {
+        localStorage.setItem("cookieChoice", "accepted");
+        banner.classList.remove("active");
+    });
 
-    if (denyBtn) {
-        denyBtn.addEventListener("click", () => {
-            localStorage.setItem("cookieChoice", "denied");
-            banner.classList.remove("active");
-        });
-    }
+    document.getElementById("deny-cookies")?.addEventListener("click", () => {
+        localStorage.setItem("cookieChoice", "denied");
+        banner.classList.remove("active");
+    });
 });
