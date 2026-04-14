@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <style>
+   <style>
         /* ===== PAGE FIX ===== */
         body {
             background: #ffffff;
@@ -17,9 +17,9 @@
 
         /* ===== CENTER WRAPPER ===== */
         .legal-wrapper {
-            display: block; /* Changed from flex to block for stability */
-            width: 100%;
-            padding: 100px 20px;
+            display: flex;
+            justify-content: center;
+            padding: 80px 20px;
         }
 
         /* ===== MAIN CARD ===== */
@@ -31,17 +31,16 @@
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             border-top: 4px solid #f4b400;
-            margin: 0 auto; /* Centers the card */
-            display: block !important; /* Forces vertical stacking */
+
+            /* THIS FIXES THE ORDER BUG */
+            display: flex;
+            flex-direction: column;
         }
 
-        /* ===== BLOCKS - Explicitly ordered ===== */
+        /* ===== BLOCKS ===== */
         .legal-block {
-            display: block;
-            width: 100%;
             margin-bottom: 40px;
             text-align: center;
-            clear: both; /* Prevents elements from floating next to each other */
         }
 
         /* ===== HEADINGS ===== */
@@ -69,13 +68,6 @@
         .legal-actions {
             text-align: center;
             margin-top: 30px;
-            display: block;
-            width: 100%;
-        }
-
-        header {
-            width: 100%;
-            background-color: #0a0a0a !important;
         }
 
         /* ===== MOBILE ===== */
@@ -83,9 +75,11 @@
             .legal-card {
                 padding: 25px;
             }
+
             .legal-block h1 {
                 font-size: 1.8rem;
             }
+
             .legal-block h2 {
                 font-size: 1.3rem;
             }
