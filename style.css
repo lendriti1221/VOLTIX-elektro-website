@@ -1369,3 +1369,24 @@ margin-right: auto !important;
 }
 
 } 
+@media (min-width: 769px) {
+
+    .navbar {
+        justify-content: space-between !important;
+        padding: 15px 40px !important;
+    }
+
+    .logo-container {
+        position: static !important;
+        transform: none !important;
+        justify-content: flex-start !important;
+    }
+
+    .nav-links {
+        justify-content: flex-end !important;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+}
