@@ -694,6 +694,7 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
 
     // A: Dictionary Method (data-translate)
+    // Used for the new Privacy and Impressum pages
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
@@ -702,21 +703,24 @@ function setLanguage(lang) {
     });
 
     // B: Inline Method (data-en/data-de)
+    // Used for existing lines of code elsewhere on your site
     document.querySelectorAll('[data-en]').forEach(el => {
         const translation = el.getAttribute(`data-${lang}`);
         if (translation) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = translation;
-            } else {
+            } else if (el.children.length === 0) {
+                // SAFETY CHECK: Only translate if it's a simple text element.
+                // This prevents breaking the order of complex HTML blocks.
                 el.innerText = translation;
             }
         }
     });
 
-    // ✅ Keep this ONLY if you use data-title/text somewhere else
+    // ✅ Sync Service Boxes
     document.querySelectorAll('.service-box').forEach((box) => {
         const key = box.getAttribute('data-key');
-        if (!key) return;
+        if (!key || !translations[lang]) return;
 
         const titleKey = `${key}_title`;
         const textKey = `${key}_text`;
@@ -730,7 +734,7 @@ function setLanguage(lang) {
         }
     });
 
-    // Sync dropdown
+    // Sync dropdown UI
     const langSelect = document.querySelector('.lang-switch');
     if (langSelect) langSelect.value = lang;
 }
@@ -763,22 +767,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// COOKIE BANNER LOGIC
 document.addEventListener("DOMContentLoaded", function() {
     const cookieBanner = document.getElementById("cookie-banner");
     const acceptBtn = document.getElementById("accept-cookies");
 
-    // Check if user has already accepted cookies
-    if (!localStorage.getItem("cookiesAccepted")) {
-        // Show the banner after a small delay
+    if (cookieBanner && !localStorage.getItem("cookiesAccepted")) {
         setTimeout(() => {
             cookieBanner.classList.add("active");
         }, 1000);
     }
 
-    acceptBtn.addEventListener("click", () => {
-        // Save the choice in local storage
-        localStorage.setItem("cookiesAccepted", "true");
-        // Hide the banner
-        cookieBanner.classList.remove("active");
-    });
+    if (acceptBtn) {
+        acceptBtn.addEventListener("click", () => {
+            localStorage.setItem("cookiesAccepted", "true");
+            cookieBanner.classList.remove("active");
+        });
+    }
 });
