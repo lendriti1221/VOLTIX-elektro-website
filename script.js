@@ -806,53 +806,67 @@ const translations = {
 // 2. THE MASTER TRANSLATION FUNCTION
 function setLanguage(lang) {
     console.log("Switching to: " + lang);
-    localStorage.setItem('selectedLanguage', lang);
+
+    localStorage.setItem("selectedLanguage", lang);
     document.documentElement.lang = lang;
 
     // A: Dictionary Method (data-translate)
-    // Used for the new Privacy and Impressum pages
-    document.querySelectorAll('[data-translate]').forEach(el => {
-        const key = el.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
-            el.innerText = translations[lang][key];
+    document.querySelectorAll("[data-translate]").forEach((el) => {
+        const key = el.getAttribute("data-translate");
+
+        if (!translations[lang] || !translations[lang][key]) return;
+
+        const value = translations[lang][key];
+
+        // Handle meta tags safely
+        if (el.tagName === "META") {
+            el.setAttribute("content", value);
+            return;
         }
+
+        // Handle inputs and textareas
+        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+            el.placeholder = value;
+            return;
+        }
+
+        // Normal text elements
+        el.textContent = value;
     });
 
-    // B: Inline Method (data-en/data-de)
-    // Used for existing lines of code elsewhere on your site
-    document.querySelectorAll('[data-en]').forEach(el => {
+    // B: Inline Method (data-en / data-de)
+    document.querySelectorAll("[data-en]").forEach((el) => {
         const translation = el.getAttribute(`data-${lang}`);
-        if (translation) {
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = translation;
-            } else if (el.children.length === 0) {
-                // SAFETY CHECK: Only translate if it's a simple text element.
-                // This prevents breaking the order of complex HTML blocks.
-                el.innerText = translation;
-            }
+        if (!translation) return;
+
+        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+            el.placeholder = translation;
+        } else if (el.children.length === 0) {
+            el.textContent = translation;
         }
     });
 
-    // ✅ Sync Service Boxes
-    document.querySelectorAll('.service-box').forEach((box) => {
-        const key = box.getAttribute('data-key');
+    // Sync Service Boxes
+    document.querySelectorAll(".service-box").forEach((box) => {
+        const key = box.getAttribute("data-key");
         if (!key || !translations[lang]) return;
 
         const titleKey = `${key}_title`;
         const textKey = `${key}_text`;
 
         if (translations[lang][titleKey]) {
-            box.setAttribute('data-title', translations[lang][titleKey]);
+            box.setAttribute("data-title", translations[lang][titleKey]);
         }
 
         if (translations[lang][textKey]) {
-            box.setAttribute('data-text', translations[lang][textKey]);
+            box.setAttribute("data-text", translations[lang][textKey]);
         }
     });
 
-    // Sync dropdown UI
-    const langSelect = document.querySelector('.lang-switch');
-    if (langSelect) langSelect.value = lang;
+    // Sync ALL language dropdowns
+    document.querySelectorAll(".lang-switch").forEach((select) => {
+        select.value = lang;
+    });
 }
 
 // 3. GLOBAL CHANGE FUNCTION
@@ -861,28 +875,35 @@ function changeLanguage(lang) {
 }
 
 // 4. INITIALIZATION
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'de';
+document.addEventListener("DOMContentLoaded", () => {
+    // Default language is now GERMAN
+    const savedLang = localStorage.getItem("selectedLanguage") || "de";
     setLanguage(savedLang);
 
-    // ✅ CLEAN mobile menu (only one version)
-    const menuBtn = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
+    // CLEAN mobile menu
+    const menuBtn = document.getElementById("mobile-menu");
+    const navList = document.getElementById("nav-list");
 
     if (menuBtn && navList) {
-        menuBtn.addEventListener('click', function () {
-            navList.classList.toggle('show');
-            menuBtn.classList.toggle('is-active');
+        menuBtn.addEventListener("click", function () {
+            navList.classList.toggle("show");
+            navList.classList.toggle("active");
+            menuBtn.classList.toggle("is-active");
         });
     }
 
     // Close menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navList) navList.classList.remove('show');
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+            if (navList) {
+                navList.classList.remove("show");
+                navList.classList.remove("active");
+            }
         });
     });
 });
+
+// 5. COOKIE BANNER
 document.addEventListener("DOMContentLoaded", function () {
     const banner = document.getElementById("cookie-banner");
     const acceptBtn = document.getElementById("accept-cookies");
