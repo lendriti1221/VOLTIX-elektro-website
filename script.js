@@ -16,6 +16,45 @@ const translations = {
         "nav_projects": "Projects",
         "nav_contact": "Contact",
         about_more_button: "Discover Our Expertise",
+        // Navigation & General
+        "nav_home": "Home",
+        "nav_about": "About",
+        "nav_services": "Services",
+        "nav_projects": "Projects",
+        "nav_contact": "Contact",
+        "back_home": "Back to Home",
+        "footer_rights": "© 2026 Voltix Elektrotechnik GmbH — All rights reserved.",
+        "footer_impressum": "Legal Notice",
+        "footer_privacy": "Privacy Policy",
+        "company_name": "VOLTIX Elektrotechnik GmbH",
+
+        // Privacy Policy Page - English
+        "privacy_page_title": "Privacy Policy | Voltix Elektrotechnik GmbH",
+        "privacy_title": "Privacy Policy",
+        "privacy_subtitle": "Your privacy is our priority. This policy outlines how Voltix handles your data in accordance with EU standards.",
+        "privacy_intro_long": "At Voltix Elektrotechnik GmbH, we value your trust. This Privacy Policy explains how we collect, use, and protect your data when you visit our website. Our practices comply strictly with the European General Data Protection Regulation (GDPR) and the Austrian Data Protection Act (DSG).",
+        "privacy_controller_title": "1. Data Controller",
+        "represented_by": "Represented by:",
+        "privacy_security_title": "2. Data Security & Encryption",
+        "privacy_security_text": "To ensure the highest level of security for your transmitted data, we utilize state-of-the-art AES 256-bit SSL/TLS encryption. You can recognize an encrypted connection by the 'https://' in your browser's address bar and the lock icon. This ensures that no third parties can intercept your communication with us.",
+        "privacy_log_title": "3. Server Log Files",
+        "privacy_log_text": "Our hosting provider automatically logs technical data required for website stability. This data is not personally identifiable and is processed under Art. 6 Para. 1 lit. f GDPR. This includes:",
+        "privacy_cookies_title": "4. Cookies & Local Storage",
+        "privacy_cookies_text": "We use functional cookies to enhance your experience. These are small text files stored on your device that allow us to remember your language preferences and provide a secure session. These files do not contain personal identifiers and are essential for the website's performance.",
+        "privacy_external_title": "5. Web Fonts & Assets",
+        "privacy_external_text": "For a professional and consistent visual presentation across all devices, this site uses external web fonts. When you load a page, these fonts are fetched from a server, which technically requires your IP address to be transmitted to the provider (e.g., Google) to deliver the file to your browser.",
+        "privacy_purpose_title": "6. Inquiries via Formspree",
+        "privacy_purpose_text": "When you send an inquiry through our contact form, your data is processed via Formspree. We have established a Data Processing Agreement to ensure your data is handled securely. We only store this data to respond to your specific project or service request.",
+        "privacy_rights_title": "7. Your Rights (GDPR)",
+        "privacy_rights_text": "Under the GDPR, you have the following rights regarding your personal data:",
+        "privacy_authority_title": "8. Supervisory Authority",
+        "privacy_authority_text": "You have the right to lodge a complaint with the Austrian Data Protection Authority (DSB) if you believe our data processing violates your rights.",
+
+        // List items often need manual handling or specific keys
+        "rights_info": "Right to information (Art. 15)",
+        "rights_rect": "Right to rectification (Art. 16)",
+        "rights_eras": "Right to erasure (Art. 17)",
+        "rights_port": "Right to data portability (Art. 20)",
       
 
         // Hero
@@ -681,7 +720,46 @@ const translations = {
         "about_title": "Über unser Unternehmen",
         "about_text_p1": "Die VOLTIX Elektrotechnik GmbH steht für moderne Elektrotechnik, durchdachte Planung und zuverlässige Umsetzung. Als Elektromeisterbetrieb begleiten wir unsere Kundinnen und Kunden von der ersten Idee bis zur fertigen Lösung – persönlich, ehrlich und auf Augenhöhe. Unser Schwerpunkt liegt auf intelligenter Gebäudetechnik und Smart-Home-Lösungen (KNX), die den Alltag spürbar erleichtern, Energie sparen und langfristig überzeugen. Ob Einfamilienhaus, Wohnung, Gewerbebetrieb oder Büro – wir entwickeln Lösungen, die genau zu Ihren Anforderungen passen und auch in Zukunft flexibel erweiterbar sind. Besonderen Wert legen wir auf saubere Arbeit, Termintreue und nachhaltige Qualität. Jede Installation wird sorgfältig geplant und Normgerecht umgesetzt, damit Sie sich auf eine sichere, zuverlässige und langlebige Elektrotechnik verlassen können.",
         "about_text_p2": "Wir sind vorwiegend in Niederösterreich und Wien tätig, übernehmen je nach Projektgröße jedoch auch Aufträge darüber hinaus. Als wachsendes Unternehmen verfolgen wir ein klares Ziel: Technik zu schaffen, die heute begeistert und morgen noch Bestand hat.",
-        "about_more_btn": "Unsere Expertise entdecken"
+        "about_more_btn": "Unsere Expertise entdecken",
+        // Navigation & Allgemein
+        "nav_home": "Startseite",
+        "nav_about": "Über uns",
+        "nav_services": "Leistungen",
+        "nav_projects": "Projekte",
+        "nav_contact": "Kontakt",
+        "back_home": "Zurück zur Startseite",
+        "footer_rights": "© 2026 Voltix Elektrotechnik GmbH — Alle Rechte vorbehalten.",
+        "footer_impressum": "Impressum",
+        "footer_privacy": "Datenschutz",
+        "company_name": "VOLTIX Elektrotechnik GmbH",
+
+        // Privacy Policy Page - German
+        "privacy_page_title": "Datenschutzerklärung | Voltix Elektrotechnik GmbH",
+        "privacy_title": "Datenschutzerklärung",
+        "privacy_subtitle": "Ihr Datenschutz ist unsere Priorität. Diese Richtlinie beschreibt, wie Voltix Ihre Daten gemäß EU-Standards verarbeitet.",
+        "privacy_intro_long": "Bei der Voltix Elektrotechnik GmbH legen wir großen Wert auf Ihr Vertrauen. Diese Datenschutzerklärung erläutert, wie wir Ihre Daten erheben, nutzen und schützen. Unsere Praktiken entsprechen strikt der europäischen Datenschutz-Grundverordnung (DSGVO) und dem österreichischen Datenschutzgesetz (DSG).",
+        "privacy_controller_title": "1. Verantwortlicher",
+        "represented_by": "Vertreten durch:",
+        "privacy_security_title": "2. Datensicherheit & Verschlüsselung",
+        "privacy_security_text": "Um die höchste Sicherheit für Ihre übertragenen Daten zu gewährleisten, nutzen wir modernste AES 256-Bit SSL/TLS-Verschlüsselung. Sie erkennen eine verschlüsselte Verbindung an dem 'https://' in der Adresszeile Ihres Browsers und dem Schloss-Symbol. Dies stellt sicher, dass Dritte Ihre Kommunikation mit uns nicht abfangen können.",
+        "privacy_log_title": "3. Server-Log-Dateien",
+        "privacy_log_text": "Unser Hosting-Provider protokolliert automatisch technische Daten, die für die Stabilität der Website erforderlich sind. Diese Daten sind nicht personenbezogen und werden gemäß Art. 6 Abs. 1 lit. f DSGVO verarbeitet. Dazu gehören:",
+        "privacy_cookies_title": "4. Cookies & Local Storage",
+        "privacy_cookies_text": "Wir verwenden funktionale Cookies, um Ihr Nutzererlebnis zu verbessern. Dies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden und es uns ermöglichen, Ihre Sprachpräferenzen zu speichern und eine sichere Sitzung bereitzustellen. Diese Dateien enthalten keine persönlichen Identifikatoren.",
+        "privacy_external_title": "5. Web Fonts & Assets",
+        "privacy_external_text": "Für eine professionelle und einheitliche visuelle Darstellung auf allen Geräten nutzt diese Seite externe Webfonts. Beim Laden einer Seite werden diese von einem Server abgerufen, was technisch die Übermittlung Ihrer IP-Adresse an den Anbieter (z. B. Google) erfordert.",
+        "privacy_purpose_title": "6. Anfragen über Formspree",
+        "privacy_purpose_text": "Wenn Sie eine Anfrage über unser Kontaktformular senden, werden Ihre Daten über Formspree verarbeitet. Wir haben einen Auftragsverarbeitungsvertrag abgeschlossen, um sicherzustellen, dass Ihre Daten sicher gehandhabt werden. Wir speichern diese Daten nur zur Beantwortung Ihrer Anfrage.",
+        "privacy_rights_title": "7. Ihre Rechte (DSGVO)",
+        "privacy_rights_text": "Gemäß der DSGVO haben Sie folgende Rechte bezüglich Ihrer personenbezogenen Daten:",
+        "privacy_authority_title": "8. Aufsichtsbehörde",
+        "privacy_authority_text": "Sie haben das Recht, eine Beschwerde bei der österreichischen Datenschutzbehörde (DSB) einzureichen, wenn Sie glauben, dass unsere Datenverarbeitung gegen Ihre Rechte verstößt.",
+
+        // List items
+        "rights_info": "Recht auf Auskunft (Art. 15)",
+        "rights_rect": "Recht auf Berichtigung (Art. 16)",
+        "rights_eras": "Recht auf Löschung (Art. 17)",
+        "rights_port": "Recht auf Datenübertragbarkeit (Art. 20)"
 
     },
 
