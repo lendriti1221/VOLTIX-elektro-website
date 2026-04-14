@@ -889,9 +889,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const acceptBtn = document.getElementById("accept-cookies");
     const denyBtn = document.getElementById("deny-cookies");
 
-    // Check if user has already made a choice
+    // Check if user already made a choice
     if (banner && !localStorage.getItem("cookieChoice")) {
-        // Show the banner with a popup effect after 1 second
         setTimeout(() => {
             banner.classList.add("active");
         }, 1000);
