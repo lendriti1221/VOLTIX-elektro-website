@@ -12,23 +12,12 @@
     <style>
         body { background: #ffffff !important; color: #333 !important; display: block !important; margin: 0; padding: 0; }
         header { width: 100%; background-color: #0a0a0a !important; position: relative; z-index: 1000; }
-        
         .legal-wrapper { padding: 100px 20px; width: 100%; background-color: #f8f9fa; }
 
-        /* THE GRID LOCK - Matches the Privacy Page for consistency */
         .legal-card {
             display: grid !important;
             grid-template-columns: 1fr !important;
-            grid-template-areas: 
-                "header"
-                "company"
-                "registry"
-                "trade"
-                "management"
-                "dispute"
-                "disclaimer"
-                "social"
-                "actions" !important;
+            grid-template-areas: "header" "company" "registry" "trade" "management" "dispute" "disclaimer" "social" "actions" !important;
             gap: 45px;
             max-width: 950px;
             margin: 0 auto !important;
@@ -52,17 +41,10 @@
         .legal-block { text-align: left; display: block !important; width: 100%; }
         .legal-block h1 { font-size: 3rem; color: #111; margin-bottom: 5px; text-align: center; font-weight: 900; }
         .legal-subtitle { text-align: center; color: #aaa; font-size: 1rem; margin-bottom: 30px; display: block; }
-        
-        .legal-block h2 { 
-            font-size: 1.3rem; color: #f4b400; margin-bottom: 15px; 
-            text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; 
-            border-bottom: 2px solid #f8f9fa; padding-bottom: 12px; 
-        }
-        
+        .legal-block h2 { font-size: 1.3rem; color: #f4b400; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; border-bottom: 2px solid #f8f9fa; padding-bottom: 12px; }
         .legal-block p { line-height: 1.9; color: #444; font-size: 1.05rem; margin-bottom: 10px; }
         .legal-block a { color: #f4b400; text-decoration: none; font-weight: 600; }
         .legal-block a:hover { text-decoration: underline; }
-
         .legal-actions { grid-area: actions; text-align: center; border-top: 1px solid #eee; padding-top: 40px; }
 
         @media (max-width: 768px) {
@@ -71,7 +53,6 @@
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -86,7 +67,7 @@
             <li><a href="index.html#projects" data-translate="nav_projects">Projects</a></li>
             <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
             <li>
-                <select class="lang-switch" onchange="setLanguage(this.value)">
+                <select class="lang-switch" onchange="changeLanguage(this.value)">
                     <option value="en">EN</option>
                     <option value="de">DE</option>
                 </select>
@@ -97,7 +78,6 @@
 
 <div class="legal-wrapper">
     <div class="legal-card">
-
         <div class="legal-block" id="i-header">
             <h1 data-translate="impressum_title">Legal Notice</h1>
             <span class="legal-subtitle" data-translate="impressum_subtitle">Disclosure according to § 25 Media Act and § 5 ECG</span>
@@ -129,7 +109,7 @@
                 <span data-translate="chamber">Chamber Membership:</span> Wirtschaftskammer Niederösterreich (WKNÖ)<br>
                 <span data-translate="authority">Trade Authority:</span> Bezirkshauptmannschaft Gänserndorf<br>
                 <span data-translate="profession">Professional Title:</span> Elektrotechnik (Master Craftsman Company)<br>
-                <span data-translate="laws">Professional Law:</span> <a href="https://www.ris.bka.gv.at" target="_blank">Gewerbeordnung (www.ris.bka.gv.at)</a>
+                <span data-translate="laws_label">Professional Law:</span> <a href="https://www.ris.bka.gv.at" target="_blank" data-translate="laws_link">Gewerbeordnung</a>
             </p>
         </div>
 
@@ -157,7 +137,6 @@
         <div class="legal-actions" id="i-actions">
             <a href="index.html" class="btn primary-btn" data-translate="back_home">Back to Home</a>
         </div>
-
     </div>
 </div>
 
@@ -174,3 +153,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
