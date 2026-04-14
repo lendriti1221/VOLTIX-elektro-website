@@ -1677,3 +1677,40 @@ margin-right: auto !important;
     margin-bottom: 2px !important;
     line-height: 1.4 !important;
 }
+/* 🔥 REMOVE EXTRA GAP BETWEEN COMPANY NAME + ADDRESS */
+.contact-section .info-text h3,
+.contact-section .info-text strong {
+    margin-bottom: 2px !important; /* very tight */
+    line-height: 1.3 !important;
+}
+
+.contact-section .info-text p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Kill any hidden spacing from parent */
+.contact-section .info-item {
+    margin-bottom: 18px !important;
+}
+@media (max-width: 768px) {
+
+    .footer-links {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 50px; /* row / column spacing */
+        max-width: 300px;
+        margin: 0 auto 25px auto;
+        text-align: center;
+    }
+
+    .footer-links a {
+        display: block;
+    }
+
+    .footer-legal {
+        justify-content: center;
+        gap: 30px;
+    }
+}
