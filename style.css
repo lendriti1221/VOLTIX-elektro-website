@@ -1880,70 +1880,62 @@ textarea::placeholder {
     }
 }
 
-/* --- FIXED FLOATING COOKIE BANNER --- */
+/* --- DESKTOP POPUP FIX --- */
 .cookie-container {
-    position: fixed !important; /* Breaks it out of the footer/page flow */
-    bottom: -100%;             /* Hidden off-screen by default */
+    /* position: fixed is the ONLY way to make it float on desktop */
+    position: fixed !important; 
+    bottom: -200px;             /* Start hidden below the screen */
     left: 50% !important;
-    transform: translateX(-50%) !important; /* Centers it on PC */
+    transform: translateX(-50%) !important; /* Centers it perfectly */
+    
+    /* Desktop-Specific Sizing */
     width: 90% !important;
-    max-width: 500px !important; /* Prevents it from being too wide on PC */
-    background: #ffffff !important; /* Using white for a cleaner look */
+    max-width: 500px !important; 
+    
+    /* Visuals */
+    background: #ffffff !important; 
     color: #000000 !important;
     padding: 25px !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
-    z-index: 999999 !important; /* Ensures it is on top of everything else */
-    transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    border-radius: 16px !important;
-    border-top: 4px solid #bcab26 !important; /* Your brand gold accent */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 15px !important;
+    border-top: 5px solid #bcab26 !important;
+    
+    /* Layering - This MUST be higher than your footer */
+    z-index: 9999999 !important; 
+    
+    transition: bottom 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
     text-align: center !important;
+    display: block !important;
 }
 
-/* Active class triggered by your script.js */
+/* This is the class your JavaScript adds to make it pop up */
 .cookie-container.active {
-    bottom: 30px !important; /* Floats 30px above the bottom edge */
+    bottom: 40px !important; 
 }
 
-.cookie-content p {
-    margin: 0 0 20px 0 !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    color: #444 !important;
-}
-
-.cookie-content a {
-    color: #bcab26 !important;
-    text-decoration: underline;
-}
-
-/* Button Group */
 .cookie-buttons {
     display: flex;
-    gap: 12px;
-    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 #accept-cookies {
     background: #bcab26 !important;
     color: #fff !important;
     border: none !important;
-    padding: 10px 25px !important;
-    border-radius: 6px !important;
-    font-weight: 700 !important;
-    cursor: pointer !important;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
     flex: 1;
 }
 
 #deny-cookies {
-    background: #eee !important;
+    background: #f0f0f0 !important;
     color: #333 !important;
     border: none !important;
-    padding: 10px 25px !important;
-    border-radius: 6px !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     flex: 1;
 }
-
-#deny-cookies:hover { background: #ddd !important; }
-#accept-cookies:hover { background: #000 !important; }
