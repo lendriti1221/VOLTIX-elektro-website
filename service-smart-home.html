@@ -14,12 +14,6 @@
             --text-dim: #444444;
         }
         body { margin: 0; background-color: var(--bg-black); color: var(--text-white); font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: #000; position: sticky; top: 0; z-index: 1000; }
-        .logo { height: 140px; width: auto; }
-        .nav-right { display: flex; align-items: center; gap: 30px; }
-        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
-        .lang-switch { background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 4px 8px; border-radius: 4px; cursor: pointer; }
         
         .container { max-width: 1200px; margin: 0 auto; padding: 40px 5%; }
         .back-link { display: inline-flex; align-items: center; text-decoration: none; color: var(--accent-gold); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; transition: transform 0.3s ease; }
@@ -51,20 +45,7 @@
     </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <a href="index.html"><img src="assets/voltix-logo.png" class="logo" alt="Voltix"></a>
-        <div class="nav-right">
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
-                <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
-            </ul>
-            <select class="lang-switch" onchange="setLanguage(this.value)">
-                <option value="de">DE</option>
-                <option value="en">EN</option>
-            </select>
-        </div>
-    </nav>
+<header id="navbar-container"></header>
 
     <div class="container">
         <a href="index.html#services" class="back-link" data-translate="back_to_overview">
@@ -143,5 +124,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>
