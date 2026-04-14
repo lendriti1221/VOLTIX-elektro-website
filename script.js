@@ -15,7 +15,7 @@ const translations = {
         "nav_services": "Services",
         "nav_projects": "Projects",
         "nav_contact": "Contact",
-        about_more_button: "Discover Our Expertise",
+        "about_more_button": "Discover Our Expertise",
         "benefit_new": "Fast and reliable implementation",
         "plan_footer_installation": "We would be happy to advise you personally on your project and show you suitable solutions. Contact us—we will implement your ideas reliably and professionally.",
         // Navigation & General
@@ -130,10 +130,10 @@ const translations = {
 
         // Services (Full Text Restored)
 
-        back_to_overview: "Back to Overview",
-        hero_button: "Get in Touch",
-        nav_services: "Services",
-        nav_contact: "Contact",
+        "back_to_overview": "Back to Overview",
+        "hero_button": "Get in Touch",
+        "nav_services": "Services",
+        "nav_contact": "Contact",
 
         "services_title": "Our Services",
         "services_subtitle": "Specialized technical solutions delivered with precision and adherence to strict EU safety standards.",
@@ -602,7 +602,7 @@ const translations = {
         "hero_subtitle": "Professionelle Lösungen im Bereich Elektrotechnik für Haus, Gewerbe und Gebäude.",
         "hero_button": "Kontakt aufnehmen",
 
-           about_more_button: "Entdecken Sie unsere Expertise",
+           "about_more_button": "Entdecken Sie unsere Expertise",
           "services_title": "Unser Service",
         "services_subtitle": "Fachgerechte technische Lösungen mit Präzision und nach strengen EU-Sicherheitsstandards.",
 
@@ -653,10 +653,10 @@ const translations = {
         "benefit_new": "Schnelle und zuverlässige Umsetzung",
 
         
-        back_to_overview: "Zurück zur Übersicht",
-        hero_button: "Kontakt aufnehmen",
-        nav_services: "Leistungen",
-        nav_contact: "Kontakt",
+        "back_to_overview": "Zurück zur Übersicht",
+        "hero_button": "Kontakt aufnehmen",
+        "nav_services": "Leistungen",
+        "nav_contact": "Kontakt",
         
 
         // Service 1
@@ -696,26 +696,26 @@ const translations = {
         "project_1_text": "Projekte in Kürze.",
         "project_2_title": "Projekte in Kürze.",
         "project_2_text": "Projekte in Kürze.",
-        nav_home: "Startseite",
-        nav_about: "Über uns",
-        nav_services: "Leistungen",
-        nav_projects: "Projekte",
-        nav_contact: "Kontakt",
-        impressum_title: "Impressum",
-        impressum_subtitle: "Informationen gemäß § 5 E-Commerce-Gesetz und Offenlegung gemäß § 25 Mediengesetz.",
-        company_info_title: "Unternehmensinformationen",
-        phone_label: "Telefon:",
-        email_label: "E-Mail:",
-        management_title: "Geschäftsführung",
-        managing_director_label: "Geschäftsführer:",
-        registry_title: "Registereintrag",
-        reg_number_label: "Firmenbuchnummer:",
-        court_label: "Firmenbuchgericht:",
-        vat_label: "UID-Nummer:",
-        back_home: "Zurück zur Startseite",
-        footer_rights: "© 2025 VOLTIX Elektrotechnik GmbH — Alle Rechte vorbehalten.",
-        footer_impressum: "Impressum",
-        footer_privacy: "Datenschutzerklärung",
+        "nav_home": "Startseite",
+        "nav_about": "Über uns",
+        "nav_services": "Leistungen",
+        "nav_projects": "Projekte",
+        "nav_contact": "Kontakt",
+        "impressum_title": "Impressum",
+        "impressum_subtitle": "Informationen gemäß § 5 E-Commerce-Gesetz und Offenlegung gemäß § 25 Mediengesetz.",
+        "company_info_title": "Unternehmensinformationen",
+        "phone_label": "Telefon:",
+        "email_label": "E-Mail:",
+        "management_title": "Geschäftsführung",
+        "managing_director_label": "Geschäftsführer:",
+        "registry_title": "Registereintrag",
+        "reg_number_label": "Firmenbuchnummer:",
+        "court_label": "Firmenbuchgericht:",
+        "vat_label": "UID-Nummer:",
+        "back_home": "Zurück zur Startseite",
+        "footer_rights": "© 2025 VOLTIX Elektrotechnik GmbH — Alle Rechte vorbehalten.",
+        "footer_impressum": "Impressum",
+        "footer_privacy": "Datenschutzerklärung",
         "plan_footer_installation": "Gerne beraten wir Sie persönlich zu Ihrem Projekt und zeigen Ihnen passende Lösungen. Kontaktieren Sie uns, wir setzen Ihre Ideen zuverlässig und fachgerecht um.",
 
         // Contact
@@ -763,7 +763,7 @@ const translations = {
         "footer_impressum": "Impressum",
         "footer_privacy": "Datenschutz",
         "company_name": "VOLTIX Elektrotechnik GmbH",
-        "
+        
 
         // Privacy Policy Page - German
         "privacy_page_title": "Datenschutzerklärung | VOLTIX Elektrotechnik GmbH",
