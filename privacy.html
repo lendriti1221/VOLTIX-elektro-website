@@ -2,85 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title data-translate="privacy_page_title">Privacy Policy | Voltix Elektrotechnik GmbH</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* GLOBAL RESET FOR STABILITY */
-        body {
-            background: #ffffff !important;
-            color: #333 !important;
-            display: block !important;
-            margin: 0;
-            padding: 0;
-        }
+        body { background: #ffffff !important; color: #333 !important; display: block !important; margin: 0; padding: 0; }
+        header { width: 100%; background-color: #0a0a0a !important; position: relative; z-index: 1000; }
+        
+        .legal-wrapper { padding: 100px 20px; width: 100%; background-color: #f8f9fa; }
 
-        header {
-            width: 100%;
-            background-color: #0a0a0a !important;
-            position: relative;
-            z-index: 1000;
-        }
-
-        .legal-wrapper {
-            padding: 100px 20px;
-            width: 100%;
-            display: block !important;
-        }
-
-        /* THE GRID LOCK ENGINE */
+        /* THE GRID LOCK - Prevents any jumping or reordering */
         .legal-card {
             display: grid !important;
             grid-template-columns: 1fr !important;
             grid-template-areas: 
-                "title"
-                "block1"
-                "block2"
-                "block3"
-                "block4"
-                "block5"
+                "header"
+                "intro"
+                "controller"
+                "encryption"
+                "logfiles"
+                "cookies"
+                "external"
+                "purpose"
+                "rights"
+                "authority"
                 "actions" !important;
-            gap: 40px;
-            max-width: 850px;
+            gap: 45px;
+            max-width: 950px;
             margin: 0 auto !important;
-            padding: 45px;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            border-top: 4px solid #f4b400;
+            padding: 70px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.07);
+            border-top: 6px solid #f4b400;
         }
 
-        /* LOCKING IDS TO AREAS */
-        #p-title { grid-area: title; }
-        #p-block1 { grid-area: block1; }
-        #p-block2 { grid-area: block2; }
-        #p-block3 { grid-area: block3; }
-        #p-block4 { grid-area: block4; }
-        #p-block5 { grid-area: block5; }
+        /* ID Assignment */
+        #p-header { grid-area: header; }
+        #p-intro { grid-area: intro; }
+        #p-controller { grid-area: controller; }
+        #p-encryption { grid-area: encryption; }
+        #p-logfiles { grid-area: logfiles; }
+        #p-cookies { grid-area: cookies; }
+        #p-external { grid-area: external; }
+        #p-purpose { grid-area: purpose; }
+        #p-rights { grid-area: rights; }
+        #p-authority { grid-area: authority; }
         #p-actions { grid-area: actions; }
 
-        .legal-block { text-align: center; display: block !important; width: 100%; }
-        .legal-block h1 { font-size: 2.4rem; color: #111; margin-bottom: 15px; }
-        .legal-block h2 { font-size: 1.5rem; color: #f4b400; margin-bottom: 10px; }
-        .legal-block p { max-width: 700px; margin: 0 auto; line-height: 1.7; color: #444; }
-
-        .legal-actions {
-            grid-area: actions;
-            text-align: center;
-            border-top: 1px solid #eee;
-            padding-top: 30px;
+        .legal-block { text-align: left; display: block !important; width: 100%; }
+        .legal-block h1 { font-size: 3rem; color: #111; margin-bottom: 5px; text-align: center; font-weight: 900; }
+        .update-date { text-align: center; color: #aaa; font-size: 0.9rem; margin-bottom: 30px; display: block; }
+        
+        .legal-block h2 { 
+            font-size: 1.3rem; color: #f4b400; margin-bottom: 15px; 
+            text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; 
+            border-bottom: 2px solid #f8f9fa; padding-bottom: 12px; 
         }
+        
+        .legal-block p, .legal-block li { line-height: 1.9; color: #444; font-size: 1.05rem; }
+        .legal-block ul { padding-left: 20px; }
+        .legal-block strong { color: #111; }
 
-        footer {
-            width: 100%;
-            margin-top: 50px;
-        }
+        .legal-actions { grid-area: actions; text-align: center; border-top: 1px solid #eee; padding-top: 40px; }
 
         @media (max-width: 768px) {
-            .legal-card { padding: 25px; gap: 30px; }
+            .legal-card { padding: 35px 25px; gap: 35px; }
+            .legal-block h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -90,9 +81,7 @@
 <header>
     <nav class="navbar">
         <div class="logo-container">
-            <a href="index.html#home">
-                <img src="assets/voltix-logo.png" class="logo" alt="Voltix Logo">
-            </a>
+            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix Logo"></a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
@@ -113,38 +102,71 @@
 <div class="legal-wrapper">
     <div class="legal-card">
 
-        <div class="legal-block" id="p-title">
+        <div class="legal-block" id="p-header">
             <h1 data-translate="privacy_title">Privacy Policy</h1>
-            <p data-translate="privacy_subtitle">Information about how personal data is processed on this website.</p>
+            <span class="update-date">Effective Date: April 2026</span>
         </div>
 
-        <div class="legal-block" id="p-block1">
-            <h2 data-translate="privacy_intro_title">1. General Information</h2>
-            <p data-translate="privacy_intro_text">We take the protection of your personal data seriously. Your data is treated confidentially and in accordance with legal regulations (GDPR).</p>
+        <div class="legal-block" id="p-intro">
+            <p data-translate="privacy_intro_long">At Voltix Elektrotechnik GmbH, we value your trust. This Privacy Policy explains how we collect, use, and protect your data when you visit our website. Our practices comply strictly with the European General Data Protection Regulation (GDPR) and the Austrian Data Protection Act (DSG).</p>
         </div>
 
-        <div class="legal-block" id="p-block2">
-            <h2 data-translate="privacy_contact_title">2. Contact Form</h2>
-            <p data-translate="privacy_contact_text">If you contact us via the form, your data (name, email, message) will be stored for the purpose of processing your request.</p>
-        </div>
-
-        <div class="legal-block" id="p-block3">
-            <h2 data-translate="privacy_formspree_title">3. Formspree</h2>
-            <p data-translate="privacy_formspree_text">This website uses Formspree to handle form submissions. Data may be transferred to and stored on servers outside the EU.</p>
-        </div>
-
-        <div class="legal-block" id="p-block4">
-            <h2 data-translate="privacy_rights_title">4. Your Rights</h2>
-            <p data-translate="privacy_rights_text">You have the right to access, correct, delete, and restrict the processing of your personal data at any time.</p>
-        </div>
-
-        <div class="legal-block" id="p-block5">
-            <h2 data-translate="privacy_responsible_title">5. Contact</h2>
+        <div class="legal-block" id="p-controller">
+            <h2 data-translate="privacy_controller_title">1. Data Controller</h2>
             <p>
-                <strong data-translate="company_name">VOLTIX Elektrotechnik GmbH</strong><br>
+                <strong>VOLTIX Elektrotechnik GmbH</strong><br>
                 Brunnengasse 2, 2230 Gänserndorf, Austria<br>
-                <a href="mailto:office@voltix-elektro.at">office@voltix-elektro.at</a>
+                <strong>Commercial Register:</strong> FN 123456z<br>
+                <strong>Represented by:</strong> Florijan Fazliji<br>
+                <strong>Email:</strong> office@voltix-elektro.at
             </p>
+        </div>
+
+        <div class="legal-block" id="p-encryption">
+            <h2 data-translate="privacy_security_title">2. Data Security & Encryption</h2>
+            <p data-translate="privacy_security_text">To ensure the highest level of security for your transmitted data, we utilize state-of-the-art AES 256-bit SSL/TLS encryption. You can recognize an encrypted connection by the "https://" in your browser's address bar and the lock icon. This ensures that no third parties can intercept your communication with us.</p>
+        </div>
+
+        <div class="legal-block" id="p-logfiles">
+            <h2 data-translate="privacy_log_title">3. Server Log Files</h2>
+            <p data-translate="privacy_log_text">Our hosting provider automatically logs technical data required for website stability. This includes:</p>
+            <ul>
+                <li>IP address (anonymized)</li>
+                <li>Date and time of access</li>
+                <li>Browser type and version</li>
+                <li>Operating system used</li>
+            </ul>
+        </div>
+
+        <div class="legal-block" id="p-cookies">
+            <h2 data-translate="privacy_cookies_title">4. Cookies & Local Storage</h2>
+            <p data-translate="privacy_cookies_text">We use functional cookies to enhance your experience. These are small text files stored on your device that allow us to remember your language preferences and provide a secure session. These files do not contain personal identifiers and are essential for the website's performance.</p>
+        </div>
+
+        <div class="legal-block" id="p-external">
+            <h2 data-translate="privacy_external_title">5. Web Fonts & Assets</h2>
+            <p data-translate="privacy_external_text">For a professional and consistent visual presentation across all devices, this site uses external web fonts. When you load a page, these fonts are fetched from a server, which technically requires your IP address to be transmitted to the provider (e.g., Google) to deliver the file to your browser.</p>
+        </div>
+
+        <div class="legal-block" id="p-purpose">
+            <h2 data-translate="privacy_purpose_title">6. Inquiries via Formspree</h2>
+            <p data-translate="privacy_purpose_text">When you send an inquiry through our contact form, your data is processed via <strong>Formspree</strong>. We have established a Data Processing Agreement to ensure your data is handled securely. We only store this data to respond to your specific project or service request.</p>
+        </div>
+
+        <div class="legal-block" id="p-rights">
+            <h2 data-translate="privacy_rights_title">7. Your Rights (GDPR)</h2>
+            <p data-translate="privacy_rights_text">Under the GDPR, you have the following rights regarding your personal data:</p>
+            <ul data-translate="privacy_rights_list">
+                <li>Right to information (Art. 15)</li>
+                <li>Right to rectification (Art. 16)</li>
+                <li>Right to erasure (Art. 17)</li>
+                <li>Right to data portability (Art. 20)</li>
+            </ul>
+        </div>
+
+        <div class="legal-block" id="p-authority">
+            <h2 data-translate="privacy_authority_title">8. Supervisory Authority</h2>
+            <p data-translate="privacy_authority_text">You have the right to lodge a complaint with the Austrian Data Protection Authority (DSB) if you believe our data processing violates your rights.</p>
         </div>
 
         <div class="legal-actions" id="p-actions">
@@ -165,6 +187,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
