@@ -17,7 +17,7 @@ const translations = {
         "nav_contact": "Contact",
         about_more_button: "Discover Our Expertise",
         "benefit_new": "Fast and reliable implementation",
-        "plan_footer_installation":"We would be happy to advise you personally on your project and show you suitable solutions. Contact us—we will implement your ideas reliably and professionally.",
+        "plan_footer_installation": "We would be happy to advise you personally on your project and show you suitable solutions. Contact us—we will implement your ideas reliably and professionally.",
         // Navigation & General
         "nav_home": "Home",
         "nav_about": "About",
@@ -716,7 +716,7 @@ const translations = {
         footer_rights: "© 2025 VOLTIX Elektrotechnik GmbH — Alle Rechte vorbehalten.",
         footer_impressum: "Impressum",
         footer_privacy: "Datenschutzerklärung",
-        "plan_footer_installation":"Gerne beraten wir Sie persönlich zu Ihrem Projekt und zeigen Ihnen passende Lösungen. Kontaktieren Sie uns, wir setzen Ihre Ideen zuverlässig und fachgerecht um.",
+        "plan_footer_installation": "Gerne beraten wir Sie persönlich zu Ihrem Projekt und zeigen Ihnen passende Lösungen. Kontaktieren Sie uns, wir setzen Ihre Ideen zuverlässig und fachgerecht um.",
 
         // Contact
         "contact_where_title": "Wo Sie uns finden",
