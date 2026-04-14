@@ -4,34 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title data-translate="impressum_page_title">Legal Notice | Voltix Elektrotechnik GmbH</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 
     <style>
-        body { background-color: #ffffff !important; color: #333 !important; margin: 0; padding: 0; }
-        .legal-viewport-fix { width: 100%; padding: 100px 20px; background-color: #ffffff; min-height: 80vh; }
-        .legal-card-final { 
-            width: 100%; max-width: 900px; background: #ffffff; padding: 50px; 
-            border: 1px solid #eee; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); 
-            margin: 0 auto !important; border-top: 5px solid #f4b400;
+        body { background: #ffffff !important; color: #333 !important; display: block !important; margin: 0; padding: 0; }
+        header { width: 100%; background-color: #0a0a0a !important; position: relative; z-index: 1000; }
+        
+        .legal-wrapper { padding: 100px 20px; width: 100%; background-color: #f8f9fa; }
+
+        /* THE GRID LOCK - Matches the Privacy Page for consistency */
+        .legal-card {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            grid-template-areas: 
+                "header"
+                "company"
+                "registry"
+                "trade"
+                "management"
+                "dispute"
+                "disclaimer"
+                "social"
+                "actions" !important;
+            gap: 45px;
+            max-width: 950px;
+            margin: 0 auto !important;
+            padding: 70px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.07);
+            border-top: 6px solid #f4b400;
         }
-        .legal-block { margin-bottom: 40px; text-align: center; }
-        .legal-block h1 { color: #111 !important; font-size: 2.5rem; margin-bottom: 20px; font-weight: 800; }
-        .legal-block h2 { color: #f4b400 !important; font-size: 1.4rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        .legal-block p { color: #555 !important; line-height: 1.7; margin-bottom: 8px; }
+
+        #i-header { grid-area: header; }
+        #i-company { grid-area: company; }
+        #i-registry { grid-area: registry; }
+        #i-trade { grid-area: trade; }
+        #i-management { grid-area: management; }
+        #i-dispute { grid-area: dispute; }
+        #i-disclaimer { grid-area: disclaimer; }
+        #i-social { grid-area: social; }
+        #i-actions { grid-area: actions; }
+
+        .legal-block { text-align: left; display: block !important; width: 100%; }
+        .legal-block h1 { font-size: 3rem; color: #111; margin-bottom: 5px; text-align: center; font-weight: 900; }
+        .legal-subtitle { text-align: center; color: #aaa; font-size: 1rem; margin-bottom: 30px; display: block; }
+        
+        .legal-block h2 { 
+            font-size: 1.3rem; color: #f4b400; margin-bottom: 15px; 
+            text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; 
+            border-bottom: 2px solid #f8f9fa; padding-bottom: 12px; 
+        }
+        
+        .legal-block p { line-height: 1.9; color: #444; font-size: 1.05rem; margin-bottom: 10px; }
         .legal-block a { color: #f4b400; text-decoration: none; font-weight: 600; }
         .legal-block a:hover { text-decoration: underline; }
-        .legal-actions { text-align: center; margin-top: 30px; border-top: 1px solid #eee; padding-top: 30px; }
-        header { width: 100%; background-color: #0a0a0a !important; }
+
+        .legal-actions { grid-area: actions; text-align: center; border-top: 1px solid #eee; padding-top: 40px; }
+
+        @media (max-width: 768px) {
+            .legal-card { padding: 35px 25px; gap: 35px; }
+            .legal-block h1 { font-size: 2.2rem; }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
     <nav class="navbar">
         <div class="logo-container">
-            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix logo"></a>
+            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix Logo"></a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
@@ -49,53 +95,71 @@
     </nav>
 </header>
 
-<main class="legal-viewport-fix">
-    <div class="legal-card-final">
-        
-        <div class="legal-block">
+<div class="legal-wrapper">
+    <div class="legal-card">
+
+        <div class="legal-block" id="i-header">
             <h1 data-translate="impressum_title">Legal Notice</h1>
-            <p data-translate="impressum_subtitle">Information according to § 5 ECG, § 14 UGB, and § 25 Media Act.</p>
+            <span class="legal-subtitle" data-translate="impressum_subtitle">Disclosure according to § 25 Media Act and § 5 ECG</span>
         </div>
 
-        <div class="legal-block">
-            <h2 data-translate="company_details">Company Details</h2>
-            <p><strong>VOLTIX Elektrotechnik GmbH</strong></p>
-            <p data-translate="business_object">Object of Business: Electrical Engineering & Installations</p>
-            <p>Brunnengasse 2, 2230 Gänserndorf, Austria</p>
-            <p><strong>Email:</strong> <a href="mailto:office@voltix-elektro.at">office@voltix-elektro.at</a></p>
-            <p><strong>Phone:</strong> +43 660 1255856</p>
+        <div class="legal-block" id="i-company">
+            <h2 data-translate="company_info_title">Company Information</h2>
+            <p>
+                <strong>VOLTIX Elektrotechnik GmbH</strong><br>
+                Brunnengasse 2, 2230 Gänserndorf, Austria<br>
+                <span data-translate="business_object">Object of Business: Electrical Engineering & Installation Technology</span><br>
+                <strong>Tel:</strong> +43 660 1255856<br>
+                <strong>Email:</strong> <a href="mailto:office@voltix-elektro.at">office@voltix-elektro.at</a>
+            </p>
         </div>
 
-        <div class="legal-block">
-            <h2 data-translate="commercial_reg">Commercial Registry</h2>
-            <p><span data-translate="reg_num">Registry Number:</span> FN 123456z</p>
-            <p><span data-translate="reg_court">Registry Court:</span> Landesgericht Korneuburg</p>
-            <p><span data-translate="vat_num">VAT-ID:</span> ATU12345678</p>
+        <div class="legal-block" id="i-registry">
+            <h2 data-translate="registry_title">Commercial Register</h2>
+            <p>
+                <span data-translate="reg_num">Commercial Register Number:</span> FN 123456z<br>
+                <span data-translate="reg_court">Register Court:</span> Landesgericht Korneuburg<br>
+                <span data-translate="vat_num">VAT-ID Number:</span> ATU12345678
+            </p>
         </div>
 
-        <div class="legal-block">
-            <h2 data-translate="memberships">Memberships & Authority</h2>
-            <p><span data-translate="chamber">Member of:</span> WKO, WKNÖ</p>
-            <p><span data-translate="authority">Trade Authority:</span> Bezirkshauptmannschaft Gänserndorf</p>
-            <p data-translate="laws">Applicable Legislation: <a href="https://www.ris.bka.gv.at" target="_blank">Gewerbeordnung (www.ris.bka.gv.at)</a></p>
+        <div class="legal-block" id="i-trade">
+            <h2 data-translate="trade_title">Chamber & Authority</h2>
+            <p>
+                <span data-translate="chamber">Chamber Membership:</span> Wirtschaftskammer Niederösterreich (WKNÖ)<br>
+                <span data-translate="authority">Trade Authority:</span> Bezirkshauptmannschaft Gänserndorf<br>
+                <span data-translate="profession">Professional Title:</span> Elektrotechnik (Master Craftsman Company)<br>
+                <span data-translate="laws">Professional Law:</span> <a href="https://www.ris.bka.gv.at" target="_blank">Gewerbeordnung (www.ris.bka.gv.at)</a>
+            </p>
         </div>
 
-        <div class="legal-block">
-            <h2 data-translate="management">Management</h2>
-            <p><strong data-translate="md">Managing Director:</strong> Florijan Fazliji</p>
+        <div class="legal-block" id="i-management">
+            <h2 data-translate="management_title">Management</h2>
+            <p><span data-translate="md">Managing Director:</span> Florijan Fazliji</p>
         </div>
 
-        <div class="legal-block">
-            <h2 data-translate="dispute_title">EU Dispute Resolution</h2>
-            <p data-translate="dispute_text">Information on online dispute resolution: Consumers have the opportunity to submit complaints to the EU's online dispute resolution platform:</p>
+        <div class="legal-block" id="i-dispute">
+            <h2 data-translate="dispute_title">Online Dispute Resolution</h2>
+            <p data-translate="dispute_text">Consumers have the opportunity to submit complaints to the EU's online dispute resolution platform. You can also send any complaints to the email address provided above.</p>
             <a href="http://ec.europa.eu/odr" target="_blank">http://ec.europa.eu/odr</a>
         </div>
 
-        <div class="legal-actions">
+        <div class="legal-block" id="i-disclaimer">
+            <h2 data-translate="disclaimer_title">Liability Disclaimer</h2>
+            <p data-translate="disclaimer_text">Despite careful control of the content, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
+        </div>
+
+        <div class="legal-block" id="i-social">
+            <h2 data-translate="social_title">Social Media Presence</h2>
+            <p data-translate="social_text">This Legal Notice also applies to our official social media appearances (e.g., Instagram, Facebook, LinkedIn) insofar as we maintain such channels.</p>
+        </div>
+
+        <div class="legal-actions" id="i-actions">
             <a href="index.html" class="btn primary-btn" data-translate="back_home">Back to Home</a>
         </div>
+
     </div>
-</main>
+</div>
 
 <footer>
     <div class="container footer-content">
