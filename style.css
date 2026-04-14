@@ -1882,39 +1882,45 @@ textarea::placeholder {
 
 /* --- FIXED FLOATING COOKIE BANNER --- */
 .cookie-container {
-    position: fixed !important; /* Breaks it out of the footer 'cage' */
-    bottom: -200px;             /* Starts hidden below the screen */
+    position: fixed !important;
+    bottom: -100% !important; /* Start hidden */
     left: 50% !important;
-    transform: translateX(-50%) !important; /* Perfectly centers it */
+    transform: translateX(-50%) !important;
     width: 90% !important;
-    max-width: 500px !important; /* Prevents it from being too wide on PC */
+    max-width: 500px !important; /* Limits width on PC */
     background: #111111 !important;
     color: #ffffff !important;
     padding: 25px !important;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5) !important;
-    z-index: 999999 !important;  /* Ensures it sits on top of everything */
+    z-index: 10000 !important; /* Sits on top of EVERYTHING */
     transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
     border-radius: 20px !important;
     border-top: 4px solid #f4b400 !important;
-    text-align: center !important;
 }
 
-/* Position when active (triggered by JS) */
+/* Active class triggered by JS */
 .cookie-container.active {
-    bottom: 40px !important; /* Floats 40px from the bottom edge */
+    bottom: 30px !important; /* Pop up 30px from bottom */
+}
+
+.cookie-content {
+    text-align: center;
 }
 
 .cookie-content p {
-    margin: 0 0 20px 0 !important;
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    color: #ccc !important;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ccc;
 }
 
-/* Button Group */
+.cookie-content a {
+    color: #f4b400;
+}
+
 .cookie-buttons {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     justify-content: center;
 }
 
@@ -1927,7 +1933,6 @@ textarea::placeholder {
     font-weight: 700;
     cursor: pointer;
     flex: 1;
-    transition: 0.3s;
 }
 
 #deny-cookies {
@@ -1939,14 +1944,11 @@ textarea::placeholder {
     font-weight: 600;
     cursor: pointer;
     flex: 1;
-    transition: 0.3s;
 }
 
-#deny-cookies:hover {
-    background: #222;
-    border-color: #777;
-}
-
-#accept-cookies:hover {
-    background: #fff;
+/* Mobile: Stack buttons if very narrow */
+@media (max-width: 400px) {
+    .cookie-buttons {
+        flex-direction: column;
+    }
 }
