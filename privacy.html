@@ -4,143 +4,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="privacy_page_title">Privacy Policy | Voltix Elektrotechnik GmbH</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Force body to be a simple vertical stack */
-        body {
-            background: #ffffff !important;
-            color: #333 !important;
-            display: block !important; 
-        }
-
-        .legal-wrapper {
-            padding: 100px 20px;
-            width: 100%;
-            background: #ffffff;
-        }
-
-        /* Using CSS Grid to FORCE vertical order */
+        /* Force vertical stacking regardless of JS */
         .legal-card {
-            width: 100%;
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            /* We define the specific order of the IDs here */
+            grid-template-areas: 
+                "title"
+                "block1"
+                "block2"
+                "block3"
+                "block4"
+                "block5"
+                "actions" !important;
+            gap: 40px;
             max-width: 850px;
-            background: #fff;
+            margin: 0 auto;
             padding: 45px;
+            background: #fff;
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             border-top: 4px solid #f4b400;
-            margin: 0 auto;
-            
-            /* THIS IS THE ENGINE THAT FIXES THE ORDER */
-            display: grid !important;
-            grid-template-columns: 1fr; /* Only one column */
-            gap: 40px; /* Space between blocks */
         }
 
-        /* Ensure every block takes the full width and clears any floats */
-        .legal-block {
-            display: block !important;
-            width: 100% !important;
-            text-align: center;
-        }
+        /* Assigning each block to its specific row */
+        #p-title { grid-area: title; }
+        #p-block1 { grid-area: block1; }
+        #p-block2 { grid-area: block2; }
+        #p-block3 { grid-area: block3; }
+        #p-block4 { grid-area: block4; }
+        #p-block5 { grid-area: block5; }
+        #p-actions { grid-area: actions; }
 
-        .legal-block h1 { font-size: 2.4rem; color: #111; margin-bottom: 10px; }
-        .legal-block h2 { font-size: 1.5rem; color: #f4b400; margin-bottom: 15px; }
+        .legal-block { text-align: center; display: block !important; }
+        .legal-block h1 { font-size: 2.4rem; color: #111; }
+        .legal-block h2 { font-size: 1.5rem; color: #f4b400; margin-bottom: 10px; }
         .legal-block p { max-width: 700px; margin: 0 auto; line-height: 1.7; color: #444; }
-
-        .legal-actions {
-            text-align: center;
-            border-top: 1px solid #eee;
-            padding-top: 30px;
-        }
-
-        header { background-color: #0a0a0a !important; }
-
-        @media (max-width: 768px) {
-            .legal-card { padding: 25px; gap: 30px; }
-            .legal-block h1 { font-size: 1.8rem; }
-        }
     </style>
 </head>
-
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo-container">
-            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-            <li><a href="about.html" data-translate="nav_about">About</a></li>
-            <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
-            <li><a href="index.html#projects" data-translate="nav_projects">Projects</a></li>
-            <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
-            <li>
-                <select class="lang-switch" onchange="setLanguage(this.value)">
-                    <option value="en">EN</option>
-                    <option value="de">DE</option>
-                </select>
-            </li>
-        </ul>
-    </nav>
-</header>
-
-<div class="legal-wrapper">
+<div class="legal-wrapper" style="padding: 100px 20px;">
     <div class="legal-card">
 
-        <div class="legal-block">
+        <div class="legal-block" id="p-title">
             <h1 data-translate="privacy_title">Privacy Policy</h1>
-            <p data-translate="privacy_subtitle">Information about how personal data is processed on this website.</p>
+            <p data-translate="privacy_subtitle">Information about how personal data is processed.</p>
         </div>
 
-        <div class="legal-block">
+        <div class="legal-block" id="p-block1">
             <h2 data-translate="privacy_intro_title">1. General Information</h2>
-            <p data-translate="privacy_intro_text">We take the protection of your personal data seriously. Your data is treated confidentially and in accordance with legal regulations (GDPR).</p>
+            <p data-translate="privacy_intro_text">Data is treated in accordance with legal regulations (GDPR).</p>
         </div>
 
-        <div class="legal-block">
+        <div class="legal-block" id="p-block2">
             <h2 data-translate="privacy_contact_title">2. Contact Form</h2>
-            <p data-translate="privacy_contact_text">If you contact us via the form, your data (name, email, message) will be stored for the purpose of processing your request.</p>
+            <p data-translate="privacy_contact_text">Your data is stored for processing your request.</p>
         </div>
 
-        <div class="legal-block">
+        <div class="legal-block" id="p-block3">
             <h2 data-translate="privacy_formspree_title">3. Formspree</h2>
-            <p data-translate="privacy_formspree_text">This website uses Formspree to handle form submissions. Data may be transferred to and stored on servers outside the EU.</p>
+            <p data-translate="privacy_formspree_text">Data may be stored on servers outside the EU.</p>
         </div>
 
-        <div class="legal-block">
+        <div class="legal-block" id="p-block4">
             <h2 data-translate="privacy_rights_title">4. Your Rights</h2>
-            <p data-translate="privacy_rights_text">You have the right to access, correct, delete, and restrict the processing of your personal data at any time.</p>
+            <p data-translate="privacy_rights_text">You have the right to access, correct, or delete your data.</p>
         </div>
 
-        <div class="legal-block">
+        <div class="legal-block" id="p-block5">
             <h2 data-translate="privacy_responsible_title">5. Contact</h2>
-            <p>
-                <strong data-translate="company_name">VOLTIX Elektrotechnik GmbH</strong><br>
-                Brunnengasse 2, 2230 Gänserndorf, Austria<br>
-                <a href="mailto:office@voltix-elektro.at">office@voltix-elektro.at</a>
-            </p>
+            <p><strong>VOLTIX Elektrotechnik GmbH</strong><br>office@voltix-elektro.at</p>
         </div>
 
-        <div class="legal-actions">
+        <div class="legal-actions" id="p-actions">
             <a href="index.html" class="btn primary-btn" data-translate="back_home">Back to Home</a>
         </div>
 
     </div>
 </div>
-
-<footer>
-    <div class="container footer-content">
-        <p data-translate="footer_rights">© 2026 Voltix Elektrotechnik GmbH — All rights reserved.</p>
-        <div class="footer-legal">
-            <a href="impressum.html" data-translate="footer_impressum">Legal Notice</a>
-            <a href="privacy.html" data-translate="footer_privacy">Privacy Policy</a>
-        </div>
-    </div>
-</footer>
 
 <script src="script.js"></script>
 </body>
