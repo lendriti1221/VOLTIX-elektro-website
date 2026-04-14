@@ -27,6 +27,10 @@ const translations = {
         "footer_impressum": "Legal Notice",
         "footer_privacy": "Privacy Policy",
         "company_name": "VOLTIX Elektrotechnik GmbH",
+        "cookie_text": "We use cookies to improve your experience on our website.",
+        "cookie_learn_more": "Learn more",
+        "cookie_deny": "Deny",
+        "cookie_accept": "Accept",
 
         // Privacy Policy Page - English
         "privacy_page_title": "Privacy Policy | Voltix Elektrotechnik GmbH",
@@ -640,6 +644,10 @@ const translations = {
         "trust_2": "✔ Normgerechte Ausführung",
         "trust_3": "✔ Moderne Gebäudetechnik",
         "trust_4": "✔ Verlässliche Qualität",
+        "cookie_text": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern.",
+        "cookie_learn_more": "Mehr erfahren",
+        "cookie_deny": "Ablehnen",
+        "cookie_accept": "Akzeptieren",
 
         
         back_to_overview: "Zurück zur Übersicht",
