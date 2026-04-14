@@ -1475,3 +1475,41 @@ margin-right: auto !important;
 section:last-of-type {
     margin-bottom: 0 !important;
 }
+/* CONTACT INFO ALIGNMENT FIX */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px; /* 🔥 tighter spacing */
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    width: 24px;
+    min-width: 24px;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 3px;
+}
+
+.info-text {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* Remove any weird spacing */
+.info-text p,
+.info-text strong {
+    margin: 0;
+}
+/* CENTER ONLY INQUIRY TITLE */
+.contact-form-wrapper h2 {
+    text-align: center;
+    width: 100%;
+}
+
+/* Center the red underline */
+.contact-form-wrapper h2::after {
+    margin-left: auto;
+    margin-right: auto;
+}
