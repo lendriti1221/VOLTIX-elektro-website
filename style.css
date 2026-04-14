@@ -1334,3 +1334,38 @@ textarea::placeholder {
         justify-content: unset !important;
     }
 }
+ @media (max-width: 768px) {
+
+
+/* CENTER ONLY THE TITLES */
+
+.contact-info h2,
+
+.contact-form-wrapper h2,
+
+.form-title {
+
+text-align: center !important;
+
+display: block !important;
+
+width: 100% !important;
+
+}
+
+
+/* Center the red underline nicely */
+
+.contact-info h2::after,
+
+.contact-form-wrapper h2::after,
+
+.form-title::after {
+
+margin-left: auto !important;
+
+margin-right: auto !important;
+
+}
+
+} 
