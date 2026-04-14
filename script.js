@@ -883,27 +883,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// --- COOKIE BANNER LOGIC ---
 document.addEventListener("DOMContentLoaded", function() {
-    const banner = document.getElementById("cookie-banner");
-    const btn = document.getElementById("accept-cookies");
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const denyBtn = document.getElementById("deny-cookies");
 
-    if (banner && btn) {
-        // Only show if not accepted before
-        if (!localStorage.getItem("cookiesAccepted")) {
-            setTimeout(() => {
-                banner.classList.add("active");
-            }, 1000);
-        }
+    if (cookieBanner && !localStorage.getItem("cookieChoice")) {
+        // Pop up the banner after 1 second
+        setTimeout(() => {
+            cookieBanner.classList.add("active");
+        }, 1000);
+    }
 
-        btn.addEventListener("click", () => {
-            localStorage.setItem("cookiesAccepted", "true");
-            banner.classList.remove("active");
-            
-            // Wait for slide-down animation then remove from view
-            setTimeout(() => {
-                banner.style.display = "none";
-            }, 600);
+    if (acceptBtn) {
+        acceptBtn.addEventListener("click", () => {
+            localStorage.setItem("cookieChoice", "accepted");
+            cookieBanner.classList.remove("active");
+        });
+    }
+
+    if (denyBtn) {
+        denyBtn.addEventListener("click", () => {
+            localStorage.setItem("cookieChoice", "denied");
+            cookieBanner.classList.remove("active");
         });
     }
 });
