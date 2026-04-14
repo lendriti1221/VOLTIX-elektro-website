@@ -79,13 +79,6 @@ const translations = {
         // Hero
         "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
         "hero_button": "Get in Touch",
-        
-        // Planning
-        "back_to_services": "Back to Services",
-"technical_spec": "TECHNICAL SPECIFICATION",
-"plan_title": "Electrical Planning & Projecting",
-"plan_description": "Every successful project starts with solid planning. We create precise CAD drawings and technical concepts for your electrical infrastructure.",
-"plan_benefits_title": "Your Advantage through Professional Planning",
 
         // About Our Company
         "about_hero_title": "VOLTIX Elektrotechnik GmbH",
@@ -635,13 +628,7 @@ const translations = {
         "skill_4": "• E-Befund & wiederkehrende Prüfungen; Erstellung von E-Befunden sowie Durchführung gesetzlich vorgeschriebener Prüfungen gemäß österreichischen Vorgaben.",
         "skill_5": "• Wallbox-Installationen & E-Mobilität; Ladelösungen für private und gewerbliche Anwendungen – fachgerecht umgesetzt und vorbereitet für zukünftige Anforderungen.",
         "skill_6": "• Klimaanlagen & Systemintegration; Elektrotechnische Vorbereitung und Integration ausgewählter Klimasysteme in bestehende Gebäude und Smart-Home-Strukturen.",
-
-        //Planning
-        "back_to_services": "Zurück zu den Leistungen",
-"technical_spec": "TECHNISCHE SPEZIFIKATION",
-"plan_title": "Elektroplanung & Projektierung",
-"plan_description": "Jedes erfolgreiche Projekt beginnt mit einer soliden Planung. Wir erstellen präzise CAD-Zeichnungen und technische Konzepte für Ihre elektrotechnische Infrastruktur.",
-"plan_benefits_title": "Ihr Vorteil durch professionelle Planung",
+        
 
         // Goal
         "mission_title": "Unser Ziel",
