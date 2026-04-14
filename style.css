@@ -1183,6 +1183,7 @@ textarea::placeholder {
         position: absolute !important;
         right: 50px !important;
         top: 50% !important;
+        margin-left: auto;
         transform: translateY(-50%) !important;
         display: flex !important;
         flex-direction: column !important;
