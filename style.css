@@ -1880,28 +1880,27 @@ textarea::placeholder {
     }
 }
 
-/* --- FORCED FLOATING COOKIE BANNER --- */
+/* --- FIXED FLOATING COOKIE BANNER --- */
 .cookie-container {
-    position: fixed !important;  /* Forces it to stay on screen */
-    bottom: -200px;              /* Start hidden below */
+    position: fixed !important;
+    bottom: -100%; /* Hidden off-screen */
     left: 50% !important;
     transform: translateX(-50%) !important;
-    width: 90% !important;
-    max-width: 500px !important; /* Proper desktop width */
+    width: 95% !important;
+    max-width: 550px !important;
     background: #111111 !important;
     color: #ffffff !important;
     padding: 25px !important;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5) !important;
-    z-index: 999999 !important;   /* Higher than everything else */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5) !important;
+    z-index: 999999 !important; /* Forces it above footer/content */
     transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    border-radius: 20px !important;
+    border-radius: 16px !important;
     border-top: 4px solid #f4b400 !important;
-    display: block !important;    /* Ensures it isn't hidden by display: none */
 }
 
-/* Position when the "active" class is added */
+/* When the active class is added via JS */
 .cookie-container.active {
-    bottom: 40px !important;      /* Floats above the bottom edge */
+    bottom: 30px !important;
 }
 
 .cookie-content {
@@ -1909,24 +1908,52 @@ textarea::placeholder {
 }
 
 .cookie-content p {
-    margin-bottom: 20px;
     font-size: 14px;
-    line-height: 1.6;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #eee;
 }
 
+/* Button Group Wrapper */
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Accept Button */
 #accept-cookies {
     background: #f4b400;
     color: #000;
     border: none;
-    padding: 12px 45px;
-    border-radius: 50px;
+    padding: 10px 25px;
+    border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s ease;
+    flex: 1;
 }
 
-#accept-cookies:hover {
-    background: #fff;
-    transform: scale(1.05);
+/* Deny Button */
+#deny-cookies {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 1;
+    transition: 0.3s;
 }
+
+#deny-cookies:hover {
+    background: #333;
+    border-color: #fff;
+}
+
+/* Mobile Fix: Stack buttons if screen is very narrow */
+@media (max-width: 400px) {
+    .cookie-buttons {
+        flex-direction: column;
+    }
 }
