@@ -883,29 +883,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// --- COOKIE BANNER LOGIC ---
 document.addEventListener("DOMContentLoaded", function() {
-    const cookieBanner = document.getElementById("cookie-banner");
+    const banner = document.getElementById("cookie-banner");
     const acceptBtn = document.getElementById("accept-cookies");
     const denyBtn = document.getElementById("deny-cookies");
 
-    if (cookieBanner && !localStorage.getItem("cookieChoice")) {
-        // Pop up the banner after 1 second
+    // Check if user has already made a choice
+    if (banner && !localStorage.getItem("cookieChoice")) {
+        // Show the banner with a popup effect after 1 second
         setTimeout(() => {
-            cookieBanner.classList.add("active");
+            banner.classList.add("active");
         }, 1000);
     }
 
     if (acceptBtn) {
         acceptBtn.addEventListener("click", () => {
             localStorage.setItem("cookieChoice", "accepted");
-            cookieBanner.classList.remove("active");
+            banner.classList.remove("active");
         });
     }
 
     if (denyBtn) {
         denyBtn.addEventListener("click", () => {
             localStorage.setItem("cookieChoice", "denied");
-            cookieBanner.classList.remove("active");
+            banner.classList.remove("active");
         });
     }
 });
