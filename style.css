@@ -1157,7 +1157,7 @@ textarea::placeholder {
     /* Restore normal navbar height */
     .navbar {
         position: relative !important;
-        height: 80px !important;
+        height: 140px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -1174,14 +1174,14 @@ textarea::placeholder {
     }
 
     .logo {
-        width: 170px !important;
+        width: 140px !important;
         height: auto !important;
     }
 
     /* KEEP HAMBURGER ON RIGHT */
     .menu-toggle {
         position: absolute !important;
-        right: 20px !important;
+        right: 50px !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
         display: flex !important;
