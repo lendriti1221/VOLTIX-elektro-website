@@ -3,146 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Voltix | Elektroplanung & Projektierung</title>
+    <title data-translate="plan_page_title">Voltix | Elektroplanung & Projektierung</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --accent-gold: #bcab26;
-            --bg-white: #ffffff;
-            --text-black: #000000;
-            --text-dim: #444444;
-        }
-        body { margin: 0; background-color: var(--bg-white); color: var(--text-black); font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: #000; position: sticky; top: 0; z-index: 1000; }
-        .logo { height: 140px; width: auto; }
-        .nav-right { display: flex; align-items: center; gap: 30px; }
-        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
-        .lang-switch { background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+        body { margin: 0; background-color: #ffffff; color: #000; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
         
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 5% 80px; }
-        .back-link { display: inline-flex; align-items: center; text-decoration: none; color: var(--accent-gold); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; transition: transform 0.3s ease; }
-        .back-link i { margin-right: 10px; }
+        .planning-container { max-width: 1100px; margin: 60px auto; padding: 0 5%; }
+        
+        .back-link { display: inline-block; margin-bottom: 30px; color: #bcab26; text-decoration: none; font-weight: 600; transition: 0.3s; }
         .back-link:hover { transform: translateX(-5px); }
 
-        .hero-flex { display: flex; gap: 50px; align-items: center; margin-bottom: 80px; }
-        .hero-content { flex: 1.2; }
-        .hero-image { flex: 0.8; }
-        .hero-image img { width: 100%; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-        .hero-content h1 { font-size: 3rem; margin: 0; font-weight: 700; line-height: 1.1; }
-        .hero-content .subtitle { color: var(--accent-gold); font-size: 1.25rem; margin: 15px 0 25px; font-weight: 500; }
+        h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 800; border-left: 6px solid #bcab26; padding-left: 20px; }
+        .intro-text { font-size: 1.2rem; color: #444; max-width: 800px; margin-bottom: 50px; }
 
-        .section-title { font-size: 1.8rem; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px; }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 60px; }
-        .service-col h3 { color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 25px; text-transform: uppercase; }
-        .service-col ul { list-style: none; padding: 0; }
-        .service-col li { position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 0.95rem; color: var(--text-dim); }
-        .service-col li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent-gold); }
+        /* --- THE CLEAN LOOK SHOWROOM --- */
+        .planning-visual-showroom {
+            width: 100%;
+            background: #fcfcfc;
+            border: 1px solid #eeeeee;
+            border-radius: 24px;
+            padding: 50px;
+            margin-bottom: 40px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
+        }
 
-        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 80px; }
-        .gallery img { width: 100%;
-    /* height: 250px; <-- DELETE OR COMMENT OUT THIS LINE */
-    height: auto;      /* ADD THIS LINE INSTEAD */
-    object-fit: cover; /* Change this to 'contain' if you want the whole plan visible, even if it adds white space */
-    border-radius: 12px;
-    border: 1px solid #eee; 
-    }
+        .visual-tag {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #bcab26;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .main-technical-img {
+            width: 100%;
+            max-height: 700px;
+            object-fit: contain; /* Ensures drawing is NEVER cut off */
+            filter: contrast(1.02);
+        }
+
+        /* Support Gallery */
+        .gallery-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-row img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+
+        /* Benefits Box */
+        .benefits-card {
+            background: #000;
+            color: #fff;
+            padding: 50px;
+            border-radius: 24px;
+            margin-bottom: 50px;
+        }
+
+        .benefits-card h2 { color: #bcab26; margin-top: 0; font-size: 1.8rem; }
         
-        .benefits-box { background: #f9f9f9; padding: 50px; border-radius: 12px; border-left: 4px solid var(--accent-gold); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .benefits-box h2 { font-size: 1.6rem; margin-top: 0; margin-bottom: 30px; }
-        .footer-cta { text-align: center; margin-top: 80px; color: var(--text-dim); font-style: italic; }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
 
-        @media (max-width: 900px) { .hero-flex, .services-grid, .gallery { grid-template-columns: 1fr; flex-direction: column; } }
+        .benefits-grid ul { list-style: none; padding: 0; }
+        .benefits-grid li { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px; }
+        .benefits-grid li::before { content: "✓"; color: #bcab26; font-weight: bold; }
+
+        .footer-cta { text-align: center; font-size: 1.1rem; color: #666; font-style: italic; }
+
+        @media (max-width: 768px) {
+            .benefits-grid, .gallery-row { grid-template-columns: 1fr; }
+            .planning-visual-showroom { padding: 20px; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="index.html"><img src="assets/voltix-logo.png" class="logo" alt="Voltix"></a>
-        <div class="nav-right">
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
-                <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
-            </ul>
-            <select class="lang-switch" onchange="setLanguage(this.value)">
-                <option value="de">DE</option>
-                <option value="en">EN</option>
-            </select>
-        </div>
-    </nav>
-
-    <div class="container">
-        <a href="index.html#services" class="back-link" data-translate="back_to_overview">
-            <i class="fas fa-chevron-left"></i> Zurück zur Übersicht
-        </a>
-
-        <div class="hero-flex">
-            <div class="hero-content">
-                <h1 data-translate="service_4_title">Elektroplanung & Projektierung</h1>
-                <div class="subtitle" data-translate="plan_hero_subtitle">Präzise Planung für zukunftssichere Installationen</div>
-                <p data-translate="plan_hero_description">Eine fundierte Planung ist das Fundament jeder sicheren und effizienten Elektroinstallation. Wir entwickeln maßgeschneiderte Konzepte für private Neubauten, Sanierungen und gewerbliche Projekte – normgerecht, durchdacht und bis ins kleinste Detail geplant.</p>
+    <header>
+        <nav class="navbar">
+            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix"></a>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-list">
+                    <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                    <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                    <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <select class="lang-switch" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                </select>
             </div>
-            <div class="hero-image">
-                <img src="assets/planning3.jpg" alt="Electrical Planning">
-            </div>
-        </div>
+        </nav>
+    </header>
 
-        <h2 class="section-title" data-translate="plan_section_title">Unsere Planungsleistungen</h2>
+    <div class="planning-container">
+        <a href="index.html#services" class="back-link">← <span data-translate="back_to_services">Back to Services</span></a>
         
-        <div class="services-grid">
-            <div class="service-col">
-                <h3 data-translate="plan_col1_title">Konzeption</h3>
-                <ul>
-                    <li data-translate="plan_col1_item1">Bedarfsanalyse & Beratung</li>
-                    <li data-translate="plan_col1_item2">Erstellung von Installationsplänen</li>
-                    <li data-translate="plan_col1_item3">Licht- und Energiekonzepte</li>
-                </ul>
-            </div>
-            <div class="service-col">
-                <h3 data-translate="plan_col2_title">Technische Details</h3>
-                <ul>
-                    <li data-translate="plan_col2_item1">Verteilerplan-Erstellung</li>
-                    <li data-translate="plan_col2_item2">Leitungsdimensionierung</li>
-                    <li data-translate="plan_col2_item3">Sicherheits- & Brandschutzplanung</li>
-                </ul>
-            </div>
-            <div class="service-col">
-                <h3 data-translate="plan_col3_title">Dokumentation</h3>
-                <ul>
-                    <li data-translate="plan_col3_item1">Bestandspläne & Revisionsunterlagen</li>
-                    <li data-translate="plan_col3_item2">Leistungsverzeichnisse</li>
-                    <li data-translate="plan_col3_item3">Behördenabwicklungen</li>
-                </ul>
-            </div>
+        <h1 data-translate="plan_title">Elektroplanung & Projektierung</h1>
+        <p class="intro-text" data-translate="plan_description">
+            Jedes erfolgreiche Projekt beginnt mit einer soliden Planung. Wir erstellen präzise CAD-Zeichnungen und technische Konzepte für Ihre elektrotechnische Infrastruktur.
+        </p>
+
+        <div class="planning-visual-showroom">
+            <div class="visual-tag" data-translate="technical_spec">TECHNICAL SPECIFICATION</div>
+            <img src="assets/65251.jpg" alt="Technical Drawing" class="main-technical-img">
         </div>
 
-        <div class="gallery">
-            <img src="assets/cad-planning.jpg" alt="CAD">
-            <img src="assets/65251.jpg" alt="Technical Drawing">
-            <img src="assets/planning2.jpg" alt="Discussion">
+        <div class="gallery-row">
+            <img src="assets/cad-planning.jpg" alt="CAD Office">
+            <img src="assets/planning2.jpg" alt="Site Discussion">
         </div>
 
-        <div class="benefits-box">
-            <h2 data-translate="plan_benefits_title">Ihr Vorteil durch professionelle Planung</h2>
-            <div class="services-grid" style="margin-bottom: 0; gap: 20px;">
-                <div class="service-col">
-                    <ul>
-                        <li data-translate="plan_benefit_1">Kostensicherheit durch detaillierte Kalkulation</li>
-                        <li data-translate="plan_benefit_2">Vermeidung von Fehlern in der Ausführungsphase</li>
-                    </ul>
-                </div>
-                <div class="service-col">
-                    <ul>
-                        <li data-translate="plan_benefit_3">Optimale Platzierung von Anschlüssen & Bedienkomponenten</li>
-                        <li data-translate="plan_benefit_4">Zukunftssicherheit durch Berücksichtigung von Erweiterungen</li>
-                    </ul>
-                </div>
+        <div class="benefits-card">
+            <h2 data-translate="plan_benefits_title">Professional Planning Benefits</h2>
+            <div class="benefits-grid">
+                <ul>
+                    <li data-translate="plan_benefit_1">Cost security through detailed calculation</li>
+                    <li data-translate="plan_benefit_2">Prevention of errors during construction</li>
+                </ul>
+                <ul>
+                    <li data-translate="plan_benefit_3">Optimal placement of connections</li>
+                    <li data-translate="plan_benefit_4">Future-proof expansion possibilities</li>
+                </ul>
             </div>
         </div>
 
         <p class="footer-cta" data-translate="plan_footer_cta">
-            Legen Sie den Grundstein für Ihr Projekt mit einer professionellen Planung. Wir begleiten Sie von der ersten Skizze bis zur finalen Abnahme.
+            We accompany you from the first sketch to final acceptance.
         </p>
     </div>
 
