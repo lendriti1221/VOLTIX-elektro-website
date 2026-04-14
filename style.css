@@ -76,53 +76,73 @@ section {
     background: var(--color-light);
 }
 
+/* NAVBAR */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
-    /* CHANGE: This pushes the logo left and nav-right group to the far right */
-    justify-content: space-between; 
+    justify-content: center;
     align-items: center;
-    padding: 10px 5%; /* Adjusted padding for a wider, cleaner desktop look */
+    gap: 40px;
+    padding: 15px 40px;
     background: #000;
     backdrop-filter: blur(5px);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    height: 100px; /* Fixed height to keep the black bar consistent */
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-shrink: 0;
-    /* Optional: If you want the logo to start exactly at the edge of your text container */
-    margin-left: 0; 
 }
 
 .logo {
-    width: 200px; /* Slightly reduced to give the links more room on the right */
+    width: 220px;
     height: auto;
+    margin: 0;
     object-fit: contain;
 }
 
-/* NEW WRAPPER: Wrap your links and lang-switch in a div in your HTML if they aren't already */
-.nav-right-group {
-    display: flex;
-    align-items: center;
-    gap: 30px; /* Space between the last link and the language switcher */
+.company-name {
+    font-size: 0;
+    font-weight: 0;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 10px; /* Control space between individual links here */
+    justify-content: center;
+    gap: 0;
     margin: 0;
     padding: 0;
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-primary);
+}
+
+.lang-switch {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+    color: #111;
 }
 
 .menu-toggle {
