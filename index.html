@@ -156,33 +156,7 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <img src="assets/voltix-logo.png" class="logo" alt="Voltix Logo">
-            </div>
-
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-
-            <ul class="nav-links" id="nav-list">
-                <li><a href="#home" data-translate="nav_home">Home</a></li>
-                <li><a href="about.html" data-translate="nav_about">About</a></li>
-                <li><a href="#services" data-translate="nav_services">Services</a></li>
-                <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
-                <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
-                <li>
-                    <select class="lang-switch" onchange="setLanguage(this.value)">
-                        <option value="en">EN</option>
-                        <option value="de">DE</option>
-                    </select>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <header id="navbar-container"></header>
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -382,6 +356,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="navbar.js"></script>
 
     <!-- COOKIE POPUP FIX -->
     <script>
