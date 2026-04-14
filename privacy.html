@@ -17,9 +17,9 @@
 
         /* ===== CENTER WRAPPER ===== */
         .legal-wrapper {
-            display: flex;
-            justify-content: center;
-            padding: 80px 20px;
+            display: block; /* Changed from flex to block for stability */
+            width: 100%;
+            padding: 100px 20px;
         }
 
         /* ===== MAIN CARD ===== */
@@ -31,14 +31,17 @@
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             border-top: 4px solid #f4b400;
-            display: flex;
-            flex-direction: column;
+            margin: 0 auto; /* Centers the card */
+            display: block !important; /* Forces vertical stacking */
         }
 
-        /* ===== BLOCKS ===== */
+        /* ===== BLOCKS - Explicitly ordered ===== */
         .legal-block {
+            display: block;
+            width: 100%;
             margin-bottom: 40px;
             text-align: center;
+            clear: both; /* Prevents elements from floating next to each other */
         }
 
         /* ===== HEADINGS ===== */
@@ -66,6 +69,13 @@
         .legal-actions {
             text-align: center;
             margin-top: 30px;
+            display: block;
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            background-color: #0a0a0a !important;
         }
 
         /* ===== MOBILE ===== */
@@ -164,7 +174,7 @@
 
 <footer>
     <div class="container footer-content">
-        <p data-translate="footer_rights">© 2025 Voltix Elektrotechnik GmbH — All rights reserved.</p>
+        <p data-translate="footer_rights">© 2026 Voltix Elektrotechnik GmbH — All rights reserved.</p>
         <div class="footer-legal">
             <a href="impressum.html" data-translate="footer_impressum">Legal Notice</a>
             <a href="privacy.html" data-translate="footer_privacy">Privacy Policy</a>
