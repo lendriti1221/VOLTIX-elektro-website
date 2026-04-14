@@ -1714,3 +1714,23 @@ margin-right: auto !important;
         gap: 30px;
     }
 }
+/* 🔥 REMOVE GAP BETWEEN COMPANY NAME + ADDRESS (FINAL FIX) */
+
+.contact-section .info-text h3,
+.contact-section .info-text strong {
+    margin: 0 !important;       /* remove default spacing */
+    padding: 0 !important;
+    line-height: 1.2 !important;
+}
+
+.contact-section .info-text p {
+    margin: 0 !important;       /* remove top gap */
+    padding: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Ensure no hidden spacing from container */
+.contact-section .info-text {
+    margin: 0 !important;
+    padding: 0 !important;
+}
