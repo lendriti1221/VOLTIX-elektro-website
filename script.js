@@ -889,7 +889,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const acceptBtn = document.getElementById("accept-cookies");
     const denyBtn = document.getElementById("deny-cookies");
 
-    // Check if user already made a choice
     if (banner && !localStorage.getItem("cookieChoice")) {
         setTimeout(() => {
             banner.classList.add("active");
