@@ -42,7 +42,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
 
-    <!-- COOKIE POPUP FIX -->
     <style>
         #cookie-banner.cookie-container {
             position: fixed !important;
@@ -163,7 +162,7 @@
             <h1>VOLTIX Elektrotechnik GmbH</h1>
             <div class="hero-subtitle">
                 <p data-translate="hero_subtitle">Professional electrical engineering solutions for homes, businesses and industry.</p>
-                <a href="#contact" class="btn primary-btn" data-translate="hero_button">Get in Touch</a>
+                <a href="/#contact" class="btn primary-btn" data-translate="hero_button">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -274,10 +273,10 @@
 
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                       <div class="info-text">
-    <strong>VOLTIX Elektrotechnik GmbH</strong>
-    <p>Brunnengasse 2, 2230 Gänserndorf</p>
-</div>
+                        <div class="info-text">
+                            <strong>VOLTIX Elektrotechnik GmbH</strong>
+                            <p>Brunnengasse 2, 2230 Gänserndorf</p>
+                        </div>
                     </div>
 
                     <div class="info-item">
@@ -299,7 +298,7 @@
                         <div class="info-text">
                             <h3 data-en="Opening Hours" data-de="Öffnungszeiten">Opening Hours</h3>
                             <p data-en="Mon – Thu: 07:00 – 16:30" data-de="Mo – Do: 07:00 – 16:30">Mon – Thu: 07:00 – 16:30</p>
-                            <p data-en="Fri: 07:00 – 12:30" data-de="Fr: 07:00 – 12:30">Fri: 07:00 – 12:30</p>
+                            <p data-en="Fri: 07:00 – 12:30" data-de="Fr: 07:00 – 12:30">Fri – 07:00 – 12:30</p>
                             <p data-en="Sat – Sun: Closed" data-de="Sa – So: Geschlossen">Sat – Sun: Closed</p>
                         </div>
                     </div>
@@ -332,25 +331,24 @@
         </div>
     </section>
 
-   <div id="cookie-banner" class="cookie-container" aria-live="polite">
-    <div class="cookie-content">
-        <p>
-            <span data-translate="cookie_text">We use cookies to improve your experience on our website.</span>
-            <a href="privacy.html" class="learn-more-inline" data-translate="cookie_learn_more">Learn more</a>
-        </p>
-        <div class="cookie-buttons">
-            <button type="button" id="deny-cookies" data-translate="cookie_deny">Deny</button>
-            <button type="button" id="accept-cookies" data-translate="cookie_accept">Accept</button>
+    <div id="cookie-banner" class="cookie-container" aria-live="polite">
+        <div class="cookie-content">
+            <p>
+                <span data-translate="cookie_text">We use cookies to improve your experience on our website.</span>
+                <a href="privacy.html" class="learn-more-inline" data-translate="cookie_learn_more">Learn more</a>
+            </p>
+            <div class="cookie-buttons">
+                <button type="button" id="deny-cookies" data-translate="cookie_deny">Deny</button>
+                <button type="button" id="accept-cookies" data-translate="cookie_accept">Accept</button>
+            </div>
         </div>
     </div>
-</div>
 
-   <div id="footer-container"></div>
+    <div id="footer-container"></div>
 
-<script src="script.js"></script>
-<script src="layout.js"></script>
+    <script src="script.js"></script>
+    <script src="layout.js"></script>
 
-    <!-- COOKIE POPUP FIX -->
     <script>
         window.addEventListener("load", function () {
             const banner = document.getElementById("cookie-banner");
