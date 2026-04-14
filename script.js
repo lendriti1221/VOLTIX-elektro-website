@@ -862,7 +862,7 @@ function changeLanguage(lang) {
 
 // 4. INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    const savedLang = localStorage.getItem('selectedLanguage') || 'de';
     setLanguage(savedLang);
 
     // ✅ CLEAN mobile menu (only one version)
