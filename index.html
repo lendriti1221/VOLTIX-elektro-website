@@ -36,7 +36,7 @@
 
     <meta name="description" content="Voltix Elektotechnik GmbH offers professional electrical engineering, industrial automation, smart home installation, and maintenance services in Germany. Specialized in PLC programming and energy solutions." data-translate="meta_description_index">
     <meta name="keywords" content="Voltix, Elektrotechnik, Electrical Engineering, Automation, Smart Home, Installation, Germany, PLC, energy efficiency, industrial control">
-    <meta name="author" content="Voltix Elektrotechnik GmbH">
+    <meta name="author" content="Voltix Elektotechnik GmbH">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -82,6 +82,18 @@
             line-height: 1.5 !important;
             font-size: 15px !important;
             color: #111111 !important;
+        }
+
+        #cookie-banner .learn-more-inline {
+            margin-left: 6px !important;
+            color: #bcab26 !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
+            white-space: nowrap !important;
+        }
+
+        #cookie-banner .learn-more-inline:hover {
+            text-decoration: underline !important;
         }
 
         #cookie-banner .cookie-buttons {
@@ -138,21 +150,6 @@
 
             #cookie-banner .cookie-buttons {
                 flex-direction: column !important;
-                #cookie-banner .cookie-learn {
-    margin-top: 12px !important;
-}
-
-#cookie-banner .learn-more-btn {
-    display: inline-block !important;
-    font-size: 13px !important;
-    color: #bcab26 !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-}
-
-#cookie-banner .learn-more-btn:hover {
-    text-decoration: underline !important;
-}
             }
         }
     </style>
@@ -363,15 +360,14 @@
 
     <div id="cookie-banner" class="cookie-container" aria-live="polite">
         <div class="cookie-content">
-            <p>We use cookies to improve your experience on our website.</p>
-           <div class="cookie-buttons">
-    <button type="button" id="deny-cookies">Deny</button>
-    <button type="button" id="accept-cookies">Accept</button>
-</div>
-
-<div class="cookie-learn">
-    <a href="privacy.html" class="learn-more-btn">Learn More</a>
-</div>
+            <p>
+                We use cookies to improve your experience on our website.
+                <a href="privacy.html" class="learn-more-inline">Learn more</a>
+            </p>
+            <div class="cookie-buttons">
+                <button type="button" id="deny-cookies">Deny</button>
+                <button type="button" id="accept-cookies">Accept</button>
+            </div>
         </div>
     </div>
 
