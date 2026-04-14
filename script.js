@@ -883,22 +883,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-// COOKIE BANNER LOGIC
+// --- COOKIE BANNER LOGIC ---
 document.addEventListener("DOMContentLoaded", function() {
     const cookieBanner = document.getElementById("cookie-banner");
     const acceptBtn = document.getElementById("accept-cookies");
 
-    if (cookieBanner && !localStorage.getItem("cookiesAccepted")) {
-        setTimeout(() => {
-            cookieBanner.classList.add("active");
-        }, 1000);
-    }
+    // Only run if the elements exist on the current page
+    if (cookieBanner && acceptBtn) {
+        
+        // Check if user has NOT accepted cookies yet
+        if (!localStorage.getItem("cookiesAccepted")) {
+            // Delay the popup slightly for a more professional feel
+            setTimeout(() => {
+                cookieBanner.classList.add("active");
+            }, 1200);
+        }
 
-    if (acceptBtn) {
+        // When user clicks the button
         acceptBtn.addEventListener("click", () => {
             localStorage.setItem("cookiesAccepted", "true");
             cookieBanner.classList.remove("active");
+            
+            // Optional: Hide it completely after the animation finishes
+            setTimeout(() => {
+                cookieBanner.style.display = "none";
+            }, 600);
         });
     }
 });
