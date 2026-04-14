@@ -1882,64 +1882,60 @@ textarea::placeholder {
 
 /* --- FIXED FLOATING COOKIE BANNER --- */
 .cookie-container {
-    position: fixed !important;
-    bottom: -100%; /* Hidden off-screen */
+    position: fixed !important; /* Breaks it out of the footer 'cage' */
+    bottom: -200px;             /* Starts hidden below the screen */
     left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 95% !important;
-    max-width: 550px !important;
+    transform: translateX(-50%) !important; /* Perfectly centers it */
+    width: 90% !important;
+    max-width: 500px !important; /* Prevents it from being too wide on PC */
     background: #111111 !important;
     color: #ffffff !important;
     padding: 25px !important;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5) !important;
-    z-index: 999999 !important; /* Forces it above footer/content */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5) !important;
+    z-index: 999999 !important;  /* Ensures it sits on top of everything */
     transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    border-radius: 16px !important;
+    border-radius: 20px !important;
     border-top: 4px solid #f4b400 !important;
+    text-align: center !important;
 }
 
-/* When the active class is added via JS */
+/* Position when active (triggered by JS) */
 .cookie-container.active {
-    bottom: 30px !important;
-}
-
-.cookie-content {
-    text-align: center;
+    bottom: 40px !important; /* Floats 40px from the bottom edge */
 }
 
 .cookie-content p {
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    color: #eee;
+    margin: 0 0 20px 0 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #ccc !important;
 }
 
-/* Button Group Wrapper */
+/* Button Group */
 .cookie-buttons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
 }
 
-/* Accept Button */
 #accept-cookies {
     background: #f4b400;
     color: #000;
     border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
+    padding: 12px 30px;
+    border-radius: 8px;
     font-weight: 700;
     cursor: pointer;
     flex: 1;
+    transition: 0.3s;
 }
 
-/* Deny Button */
 #deny-cookies {
     background: transparent;
     color: #fff;
-    border: 1px solid #555;
-    padding: 10px 25px;
-    border-radius: 5px;
+    border: 1px solid #444;
+    padding: 12px 30px;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     flex: 1;
@@ -1947,13 +1943,10 @@ textarea::placeholder {
 }
 
 #deny-cookies:hover {
-    background: #333;
-    border-color: #fff;
+    background: #222;
+    border-color: #777;
 }
 
-/* Mobile Fix: Stack buttons if screen is very narrow */
-@media (max-width: 400px) {
-    .cookie-buttons {
-        flex-direction: column;
-    }
+#accept-cookies:hover {
+    background: #fff;
 }
