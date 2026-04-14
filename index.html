@@ -6,21 +6,25 @@
 
     <style>
         * { box-sizing: border-box; }
+
         body {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
             width: 100%;
         }
+
         img {
             max-width: 100%;
             height: auto;
         }
+
         .container {
             width: 100%;
             padding: 0 20px;
             margin: 0 auto;
         }
+
         section {
             width: 100%;
             display: block;
@@ -32,11 +36,111 @@
 
     <meta name="description" content="Voltix Elektotechnik GmbH offers professional electrical engineering, industrial automation, smart home installation, and maintenance services in Germany. Specialized in PLC programming and energy solutions." data-translate="meta_description_index">
     <meta name="keywords" content="Voltix, Elektrotechnik, Electrical Engineering, Automation, Smart Home, Installation, Germany, PLC, energy efficiency, industrial control">
-    <meta name="author" content="Voltix Elektotechnik GmbH">
+    <meta name="author" content="Voltix Elektrotechnik GmbH">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/voltix-logo.png">
+
+    <!-- COOKIE POPUP FIX -->
+    <style>
+        #cookie-banner.cookie-container {
+            position: fixed !important;
+            left: 50% !important;
+            bottom: 24px !important;
+            transform: translateX(-50%) translateY(160%) !important;
+            width: min(92%, 520px) !important;
+            max-width: 520px !important;
+            background: #ffffff !important;
+            color: #111111 !important;
+            border-radius: 16px !important;
+            border-top: 5px solid #bcab26 !important;
+            box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28) !important;
+            padding: 22px !important;
+            z-index: 2147483647 !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+            text-align: center !important;
+            transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s ease !important;
+            display: block !important;
+        }
+
+        #cookie-banner.cookie-container.active {
+            transform: translateX(-50%) translateY(0) !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+
+        #cookie-banner .cookie-content {
+            display: block !important;
+        }
+
+        #cookie-banner .cookie-content p {
+            margin: 0 0 18px 0 !important;
+            line-height: 1.5 !important;
+            font-size: 15px !important;
+            color: #111111 !important;
+        }
+
+        #cookie-banner .cookie-buttons {
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 12px !important;
+            margin-top: 0 !important;
+            width: 100% !important;
+        }
+
+        #cookie-banner .cookie-buttons button {
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            flex: 1 !important;
+            width: auto !important;
+            border: none !important;
+            border-radius: 8px !important;
+            padding: 12px 18px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            transition: opacity 0.2s ease !important;
+            pointer-events: auto !important;
+        }
+
+        #cookie-banner .cookie-buttons button:hover {
+            opacity: 0.9 !important;
+        }
+
+        #accept-cookies {
+            background: #bcab26 !important;
+            color: #ffffff !important;
+        }
+
+        #deny-cookies {
+            background: #f1f1f1 !important;
+            color: #222222 !important;
+        }
+
+        @media (max-width: 768px) {
+            #cookie-banner.cookie-container {
+                left: 10px !important;
+                right: 10px !important;
+                bottom: 10px !important;
+                width: auto !important;
+                max-width: none !important;
+                transform: translateY(160%) !important;
+                padding: 18px !important;
+            }
+
+            #cookie-banner.cookie-container.active {
+                transform: translateY(0) !important;
+            }
+
+            #cookie-banner .cookie-buttons {
+                flex-direction: column !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -136,7 +240,6 @@
         </div>
     </section>
 
-    <!-- Modal Overlay -->
     <div id="modalOverlay" class="modal-overlay" onclick="outsideClick(event)">
         <div class="modal">
             <button class="close-btn" onclick="closeModal()">×</button>
@@ -243,7 +346,6 @@
         </div>
     </section>
 
-    <!-- Cookie Banner -->
     <div id="cookie-banner" class="cookie-container" aria-live="polite">
         <div class="cookie-content">
             <p>We use cookies to improve your experience on our website.</p>
@@ -265,5 +367,44 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- COOKIE POPUP FIX -->
+    <script>
+        window.addEventListener("load", function () {
+            const banner = document.getElementById("cookie-banner");
+            const acceptBtn = document.getElementById("accept-cookies");
+            const denyBtn = document.getElementById("deny-cookies");
+
+            if (!banner || !acceptBtn || !denyBtn) return;
+
+            try {
+                const choice = localStorage.getItem("cookieChoice");
+
+                if (!choice) {
+                    setTimeout(function () {
+                        banner.classList.add("active");
+                    }, 500);
+                }
+
+                acceptBtn.onclick = function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    localStorage.setItem("cookieChoice", "accepted");
+                    banner.classList.remove("active");
+                    banner.style.display = "none";
+                };
+
+                denyBtn.onclick = function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    localStorage.setItem("cookieChoice", "denied");
+                    banner.classList.remove("active");
+                    banner.style.display = "none";
+                };
+            } catch (err) {
+                console.error("Cookie banner error:", err);
+            }
+        });
+    </script>
 </body>
 </html>
