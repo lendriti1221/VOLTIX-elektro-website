@@ -78,26 +78,7 @@
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo-container">
-            <a href="index.html#home"><img src="assets/voltix-logo.png" class="logo" alt="Voltix Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-            <li><a href="about.html" data-translate="nav_about">About</a></li>
-            <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
-            <li><a href="index.html#projects" data-translate="nav_projects">Projects</a></li>
-            <li><a href="index.html#contact" data-translate="nav_contact">Contact</a></li>
-            <li>
-                <select class="lang-switch" onchange="setLanguage(this.value)">
-                    <option value="en">EN</option>
-                    <option value="de">DE</option>
-                </select>
-            </li>
-        </ul>
-    </nav>
-</header>
+<header id="navbar-container"></header>
 
 <div class="legal-wrapper">
     <div class="legal-card">
@@ -187,5 +168,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="navbar.js"></script>
 </body>
 </html>
