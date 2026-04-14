@@ -735,16 +735,6 @@ textarea::placeholder {
     cursor: pointer;
 }
 
-.contact-container p {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-    color: white;
-}
 
 .button-wrapper {
     display: flex;
@@ -1670,4 +1660,20 @@ margin-right: auto !important;
         flex-direction: column !important;
         gap: 0 !important;
     }
+}
+/* Tighten space under location title */
+.contact-section .contact-info h2 {
+    margin-bottom: 15px !important; /* ↓ was too big */
+}
+
+/* Reduce space between company name and address */
+.contact-section .info-text h3,
+.contact-section .info-text strong {
+    margin-bottom: 4px !important; /* tighter */
+}
+
+/* Reduce space between lines (address text) */
+.contact-section .info-text p {
+    margin-bottom: 2px !important;
+    line-height: 1.4 !important;
 }
