@@ -1882,42 +1882,41 @@ textarea::placeholder {
 
 /* --- FIXED FLOATING COOKIE BANNER --- */
 .cookie-container {
-    position: fixed !important;
-    bottom: -100% !important; /* Start hidden */
+    position: fixed !important; /* Breaks it out of the footer/page flow */
+    bottom: -100%;             /* Hidden off-screen by default */
     left: 50% !important;
-    transform: translateX(-50%) !important;
+    transform: translateX(-50%) !important; /* Centers it on PC */
     width: 90% !important;
-    max-width: 500px !important; /* Limits width on PC */
-    background: #111111 !important;
-    color: #ffffff !important;
+    max-width: 500px !important; /* Prevents it from being too wide on PC */
+    background: #ffffff !important; /* Using white for a cleaner look */
+    color: #000000 !important;
     padding: 25px !important;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5) !important;
-    z-index: 10000 !important; /* Sits on top of EVERYTHING */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+    z-index: 999999 !important; /* Ensures it is on top of everything else */
     transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    border-radius: 20px !important;
-    border-top: 4px solid #f4b400 !important;
+    border-radius: 16px !important;
+    border-top: 4px solid #bcab26 !important; /* Your brand gold accent */
+    text-align: center !important;
 }
 
-/* Active class triggered by JS */
+/* Active class triggered by your script.js */
 .cookie-container.active {
-    bottom: 30px !important; /* Pop up 30px from bottom */
-}
-
-.cookie-content {
-    text-align: center;
+    bottom: 30px !important; /* Floats 30px above the bottom edge */
 }
 
 .cookie-content p {
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    color: #ccc;
+    margin: 0 0 20px 0 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #444 !important;
 }
 
 .cookie-content a {
-    color: #f4b400;
+    color: #bcab26 !important;
+    text-decoration: underline;
 }
 
+/* Button Group */
 .cookie-buttons {
     display: flex;
     gap: 12px;
@@ -1925,30 +1924,26 @@ textarea::placeholder {
 }
 
 #accept-cookies {
-    background: #f4b400;
-    color: #000;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
+    background: #bcab26 !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 10px 25px !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
     flex: 1;
 }
 
 #deny-cookies {
-    background: transparent;
-    color: #fff;
-    border: 1px solid #444;
-    padding: 12px 30px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
+    background: #eee !important;
+    color: #333 !important;
+    border: none !important;
+    padding: 10px 25px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
     flex: 1;
 }
 
-/* Mobile: Stack buttons if very narrow */
-@media (max-width: 400px) {
-    .cookie-buttons {
-        flex-direction: column;
-    }
-}
+#deny-cookies:hover { background: #ddd !important; }
+#accept-cookies:hover { background: #000 !important; }
