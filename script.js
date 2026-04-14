@@ -885,28 +885,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // --- COOKIE BANNER LOGIC ---
 document.addEventListener("DOMContentLoaded", function() {
-    const cookieBanner = document.getElementById("cookie-banner");
-    const acceptBtn = document.getElementById("accept-cookies");
+    const banner = document.getElementById("cookie-banner");
+    const btn = document.getElementById("accept-cookies");
 
-    // Only run if the elements exist on the current page
-    if (cookieBanner && acceptBtn) {
-        
-        // Check if user has NOT accepted cookies yet
+    if (banner && btn) {
+        // Only show if not accepted before
         if (!localStorage.getItem("cookiesAccepted")) {
-            // Delay the popup slightly for a more professional feel
             setTimeout(() => {
-                cookieBanner.classList.add("active");
-            }, 1200);
+                banner.classList.add("active");
+            }, 1000);
         }
 
-        // When user clicks the button
-        acceptBtn.addEventListener("click", () => {
+        btn.addEventListener("click", () => {
             localStorage.setItem("cookiesAccepted", "true");
-            cookieBanner.classList.remove("active");
+            banner.classList.remove("active");
             
-            // Optional: Hide it completely after the animation finishes
+            // Wait for slide-down animation then remove from view
             setTimeout(() => {
-                cookieBanner.style.display = "none";
+                banner.style.display = "none";
             }, 600);
         });
     }
