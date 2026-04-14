@@ -883,15 +883,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// --- COOKIE BANNER LOGIC ---
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const banner = document.getElementById("cookie-banner");
-    
-    // Check if the user already made a choice
+
     if (banner && !localStorage.getItem("cookieChoice")) {
-        // Force the active class after 1 second
         setTimeout(() => {
-            console.log("Cookie banner is now active"); // Check your console (F12) for this
             banner.classList.add("active");
         }, 1000);
     }
