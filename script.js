@@ -16,6 +16,7 @@ const translations = {
         "nav_projects": "Projects",
         "nav_contact": "Contact",
         about_more_button: "Discover Our Expertise",
+        "benefit_new": "Fast and reliable implementation",
         // Navigation & General
         "nav_home": "Home",
         "nav_about": "About",
@@ -648,6 +649,7 @@ const translations = {
         "cookie_learn_more": "Mehr erfahren",
         "cookie_deny": "Ablehnen",
         "cookie_accept": "Akzeptieren",
+        "benefit_new": "Schnelle und zuverlässige Umsetzung",
 
         
         back_to_overview: "Zurück zur Übersicht",
