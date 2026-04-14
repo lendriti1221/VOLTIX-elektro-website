@@ -885,19 +885,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.addEventListener("DOMContentLoaded", function () {
     const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const denyBtn = document.getElementById("deny-cookies");
 
-    if (banner && !localStorage.getItem("cookieChoice")) {
+    if (!banner || !acceptBtn || !denyBtn) return;
+
+    const choice = localStorage.getItem("cookieChoice");
+
+    if (!choice) {
         setTimeout(() => {
             banner.classList.add("active");
-        }, 1000);
+        }, 500);
     }
 
-    document.getElementById("accept-cookies")?.addEventListener("click", () => {
+    acceptBtn.addEventListener("click", function () {
         localStorage.setItem("cookieChoice", "accepted");
         banner.classList.remove("active");
     });
 
-    document.getElementById("deny-cookies")?.addEventListener("click", () => {
+    denyBtn.addEventListener("click", function () {
         localStorage.setItem("cookieChoice", "denied");
         banner.classList.remove("active");
     });
