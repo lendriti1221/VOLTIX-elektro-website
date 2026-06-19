@@ -9,7 +9,7 @@ const translations = {
         "hero_subtitle": "Professional solutions in electrical engineering for home, business and buildings.",
         "hero_button": "Get in Touch",
         // ... (Keep all your other "en" keys here)
-        "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — All rights reserved.",
+        "footer_text": "© 2025 VOLTIX Elektrotechnik GmbH — All rights reserved.",
         "nav_home": "Home",
         "nav_about": "About",
         "nav_services": "Services",
@@ -190,7 +190,7 @@ const translations = {
         "placeholder_msg": "Message*",
         "contact_privacy": "Personal data will be transmitted...",
         "contact_send_btn": "SEND",
-        "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — All rights reserved.",
+        "footer_text": "© 2025 VOLTIX Elektrotechnik GmbH — All rights reserved.",
 
         // About Page Specific
       "about_title": "About Our Company",
@@ -204,7 +204,7 @@ const translations = {
 
         "mission_title": "Our Mission",
         "mission_text": "We aim to set new standards in electrical engineering by delivering modern, efficient, and safe installations that significantly improve productivity, reduce energy consumption, and enable sustainable, smart living and working environments for our clients.",
-        "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — All rights reserved.",
+        "footer_text": "© 2025 VOLTIX Elektrotechnik GmbH — All rights reserved.",
         // ... your other keys
         "back_to_overview": "Back to Overview",
         "inst_hero_subtitle": "New Construction • Renovation • Remodeling • Extension",
@@ -448,7 +448,7 @@ const translations = {
         "hero_subtitle": "Professionelle Lösungen im Bereich Elektrotechnik für Haus, Gewerbe und Gebäude.",
         "hero_button": "Kontakt aufnehmen",
         // ... (Keep all your other "de" keys here)
-        "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — Alle Rechte vorbehalten.",
+        "footer_text": "© 2025 VOLTIX Elektrotechnik GmbH — Alle Rechte vorbehalten.",
         "climate_hero_subtitle": "Angenehmes Raumklima – intelligent geplant und fachgerecht integriert",
 "climate_hero_description": "Ein gutes Raumklima steigert den Komfort, die Konzentration und das Wohlbefinden – im Wohnbereich genauso wie im Büro oder Gewerbebetrieb. Wir unterstützen Sie bei der Auswahl, elektrotechnischen Vorbereitung und intelligenten Einbindung moderner Klimaanlagen.",
 "climate_section_title": "Unsere Leistungen im Bereich Klimaanlagen",
@@ -734,12 +734,12 @@ const translations = {
         "placeholder_msg": "Nachricht*",
         "contact_privacy": "Persönliche Daten werden übermittelt...",
         "contact_send_btn": "SENDEN",
-        "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — Alle Rechte vorbehalten.",
+        "footer_text": "© 2025 VOLTIX Elektrotechnik GmbH — Alle Rechte vorbehalten.",
 
-        "about_hero_title": "Über VOLTIX Elektotechnik GmbH",
+        "about_hero_title": "Über VOLTIX Elektrotechnik GmbH",
         "about_hero_subtitle": "Ihr vertrauenswürdiger Partner für moderne Elektrotechnik intelligente Gebäudelösungen.",
         "who_we_are_title": "Wer wir sind",
-        "who_we_are_p1": "Die VOLTIX Elektotechnik GmbH ist ein zukunftsorientiertes Elektrotechnikunternehmen, das sich der Bereitstellung hochwertiger Lösungen für Privat-, Gewerbe- und Industriekunden verschrieben hat. Wir wurden 2018 mit der Mission gegründet, deutsche Ingenieurspräzision in die sich schnell entwickelnden Bereiche der Automatisierung und nachhaltigen Energie zu bringen.",
+        "who_we_are_p1": "Die VOLTIX Elektrotechnik GmbH ist ein zukunftsorientiertes Elektrotechnikunternehmen, das sich der Bereitstellung hochwertiger Lösungen für Privat-, Gewerbe- und Industriekunden verschrieben hat. Wir wurden 2018 mit der Mission gegründet, deutsche Ingenieurspräzision in die sich schnell entwickelnden Bereiche der Automatisierung und nachhaltigen Energie zu bringen.",
         "who_we_are_p2": "Mit Expertise in Automatisierungstechnologien, Industriemaschinen, Smart-Home-Systemen und komplexen Elektroinstallationen liefern wir Zuverlässigkeit und Innovation in jedem Projekt, wobei wir uns auf Langlebigkeit und die Einhaltung strengster europäischer Sicherheitsstandards konzentrieren.",
 
      
@@ -748,7 +748,7 @@ const translations = {
 
         "mission_title": "Unsere Mission",
         "mission_text": "Unser Ziel ist es, neue Maßstäbe in der Elektrotechnik zu setzen, indem wir moderne, effiziente und sichere Installationen liefern, die die Produktivität erheblich steigern, den Energieverbrauch senken und nachhaltige, intelligente Lebens- und Arbeitsumgebungen ermöglichen.",
-        "footer_text": "© 2025 VOLTIX Elektotechnik GmbH — Alle Rechte vorbehalten.",
+        "footer_text": "© 2025 VOLTIX Elektrotechnik GmbH — Alle Rechte vorbehalten.",
 
         "about_title": "Über unser Unternehmen",
         "about_text_p1": "Die VOLTIX Elektrotechnik GmbH steht für moderne Elektrotechnik, durchdachte Planung und zuverlässige Umsetzung. Als Elektromeisterbetrieb begleiten wir unsere Kundinnen und Kunden von der ersten Idee bis zur fertigen Lösung – persönlich, ehrlich und auf Augenhöhe. Unser Schwerpunkt liegt auf intelligenter Gebäudetechnik und Smart-Home-Lösungen (KNX), die den Alltag spürbar erleichtern, Energie sparen und langfristig überzeugen. Ob Einfamilienhaus, Wohnung, Gewerbebetrieb oder Büro – wir entwickeln Lösungen, die genau zu Ihren Anforderungen passen und auch in Zukunft flexibel erweiterbar sind. Besonderen Wert legen wir auf saubere Arbeit, Termintreue und nachhaltige Qualität. Jede Installation wird sorgfältig geplant und Normgerecht umgesetzt, damit Sie sich auf eine sichere, zuverlässige und langlebige Elektrotechnik verlassen können.",
